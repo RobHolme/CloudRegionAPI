@@ -1,6 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TestIpInSubnet = exports.TestPrivateAddress = exports.TestIPv4Subnet = exports.TestIPv4Address = void 0;
+exports.TestIPv4Address = TestIPv4Address;
+exports.TestIPv4Subnet = TestIPv4Subnet;
+exports.TestPrivateAddress = TestPrivateAddress;
+exports.TestIpInSubnet = TestIpInSubnet;
 //-----------------------------
 // Function:    TestIPv4Address
 // Description: Return true if the parameter matches the pattern of an IPv4 Address  
@@ -12,7 +15,6 @@ function TestIPv4Address(IpAddress) {
     }
     return false;
 }
-exports.TestIPv4Address = TestIPv4Address;
 //-----------------------------
 // Function:    TestIPv4Subnet
 // Description: Return true if the parameter matches the pattern of an IPv4 subnet (CIDR notation)  
@@ -24,7 +26,6 @@ function TestIPv4Subnet(IpSubnet) {
     }
     return false;
 }
-exports.TestIPv4Subnet = TestIPv4Subnet;
 //-----------------------------
 // Function:    TestPrivateAddress
 // Description: Return true if IpAddress is within the rfc1918 private address range
@@ -43,7 +44,6 @@ function TestPrivateAddress(IpAddress) {
     }
     return false;
 }
-exports.TestPrivateAddress = TestPrivateAddress;
 //-----------------------------
 // Function:    TestIpInSubnet
 // Description: Return true if the IP address falls within the Subnet
@@ -55,7 +55,6 @@ function TestIpInSubnet(IpAddress, Subnet) {
     const subnetLong = IpToLong(subnetAddress);
     return (ipLong & subnetMask) === (subnetLong & subnetMask);
 }
-exports.TestIpInSubnet = TestIpInSubnet;
 //-----------------------------
 // Function:    IpToLong
 // Description: Convert a tring based IPv4 address to a Long Int

@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.GetCloudProviderSubnets = void 0;
+exports.GetCloudProviderSubnets = GetCloudProviderSubnets;
 const fs_1 = __importDefault(require("fs"));
 ;
 //-----------------------------
@@ -19,4 +19,3 @@ function GetCloudProviderSubnets(Filename, Filter = "") {
     }
     return azureSubnets;
 }
-exports.GetCloudProviderSubnets = GetCloudProviderSubnets;
