@@ -9,7 +9,6 @@ const router = Router();
 // -----------------------------
 router.get("/:ip", (req: Request, res: Response) => {
   const ipAddress = req.params.ip;
-  //var jsonResult : JSON = JSON.parse("[]");
   var jsonResult : Object[] = [];
   res.setHeader('content-type', 'application/json');
 
