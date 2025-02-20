@@ -30,12 +30,17 @@ exports.TestIPv4Subnet = TestIPv4Subnet;
 // Description: Return true if IpAddress is within the rfc1918 private address range
 //-----------------------------
 function TestPrivateAddress(IpAddress) {
-    var rfc1918 = ["172.16.0.0/12", "10.0.0.0/8", "192.168.0.0/16"];
-    rfc1918.forEach(subnet => {
-        if (TestIpInSubnet(IpAddress, subnet)) {
+    var reservedAddressRanges = [
+        "172.16.0.0/12",
+        "10.0.0.0/8",
+        "192.168.0.0/16",
+        "172.16.0.0/12",
+    ];
+    for (var i = 0; i < reservedAddressRanges.length; i++) {
+        if (TestIpInSubnet(IpAddress, reservedAddressRanges[i])) {
             return true;
         }
-    });
+    }
     return false;
 }
 exports.TestPrivateAddress = TestPrivateAddress;
