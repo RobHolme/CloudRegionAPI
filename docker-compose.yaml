@@ -1,0 +1,12 @@
+services:
+  node:
+    image: "node:22-slim"
+    user: "node"
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./src:/home/node/app
+    ports:
+      - "3000:3000"
+    command: "node --run build && node --run start"
