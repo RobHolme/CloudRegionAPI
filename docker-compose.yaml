@@ -9,4 +9,4 @@ services:
       - ./src:/home/node/app
     ports:
       - "3000:3000"
-    command: "node --run build && node --run start"
+    command: "npm install && node --run build && node --run start"
