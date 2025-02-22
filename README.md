@@ -14,7 +14,7 @@ API to return the cloud provider and region for a given IPv4 address. Multiple r
 ``` node --run build```
 
 ### Run
-``` node --run start```
+``` node --run serve```
 
 ### Connect
 ```http://127.0.0.1:3000/ip/{ipaddress}```
