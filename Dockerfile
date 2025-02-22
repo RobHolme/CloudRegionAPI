@@ -8,7 +8,7 @@ RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
 WORKDIR /home/node/app
 
 # Copy the package.json and package-lock.json files to the container
-COPY package*.json ./
+COPY --chown=node:node package*.json ./
 
 # Switch to the node user
 USER node
