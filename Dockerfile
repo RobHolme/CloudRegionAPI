@@ -17,10 +17,10 @@ USER node
 RUN npm install --omit=dev
 
 # copy the 'compiled' release folder to the container
-COPY --chown=node:node ./release/ .
+COPY --chown=node:node ./release/ ./release/
 
 # Expose the port the app runs on
 EXPOSE 3000
 
 # Serve the app
-CMD [ "node", "index.js" ]
+CMD [ "node", "./release/index.js" ]
