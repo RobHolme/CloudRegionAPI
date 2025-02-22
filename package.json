@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/index.ts",
     "build": "tsc && npm run copy-json",
     "serve": "node release/index.js",
     "copy-json": "copyfiles -u 2 ./src/cloudproviders/*.json ./release/cloudproviders"
