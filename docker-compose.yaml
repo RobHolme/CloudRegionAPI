@@ -1,3 +1,7 @@
+networks:
+  192-168-0-0-macvlan:
+    external: true
+    
 services:
   CloudRegionAPI:
     container_name: CloudRegionAPI
