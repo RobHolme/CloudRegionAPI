@@ -21,13 +21,13 @@ router.get("/:ip", (req: Request, res: Response) => {
     }
     // get the cloud provider subnets (and region/service), filtered on the first octet of the IP Address matching the start of the subnet network address 
     var CloudProviderDetails: cloudProviderJSON[] = GetCloudProviderSubnets('./src/cloudproviders/Azure.json', ipAddress.split(".")[0]);
-    CloudProviderDetails.push(...GetCloudProviderSubnets('./src/cloudproviders/AWS.json', ipAddress.split(".")[0]));
-    CloudProviderDetails.push(...GetCloudProviderSubnets('./src/cloudproviders/AWS.json', ipAddress.split(".")[0]));
-    CloudProviderDetails.push(...GetCloudProviderSubnets('./src/cloudproviders/Azure.json', ipAddress.split(".")[0]));
-    CloudProviderDetails.push(...GetCloudProviderSubnets('./src/cloudproviders/GoogleCloud.json', ipAddress.split(".")[0]));
-    CloudProviderDetails.push(...GetCloudProviderSubnets('./src/cloudproviders/OCI.json', ipAddress.split(".")[0]));
-    CloudProviderDetails.push(...GetCloudProviderSubnets('./src/cloudproviders/Akamai.json', ipAddress.split(".")[0]));
-    CloudProviderDetails.push(...GetCloudProviderSubnets('./src/cloudproviders/CloudFlare.json', ipAddress.split(".")[0]));
+    CloudProviderDetails.push(...GetCloudProviderSubnets('./cloudproviders/AWS.json', ipAddress.split(".")[0]));
+    CloudProviderDetails.push(...GetCloudProviderSubnets('./cloudproviders/AWS.json', ipAddress.split(".")[0]));
+    CloudProviderDetails.push(...GetCloudProviderSubnets('./cloudproviders/Azure.json', ipAddress.split(".")[0]));
+    CloudProviderDetails.push(...GetCloudProviderSubnets('./cloudproviders/GoogleCloud.json', ipAddress.split(".")[0]));
+    CloudProviderDetails.push(...GetCloudProviderSubnets('./cloudproviders/OCI.json', ipAddress.split(".")[0]));
+    CloudProviderDetails.push(...GetCloudProviderSubnets('./cloudproviders/Akamai.json', ipAddress.split(".")[0]));
+    CloudProviderDetails.push(...GetCloudProviderSubnets('./cloudproviders/CloudFlare.json', ipAddress.split(".")[0]));
 
     CloudProviderDetails.forEach((currentSubnet: cloudProviderJSON) => {
       if (TestIpInSubnet(ipAddress, currentSubnet.ip_prefix)) {

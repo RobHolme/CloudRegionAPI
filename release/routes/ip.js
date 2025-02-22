@@ -21,13 +21,13 @@ router.get("/:ip", (req, res) => {
         }
         // get the cloud provider subnets (and region/service), filtered on the first octet of the IP Address matching the start of the subnet network address 
         var CloudProviderDetails = (0, cloudprovider_utils_1.GetCloudProviderSubnets)('./src/cloudproviders/Azure.json', ipAddress.split(".")[0]);
-        CloudProviderDetails.push(...(0, cloudprovider_utils_1.GetCloudProviderSubnets)('./src/cloudproviders/AWS.json', ipAddress.split(".")[0]));
-        CloudProviderDetails.push(...(0, cloudprovider_utils_1.GetCloudProviderSubnets)('./src/cloudproviders/AWS.json', ipAddress.split(".")[0]));
-        CloudProviderDetails.push(...(0, cloudprovider_utils_1.GetCloudProviderSubnets)('./src/cloudproviders/Azure.json', ipAddress.split(".")[0]));
-        CloudProviderDetails.push(...(0, cloudprovider_utils_1.GetCloudProviderSubnets)('./src/cloudproviders/GoogleCloud.json', ipAddress.split(".")[0]));
-        CloudProviderDetails.push(...(0, cloudprovider_utils_1.GetCloudProviderSubnets)('./src/cloudproviders/OCI.json', ipAddress.split(".")[0]));
-        CloudProviderDetails.push(...(0, cloudprovider_utils_1.GetCloudProviderSubnets)('./src/cloudproviders/Akamai.json', ipAddress.split(".")[0]));
-        CloudProviderDetails.push(...(0, cloudprovider_utils_1.GetCloudProviderSubnets)('./src/cloudproviders/CloudFlare.json', ipAddress.split(".")[0]));
+        CloudProviderDetails.push(...(0, cloudprovider_utils_1.GetCloudProviderSubnets)('./cloudproviders/AWS.json', ipAddress.split(".")[0]));
+        CloudProviderDetails.push(...(0, cloudprovider_utils_1.GetCloudProviderSubnets)('./cloudproviders/AWS.json', ipAddress.split(".")[0]));
+        CloudProviderDetails.push(...(0, cloudprovider_utils_1.GetCloudProviderSubnets)('./cloudproviders/Azure.json', ipAddress.split(".")[0]));
+        CloudProviderDetails.push(...(0, cloudprovider_utils_1.GetCloudProviderSubnets)('./cloudproviders/GoogleCloud.json', ipAddress.split(".")[0]));
+        CloudProviderDetails.push(...(0, cloudprovider_utils_1.GetCloudProviderSubnets)('./cloudproviders/OCI.json', ipAddress.split(".")[0]));
+        CloudProviderDetails.push(...(0, cloudprovider_utils_1.GetCloudProviderSubnets)('./cloudproviders/Akamai.json', ipAddress.split(".")[0]));
+        CloudProviderDetails.push(...(0, cloudprovider_utils_1.GetCloudProviderSubnets)('./cloudproviders/CloudFlare.json', ipAddress.split(".")[0]));
         CloudProviderDetails.forEach((currentSubnet) => {
             if ((0, ip_utils_1.TestIpInSubnet)(ipAddress, currentSubnet.ip_prefix)) {
                 jsonResult.push(currentSubnet);
