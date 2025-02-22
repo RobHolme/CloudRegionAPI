@@ -1,12 +1,14 @@
 services:
-  node:
-    image: "node:22-slim"
-    user: "node"
-    working_dir: /home/node/app
+  CloudRegionAPI:
+    container_name: CloudRegionAPI
+    image: "robholme/cloud-region-api:latest"
+    networks:
+      192-168-0-0-macvlan:
+        ipv4_address: 192.168.0.26
     environment:
       - NODE_ENV=production
-    volumes:
-      - ./src:/home/node/app
-    ports:
-      - "3000:3000"
-    command: "npm install && node --run build && node --run start"
+      - TZ=Australia/Perth
+    dns:
+      - 192.168.0.40
+      - 192.168.0.20  
+    restart: always
