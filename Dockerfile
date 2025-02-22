@@ -17,7 +17,7 @@ USER node
 RUN npm install --omit=dev
 
 # copy the 'compiled' release folder to the container
-COPY --chown=node:node ./release/ ./release/
+COPY --chown=node:node ./release/ /home/node/app/release/
 
 # Expose the port the app runs on
 EXPOSE 3000
