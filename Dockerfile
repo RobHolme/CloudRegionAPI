@@ -14,7 +14,7 @@ COPY package*.json ./
 USER node
 
 # Install production dependencies
-RUN npm install --production
+RUN npm install --omit=dev
 
 # copy the 'compiled' release folder to the container
 COPY --chown=node:node ./release/ .
