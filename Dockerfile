@@ -20,7 +20,7 @@ RUN npm install --omit=dev
 COPY --chown=node:node ./release/ ./release/
 
 # Expose the port the app runs on
-EXPOSE 443
+EXPOSE 80
 
 # Serve the app
 CMD [ "node", "./release/index.js" ]
