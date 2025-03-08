@@ -1,104 +1,104 @@
 [
   {
-    "ip_prefix": "173.245.48.0/20",
+    "Subnet": "173.245.48.0/20",
     "Region": "Unknown",
     "Service": "",
     "SubnetSize": "20",
     "CloudProvider": "CloudFlare"
   },
   {
-    "ip_prefix": "103.21.244.0/22",
+    "Subnet": "103.21.244.0/22",
     "Region": "Unknown",
     "Service": "",
     "SubnetSize": "22",
     "CloudProvider": "CloudFlare"
   },
   {
-    "ip_prefix": "103.22.200.0/22",
+    "Subnet": "103.22.200.0/22",
     "Region": "Unknown",
     "Service": "",
     "SubnetSize": "22",
     "CloudProvider": "CloudFlare"
   },
   {
-    "ip_prefix": "103.31.4.0/22",
+    "Subnet": "103.31.4.0/22",
     "Region": "Unknown",
     "Service": "",
     "SubnetSize": "22",
     "CloudProvider": "CloudFlare"
   },
   {
-    "ip_prefix": "141.101.64.0/18",
+    "Subnet": "141.101.64.0/18",
     "Region": "Unknown",
     "Service": "",
     "SubnetSize": "18",
     "CloudProvider": "CloudFlare"
   },
   {
-    "ip_prefix": "108.162.192.0/18",
+    "Subnet": "108.162.192.0/18",
     "Region": "Unknown",
     "Service": "",
     "SubnetSize": "18",
     "CloudProvider": "CloudFlare"
   },
   {
-    "ip_prefix": "190.93.240.0/20",
+    "Subnet": "190.93.240.0/20",
     "Region": "Unknown",
     "Service": "",
     "SubnetSize": "20",
     "CloudProvider": "CloudFlare"
   },
   {
-    "ip_prefix": "188.114.96.0/20",
+    "Subnet": "188.114.96.0/20",
     "Region": "Unknown",
     "Service": "",
     "SubnetSize": "20",
     "CloudProvider": "CloudFlare"
   },
   {
-    "ip_prefix": "197.234.240.0/22",
+    "Subnet": "197.234.240.0/22",
     "Region": "Unknown",
     "Service": "",
     "SubnetSize": "22",
     "CloudProvider": "CloudFlare"
   },
   {
-    "ip_prefix": "198.41.128.0/17",
+    "Subnet": "198.41.128.0/17",
     "Region": "Unknown",
     "Service": "",
     "SubnetSize": "17",
     "CloudProvider": "CloudFlare"
   },
   {
-    "ip_prefix": "162.158.0.0/15",
+    "Subnet": "162.158.0.0/15",
     "Region": "Unknown",
     "Service": "",
     "SubnetSize": "15",
     "CloudProvider": "CloudFlare"
   },
   {
-    "ip_prefix": "104.16.0.0/13",
+    "Subnet": "104.16.0.0/13",
     "Region": "Unknown",
     "Service": "",
     "SubnetSize": "13",
     "CloudProvider": "CloudFlare"
   },
   {
-    "ip_prefix": "104.24.0.0/14",
+    "Subnet": "104.24.0.0/14",
     "Region": "Unknown",
     "Service": "",
     "SubnetSize": "14",
     "CloudProvider": "CloudFlare"
   },
   {
-    "ip_prefix": "172.64.0.0/13",
+    "Subnet": "172.64.0.0/13",
     "Region": "Unknown",
     "Service": "",
     "SubnetSize": "13",
     "CloudProvider": "CloudFlare"
   },
   {
-    "ip_prefix": "131.0.72.0/22",
+    "Subnet": "131.0.72.0/22",
     "Region": "Unknown",
     "Service": "",
     "SubnetSize": "22",
