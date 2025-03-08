@@ -1,0 +1,25 @@
+name: Weekly update of cloud provider JSON files
+
+on:
+  # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
+  schedule:
+    # 12am every Sunday
+    - cron: "0 0 * * 0"
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Run update script
+        run: ./update-cloudproviderjson.ps1
+        shell: pwsh
+      - name: Push to repository
+        run: |
+          git config user.name ${{ secrets.USERNAME }}
+          git config user.email ${{ secrets.EMAIL }}
+          now=$(date)
+          git add -A
+          git commit -m "Auto update of cloud provider JSON files on $now"
+          git push
