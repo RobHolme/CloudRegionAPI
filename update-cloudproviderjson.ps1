@@ -85,55 +85,25 @@ function Invoke-WebRequestEx {
 # Description:  Retrieves all AWS regions and associated IP ranges. Uses a cached JSON file if it exists, otherwise retrieve from AWS.
 #--------------------------
 function GetAWSRegions {
-    param(
-        [parameter(Mandatory = $false)]
-        [string] $OctetFilter
-    )
-
     # download the regions from source if the cached file does not exist or if the ForceDownload switch is used.
-    if (!(Test-Path (Join-Path -Path $PSScriptRoot -ChildPath $awsCache)) -or $ForceDownload) {
-        Write-Verbose "Retrieving AWS regions from $awsSource"
-        $awsNetRanges = Invoke-WebRequestEx -Uri $awsSource -ProxyServer $ProxyServer -ProxyCredential $ProxyCredential
-        if ($null -eq $awsNetRanges) {
-            Write-Warning "Failed to retrieve AWS IP ranges. Falling back to cached file. Use -Debug for more information."
-        }
-        else {
-            $awsNetRangesJson = ConvertFrom-Json $awsNetRanges.Content 
-            $awsRegions = $awsNetRangesJson.prefixes | Select-Object  @{E = { $_.ip_prefix }; L = "Subnet" }, Region, Service, @{E = { $_.ip_prefix.split("/")[1] }; L = "SubnetSize" }, @{E = { "AWS" }; L = "CloudProvider" }
+    Write-Verbose "Retrieving AWS regions from $awsSource"
+    $awsNetRanges = Invoke-WebRequestEx -Uri $awsSource -ProxyServer $ProxyServer -ProxyCredential $ProxyCredential
+    if ($null -eq $awsNetRanges) {
+        Write-Warning "Failed to retrieve AWS IP ranges. Falling back to cached file. Use -Debug for more information."
+    }
+    else {
+        $awsNetRangesJson = ConvertFrom-Json $awsNetRanges.Content 
+        $awsRegions = $awsNetRangesJson.prefixes | Select-Object  @{E = { $_.ip_prefix }; L = "Subnet" }, Region, Service, @{E = { $_.ip_prefix.split("/")[1] }; L = "SubnetSize" }, @{E = { "AWS" }; L = "CloudProvider" }
             
-            # if not subnets found, return $null and do not update the cache file
-            if ($awsRegions.Count -eq 0) {
-                Write-Error "No AWS IP ranges found. Source may have changed? Using cached file instead."
-            }
-            else {
-                # cache the JSON file for future use in the same directory as the script, return the IP ranges and regions
-                $awsRegions | ConvertTo-Json | Out-File -FilePath (Join-Path -Path $PSScriptRoot -ChildPath $awsCache)
-                # return regions
-                if ($OctetFilter) {
-                    return $awsRegions | Where-Object { $_.Subnet -match "^$($OctetFilter)\." }
-                }
-                else {
-                    return $awsRegions
-                }
-            }
-        }
-    }
-
-    # return the cached JSON file if it exists. Assume online checks failed (or not requested) if this code is reached.
-    Write-Verbose "Using cached AWS regions from $(Join-Path -Path $PSScriptRoot -ChildPath $awsCache). Use -ForceDownload to refresh."
-    try {
-        if ($OctetFilter) {
-            return (Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath $awsCache)) | ConvertFrom-Json | Where-Object { $_.Subnet -match "^$($OctetFilter)\." }
+        # if not subnets found, return $null and do not update the cache file
+        if ($awsRegions.Count -eq 0) {
+            Write-Error "No AWS IP ranges found. Source may have changed? No updates saved."
         }
         else {
-            return (Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath $awsCache)) | ConvertFrom-Json
+            # cache the JSON file for future use in the same directory as the script, return the IP ranges and regions
+            $awsRegions | ConvertTo-Json | Out-File -FilePath (Join-Path -Path $PSScriptRoot -ChildPath $awsCache)
         }
-    }
-    catch {
-        Write-Error "Failed to read cached AWS IP ranges. Check the file exists and try again. Use -Debug for more information."
-        Write-Debug $_.Exception
-        return $null
-    }
+    } 
 }
 
 
@@ -142,50 +112,33 @@ function GetAWSRegions {
 # Description:  Retrieves all Azure regions and associated IP ranges. Uses a cached JSON file if it exists, otherwise retrieve from Azure.
 #--------------------------
 function GetAzureRegions {
-    param(
-        [parameter(Mandatory = $false)]
-        [string] $OctetFilter
-    )
-
-    if (!(Test-Path (Join-Path -Path $PSScriptRoot -ChildPath $azureCache)) -or $ForceDownload) {
-        $azureRegions = @()
-        $azureRegionHashTable = @{}
+    $azureRegions = @()
+    $azureRegionHashTable = @{}
             
-        # Get the download URL for the Azure IP ranges JSON file    
-        Write-Verbose "Retrieving Azure regions from $azureSource"
-        $azureNetDownload = Invoke-WebRequestEx -Uri $azureSource -ProxyServer $ProxyServer -ProxyCredential $ProxyCredential
-        if ($null -eq $azureNetDownload) {
-            Write-Warning "Failed to retrieve download location for Azure IP ranges. Falling back to cached file. Use -Debug for more information."
+    # Get the download URL for the Azure IP ranges JSON file    
+    Write-Verbose "Retrieving Azure regions from $azureSource"
+    $azureNetDownload = Invoke-WebRequestEx -Uri $azureSource -ProxyServer $ProxyServer -ProxyCredential $ProxyCredential
+    if ($null -eq $azureNetDownload) {
+        Write-Warning "Failed to retrieve download location for Azure IP ranges. Falling back to cached file. Use -Debug for more information."
+    }
+    else {
+        $azureNetDownload = ($azureNetDownload.RawContent | Select-string -Pattern 'https:\/\/download\.microsoft\.com\/download.+\.json",').Matches[0].Value            
+        $azureNetDownload = $azureNetDownload.Substring(0, $azureNetDownload.Length - 2)
+        $azureNetDownloadRaw = (Invoke-WebRequestEx -Uri $azureNetDownload -ProxyServer $ProxyServer -ProxyCredential $ProxyCredential)
+        if ($null -eq $azureNetDownloadRaw) {
+            Write-Warning "Failed to retrieve Azure IP ranges. Falling back to cached file. Use -Debug for more information."
         }
         else {
-            $azureNetDownload = ($azureNetDownload.RawContent | Select-string -Pattern 'https:\/\/download\.microsoft\.com\/download.+\.json",').Matches[0].Value            
-            $azureNetDownload = $azureNetDownload.Substring(0, $azureNetDownload.Length - 2)
-            $azureNetDownloadRaw = (Invoke-WebRequestEx -Uri $azureNetDownload -ProxyServer $ProxyServer -ProxyCredential $ProxyCredential)
-            if ($null -eq $azureNetDownloadRaw) {
-                Write-Warning "Failed to retrieve Azure IP ranges. Falling back to cached file. Use -Debug for more information."
-            }
-            else {
-                $azureNetDownloadRaw = $azureNetDownloadRaw.RawContent
-                $azureRegionJson = ($azureNetDownloadRaw.Substring($azureNetDownloadRaw.IndexOf('{'), ($azureNetDownloadRaw.LastIndexOf('}') - $azureNetDownloadRaw.IndexOf('{')) + 1) | ConvertFrom-Json).values.properties
-                # sort the IP ranges so that those without a region, then service, are last
-                foreach ($region in $azureRegionJson | Sort-Object -Property region, systemService  -Descending) {
-                    write-progress -activity "Processing Azure regions" -status "Processing region: $($region.region)" -percentcomplete (($azureRegionJson.IndexOf($region) / $azureRegionJson.Count) * 100)
-                    foreach ($addressPrefix in $region.addressPrefixes) {
-                        if (TestIPv4Subnet -IPSubnet $addressPrefix) {
-                            if ($azureRegionHashTable.Contains($addressPrefix)) {
-                                # ignore duplicate IP range if it does not include region or service details. Attempt to remove duplicates with less details than already discovered.
-                                if (($region.region -ne "") -and ($region.systemService -ne "")) {
-                                    $azureRegions += [PSCustomObject]@{
-                                        Subnet        = $addressPrefix
-                                        Region        = $region.region
-                                        Service       = $region.systemService
-                                        SubnetSize    = $addressPrefix.split("/")[1]
-                                        CloudProvider = "Azure"
-                                    }
-                                }
-                            }
-                            else {
-                                $azureRegionHashTable.Add($addressPrefix, $null)
+            $azureNetDownloadRaw = $azureNetDownloadRaw.RawContent
+            $azureRegionJson = ($azureNetDownloadRaw.Substring($azureNetDownloadRaw.IndexOf('{'), ($azureNetDownloadRaw.LastIndexOf('}') - $azureNetDownloadRaw.IndexOf('{')) + 1) | ConvertFrom-Json).values.properties
+            # sort the IP ranges so that those without a region, then service, are last
+            foreach ($region in $azureRegionJson | Sort-Object -Property region, systemService  -Descending) {
+                write-progress -activity "Processing Azure regions" -status "Processing region: $($region.region)" -percentcomplete (($azureRegionJson.IndexOf($region) / $azureRegionJson.Count) * 100)
+                foreach ($addressPrefix in $region.addressPrefixes) {
+                    if (TestIPv4Subnet -IPSubnet $addressPrefix) {
+                        if ($azureRegionHashTable.Contains($addressPrefix)) {
+                            # ignore duplicate IP range if it does not include region or service details. Attempt to remove duplicates with less details than already discovered.
+                            if (($region.region -ne "") -and ($region.systemService -ne "")) {
                                 $azureRegions += [PSCustomObject]@{
                                     Subnet        = $addressPrefix
                                     Region        = $region.region
@@ -195,44 +148,30 @@ function GetAzureRegions {
                                 }
                             }
                         }
-                    }
-                }
-                write-progress -activity "Processing Azure regions" -status "Processing complete" -completed
-
-                # if no subnets found, return $null and do not update the cache file
-                if ($azureRegions.Count -eq 0) {
-                    Write-Error "No Azure IP ranges found. Source may have changed? Using Cached file instead."
-                }
-                else {
-                    # cache the JSON file for future use in the same directory as the script
-                    $azureRegions | ConvertTo-Json | Out-File -FilePath (Join-Path -Path $PSScriptRoot -ChildPath $azureCache)
-                        
-                    # return all IP ranges and regions
-                    if ($OctetFilter) {
-                        return $azureRegions | Where-Object { $_.Subnet -match "^$($OctetFilter)\." }
-                    }
-                    else {
-                        return $azureRegions
+                        else {
+                            $azureRegionHashTable.Add($addressPrefix, $null)
+                            $azureRegions += [PSCustomObject]@{
+                                Subnet        = $addressPrefix
+                                Region        = $region.region
+                                Service       = $region.systemService
+                                SubnetSize    = $addressPrefix.split("/")[1]
+                                CloudProvider = "Azure"
+                            }
+                        }
                     }
                 }
             }
+            write-progress -activity "Processing Azure regions" -status "Processing complete" -completed
+
+            # if no subnets found, return $null and do not update the cache file
+            if ($azureRegions.Count -eq 0) {
+                Write-Error "No Azure IP ranges found. Source may have changed? No updates saved."
+            }
+            # cache the JSON file for future use in the same directory as the script
+            else {
+                $azureRegions | ConvertTo-Json | Out-File -FilePath (Join-Path -Path $PSScriptRoot -ChildPath $azureCache)                 
+            }
         }
-    }
-    
-    # return the cached JSON file if it exists. Assume online checks failed if this code is reached.
-    Write-Verbose "Using cached Azure regions from $(Join-Path -Path $PSScriptRoot -ChildPath $azureCache). Use -ForceDownload to refresh."
-    try {
-        if ($OctetFilter) {
-            return (Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath $azureCache)) | ConvertFrom-Json | Where-Object { $_.Subnet -match "^$($OctetFilter)\." }
-        }
-        else {
-            return (Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath $azureCache)) | ConvertFrom-Json
-        }
-    }
-    catch {
-        Write-Error "Failed to read cached Azure IP ranges. Check the file exists and try again. Use -Debug for more information."
-        Write-Debug $_.Exception
-        return $null
     }
 }
  
@@ -240,58 +179,25 @@ function GetAzureRegions {
 #--------------------------
 # Function:     GetGoogleCloudRegions
 # Description:  Retrieves all Google Cloud regions and associated IP ranges. Uses a cached JSON file if it exists, otherwise retrieve from Google Cloud.
-#               Use OctetFilter parameter to limit values returned to those where first octet of subnet matches the value of this parameter.
 #--------------------------
-function GetGoogleCloudRegions {
-    param(
-        [parameter(Mandatory = $false)]
-        [string] $OctetFilter
-    )
-        
-    if (!(Test-Path (Join-Path -Path $PSScriptRoot -ChildPath $googleCloudCache)) -or $ForceDownload) {
-        Write-Verbose "Retrieving Google Cloud regions from $googleCloudSource"
-        $gcpNetRanges = Invoke-WebRequestEx -Uri $googleCloudSource -ProxyServer $ProxyServer -ProxyCredential $ProxyCredential
-        if ($null -eq $gcpNetRanges) {
-            Write-Warning "Failed to retrieve Google Cloud IP ranges. Falling back to cache file. Use -Debug for more information."
-        }
-        else {
-            $gcpNetRangesJson = ConvertFrom-Json $gcpNetRanges.Content 
-            $gcpRegions = ($gcpNetRangesJson.prefixes) | Where-Object { $null -ne $_.ipv4Prefix } | Select-Object @{E = { $_.ipv4Prefix }; L = "Subnet" }, @{E = { $_.scope }; L = "Region" }, service, @{E = { (($_.ipv4Prefix).split("/"))[1] }; L = "SubnetSize" }, @{E = { "Google Cloud" }; L = "CloudProvider" }
+function GetGoogleCloudRegions {   
+    Write-Verbose "Retrieving Google Cloud regions from $googleCloudSource"
+    $gcpNetRanges = Invoke-WebRequestEx -Uri $googleCloudSource -ProxyServer $ProxyServer -ProxyCredential $ProxyCredential
+    if ($null -eq $gcpNetRanges) {
+        Write-Warning "Failed to retrieve Google Cloud IP ranges. Falling back to cache file. Use -Debug for more information."
+    }
+    else {
+        $gcpNetRangesJson = ConvertFrom-Json $gcpNetRanges.Content 
+        $gcpRegions = ($gcpNetRangesJson.prefixes) | Where-Object { $null -ne $_.ipv4Prefix } | Select-Object @{E = { $_.ipv4Prefix }; L = "Subnet" }, @{E = { $_.scope }; L = "Region" }, service, @{E = { (($_.ipv4Prefix).split("/"))[1] }; L = "SubnetSize" }, @{E = { "Google Cloud" }; L = "CloudProvider" }
                 
-            # if no subnets found, return $null and do not update the cache file
-            if ($gcpRegions.Count -eq 0) {
-                Write-Error "No Google Cloud IP ranges found. Source may have changed? Using cached file instead."
-            }
-            else {
-                # cache the JSON file for future use in the same directory as the script
-                $gcpRegions | ConvertTo-Json | Out-File -FilePath (Join-Path -Path $PSScriptRoot -ChildPath $googleCloudCache)
-                    
-                # speed up the search by only returning subnets where the first octet matches the parameter value for $OctetFilter 
-                if ($OctetFilter) {
-                    return $gcpRegions | Where-Object { $_.Subnet -match "^$($OctetFilter)\." }
-                }
-                else {
-                    # return the IP ranges and regions
-                    return $gcpRegions
-                }
-            }
-        }
-    }
-        
-    # return the cached JSON file if it exists. Assume online checks failed (or not requested) if this code is reached.
-    Write-Verbose "Using cached Google Cloud regions from $(Join-Path -Path $PSScriptRoot -ChildPath $googleCloudCache). Use -ForceDownload to refresh."
-    try {
-        if ($OctetFilter) {
-            return (Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath $googleCloudCache)) | ConvertFrom-Json | Where-Object { $_.Subnet -match "^$($OctetFilter)\." }
+        # if no subnets found, return $null and do not update the cache file
+        if ($gcpRegions.Count -eq 0) {
+            Write-Error "No Google Cloud IP ranges found. Source may have changed? Using cached file instead."
         }
         else {
-            return (Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath $googleCloudCache)) | ConvertFrom-Json
+            # cache the JSON file for future use in the same directory as the script
+            $gcpRegions | ConvertTo-Json | Out-File -FilePath (Join-Path -Path $PSScriptRoot -ChildPath $googleCloudCache)
         }
-    }
-    catch {
-        Write-Error "Failed to read cached Google Cloud IP ranges. Check the file exists and try again. Use -Debug for more information."
-        Write-Debug $_.Exception
-        return $null
     }
 }
 
@@ -302,65 +208,35 @@ function GetGoogleCloudRegions {
 #               Sources IPs from a demo widget for ipinfo.io. May not be a reliable long term source.
 #--------------------------
 function GetAkamaiRegions {
-    param(
-        [parameter(Mandatory = $false)]
-        [string] $OctetFilter
-    )
-
     $AkamaiRegions = @()
-    if (!(Test-Path (Join-Path -Path $PSScriptRoot -ChildPath $akamaiCache)) -or $ForceDownload) {
-        Write-Verbose "Retrieving Akamai IP ranges from $akamaiSource"
-        $AkamaiNetRanges = Invoke-WebRequestEx -Uri $akamaiSource -ProxyServer $ProxyServer -ProxyCredential $ProxyCredential
-        if ($null -eq $AkamaiNetRanges) {
-            Write-Warning "Failed to retrieve Akamai IP ranges. Falling back to cache file. Use -Debug for more information."
-        }
-        else {
-            $AkamaiNetRangesObject = $AkamaiNetRanges.Content | ConvertFrom-Json
-            foreach ($subnet in $AkamaiNetRangesObject.ranges) {
-                # ipv4 ranges only
-                if (TestIPv4Subnet -IPSubnet $subnet) {
-                    $AkamaiRegions += [PSCustomObject]@{
-                        Subnet        = $subnet
-                        Region        = "Unknown"
-                        Service       = ""
-                        SubnetSize    = $subnet.split("/")[1]
-                        CloudProvider = "Akamai"
-                    }
+    Write-Verbose "Retrieving Akamai IP ranges from $akamaiSource"
+    $AkamaiNetRanges = Invoke-WebRequestEx -Uri $akamaiSource -ProxyServer $ProxyServer -ProxyCredential $ProxyCredential
+    if ($null -eq $AkamaiNetRanges) {
+        Write-Warning "Failed to retrieve Akamai IP ranges. Falling back to cache file. Use -Debug for more information."
+    }
+    else {
+        $AkamaiNetRangesObject = $AkamaiNetRanges.Content | ConvertFrom-Json
+        foreach ($subnet in $AkamaiNetRangesObject.ranges) {
+            # ipv4 ranges only
+            if (TestIPv4Subnet -IPSubnet $subnet) {
+                $AkamaiRegions += [PSCustomObject]@{
+                    Subnet        = $subnet
+                    Region        = "Unknown"
+                    Service       = ""
+                    SubnetSize    = $subnet.split("/")[1]
+                    CloudProvider = "Akamai"
                 }
             }
+        }
     
-            # if no subnets found, return $null and do not update the cache file
-            if ($AkamaiRegions.Count -eq 0) {
-                Write-Error "No Akamai IP ranges found. Source may have changed?. Using cached file instead."
-            }
-            else {
-                # cache the JSON file for future use in the same directory as the script
-                $AkamaiRegions | ConvertTo-Json | Out-File -FilePath (Join-Path -Path $PSScriptRoot -ChildPath $akamaiCache)
-                # return the IP ranges and regions
-                if ($OctetFilter) {
-                    return $AkamaiRegions | Where-Object { $_.Subnet -match "^$($OctetFilter)\." }
-                }
-                else {
-                    return $AkamaiRegions
-                }
-            }
-        }
-    }
-
-    # return the cached JSON file if it exists. Assume online checks failed (or not requested) if this code is reached.
-    Write-Verbose "Using cached Akamai IP ranges from $(Join-Path -Path $PSScriptRoot -ChildPath $akamaiCache). Use -ForceDownload to refresh."
-    try {
-        if ($OctetFilter) {
-            return (Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath $akamaiCache)) | ConvertFrom-Json | Where-Object { $_.Subnet -match "^$($OctetFilter)\." }
+        # if no subnets found, return $null and do not update the cache file
+        if ($AkamaiRegions.Count -eq 0) {
+            Write-Error "No Akamai IP ranges found. Source may have changed?. Using cached file instead."
         }
         else {
-            return (Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath $akamaiCache)) | ConvertFrom-Json
+            # cache the JSON file for future use in the same directory as the script
+            $AkamaiRegions | ConvertTo-Json | Out-File -FilePath (Join-Path -Path $PSScriptRoot -ChildPath $akamaiCache)
         }
-    }
-    catch {
-        Write-Error "Failed to read cached Akamai IP ranges. Check the file exists and try again. Use -Debug for more information."
-        Write-Debug $_.Exception
-        return $null
     }
 }
 
@@ -369,62 +245,32 @@ function GetAkamaiRegions {
 # Function:     GetCloudFlareRegions
 # Description:  Retrieves all CloudFlare IP ranges. Regions not available. Uses a cached JSON file if it exists, otherwise retrieve from CloudFlare.
 function GetCloudFlareRegions {
-    param(
-        [parameter(Mandatory = $false)]
-        [string] $OctetFilter
-    )
-
     $cloudFlareRegions = @()
-    if (!(Test-Path (Join-Path -Path $PSScriptRoot -ChildPath $cloudFlareCache)) -or $ForceDownload) {
-        Write-Verbose "Retrieving CloudFlare IP ranges from $cloudFlareSource"
-        $cloudFlareNetRanges = Invoke-WebRequestEx -Uri $cloudFlareSource -ProxyServer $ProxyServer -ProxyCredential $ProxyCredential
-        if ($null -eq $cloudFlareNetRanges) {
-            Write-Warning "Failed to retrieve CloudFlare IP ranges. Falling back to cache file. Use -Debug for more information."
-        }
-        else {
-            foreach ($subnet in ($cloudFlareNetRanges.Content | Select-String -Pattern '([0-9]{1,3}\.){3}[0-9]{1,3}/[0-9]{1,2}' -AllMatches).Matches.Value) {
-                $cloudFlareRegions += [PSCustomObject]@{
-                    Subnet        = $subnet
-                    Region        = "Unknown"
-                    Service       = ""
-                    SubnetSize    = $subnet.split("/")[1]
-                    CloudProvider = "CloudFlare"
-                }
+    Write-Verbose "Retrieving CloudFlare IP ranges from $cloudFlareSource"
+    $cloudFlareNetRanges = Invoke-WebRequestEx -Uri $cloudFlareSource -ProxyServer $ProxyServer -ProxyCredential $ProxyCredential
+    if ($null -eq $cloudFlareNetRanges) {
+        Write-Warning "Failed to retrieve CloudFlare IP ranges. Falling back to cache file. Use -Debug for more information."
+    }
+    else {
+        foreach ($subnet in ($cloudFlareNetRanges.Content | Select-String -Pattern '([0-9]{1,3}\.){3}[0-9]{1,3}/[0-9]{1,2}' -AllMatches).Matches.Value) {
+            $cloudFlareRegions += [PSCustomObject]@{
+                Subnet        = $subnet
+                Region        = "Unknown"
+                Service       = ""
+                SubnetSize    = $subnet.split("/")[1]
+                CloudProvider = "CloudFlare"
             }
+        }
 
-            # if no subnets found, return $null and do not update the cache file
-            if ($cloudFlareRegions.Count -eq 0) {
-                Write-Error "No CloudFlare IP ranges found. Source may have changed? Using cached file instead."
-            }
-            else {
-                # cache the JSON file for future use in the same directory as the script
-                $cloudFlareRegions | ConvertTo-Json | Out-File -FilePath (Join-Path -Path $PSScriptRoot -ChildPath $cloudFlareCache)
-                # return the IP ranges
-                if ($OctetFilter) {
-                    return $cloudFlareRegions | Where-Object { $_.Subnet -match "^$($OctetFilter)\." }
-                }
-                else {
-                    return $cloudFlareRegions   
-                } 
-            }
-        }   
-    }
-        
-    # return the cached JSON file if it exists. Assume online checks failed if this code is reached.
-    Write-Verbose "Using cached CloudFlare IP ranges from $(Join-Path -Path $PSScriptRoot -ChildPath $cloudFlareCache). Use -ForceDownload to refresh."
-    try {
-        if ($OctetFilter) {
-            return (Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath $cloudFlareCache)) | ConvertFrom-Json | Where-Object { $_.Subnet -match "^$($OctetFilter)\." }
+        # if no subnets found, return $null and do not update the cache file
+        if ($cloudFlareRegions.Count -eq 0) {
+            Write-Error "No CloudFlare IP ranges found. Source may have changed? No updates saved."
         }
+        # cache the JSON file for future use in the same directory as the script
         else {
-            return (Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath $cloudFlareCache)) | ConvertFrom-Json
+            $cloudFlareRegions | ConvertTo-Json | Out-File -FilePath (Join-Path -Path $PSScriptRoot -ChildPath $cloudFlareCache)
         }
-    }
-    catch {
-        Write-Error "Failed to read cached CloudFlare IP ranges. Check the file exists and try again. Use -Debug for more information."
-        Write-Debug $_.Exception
-        return $null
-    }
+    }   
 }
 
 
@@ -433,73 +279,42 @@ function GetCloudFlareRegions {
 # Description:  Retrieves all OCI regions and associated IP ranges. Uses a cached JSON file if it exists, otherwise retrieve from OCI.
 #--------------------------
 function GetOCIRegions {
-    param(
-        [parameter(Mandatory = $false)]
-        [string] $OctetFilter
-    )
-
     $ociRegions = @()
-    if (!(Test-Path (Join-Path -Path $PSScriptRoot -ChildPath $ociCache)) -or $ForceDownload) {
-        Write-Verbose "Retrieving Oracle Cloud regions from $ocisource"
-        $ociNetRanges = Invoke-WebRequestEx -Uri $ociSource -ProxyServer $ProxyServer -ProxyCredential $ProxyCredential
-        if ($null -eq $ociNetRanges) {
-            Write-Warning "Failed to retrieve CloudFlare IP ranges. Falling back to cache file. Use -Debug for more information."
-        }
-        else {
-            $ociNetRangesJson = ConvertFrom-Json $ociNetRanges.Content 
-            foreach ($region in $ociNetRangesJson.regions) {
-                write-progress -activity "Processing OCI regions" -status "Processing region: $($region.region)" -percentcomplete (($ociNetRangesJson.regions.IndexOf($region) / $ociNetRangesJson.regions.Count) * 100)
-                foreach ($addressPrefix in $region.cidrs) {
-                    if ($region.region -ne "") {
-                        if (TestIPv4Subnet -IPSubnet $addressPrefix.cidr) {
-                            foreach ($tag in $addressPrefix.tags) {
-                                $ociRegions += [PSCustomObject]@{
-                                    Subnet        = $addressPrefix.cidr
-                                    Region        = $region.region
-                                    Service       = $tag
-                                    SubnetSize    = $($addressPrefix.cidr).split("/")[1]
-                                    CloudProvider = "Oracle Cloud (OCI)"
-                                }
+    Write-Verbose "Retrieving Oracle Cloud regions from $ocisource"
+    $ociNetRanges = Invoke-WebRequestEx -Uri $ociSource -ProxyServer $ProxyServer -ProxyCredential $ProxyCredential
+    if ($null -eq $ociNetRanges) {
+        Write-Warning "Failed to retrieve CloudFlare IP ranges. Falling back to cache file. Use -Debug for more information."
+    }
+    else {
+        $ociNetRangesJson = ConvertFrom-Json $ociNetRanges.Content 
+        foreach ($region in $ociNetRangesJson.regions) {
+            write-progress -activity "Processing OCI regions" -status "Processing region: $($region.region)" -percentcomplete (($ociNetRangesJson.regions.IndexOf($region) / $ociNetRangesJson.regions.Count) * 100)
+            foreach ($addressPrefix in $region.cidrs) {
+                if ($region.region -ne "") {
+                    if (TestIPv4Subnet -IPSubnet $addressPrefix.cidr) {
+                        foreach ($tag in $addressPrefix.tags) {
+                            $ociRegions += [PSCustomObject]@{
+                                Subnet        = $addressPrefix.cidr
+                                Region        = $region.region
+                                Service       = $tag
+                                SubnetSize    = $($addressPrefix.cidr).split("/")[1]
+                                CloudProvider = "Oracle Cloud (OCI)"
                             }
                         }
                     }
                 }
             }
-            write-progress -activity "Processing OCI regions" -status "Completed" -completed
-            # if no subnets found, return $null and do not update the cache file
-            if ($ociRegions.Count -eq 0) {
-                Write-Error "No OCI IP ranges found. Source may have changed?. Using cached file instead."
-            }
-            else {
-                # cache the JSON file for future use in the same directory as the script
-                $ociRegions | ConvertTo-Json | Out-File -FilePath (Join-Path -Path $PSScriptRoot -ChildPath $ociCache)
-                # return the IP ranges and regions
-                if ($OctetFilter) {
-                    return $ociRegions | Where-Object { $_.Subnet -match "^$($OctetFilter)\." }
-                }
-                else {
-                    return $ociRegions
-                }
-            }
         }
-    }
-        
-    # return the cached JSON file if it exists. Assume online checks failed if this code is reached.
-    Write-Verbose "Using cached OCI regions from $(Join-Path -Path $PSScriptRoot -ChildPath $ociCache). Use -ForceDownload to refresh."
-    try {
-        if ($OctetFilter) {
-            return (Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath $ociCache)) | ConvertFrom-Json | Where-Object { $_.Subnet -match "^$($OctetFilter)\." }
+        write-progress -activity "Processing OCI regions" -status "Completed" -completed
+        # if no subnets found, return $null and do not update the cache file
+        if ($ociRegions.Count -eq 0) {
+            Write-Error "No OCI IP ranges found. Source may have changed?. No updates saved."
         }
+        # cache the JSON file for future use in the same directory as the script
         else {
-            return (Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath $ociCache)) | ConvertFrom-Json
+            $ociRegions | ConvertTo-Json | Out-File -FilePath (Join-Path -Path $PSScriptRoot -ChildPath $ociCache)
         }
-    }
-    catch {
-        Write-Error "Failed to read cached OCI IP ranges. Check the file exists and try again. Use -Debug for more information."
-        Write-Debug $_.Exception
-        return $null
-    }
-            
+    }   
 }
 
 
