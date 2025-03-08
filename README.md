@@ -26,10 +26,11 @@ $ cd CloudRegionAPI
 ### Install Dev dependencies (needed for build script)
 ```$ npm install --only=dev```
 
-### Update the JSON files defining the cloud provider's subnets, regions, and services
+### Optional: Update the JSON files defining the cloud provider's subnets, regions, and services
+>The repo files are updated 12am every Sunday via a GitHub action, so this step can be skipped unless the very latest updates are needed.
+
 Requires powershell 7 (or greater) to run the script. If building on Windows, do not use Powershell 5.1 as the performance will be exceedingly slow. 
 
-If this script isn't run the API will use the potentially older versions of the JSON files included in the repo.
 
 ```$ pwsh -File ./update-cloudprovidersjson.ps1```
 
