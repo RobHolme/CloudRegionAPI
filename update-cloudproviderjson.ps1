@@ -27,23 +27,6 @@ $ociCache = Join-Path -Path "src" -ChildPath "cloudproviders" -AdditionalChildPa
 $akamaiCache = Join-Path -Path "src" -ChildPath "cloudproviders" -AdditionalChildPath "Akamai.json"
     
 
-#--------------------------
-# Function:     TestIPv4Address
-# Description:  Returns $true if the given string is a valid IPv4 address.
-#--------------------------
-function TestIPv4Address {
-    [OutputType([bool])]
-    param (
-        [string]$IPAddress
-    )
-    
-    if ($IPAddress -match '^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$') {
-        return $true
-    }
-    else {
-        return $false
-    }
-}
 
 #--------------------------
 # Function:     TestIPv4Subnet
@@ -95,26 +78,6 @@ function Invoke-WebRequestEx {
         return $null
     }
         
-}
-
-#--------------------------
-# Function:     IsPrivateAddress
-# Description:  Returns true if the IPv4 address is within any of the RFC1918 private address ranges.
-#--------------------------
-function IsPrivateAddress {
-    param (
-        # IPv4 Address
-        [Parameter(Mandatory = $true)]
-        [string] $IpAddress
-    )
-
-    $rfc1918 = "172.16.0.0/12", "10.0.0.0/8", "192.168.0.0/16"
-    foreach ($addressRange in $rfc1918) {
-        if (TestIpInSubnet -IPAddress $IpAddress -Subnet $addressRange) {
-            return $true
-        }
-    }
-    return $false
 }
 
 #--------------------------
@@ -537,70 +500,6 @@ function GetOCIRegions {
         return $null
     }
             
-}
-
-
-#--------------------------
-# Function:     TestIpInSubnet
-# Description:  Returns $true if the IP address is within the given subnet.
-#--------------------------
-function TestIpInSubnet {
-    param (
-        [string]$IPAddress,
-        [string]$Subnet
-    )
-      
-    function ConvertTo-UInt32 {
-        param (
-            [byte[]]$IPAddressBytes
-        )
-        [Array]::Reverse($IPAddressBytes)
-        return [BitConverter]::ToInt32($IPAddressBytes, 0)
-    }
-    
-    function Get-NetworkAddress {
-        param (
-            [int32]$IPAddress,
-            [int32]$SubnetMask
-        )
-        return $IPAddress -band $SubnetMask
-    }
-    
-    function Get-BroadcastAddress {
-        param (
-            [int32]$NetworkAddress,
-            [int32]$SubnetMask
-        )
-        return $NetworkAddress -bor (-bnot $SubnetMask)
-    }
-    
-    # Split the subnet into address and prefix length
-    $subnetParts = $Subnet.Split('/')
-    $subnetAddress = $subnetParts[0]
-    $prefixLength = [int]$subnetParts[1]
-    
-    # Convert IP addresses to byte arrays
-    try {
-        $ipBytes = [System.Net.IPAddress]::Parse($IPAddress).GetAddressBytes()
-        $subnetBytes = [System.Net.IPAddress]::Parse($subnetAddress).GetAddressBytes()
-    }
-    catch {
-        Write-Warning "Invalid IP address or subnet. IP: $IPAddress, Subnet: $Subnet"
-    }
-    
-    # Convert byte arrays to UInt32
-    $ipUInt32 = ConvertTo-UInt32 -IPAddressBytes $ipBytes
-    $subnetUInt32 = ConvertTo-UInt32 -IPAddressBytes $subnetBytes
-    
-    # Calculate the subnet mask
-    $subnetMask = [int32](-bnot ([math]::Pow(2, 32 - $prefixLength) - 1))
-    
-    # Calculate network and broadcast addresses
-    $networkAddress = Get-NetworkAddress -IPAddress $subnetUInt32 -SubnetMask $subnetMask
-    $broadcastAddress = Get-BroadcastAddress -NetworkAddress $networkAddress -SubnetMask $subnetMask
-    
-    # Check if the IP address is within the subnet
-    return ($ipUInt32 -ge $networkAddress -and $ipUInt32 -le $broadcastAddress)
 }
 
 
