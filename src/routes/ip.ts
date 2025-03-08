@@ -20,10 +20,9 @@ router.get("/:ip", (req: Request, res: Response) => {
       return;
     }
     // get the cloud provider subnets (and region/service), filtered on the first octet of the IP Address matching the start of the subnet network address 
-    var CloudProviderDetails: cloudProviderJSON[] = GetCloudProviderSubnets('./release/cloudproviders/Azure.json', ipAddress.split(".")[0]);
-    CloudProviderDetails.push(...GetCloudProviderSubnets('./release/cloudproviders/AWS.json', ipAddress.split(".")[0]));
-    CloudProviderDetails.push(...GetCloudProviderSubnets('./release/cloudproviders/AWS.json', ipAddress.split(".")[0]));
+    var CloudProviderDetails: cloudProviderJSON[] = [];
     CloudProviderDetails.push(...GetCloudProviderSubnets('./release/cloudproviders/Azure.json', ipAddress.split(".")[0]));
+    CloudProviderDetails.push(...GetCloudProviderSubnets('./release/cloudproviders/AWS.json', ipAddress.split(".")[0]));
     CloudProviderDetails.push(...GetCloudProviderSubnets('./release/cloudproviders/GoogleCloud.json', ipAddress.split(".")[0]));
     CloudProviderDetails.push(...GetCloudProviderSubnets('./release/cloudproviders/OCI.json', ipAddress.split(".")[0]));
     CloudProviderDetails.push(...GetCloudProviderSubnets('./release/cloudproviders/Akamai.json', ipAddress.split(".")[0]));
