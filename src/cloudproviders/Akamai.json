@@ -1,6 +1,6 @@
 [
   {
-    "Subnet": "195.27.203.0/24",
+    "Subnet": "195.27.203.0/25",
     "Region": "Unknown",
     "Service": "",
     "SubnetSize": "25",
