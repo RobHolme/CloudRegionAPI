@@ -19,7 +19,7 @@ $akamaiSource = "https://ipinfo.io/widget/demo/akamai.com?dataset=ranges"
 
 # cache file names for each cloud provider
 
-$azureCache =  Join-Path -Path "src" -ChildPath "cloudproviders" -AdditionalChildPath "Azure.json"
+$azureCache = Join-Path -Path "src" -ChildPath "cloudproviders" -AdditionalChildPath "Azure.json"
 $awsCache = Join-Path -Path "src" -ChildPath "cloudproviders" -AdditionalChildPath "AWS.json"
 $googleCloudCache = Join-Path -Path "src" -ChildPath "cloudproviders" -AdditionalChildPath "GoogleCloud.json"
 $cloudFlareCache = Join-Path -Path "src" -ChildPath "cloudproviders" -AdditionalChildPath "CloudFlare.json"
@@ -99,7 +99,7 @@ function GetAWSRegions {
         }
         else {
             $awsNetRangesJson = ConvertFrom-Json $awsNetRanges.Content 
-            $awsRegions = $awsNetRangesJson.prefixes | Select-Object ip_prefix, Region, Service, @{E = { $_.ip_prefix.split("/")[1] }; L = "SubnetSize" }, @{E = { "AWS" }; L = "CloudProvider" }
+            $awsRegions = $awsNetRangesJson.prefixes | Select-Object  @{E = { $_.ip_prefix }; L = "Subnet" }, Region, Service, @{E = { $_.ip_prefix.split("/")[1] }; L = "SubnetSize" }, @{E = { "AWS" }; L = "CloudProvider" }
             
             # if not subnets found, return $null and do not update the cache file
             if ($awsRegions.Count -eq 0) {
@@ -110,7 +110,7 @@ function GetAWSRegions {
                 $awsRegions | ConvertTo-Json | Out-File -FilePath (Join-Path -Path $PSScriptRoot -ChildPath $awsCache)
                 # return regions
                 if ($OctetFilter) {
-                    return $awsRegions | Where-Object { $_.ip_prefix -match "^$($OctetFilter)\." }
+                    return $awsRegions | Where-Object { $_.Subnet -match "^$($OctetFilter)\." }
                 }
                 else {
                     return $awsRegions
@@ -123,7 +123,7 @@ function GetAWSRegions {
     Write-Verbose "Using cached AWS regions from $(Join-Path -Path $PSScriptRoot -ChildPath $awsCache). Use -ForceDownload to refresh."
     try {
         if ($OctetFilter) {
-            return (Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath $awsCache)) | ConvertFrom-Json | Where-Object { $_.ip_prefix -match "^$($OctetFilter)\." }
+            return (Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath $awsCache)) | ConvertFrom-Json | Where-Object { $_.Subnet -match "^$($OctetFilter)\." }
         }
         else {
             return (Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath $awsCache)) | ConvertFrom-Json
@@ -176,7 +176,7 @@ function GetAzureRegions {
                                 # ignore duplicate IP range if it does not include region or service details. Attempt to remove duplicates with less details than already discovered.
                                 if (($region.region -ne "") -and ($region.systemService -ne "")) {
                                     $azureRegions += [PSCustomObject]@{
-                                        ip_prefix     = $addressPrefix
+                                        Subnet        = $addressPrefix
                                         Region        = $region.region
                                         Service       = $region.systemService
                                         SubnetSize    = $addressPrefix.split("/")[1]
@@ -187,7 +187,7 @@ function GetAzureRegions {
                             else {
                                 $azureRegionHashTable.Add($addressPrefix, $null)
                                 $azureRegions += [PSCustomObject]@{
-                                    ip_prefix     = $addressPrefix
+                                    Subnet        = $addressPrefix
                                     Region        = $region.region
                                     Service       = $region.systemService
                                     SubnetSize    = $addressPrefix.split("/")[1]
@@ -209,7 +209,7 @@ function GetAzureRegions {
                         
                     # return all IP ranges and regions
                     if ($OctetFilter) {
-                        return $azureRegions | Where-Object { $_.ip_prefix -match "^$($OctetFilter)\." }
+                        return $azureRegions | Where-Object { $_.Subnet -match "^$($OctetFilter)\." }
                     }
                     else {
                         return $azureRegions
@@ -223,7 +223,7 @@ function GetAzureRegions {
     Write-Verbose "Using cached Azure regions from $(Join-Path -Path $PSScriptRoot -ChildPath $azureCache). Use -ForceDownload to refresh."
     try {
         if ($OctetFilter) {
-            return (Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath $azureCache)) | ConvertFrom-Json | Where-Object { $_.ip_prefix -match "^$($OctetFilter)\." }
+            return (Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath $azureCache)) | ConvertFrom-Json | Where-Object { $_.Subnet -match "^$($OctetFilter)\." }
         }
         else {
             return (Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath $azureCache)) | ConvertFrom-Json
@@ -256,7 +256,7 @@ function GetGoogleCloudRegions {
         }
         else {
             $gcpNetRangesJson = ConvertFrom-Json $gcpNetRanges.Content 
-            $gcpRegions = ($gcpNetRangesJson.prefixes) | Where-Object { $null -ne $_.ipv4Prefix } | Select-Object @{E = { $_.ipv4Prefix }; L = "ip_prefix" }, @{E = { $_.scope }; L = "Region" }, service, @{E = { (($_.ipv4Prefix).split("/"))[1] }; L = "SubnetSize" }, @{E = { "Google Cloud" }; L = "CloudProvider" }
+            $gcpRegions = ($gcpNetRangesJson.prefixes) | Where-Object { $null -ne $_.ipv4Prefix } | Select-Object @{E = { $_.ipv4Prefix }; L = "Subnet" }, @{E = { $_.scope }; L = "Region" }, service, @{E = { (($_.ipv4Prefix).split("/"))[1] }; L = "SubnetSize" }, @{E = { "Google Cloud" }; L = "CloudProvider" }
                 
             # if no subnets found, return $null and do not update the cache file
             if ($gcpRegions.Count -eq 0) {
@@ -268,7 +268,7 @@ function GetGoogleCloudRegions {
                     
                 # speed up the search by only returning subnets where the first octet matches the parameter value for $OctetFilter 
                 if ($OctetFilter) {
-                    return $gcpRegions | Where-Object { $_.ip_prefix -match "^$($OctetFilter)\." }
+                    return $gcpRegions | Where-Object { $_.Subnet -match "^$($OctetFilter)\." }
                 }
                 else {
                     # return the IP ranges and regions
@@ -282,7 +282,7 @@ function GetGoogleCloudRegions {
     Write-Verbose "Using cached Google Cloud regions from $(Join-Path -Path $PSScriptRoot -ChildPath $googleCloudCache). Use -ForceDownload to refresh."
     try {
         if ($OctetFilter) {
-            return (Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath $googleCloudCache)) | ConvertFrom-Json | Where-Object { $_.ip_prefix -match "^$($OctetFilter)\." }
+            return (Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath $googleCloudCache)) | ConvertFrom-Json | Where-Object { $_.Subnet -match "^$($OctetFilter)\." }
         }
         else {
             return (Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath $googleCloudCache)) | ConvertFrom-Json
@@ -320,7 +320,7 @@ function GetAkamaiRegions {
                 # ipv4 ranges only
                 if (TestIPv4Subnet -IPSubnet $subnet) {
                     $AkamaiRegions += [PSCustomObject]@{
-                        ip_prefix     = $subnet
+                        Subnet        = $subnet
                         Region        = "Unknown"
                         Service       = ""
                         SubnetSize    = $subnet.split("/")[1]
@@ -338,7 +338,7 @@ function GetAkamaiRegions {
                 $AkamaiRegions | ConvertTo-Json | Out-File -FilePath (Join-Path -Path $PSScriptRoot -ChildPath $akamaiCache)
                 # return the IP ranges and regions
                 if ($OctetFilter) {
-                    return $AkamaiRegions | Where-Object { $_.ip_prefix -match "^$($OctetFilter)\." }
+                    return $AkamaiRegions | Where-Object { $_.Subnet -match "^$($OctetFilter)\." }
                 }
                 else {
                     return $AkamaiRegions
@@ -351,7 +351,7 @@ function GetAkamaiRegions {
     Write-Verbose "Using cached Akamai IP ranges from $(Join-Path -Path $PSScriptRoot -ChildPath $akamaiCache). Use -ForceDownload to refresh."
     try {
         if ($OctetFilter) {
-            return (Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath $akamaiCache)) | ConvertFrom-Json | Where-Object { $_.ip_prefix -match "^$($OctetFilter)\." }
+            return (Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath $akamaiCache)) | ConvertFrom-Json | Where-Object { $_.Subnet -match "^$($OctetFilter)\." }
         }
         else {
             return (Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath $akamaiCache)) | ConvertFrom-Json
@@ -384,7 +384,7 @@ function GetCloudFlareRegions {
         else {
             foreach ($subnet in ($cloudFlareNetRanges.Content | Select-String -Pattern '([0-9]{1,3}\.){3}[0-9]{1,3}/[0-9]{1,2}' -AllMatches).Matches.Value) {
                 $cloudFlareRegions += [PSCustomObject]@{
-                    ip_prefix     = $subnet
+                    Subnet        = $subnet
                     Region        = "Unknown"
                     Service       = ""
                     SubnetSize    = $subnet.split("/")[1]
@@ -401,7 +401,7 @@ function GetCloudFlareRegions {
                 $cloudFlareRegions | ConvertTo-Json | Out-File -FilePath (Join-Path -Path $PSScriptRoot -ChildPath $cloudFlareCache)
                 # return the IP ranges
                 if ($OctetFilter) {
-                    return $cloudFlareRegions | Where-Object { $_.ip_prefix -match "^$($OctetFilter)\." }
+                    return $cloudFlareRegions | Where-Object { $_.Subnet -match "^$($OctetFilter)\." }
                 }
                 else {
                     return $cloudFlareRegions   
@@ -414,7 +414,7 @@ function GetCloudFlareRegions {
     Write-Verbose "Using cached CloudFlare IP ranges from $(Join-Path -Path $PSScriptRoot -ChildPath $cloudFlareCache). Use -ForceDownload to refresh."
     try {
         if ($OctetFilter) {
-            return (Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath $cloudFlareCache)) | ConvertFrom-Json | Where-Object { $_.ip_prefix -match "^$($OctetFilter)\." }
+            return (Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath $cloudFlareCache)) | ConvertFrom-Json | Where-Object { $_.Subnet -match "^$($OctetFilter)\." }
         }
         else {
             return (Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath $cloudFlareCache)) | ConvertFrom-Json
@@ -454,7 +454,7 @@ function GetOCIRegions {
                         if (TestIPv4Subnet -IPSubnet $addressPrefix.cidr) {
                             foreach ($tag in $addressPrefix.tags) {
                                 $ociRegions += [PSCustomObject]@{
-                                    ip_prefix     = $addressPrefix.cidr
+                                    Subnet        = $addressPrefix.cidr
                                     Region        = $region.region
                                     Service       = $tag
                                     SubnetSize    = $($addressPrefix.cidr).split("/")[1]
@@ -475,7 +475,7 @@ function GetOCIRegions {
                 $ociRegions | ConvertTo-Json | Out-File -FilePath (Join-Path -Path $PSScriptRoot -ChildPath $ociCache)
                 # return the IP ranges and regions
                 if ($OctetFilter) {
-                    return $ociRegions | Where-Object { $_.ip_prefix -match "^$($OctetFilter)\." }
+                    return $ociRegions | Where-Object { $_.Subnet -match "^$($OctetFilter)\." }
                 }
                 else {
                     return $ociRegions
@@ -488,7 +488,7 @@ function GetOCIRegions {
     Write-Verbose "Using cached OCI regions from $(Join-Path -Path $PSScriptRoot -ChildPath $ociCache). Use -ForceDownload to refresh."
     try {
         if ($OctetFilter) {
-            return (Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath $ociCache)) | ConvertFrom-Json | Where-Object { $_.ip_prefix -match "^$($OctetFilter)\." }
+            return (Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath $ociCache)) | ConvertFrom-Json | Where-Object { $_.Subnet -match "^$($OctetFilter)\." }
         }
         else {
             return (Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath $ociCache)) | ConvertFrom-Json

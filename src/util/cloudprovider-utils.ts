@@ -2,7 +2,7 @@ import fs from 'fs';
 
 // define the structure of the JSON files containing the cloud provider details
 export interface cloudProviderJSON {
-    ip_prefix: string;
+    Subnet: string;
     Region: string;
     Service: string;
     SubnetSize: string;
@@ -17,9 +17,9 @@ export function GetCloudProviderSubnets(Filename: string, Filter: string = ""): 
 
     var azureSubnets : cloudProviderJSON[] = JSON.parse(fs.readFileSync(Filename, 'utf-8'));
 
-    // filter the results on first digits if ip_prefix property (if set)
+    // filter the results on first digits of Subnet property (if set)
     if (Filter != "") {
-        const filteredAzureSubnets : cloudProviderJSON[] = azureSubnets.filter((item : cloudProviderJSON) => item.ip_prefix.indexOf(Filter) == 0);
+        const filteredAzureSubnets : cloudProviderJSON[] = azureSubnets.filter((item : cloudProviderJSON) => item.Subnet.indexOf(Filter) == 0);
         return filteredAzureSubnets;
     }
     return azureSubnets;

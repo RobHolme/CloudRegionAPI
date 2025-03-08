@@ -4,15 +4,16 @@ import { GetCloudProviderSubnets, cloudProviderJSON } from '../util/cloudprovide
 const router = Router();
 
 // -----------------------------
-// Get IP address router
+// Get IP address router (/:ip)
 // Use a path parameter to retrieve the IP address to query. e.g.  http://server/ip/20.340.54.4
+// Returns result as JSON. Empty array if no match found.
 // -----------------------------
 router.get("/:ip", (req: Request, res: Response) => {
   const ipAddress = req.params.ip;
   var jsonResult: Object[] = [];
   res.setHeader('content-type', 'application/json');
 
-  // return error if the string does not match the format of an IPv4 address
+  // only process 'ip' parameters that are valid IPv4 addresses
   if (TestIPv4Address(ipAddress)) {
     // return an error for private addresses - likely to be private endpoints
     if (TestPrivateAddress(ipAddress) == true) {
@@ -28,15 +29,17 @@ router.get("/:ip", (req: Request, res: Response) => {
     CloudProviderDetails.push(...GetCloudProviderSubnets('./release/cloudproviders/Akamai.json', ipAddress.split(".")[0]));
     CloudProviderDetails.push(...GetCloudProviderSubnets('./release/cloudproviders/CloudFlare.json', ipAddress.split(".")[0]));
 
+    // filter the cloud provider subnets to find the subnet that the IP address belongs to
     CloudProviderDetails.forEach((currentSubnet: cloudProviderJSON) => {
-      if (TestIpInSubnet(ipAddress, currentSubnet.ip_prefix)) {
+      if (TestIpInSubnet(ipAddress, currentSubnet.Subnet)) {
         jsonResult.push(currentSubnet);
       }
     });
 
+    // return the JSON result
     res.send(JSON.stringify(jsonResult, null, 2));
-    //res.send(TestIpInSubnet(ipAddress, "20.0.0.0/24"));
   } else {
+    // return a 404 error if the IP address is not valid
     res.status(404).json({ message: "IPv4 Address failed validation" });
   }
 });
