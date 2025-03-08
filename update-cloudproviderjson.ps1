@@ -98,6 +98,8 @@ function GetAWSRegions {
         # if not subnets found, return $null and do not update the cache file
         if ($awsRegions.Count -eq 0) {
             Write-Error "No AWS IP ranges found. Source may have changed? No updates saved."
+            # return error code to indicate no subnets found (should trigger github action to fail)
+            exit 1
         }
         else {
             # cache the JSON file for future use in the same directory as the script, return the IP ranges and regions
@@ -166,6 +168,8 @@ function GetAzureRegions {
             # if no subnets found, return $null and do not update the cache file
             if ($azureRegions.Count -eq 0) {
                 Write-Error "No Azure IP ranges found. Source may have changed? No updates saved."
+                # return error code to indicate no subnets found (should trigger github action to fail)
+                exit 1
             }
             # cache the JSON file for future use in the same directory as the script
             else {
@@ -193,6 +197,8 @@ function GetGoogleCloudRegions {
         # if no subnets found, return $null and do not update the cache file
         if ($gcpRegions.Count -eq 0) {
             Write-Error "No Google Cloud IP ranges found. Source may have changed? Using cached file instead."
+            # return error code to indicate no subnets found (should trigger github action to fail)
+            exit 1
         }
         else {
             # cache the JSON file for future use in the same directory as the script
@@ -232,6 +238,8 @@ function GetAkamaiRegions {
         # if no subnets found, return $null and do not update the cache file
         if ($AkamaiRegions.Count -eq 0) {
             Write-Error "No Akamai IP ranges found. Source may have changed?. Using cached file instead."
+            # return error code to indicate no subnets found (should trigger github action to fail)
+            exit 1
         }
         else {
             # cache the JSON file for future use in the same directory as the script
@@ -265,6 +273,8 @@ function GetCloudFlareRegions {
         # if no subnets found, return $null and do not update the cache file
         if ($cloudFlareRegions.Count -eq 0) {
             Write-Error "No CloudFlare IP ranges found. Source may have changed? No updates saved."
+            # return error code to indicate no subnets found (should trigger github action to fail)
+            exit 1
         }
         # cache the JSON file for future use in the same directory as the script
         else {
@@ -309,6 +319,8 @@ function GetOCIRegions {
         # if no subnets found, return $null and do not update the cache file
         if ($ociRegions.Count -eq 0) {
             Write-Error "No OCI IP ranges found. Source may have changed?. No updates saved."
+            # return error code to indicate no subnets found (should trigger github action to fail)
+            exit 1
         }
         # cache the JSON file for future use in the same directory as the script
         else {
