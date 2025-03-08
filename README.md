@@ -95,5 +95,5 @@ $ sudo ./build-container.sh
 
 ### Run the container
 ```bash
-$ sudo docker compose up -d
+$ sudo docker run --name CloudRegionAPI --publish 80:80 --env NODE_ENV=production --detach robholme/cloud-region-api:latest
 ```
