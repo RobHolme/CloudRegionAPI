@@ -30,13 +30,4 @@ jobs:
       - name: Build node solution
         run: node --run build
 
-      # push to repository. Ignore push errors - i.e. if there are no changes to the compiled .js files (and updated .json files)
-      - name: Push to repository
-        continue-on-error: true
-        run: |
-          git config user.name ${{ secrets.USERNAME }}
-          git config user.email ${{ secrets.EMAIL }}
-          now=$(date)
-          git add ./release/
-          git commit -m "Auto build of ./release [$now]"
-          git push
+      # TO DO: add tests here
