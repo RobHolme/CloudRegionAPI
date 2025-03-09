@@ -75,6 +75,79 @@ Client information returned as a JSON payload
   }
 }
 ```
+
+## Azure Parameter
+Returns all Azure IPv4 subnets.
+
+__```GET http://127.0.0.1/azure```__
+
+
+### Authentication
+No authentication required.
+
+### Body
+All Azure subnets returned as a JSON payload
+
+## AWS Parameter
+Returns all AWS IPv4 subnets.
+
+__```GET http://127.0.0.1/aws```__
+
+
+### Authentication
+No authentication required.
+
+### Body
+All AWS subnets returned as a JSON payload
+
+## OCI Parameter
+Returns all Oracle Cloud (OCI) IPv4 subnets.
+
+__```GET http://127.0.0.1/oci```__
+
+
+### Authentication
+No authentication required.
+
+### Body
+All Oracle Cloud (OCI) subnets returned as a JSON payload
+
+## Google Parameter
+Returns all Google Cloud IPv4 subnets.
+
+__```GET http://127.0.0.1/google```__
+
+
+### Authentication
+No authentication required.
+
+### Body
+All Google Cloud subnets returned as a JSON payload
+
+## Akamai Parameter
+Returns all Akamai IPv4 subnets.
+
+__```GET http://127.0.0.1/akamai```__
+
+
+### Authentication
+No authentication required.
+
+### Body
+All Akamai subnets returned as a JSON payload
+
+## CloudFlare Parameter
+Returns all CloudFlare IPv4 subnets.
+
+__```GET http://127.0.0.1/cloudflare```__
+
+
+### Authentication
+No authentication required.
+
+### Body
+All CloudFlare subnets returned as a JSON payload
+
 <br>
 <br>
 
