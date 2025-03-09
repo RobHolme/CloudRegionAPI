@@ -54,7 +54,7 @@ jobs:
           target: final
           push: true
           tags: |
-             ${{ env.REGISTRY }}/ ${{ env.REGISTRY }}/ ${{ env.IMAGE_NAME }}:latest
+             ${{ env.REGISTRY }}/${{ env.OWNER }}/${{ env.IMAGE_NAME }}:latest
           build-args: |
             NODE_ENV=production
     
