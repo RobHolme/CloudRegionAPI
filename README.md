@@ -34,14 +34,14 @@ Multiple results may be returned. Some cloud providers include super nets and sm
 ```yaml
 [
   {
-    "ip_prefix": "3.16.0.0/14",
+    "Subnet": "3.16.0.0/14",
     "region": "us-east-2",
     "service": "AMAZON",
     "SubnetSize": "14",
     "CloudProvider": "AWS"
   },
   {
-    "ip_prefix": "3.16.0.0/14",
+    "Subnet": "3.16.0.0/14",
     "region": "us-east-2",
     "service": "EC2",
     "SubnetSize": "14",
