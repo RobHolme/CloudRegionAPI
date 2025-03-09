@@ -16,14 +16,19 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-              # build /release/*.js files from /src/*.ts 
-      #- name: Build node solution release
-      #  uses: actions/setup-node@v1
+      # setup node (v22)
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '22'
+      
+      # install npm dependencies
+      - name: Install dependencies
+        run: npm install
 
-      #  run: |
-      #   npm install
-      #  run: |
-      #   node --run build
+      # build node solution
+      - name: Build node solution
+        run: node --run build
 
       # login in to GitHub Container registry
       - name: Login to GitHub Container registry
@@ -49,7 +54,7 @@ jobs:
           target: final
           push: true
           tags: |
-            $REGISTRY/$OWNER/$IMAGE_NAME:latest
+            $REGISTRY/$OWNER/$IMAGE_NAME
           build-args: |
             NODE_ENV=production
     
