@@ -30,7 +30,7 @@ Results returned as a JSON payload
   }
 ]
 ```
-Multiple results may be returned. Some cloud providers include supernets and smaller subnets that a given Ip may match both - or sometimes the same subnet is repeated with different service tags:
+Multiple results may be returned. Some cloud providers include super nets and smaller subnets that a given IP may match both - or sometimes the same subnet is repeated with different service tags. e.g:
 
 ```yaml
 [
