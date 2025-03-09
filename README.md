@@ -7,12 +7,11 @@ The API provides the following path based parameters:
 >URL examples assume API is running on localhost (127.0.0.1). Replace with the URL of the container / node app this solution is deployed to.
 ## IP Parameter
 
-
 __```GET http://127.0.0.1/ip/{IPv4Addres}```__
 
 {IPvAddress} - The IPv4 address of the cloud service.
 
-e.g. ```curl http://192.168.0.26/ip/34.37.1.5```
+e.g. ```curl http://127.0.0.1/ip/34.37.1.5```
 
 ### Authentication
 No authentication required.
@@ -51,7 +50,36 @@ Multiple results may be returned. Some cloud providers include supernets and sma
   }
 ]
 ```
+## Info Parameter
+Displays information about the client connection.
 
+__```GET http://127.0.0.1/info```__
+
+
+e.g. ```curl http://127.0.0.1/info```
+
+### Authentication
+No authentication required.
+
+### Body
+Client information returned as a JSON payload
+
+```JSON
+{
+  "ClientIP": "::ffff:127.0.0.1",
+  "Protocol": "http",
+  "HTTPVersion": "1.1",
+  "Headers": {
+    "host": "127.0.0.1",
+    "user-agent": "curl/8.10.1",
+    "accept": "*/*"
+  }
+}
+```
+<br>
+<br>
+
+## Notes
 
 IP ranges and region details for each cloud provider are sourced from:
 * https://ip-ranges.amazonaws.com/ip-ranges.json
@@ -65,7 +93,7 @@ IP ranges and region details for each cloud provider are sourced from:
 <br>
 
 
-# Running under local node.js
+# Build and run via local node.js environment
 ### Clone the repo
 ```
 $ git clone https://github.com:RobHolme/CloudRegionAPI.git
@@ -121,7 +149,7 @@ Results will be returned as a JSON string. Multiple matches may be returned with
 <br>
 
 
-# Running under local docker engine
+# Build and run via local docker engine
 
 ### Install node build dependencies:
 ```bash
