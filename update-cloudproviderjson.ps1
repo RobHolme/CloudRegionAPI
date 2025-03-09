@@ -5,7 +5,6 @@ Download JSON files detailing subnets for each cloud provider / CDN
 #>
 
 
-
 # timeout to retrieve the IP ranges from source sites (in seconds)
 $timeout = 5
 
@@ -18,7 +17,6 @@ $ociSource = "https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json"
 $akamaiSource = "https://ipinfo.io/widget/demo/akamai.com?dataset=ranges"
 
 # cache file names for each cloud provider
-
 $azureCache = Join-Path -Path "src" -ChildPath "cloudproviders" -AdditionalChildPath "Azure.json"
 $awsCache = Join-Path -Path "src" -ChildPath "cloudproviders" -AdditionalChildPath "AWS.json"
 $googleCloudCache = Join-Path -Path "src" -ChildPath "cloudproviders" -AdditionalChildPath "GoogleCloud.json"
@@ -26,7 +24,6 @@ $cloudFlareCache = Join-Path -Path "src" -ChildPath "cloudproviders" -Additional
 $ociCache = Join-Path -Path "src" -ChildPath "cloudproviders" -AdditionalChildPath "OCI.json"
 $akamaiCache = Join-Path -Path "src" -ChildPath "cloudproviders" -AdditionalChildPath "Akamai.json"
     
-
 
 #--------------------------
 # Function:     TestIPv4Subnet
@@ -94,7 +91,6 @@ function GetAWSRegions {
     else {
         $awsNetRangesJson = ConvertFrom-Json $awsNetRanges.Content 
         $awsRegions = $awsNetRangesJson.prefixes | Select-Object  @{E = { $_.ip_prefix }; L = "Subnet" }, Region, Service, @{E = { $_.ip_prefix.split("/")[1] }; L = "SubnetSize" }, @{E = { "AWS" }; L = "CloudProvider" }
-            
         # if not subnets found, return $null and do not update the cache file
         if ($awsRegions.Count -eq 0) {
             Write-Error "No AWS IP ranges found. Source may have changed? No updates saved."
@@ -164,7 +160,6 @@ function GetAzureRegions {
                 }
             }
             write-progress -activity "Processing Azure regions" -status "Processing complete" -completed
-
             # if no subnets found, return $null and do not update the cache file
             if ($azureRegions.Count -eq 0) {
                 Write-Error "No Azure IP ranges found. Source may have changed? No updates saved."
@@ -355,7 +350,3 @@ $AkamaiRegions = GetAkamaiRegions
 Write-Verbose "$($AkamaiRegions.Count) Akamai subnets loaded"
     
 write-progress -activity "Loading subnet ranges" -status "Completed" -completed
-
-
-
-

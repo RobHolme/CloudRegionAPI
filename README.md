@@ -4,7 +4,6 @@ API to return the cloud provider and region for a given IPv4 address. Multiple r
 
 The API provides the following path based parameters:
 
->URL examples assume API is running on localhost (127.0.0.1). Replace with the URL of the container / node app this solution is deployed to.
 ## IP Parameter
 
 __```GET http://127.0.0.1/ip/{IPv4Addres}```__
@@ -80,6 +79,8 @@ Client information returned as a JSON payload
 <br>
 
 ## Notes
+
+>URL examples assume API is running on localhost (127.0.0.1). Replace with the URL of the container / node app this solution is deployed to.
 
 IP ranges and region details for each cloud provider are sourced from:
 * https://ip-ranges.amazonaws.com/ip-ranges.json
