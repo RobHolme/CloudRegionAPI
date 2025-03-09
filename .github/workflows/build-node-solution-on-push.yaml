@@ -37,6 +37,6 @@ jobs:
           git config user.name ${{ secrets.USERNAME }}
           git config user.email ${{ secrets.EMAIL }}
           now=$(date)
-          git add /release/
-          git commit -m "Auto build of /release [$now]"
+          git add ./release/
+          git commit -m "Auto build of ./release [$now]"
           git push
