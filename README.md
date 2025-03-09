@@ -1,6 +1,58 @@
 # CloudRegionAPI
 API to return the cloud provider and region for a given IPv4 address. Multiple results may be returned - some subnet scopes overlap. 
 
+
+The API provides the following path based parameters:
+
+>URL examples assume API is running on localhost (127.0.0.1). Replace with the URL of the container / node app this solution is deployed to.
+## IP Parameter
+
+
+__```GET http://127.0.0.1/ip/{IPv4Addres}```__
+
+{IPvAddress} - The IPv4 address of the cloud service.
+
+e.g. ```curl http://192.168.0.26/ip/34.37.1.5```
+
+### Authentication
+No authentication required.
+
+### Body
+Results returned as a JSON payload
+
+```JSON
+[
+  {
+    "ip_prefix": "34.37.0.0/16",
+    "Region": "us-west8",
+    "service": "Google Cloud",
+    "SubnetSize": "16",
+    "CloudProvider": "Google Cloud"
+  }
+]
+```
+Multiple results may be returned. Some cloud providers include supernets and smaller subnets that a given Ip may match both - or sometimes the same subnet is repeated with different service tags:
+
+```yaml
+[
+  {
+    "ip_prefix": "3.16.0.0/14",
+    "region": "us-east-2",
+    "service": "AMAZON",
+    "SubnetSize": "14",
+    "CloudProvider": "AWS"
+  },
+  {
+    "ip_prefix": "3.16.0.0/14",
+    "region": "us-east-2",
+    "service": "EC2",
+    "SubnetSize": "14",
+    "CloudProvider": "AWS"
+  }
+]
+```
+
+
 IP ranges and region details for each cloud provider are sourced from:
 * https://ip-ranges.amazonaws.com/ip-ranges.json
 * https://www.microsoft.com/en-us/download/confirmation.aspx?id=56519
