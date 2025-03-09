@@ -29,3 +29,14 @@ jobs:
       # build node solution
       - name: Build node solution
         run: node --run build
+
+      # push to repository. Ignore push errors - i.e. if there are no changes to the compiled .js files 
+      - name: Push to repository
+        continue-on-error: true
+        run: |
+          git config user.name ${{ secrets.USERNAME }}
+          git config user.email ${{ secrets.EMAIL }}
+          now=$(date)
+          git add -A
+          git commit -m "Auto build of /release/*.js from /src/ [$now]"
+          git push
