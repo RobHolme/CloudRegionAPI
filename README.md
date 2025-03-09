@@ -167,7 +167,9 @@ IP ranges and region details for each cloud provider are sourced from:
 <br>
 
 
-# Build and run via local node.js environment
+# Build / Run Options
+
+## Option 1: Build and run via local node.js environment
 ### Clone the repo
 ```
 $ git clone https://github.com:RobHolme/CloudRegionAPI.git
@@ -194,36 +196,12 @@ Requires powershell 7 (or greater) to run the script. If building on Windows, do
 ### Run
 ```$ node --run serve```
 
-### Connect
-connect to http://127.0.0.1/ip/{ipaddress}  (where {ipaddress} is the IPv4 address to search on)
 
-example:
-http://127.0.0.1/ip/20.60.182.68
-
-Results will be returned as a JSON string. Multiple matches may be returned with overlap between larger and smaller subnets:
-```json
-[
-  {
-    "ip_prefix": "20.60.182.0/23",
-    "Region": "australiaeast",
-    "Service": "AzureStorage",
-    "SubnetSize": "23",
-    "CloudProvider": "Azure"
-  },
-  {
-    "ip_prefix": "20.60.0.0/16",
-    "Region": "",
-    "Service": "AzureStorage",
-    "SubnetSize": "16",
-    "CloudProvider": "Azure"
-  }
-]
-```
 <br>
 <br>
 
 
-# Build and run via local docker engine
+## Option 2: Build and run via local docker engine
 
 ### Install node build dependencies:
 ```bash
@@ -248,7 +226,14 @@ If this script isn't run the API will use the potentially older versions of the 
 $ sudo ./build-container.sh
 ```
 
-### Run the container
-```bash
+### Run the container from local image
+```
 $ sudo docker run --name CloudRegionAPI --publish 80:80 --env NODE_ENV=production --detach robholme/cloud-region-api:latest
+```
+
+## Option 3: Run published container from GitHub Container Registry
+
+### Run the container
+```
+$ sudo docker run --name CloudRegionAPI --publish 80:80 --env NODE_ENV=production --detach ghcr.io/robholme/cloud-region-api:latest
 ```
