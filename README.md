@@ -8,7 +8,7 @@ The API provides the following path based parameters:
 
 __```GET http://127.0.0.1/ip/{IPv4Addres}```__
 
-{IPvAddress} - The IPv4 address of the cloud service.
+__IPvAddress \<string\>__ : The IPv4 address of the cloud service.
 
 e.g. ```curl http://127.0.0.1/ip/34.37.1.5```
 
