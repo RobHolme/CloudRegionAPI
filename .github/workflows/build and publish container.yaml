@@ -32,8 +32,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: [22.x]
-        run: npm install
-        run: node --run build
+        run: |
+         npm install
+        run: |
+         node --run build
 
       # build the docker image, push to GitHub container registry
       - name: Build and Push Docker Image
