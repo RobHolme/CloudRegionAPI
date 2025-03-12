@@ -13,7 +13,9 @@ app.use("/ip", ipRoutes);
 
 // handle requests for the root URL
 app.get("/", (req: Request, res: Response) => {
-  res.send("Welcome");
+  var html: string = fs.readFileSync('./release/html/search.html', 'utf-8');
+  res.send(html);
+  // res.send("Welcome");
 });
 
 // handle requests for the /info URL
