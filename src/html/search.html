@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Cloud Region</title>
+
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+
+    <script>
+        // Function to submit the form and display result in a table
+        async function submitForm(event) {
+            document.getElementById('result').textContent = "";
+            event.preventDefault();
+            const ip = document.getElementById('ip').value;
+            const response = await fetch(`/ip/${ip}`);
+            const jsonData = await response.json();
+            if (jsonData.length == 0) {
+                document.getElementById('result').textContent = "No results found.";
+                console.log("No results found.");
+                return;
+            }
+            const tableContainer = document.getElementById('table-container');
+            if (tableContainer.firstChild) {
+                tableContainer.removeChild(tableContainer.firstChild);
+            }
+            document.getElementById('table-container').appendChild(generateTable(jsonData));
+        }
+
+        // Function to generate a table from JSON data.
+        // Table header is created from keys of the first object in the array.
+        function generateTable(jsonData) {
+            const table = document.createElement('table');
+            const thead = document.createElement('thead');
+            const tbody = document.createElement('tbody');
+
+            // Create table header. Manually add Cloud Provider, Region, Service, Subnet headers
+            const headerRow = document.createElement('tr');
+            "Cloud Provider,Region,Service,Subnet".split(',').forEach(key => {
+                const th = document.createElement('th');
+                th.textContent = key.charAt(0).toUpperCase() + key.slice(1);
+                headerRow.appendChild(th);
+            });
+
+            /*
+            // Create table header from keys of the first object in the array
+            Object.keys(jsonData[0]).forEach(key => {
+                const th = document.createElement('th');
+                th.textContent = key.charAt(0).toUpperCase() + key.slice(1);
+                headerRow.appendChild(th);
+            });
+            */
+            thead.appendChild(headerRow);
+
+            // Create table rows
+            jsonData.forEach(item => {
+                const headers = ["Cloud Provider,Region,Service,Subnet"]
+                headers.forEach(key => {
+                    console.log(key);
+                    const td = document.createElement('td');
+                    td.textContent = item[key].value
+                    row.appendChild(td);
+                });
+                tbody.appendChild(row);
+            });
+
+            /*
+            // Create table rows from jsonData
+            jsonData.forEach(item => {
+                const row = document.createElement('tr');
+                Object.values(item).forEach(value => {
+                    const td = document.createElement('td');
+                    td.textContent = value;
+                    row.appendChild(td);
+                });
+                tbody.appendChild(row);
+            });
+            */
+
+            table.appendChild(thead);
+            table.appendChild(tbody);
+            return table;
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>Find cloud service region</h1>
+    <form onsubmit="submitForm(event)">
+        <label for="ip">IP Address:</label>
+        <input type="text" id="ip" name="ip" required>
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    <pre id="result"></pre>
+    <div id="table-container"></div>
+</body>
+
+</html>
