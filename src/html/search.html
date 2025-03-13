@@ -11,9 +11,15 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
+        body {
+            text-align: center;
+        }
+
         table {
-            width: 85%;
+            margin-left: auto;
+            margin-right: auto;
             border-collapse: collapse;
+            align-content: center;
         }
 
         th,
@@ -26,20 +32,23 @@
         th {
             background-color: #f2f2f2;
         }
+
+        form {
+            text-align: center;
+        }
+
+
     </style>
 
     <script>
         // Function to submit the form and display result in a table
         async function submitForm(event) {
+            event.preventDefault();
+            
             // clear previous results
             document.getElementById('result').textContent = "";
             document.getElementById('table-container').textContent = "";
-//            const tableContainer = document.getElementById('table-container');
-//            if (tableContainer.firstChild) {
-//                tableContainer.removeChild(tableContainer.firstChild);
-//            }
 
-            event.preventDefault();
             const ip = document.getElementById('ip').value;
             const response = await fetch(`/ip/${ip}`);
             const jsonData = await response.json();
@@ -89,15 +98,31 @@
 </head>
 
 <body>
-    <h2>Locate region of a cloud service</h2>
+    <div>
+        <h2>Locate region of a cloud service</h2>
+        <p>Enter the IPv4 address of the cloud service to determine the region the service is located in.</p>
+    
     <form onsubmit="submitForm(event)">
-        <label for="ip">Cloud Service IP Address:</label>
+        <label for="ip">IP Address:</label>
         <input type="text" id="ip" name="ip" required>
         <button type="submit">Submit</button>
     </form>
+</p>  
     <br>
     <pre id="result"></pre>
     <div id="table-container"></div>
+
+    <div style="position: relative">
+        <p style="position: fixed; bottom: 0; width:100%;">
+            <font size="2">
+                Project src: <a href="https://github.com/RobHolme/CloudRegionAPI">https://github.com/RobHolme/CloudRegionAPI</a><br>
+                Report Issues: <a href="https://github.com/RobHolme/CloudRegionAPI/issues">https://github.com/RobHolme/CloudRegionAPI/issues</a><br>
+                Container Image: ghcr.io/robholme/cloud-region-api:latest
+            </font>
+            <br><br>
+            <font size="1">© 2025 Rob Holme</font>
+        </p>
+    </div>
 </body>
 
 </html>
