@@ -11,6 +11,9 @@ app.use(express.json());
 // define the routes
 app.use("/ip", ipRoutes);
 
+// favicon
+app.use('/favicon.ico', express.static('./release/images/favicon.ico'));
+
 // handle requests for the root URL
 app.get("/", (req: Request, res: Response) => {
   var html: string = fs.readFileSync('./release/html/search.html', 'utf-8');
