@@ -5,7 +5,7 @@
   "scripts": {
     "build": "tsc && npm run copy-json",
     "serve": "node release/index.js",
-    "copy-json": "copyfiles -u 2 ./src/cloudproviders/*.json ./release/cloudproviders && copyfiles -u 2 ./src/html/*.html ./release/html && copyfiles -u 2 ./src/image/*.ico ./release/image"
+    "copy-json": "copyfiles -u 2 ./src/cloudproviders/*.json ./release/cloudproviders && copyfiles -u 2 ./src/html/*.html ./release/html && copyfiles -u 2 ./src/images/*.ico ./release/images"
   },
   "keywords": [],
   "author": "",
