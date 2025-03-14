@@ -11,7 +11,8 @@ const router = Router();
 // -----------------------------
 router.get("/:hostname", (req: Request, res: Response) => {
     const hostname = req.params.hostname;
-    console.log(`Resolving ${hostname}`);
+//    console.log(req.url);
+//    console.log(`Resolving ${hostname}`);
     var jsonResult: Object[] = [];
 
     console.log(JSON.stringify(req.headers));
@@ -23,7 +24,8 @@ router.get("/:hostname", (req: Request, res: Response) => {
         addresses.forEach((address) => {
 
             console.log(`Querying ${address}`);
-// RELATIVE PATH NOT SUPPORTED !!!           
+// RELATIVE PATH NOT SUPPORTED !!! 
+// just call a function instead. Copy the /ip router functionality into a function - use for both /ip and /hostname          
             fetch(`/ip/${address}`)
                 .then((response) => {
                         jsonResult.push(response.json());
