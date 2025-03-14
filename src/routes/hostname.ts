@@ -11,18 +11,31 @@ const router = Router();
 // -----------------------------
 router.get("/:hostname", (req: Request, res: Response) => {
     const hostname = req.params.hostname;
+    console.log(`Resolving ${hostname}`);
     var jsonResult: Object[] = [];
+
+    console.log(JSON.stringify(req.headers));
 
     dns.resolve4(hostname, (err, addresses) => {
         if (err) throw err;
 
         // get the cloud provider subnets (and region/service) for each IP address
-        addresses.forEach(async (a) => {
-            const response = await fetch(`/ip/${addresses}`);
-            const jsonData = await response.json();
-            if (jsonData.length > 0) {
-                jsonResult.push(jsonData);
-            }
+        addresses.forEach((address) => {
+
+            console.log(`Querying ${address}`);
+// RELATIVE PATH NOT SUPPORTED !!!           
+            fetch(`/ip/${address}`)
+                .then((response) => {
+                        jsonResult.push(response.json());
+                })
+                .catch((err) => {
+                    console.log(`Unable to fetch /ip/${address} -`, err);
+                });
+            //       const response = await fetch('/ip/${address}');
+            //       const jsonData = await response.json();
+            //      if (jsonData.length > 0) {
+            //        jsonResult.push(jsonData);
+            //    }
         });
     });
     // return the JSON result

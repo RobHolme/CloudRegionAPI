@@ -172,10 +172,12 @@
       var jsonData = [];
 
       if (ip.match(ValidIpAddressRegex)) {
+console.log("ip is: " + ip);        
         const response = await fetch(`/ip/${ip}`);
         jsonData = await response.json();
       }
       else if (ip.match(ValidHostnameRegex)) {
+        console.log("hostname is: " + ip);        
         const response = await fetch(`/hostname/${ip}`);
         jsonData = await response.json();
       } else {
