@@ -1,7 +1,8 @@
 import fs from 'fs';
 import express, { Request, Response } from "express";
-import ipRoutes from "./routes/ip";
 import { cloudProviderJSON } from './util/cloudprovider-utils'
+import ipRoutes from "./routes/ip";
+import hostnameRoutes from "./routes/hostname";
 
 // create a new express application instance
 const app = express();
@@ -10,8 +11,8 @@ app.use(express.json());
 
 // define the routes
 app.use("/ip", ipRoutes);
-
-// favicon
+app.use("/hostname", hostnameRoutes);
+// static URL for favicon
 app.use('/favicon.ico', express.static('./release/images/favicon.ico'));
 
 // handle requests for the root URL
