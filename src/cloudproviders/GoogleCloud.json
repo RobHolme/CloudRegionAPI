@@ -2674,6 +2674,13 @@
     "CloudProvider": "Google Cloud"
   },
   {
+    "Subnet": "34.13.112.0/20",
+    "Region": "global",
+    "service": "Google Cloud",
+    "SubnetSize": "20",
+    "CloudProvider": "Google Cloud"
+  },
+  {
     "Subnet": "34.36.0.0/16",
     "Region": "global",
     "service": "Google Cloud",
