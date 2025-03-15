@@ -71,7 +71,7 @@ begin {
         )
 
         $retry = 0
-        while ($retry -lt 3) {
+        while ($retry++ -lt 3) {
             try {
                 # if a proxy server is specified, use it with the provided credentials, otherwise use direct connection
                 if (($ProxyServer) -and ($ProxyCredential)) {
@@ -83,7 +83,6 @@ begin {
                 }
             }
             catch {
-                $retry++
                 if ($retry -lt 3) {
                     Write-Warning "Failed to connect to $URI." + 3-$retry + "attempts remaining."
                 }
