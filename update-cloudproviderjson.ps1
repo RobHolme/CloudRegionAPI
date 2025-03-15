@@ -15,7 +15,7 @@ param (
 begin {
 
     # timeout to retrieve the IP ranges from source sites (in seconds)
-    $timeout = 5
+    $timeout = 10
 
     # source URLs for each cloud provider
     $awsSource = "https://ip-ranges.amazonaws.com/ip-ranges.json"
@@ -56,6 +56,7 @@ begin {
     # Function:     Invoke-WebRequestEx
     # Description:  Wrapper for Invoke-WebRequest with optional proxy support. 
     #               If $null values provided for the proxy server and credentials, a direct connection is used.
+    #               Failed connections are retried 3 times
     #--------------------------
     function Invoke-WebRequestEx {
         param (
@@ -69,21 +70,30 @@ begin {
             [Pscredential] $ProxyCredential
         )
 
-        try {
-            # if a proxy server is specified, use it with the provided credentials, otherwise use direct connection
-            if (($ProxyServer) -and ($ProxyCredential)) {
-                Write-Verbose "Using proxy server $ProxyServer"
-                return Invoke-WebRequest -Uri $Uri -TimeoutSec $timeout -Proxy $ProxyServer -ProxyCredential $ProxyCredential
+        $retry = 0
+        while ($retry -lt 3) {
+            try {
+                # if a proxy server is specified, use it with the provided credentials, otherwise use direct connection
+                if (($ProxyServer) -and ($ProxyCredential)) {
+                    Write-Verbose "Using proxy server $ProxyServer"
+                    return Invoke-WebRequest -Uri $Uri -TimeoutSec $timeout -Proxy $ProxyServer -ProxyCredential $ProxyCredential
+                }
+                else {
+                    return Invoke-WebRequest -Uri $Uri -TimeoutSec $timeout
+                }
             }
-            else {
-                return Invoke-WebRequest -Uri $Uri -TimeoutSec $timeout
+            catch {
+                $retry++
+                if ($retry -lt 3) {
+                    Write-Warning "Failed to connect to $URI." + 3-$retry + "attempts remaining."
+                }
+                else {
+                    Write-error $_.Exception
+                    return $null
+                }
             }
         }
-        catch {
-            Write-Debug $_.Exception
-            return $null
-        }
-        
+        return $null
     }
 
     #--------------------------
@@ -93,7 +103,7 @@ begin {
     function GetAWSRegions {
         # download the regions from source if the cached file does not exist or if the ForceDownload switch is used.
         Write-Verbose "Retrieving AWS regions from $awsSource"
-        $awsNetRanges = Invoke-WebRequestEx -Uri $awsSource -ProxyServer $ProxyServer -ProxyCredential $ProxyCredential
+        $awsNetRanges = Invoke-WebRequestEx -Uri $awsSource
         if ($null -eq $awsNetRanges) {
             Write-Warning "Failed to retrieve AWS IP ranges."
             # return error code to indicate no subnets found (should trigger github action to fail)
@@ -126,7 +136,7 @@ begin {
             
         # Get the download URL for the Azure IP ranges JSON file    
         Write-Verbose "Retrieving Azure regions from $azureSource"
-        $azureNetDownload = Invoke-WebRequestEx -Uri $azureSource -ProxyServer $ProxyServer -ProxyCredential $ProxyCredential
+        $azureNetDownload = Invoke-WebRequestEx -Uri $azureSource
         if ($null -eq $azureNetDownload) {
             Write-Warning "Failed to retrieve download location for Azure IP ranges."
             # return error code to indicate no subnets found (should trigger github action to fail)
@@ -135,7 +145,7 @@ begin {
         else {
             $azureNetDownload = ($azureNetDownload.RawContent | Select-string -Pattern 'https:\/\/download\.microsoft\.com\/download.+\.json",').Matches[0].Value            
             $azureNetDownload = $azureNetDownload.Substring(0, $azureNetDownload.Length - 2)
-            $azureNetDownloadRaw = (Invoke-WebRequestEx -Uri $azureNetDownload -ProxyServer $ProxyServer -ProxyCredential $ProxyCredential)
+            $azureNetDownloadRaw = (Invoke-WebRequestEx -Uri $azureNetDownload)
             if ($null -eq $azureNetDownloadRaw) {
                 Write-Warning "Failed to retrieve Azure IP ranges."
                 # return error code to indicate no subnets found (should trigger github action to fail)
@@ -196,7 +206,7 @@ begin {
     #--------------------------
     function GetGoogleCloudRegions {   
         Write-Verbose "Retrieving Google Cloud regions from $googleCloudSource"
-        $gcpNetRanges = Invoke-WebRequestEx -Uri $googleCloudSource -ProxyServer $ProxyServer -ProxyCredential $ProxyCredential
+        $gcpNetRanges = Invoke-WebRequestEx -Uri $googleCloudSource
         if ($null -eq $gcpNetRanges) {
             Write-Warning "Failed to retrieve Google Cloud IP ranges."
             # return error code to indicate no subnets found (should trigger github action to fail)
@@ -228,7 +238,7 @@ begin {
     function GetAkamaiRegions {
         $AkamaiRegions = @()
         Write-Verbose "Retrieving Akamai IP ranges from $akamaiSource"
-        $AkamaiNetRanges = Invoke-WebRequestEx -Uri $akamaiSource -ProxyServer $ProxyServer -ProxyCredential $ProxyCredential
+        $AkamaiNetRanges = Invoke-WebRequestEx -Uri $akamaiSource
         if ($null -eq $AkamaiNetRanges) {
             Write-Warning "Failed to retrieve Akamai IP ranges."
             # return error code to indicate no subnets found (should trigger github action to fail)
@@ -269,7 +279,7 @@ begin {
     function GetCloudFlareRegions {
         $cloudFlareRegions = @()
         Write-Verbose "Retrieving CloudFlare IP ranges from $cloudFlareSource"
-        $cloudFlareNetRanges = Invoke-WebRequestEx -Uri $cloudFlareSource -ProxyServer $ProxyServer -ProxyCredential $ProxyCredential
+        $cloudFlareNetRanges = Invoke-WebRequestEx -Uri $cloudFlareSource
         if ($null -eq $cloudFlareNetRanges) {
             Write-Warning "Failed to retrieve CloudFlare IP ranges."
             # return error code to indicate no subnets found (should trigger github action to fail)
@@ -307,7 +317,7 @@ begin {
     function GetOCIRegions {
         $ociRegions = @()
         Write-Verbose "Retrieving Oracle Cloud regions from $ocisource"
-        $ociNetRanges = Invoke-WebRequestEx -Uri $ociSource -ProxyServer $ProxyServer -ProxyCredential $ProxyCredential
+        $ociNetRanges = Invoke-WebRequestEx -Uri $ociSource
         if ($null -eq $ociNetRanges) {
             Write-Warning "Failed to retrieve CloudFlare IP ranges."
             # return error code to indicate no subnets found (should trigger github action to fail)
