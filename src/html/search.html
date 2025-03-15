@@ -69,9 +69,9 @@
 
     label {
       position: absolute;
-      top: 36px;
+      top: 30px;
       color: rgba(255, 255, 255, 0.5);
-      font: 400 36px Roboto;
+      font: 400 24px Roboto;
       cursor: text;
       transition: 0.25s ease;
     }
@@ -79,12 +79,13 @@
     input {
       display: block;
       width: 100%;
-      padding-top: 36px;
+      padding-top: 30px;
       border: none;
       border-radius: 0;
       color: white;
       background: #333;
-      font-size: 36px;
+      font-size: 30px;
+      font-family: monospace;
       transition: 0.3s ease;
     }
 
@@ -158,6 +159,8 @@
   </style>
 
   <script>
+    
+    // -----------------------------------------
     // Function to submit the form and display result in a table
     async function submitForm(event) {
       event.preventDefault();
@@ -191,7 +194,7 @@
         }    
       // If input pattern doesn't match IP address or hostname, display an error message  
       } else {       
-        document.getElementById('result').textContent = "Error: Invalid IP address or hostname.";
+        document.getElementById('result').textContent = "Error: Invalid IPv4 address or hostname.";
         return;
       }
 
@@ -203,6 +206,7 @@
       document.getElementById('table-container').appendChild(generateTable(jsonData));
     }
 
+    // -----------------------------------------
     // Function to generate a table from JSON data.
     // Table header is created from keys of the first object in the array.
     function generateTable(jsonData) {
@@ -235,7 +239,30 @@
       table.appendChild(tbody);
       return table;
     }
-  </script>
+
+    // -----------------------------------------
+    // Increase the size of the input field based on size of the IP / Hostname entered
+    function adjustInputWidth(input) {
+    // format text as lower case to make calculating width more consistent (or move to monospaced font?)
+    input.value = input.value.toLocaleLowerCase();
+    // Calculate the new width of the .centered style based on the length of the input value
+    const newWidth = Math.max((input.value.length * 17) + 10, 300); // Adjust the multiplier as needed
+    const element = document.querySelector('.centered');
+    element.style.width = `${newWidth}px`;
+}
+
+
+// -----------------------------------------
+// Register listener on page load
+window.onload = function() {
+  // Dynamically adjust input box width based on text size 
+  const inputBox = document.getElementById('ip');
+  inputBox.addEventListener('input', function() {
+    adjustInputWidth(inputBox);
+  });
+}
+
+</script>
 </head>
 
 <body>
@@ -245,7 +272,7 @@
       <div class="centered">
         <div class="group">
           <input id="ip" type="text" required="required" />
-          <label for="ip">IP Address</label>
+          <label for="ip">IP Address / Hostname</label>
           <div class="bar"></div>
           <button type="submit">Submit</button>
         </div>
