@@ -1,6 +1,6 @@
 import dns from 'node:dns';
 import { Router, Request, Response } from "express";
-import { cloudProviderJSON, SearchAllCloudProviders } from '../util/cloudprovider-utils';
+import { cloudProviderJSON,cloudProviderSearchResult, SearchAllCloudProviders } from '../util/cloudprovider-utils';
 
 const router = Router();
 
@@ -13,7 +13,7 @@ router.get("/:hostname", (req: Request, res: Response) => {
     const hostname = req.params.hostname;
     // resolve the hostname to an IPv4 address(s) - could be multiple A records. IPv6 not supported by this API.
     dns.resolve4(hostname, (err, addresses) => {
-        var matchingRegions: cloudProviderJSON[] = [];
+        var matchingRegions: cloudProviderSearchResult[] = [];
         if (err) {
             res.status(404).json({ message: "DNS lookup failed" });
             return
@@ -21,7 +21,8 @@ router.get("/:hostname", (req: Request, res: Response) => {
 
         // get the cloud provider subnets (and region/service) for each IP address resolved from the hostname
         for (var i = 0; i < addresses.length; i++) {
-            var cloudProviderResults: cloudProviderJSON[] = SearchAllCloudProviders(addresses[i]);
+            var cloudProviderResults: cloudProviderSearchResult[] = SearchAllCloudProviders(addresses[i]);
+
             matchingRegions.push(...cloudProviderResults);
         }
         // return the JSON result

@@ -9,6 +9,14 @@ export interface cloudProviderJSON {
     SubnetSize: string;
 };
 
+export interface cloudProviderSearchResult {
+    IPAddress: string;
+    Subnet: string;
+    Region: string;
+    Service: string;
+    SubnetSize: string;
+};
+
 
 //-----------------------------
 // Function:    GetCloudProviderSubnets
@@ -31,8 +39,8 @@ export function GetCloudProviderSubnets(Filename: string, Filter: string = ""): 
 // Function:    SearchAllCloudProviders
 // Description: Search all cloud providers for subnets that container the IP address
 //-----------------------------
-export function SearchAllCloudProviders(ipAddress: string): cloudProviderJSON[] {
-    var cloudProviderResults: cloudProviderJSON[] = [];
+export function SearchAllCloudProviders(ipAddress: string): cloudProviderSearchResult[] {
+    var cloudProviderResults: cloudProviderSearchResult[] = [];
     // get the cloud provider subnets (and region/service), filtered on the first octet of the IP Address matching the start of the subnet network address 
     var CloudProviderDetails: cloudProviderJSON[] = [];
     CloudProviderDetails.push(...GetCloudProviderSubnets('./release/cloudproviders/Azure.json', ipAddress.split(".")[0]));
@@ -45,7 +53,10 @@ export function SearchAllCloudProviders(ipAddress: string): cloudProviderJSON[] 
     // filter the cloud provider subnets to find the subnet that the IP address belongs to
     CloudProviderDetails.forEach((currentSubnet: cloudProviderJSON) => {
         if (TestIpInSubnet(ipAddress, currentSubnet.Subnet)) {
-            cloudProviderResults.push(currentSubnet);
+            var tempResult: cloudProviderSearchResult;
+            // merge the IPAddress and cloud provider JSON into a new object
+            tempResult = Object.assign({}, {IPAddress:ipAddress}, currentSubnet)
+            cloudProviderResults.push(tempResult);
         }
     });
     return cloudProviderResults;

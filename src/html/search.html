@@ -181,7 +181,7 @@
         return;
       }
       // Check if the input is a valid IP address or hostname, and call the appropriate function to retune results
-      if (ip.match(ValidIpAddressRegex)) {     
+      if (ip.match(ValidIpAddressRegex)) {   
         const response = await fetch(`/ip/${ip}`);
         jsonData = await response.json();
         // Check if the response status is not 200, and display an error message
@@ -192,14 +192,14 @@
       }
       else if (ip.match(ValidHostnameRegex)) {      
         const response = await fetch(`/hostname/${ip}`);
-        jsonData = await response.json(); 
+        jsonData = await response.json();
         // Check if the response status is not 200, and display an error message
         if (response.status != 200) {
           document.getElementById('result').textContent = "Error retrieving results: " + jsonData.message;
           return;
         }    
       // If input pattern doesn't match IP address or hostname, display an error message  
-      } else {       
+      } else {
         document.getElementById('result').textContent = "Error: Invalid IPv4 address or hostname.";
         return;
       }
@@ -222,7 +222,7 @@
 
       // Create table header. Manually add Cloud Provider, Region, Service, Subnet headers
       const headerRow = document.createElement('tr');
-      "Cloud Provider,Region,Service,Subnet".split(',').forEach(key => {
+      ['IP Address','Cloud Provider','Region','Service','Subnet'].forEach(key => {
         const th = document.createElement('th');
         th.textContent = key.charAt(0).toUpperCase() + key.slice(1);
         headerRow.appendChild(th);
@@ -230,7 +230,7 @@
       thead.appendChild(headerRow);
 
       // Create table rows, Manually specify the order of the keys used to populate the table
-      const headers = ['CloudProvider', 'Region', 'Service', 'Subnet'];
+      const headers = ['IPAddress','CloudProvider', 'Region', 'Service', 'Subnet'];
       jsonData.forEach(item => {
         const row = document.createElement('tr');
         headers.forEach((key) => {
@@ -249,26 +249,26 @@
     // -----------------------------------------
     // Increase the size of the input field based on size of the IP / Hostname entered
     function adjustInputWidth(input) {
-    // format text as lower case to make calculating width more consistent (or move to monospaced font?). Trim whitespace.
-    input.value = input.value.toLocaleLowerCase().trim();
-    // Calculate the new width of the .centered style based on the length of the input value
-    const newWidth = Math.max((input.value.length * 17) + 10, 300); // Adjust the multiplier as needed
-    const element = document.querySelector('.centered');
-    element.style.width = `${newWidth}px`;
-}
+      // format text as lower case to make calculating width more consistent (or move to monospaced font?). Trim whitespace.
+      input.value = input.value.toLocaleLowerCase().trim();
+      // Calculate the new width of the .centered style based on the length of the input value
+      const newWidth = Math.max((input.value.length * 17) + 10, 300); // Adjust the multiplier as needed
+      const element = document.querySelector('.centered');
+      element.style.width = `${newWidth}px`;
+    }
 
 
-// -----------------------------------------
-// Register listener on page load
-window.onload = function() {
-  // Dynamically adjust input box width based on text size 
-  const inputBox = document.getElementById('ip');
-  inputBox.addEventListener('input', function() {
-    adjustInputWidth(inputBox);
-  });
-}
+    // -----------------------------------------
+    // Register listener on page load
+    window.onload = function() {
+      // Dynamically adjust input box width based on text size 
+      const inputBox = document.getElementById('ip');
+      inputBox.addEventListener('input', function() {
+        adjustInputWidth(inputBox);
+      });
+    }
 
-</script>
+  </script>
 </head>
 
 <body>

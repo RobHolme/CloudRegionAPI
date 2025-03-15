@@ -1,6 +1,6 @@
 import { Router, Request, Response } from "express";
 import { TestIPv4Address, TestPrivateAddress, TestIpInSubnet } from '../util/ip-utils';
-import { SearchAllCloudProviders, cloudProviderJSON } from '../util/cloudprovider-utils'
+import { SearchAllCloudProviders, cloudProviderJSON, cloudProviderSearchResult } from '../util/cloudprovider-utils'
 const router = Router();
 
 // -----------------------------
@@ -20,7 +20,7 @@ router.get("/:ip", (req: Request, res: Response) => {
       res.status(404).json({ message: "IPv4 Address is a reserved address" });
       return;
     }
-    var CloudProviderDetails: cloudProviderJSON[] = SearchAllCloudProviders(ipAddress);
+    var CloudProviderDetails: cloudProviderSearchResult[] = SearchAllCloudProviders(ipAddress);
     // return the JSON result
     res.send(JSON.stringify(CloudProviderDetails, null, 2));
   } else {
