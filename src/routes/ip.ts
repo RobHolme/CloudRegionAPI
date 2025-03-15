@@ -20,26 +20,7 @@ router.get("/:ip", (req: Request, res: Response) => {
       res.status(404).json({ message: "IPv4 Address is a reserved address" });
       return;
     }
-
     var CloudProviderDetails: cloudProviderJSON[] = SearchAllCloudProviders(ipAddress);
-
-    /*
-    // get the cloud provider subnets (and region/service), filtered on the first octet of the IP Address matching the start of the subnet network address 
-    var CloudProviderDetails: cloudProviderJSON[] = [];
-    CloudProviderDetails.push(...GetCloudProviderSubnets('./release/cloudproviders/Azure.json', ipAddress.split(".")[0]));
-    CloudProviderDetails.push(...GetCloudProviderSubnets('./release/cloudproviders/AWS.json', ipAddress.split(".")[0]));
-    CloudProviderDetails.push(...GetCloudProviderSubnets('./release/cloudproviders/GoogleCloud.json', ipAddress.split(".")[0]));
-    CloudProviderDetails.push(...GetCloudProviderSubnets('./release/cloudproviders/OCI.json', ipAddress.split(".")[0]));
-    CloudProviderDetails.push(...GetCloudProviderSubnets('./release/cloudproviders/Akamai.json', ipAddress.split(".")[0]));
-    CloudProviderDetails.push(...GetCloudProviderSubnets('./release/cloudproviders/CloudFlare.json', ipAddress.split(".")[0]));
-
-    // filter the cloud provider subnets to find the subnet that the IP address belongs to
-    CloudProviderDetails.forEach((currentSubnet: cloudProviderJSON) => {
-      if (TestIpInSubnet(ipAddress, currentSubnet.Subnet)) {
-        jsonResult.push(currentSubnet);
-      }
-    });
-*/
     // return the JSON result
     res.send(JSON.stringify(CloudProviderDetails, null, 2));
   } else {
