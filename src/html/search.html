@@ -166,6 +166,7 @@
       event.preventDefault();
 
       // Regular expressions for IP address and hostname validation
+      invalidCharacter="\/|\\\\|\"|'|;";
       ValidIpAddressRegex = "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$";
       ValidHostnameRegex = "^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\-]*[A-Za-z0-9])$";
       // clear previous results from web page
@@ -174,6 +175,11 @@
       const ip = document.getElementById('ip').value;
       var jsonData = [];
 
+      // first reject any strings with invalid characters not picked up in the regexes below
+      if (ip.match(invalidCharacter)) { 
+        document.getElementById('result').textContent = "Error: Invalid IPv4 address or hostname.";
+        return;
+      }
       // Check if the input is a valid IP address or hostname, and call the appropriate function to retune results
       if (ip.match(ValidIpAddressRegex)) {     
         const response = await fetch(`/ip/${ip}`);
@@ -243,8 +249,8 @@
     // -----------------------------------------
     // Increase the size of the input field based on size of the IP / Hostname entered
     function adjustInputWidth(input) {
-    // format text as lower case to make calculating width more consistent (or move to monospaced font?)
-    input.value = input.value.toLocaleLowerCase();
+    // format text as lower case to make calculating width more consistent (or move to monospaced font?). Trim whitespace.
+    input.value = input.value.toLocaleLowerCase().trim();
     // Calculate the new width of the .centered style based on the length of the input value
     const newWidth = Math.max((input.value.length * 17) + 10, 300); // Adjust the multiplier as needed
     const element = document.querySelector('.centered');
