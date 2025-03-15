@@ -86,7 +86,9 @@ function GetAWSRegions {
     Write-Verbose "Retrieving AWS regions from $awsSource"
     $awsNetRanges = Invoke-WebRequestEx -Uri $awsSource -ProxyServer $ProxyServer -ProxyCredential $ProxyCredential
     if ($null -eq $awsNetRanges) {
-        Write-Warning "Failed to retrieve AWS IP ranges. Falling back to cached file. Use -Debug for more information."
+        Write-Warning "Failed to retrieve AWS IP ranges."
+        # return error code to indicate no subnets found (should trigger github action to fail)
+        exit 1
     }
     else {
         $awsNetRangesJson = ConvertFrom-Json $awsNetRanges.Content 
@@ -117,14 +119,18 @@ function GetAzureRegions {
     Write-Verbose "Retrieving Azure regions from $azureSource"
     $azureNetDownload = Invoke-WebRequestEx -Uri $azureSource -ProxyServer $ProxyServer -ProxyCredential $ProxyCredential
     if ($null -eq $azureNetDownload) {
-        Write-Warning "Failed to retrieve download location for Azure IP ranges. Falling back to cached file. Use -Debug for more information."
+        Write-Warning "Failed to retrieve download location for Azure IP ranges."
+        # return error code to indicate no subnets found (should trigger github action to fail)
+        exit 1
     }
     else {
         $azureNetDownload = ($azureNetDownload.RawContent | Select-string -Pattern 'https:\/\/download\.microsoft\.com\/download.+\.json",').Matches[0].Value            
         $azureNetDownload = $azureNetDownload.Substring(0, $azureNetDownload.Length - 2)
         $azureNetDownloadRaw = (Invoke-WebRequestEx -Uri $azureNetDownload -ProxyServer $ProxyServer -ProxyCredential $ProxyCredential)
         if ($null -eq $azureNetDownloadRaw) {
-            Write-Warning "Failed to retrieve Azure IP ranges. Falling back to cached file. Use -Debug for more information."
+            Write-Warning "Failed to retrieve Azure IP ranges."
+            # return error code to indicate no subnets found (should trigger github action to fail)
+            exit 1
         }
         else {
             $azureNetDownloadRaw = $azureNetDownloadRaw.RawContent
@@ -183,7 +189,9 @@ function GetGoogleCloudRegions {
     Write-Verbose "Retrieving Google Cloud regions from $googleCloudSource"
     $gcpNetRanges = Invoke-WebRequestEx -Uri $googleCloudSource -ProxyServer $ProxyServer -ProxyCredential $ProxyCredential
     if ($null -eq $gcpNetRanges) {
-        Write-Warning "Failed to retrieve Google Cloud IP ranges. Falling back to cache file. Use -Debug for more information."
+        Write-Warning "Failed to retrieve Google Cloud IP ranges."
+        # return error code to indicate no subnets found (should trigger github action to fail)
+        exit 1
     }
     else {
         $gcpNetRangesJson = ConvertFrom-Json $gcpNetRanges.Content 
@@ -213,7 +221,9 @@ function GetAkamaiRegions {
     Write-Verbose "Retrieving Akamai IP ranges from $akamaiSource"
     $AkamaiNetRanges = Invoke-WebRequestEx -Uri $akamaiSource -ProxyServer $ProxyServer -ProxyCredential $ProxyCredential
     if ($null -eq $AkamaiNetRanges) {
-        Write-Warning "Failed to retrieve Akamai IP ranges. Falling back to cache file. Use -Debug for more information."
+        Write-Warning "Failed to retrieve Akamai IP ranges."
+        # return error code to indicate no subnets found (should trigger github action to fail)
+        exit 1
     }
     else {
         $AkamaiNetRangesObject = $AkamaiNetRanges.Content | ConvertFrom-Json
@@ -232,7 +242,7 @@ function GetAkamaiRegions {
     
         # if no subnets found, return $null and do not update the cache file
         if ($AkamaiRegions.Count -eq 0) {
-            Write-Error "No Akamai IP ranges found. Source may have changed?. Using cached file instead."
+            Write-Error "No Akamai IP ranges found. Source may have changed?."
             # return error code to indicate no subnets found (should trigger github action to fail)
             exit 1
         }
@@ -252,7 +262,9 @@ function GetCloudFlareRegions {
     Write-Verbose "Retrieving CloudFlare IP ranges from $cloudFlareSource"
     $cloudFlareNetRanges = Invoke-WebRequestEx -Uri $cloudFlareSource -ProxyServer $ProxyServer -ProxyCredential $ProxyCredential
     if ($null -eq $cloudFlareNetRanges) {
-        Write-Warning "Failed to retrieve CloudFlare IP ranges. Falling back to cache file. Use -Debug for more information."
+        Write-Warning "Failed to retrieve CloudFlare IP ranges."
+        # return error code to indicate no subnets found (should trigger github action to fail)
+        exit 1    
     }
     else {
         foreach ($subnet in ($cloudFlareNetRanges.Content | Select-String -Pattern '([0-9]{1,3}\.){3}[0-9]{1,3}/[0-9]{1,2}' -AllMatches).Matches.Value) {
@@ -288,7 +300,9 @@ function GetOCIRegions {
     Write-Verbose "Retrieving Oracle Cloud regions from $ocisource"
     $ociNetRanges = Invoke-WebRequestEx -Uri $ociSource -ProxyServer $ProxyServer -ProxyCredential $ProxyCredential
     if ($null -eq $ociNetRanges) {
-        Write-Warning "Failed to retrieve CloudFlare IP ranges. Falling back to cache file. Use -Debug for more information."
+        Write-Warning "Failed to retrieve CloudFlare IP ranges."
+        # return error code to indicate no subnets found (should trigger github action to fail)
+        exit 1
     }
     else {
         $ociNetRangesJson = ConvertFrom-Json $ociNetRanges.Content 
