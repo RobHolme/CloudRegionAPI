@@ -21,13 +21,6 @@
     "CloudProvider": "CloudFlare"
   },
   {
-    "Subnet": "103.31.4.0/22",
-    "Region": "Unknown",
-    "Service": "",
-    "SubnetSize": "22",
-    "CloudProvider": "CloudFlare"
-  },
-  {
     "Subnet": "141.101.64.0/18",
     "Region": "Unknown",
     "Service": "",
