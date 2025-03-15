@@ -10,6 +10,7 @@ const router = Router();
 // Returns result as string[]. Empty array if no match found.
 // -----------------------------
 router.get("/:hostname", (req: Request, res: Response) => {
+    res.setHeader('content-type', 'application/json');
     const hostname = req.params.hostname;
     // resolve the hostname to an IPv4 address(s) - could be multiple A records. IPv6 not supported by this API.
     dns.resolve4(hostname, (err, addresses) => {
