@@ -21,6 +21,13 @@
     "CloudProvider": "Oracle Cloud (OCI)"
   },
   {
+    "Subnet": "129.145.76.0/22",
+    "Region": "us-ashburn-1",
+    "Service": "OCI",
+    "SubnetSize": "22",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
     "Subnet": "129.151.48.0/20",
     "Region": "us-ashburn-1",
     "Service": "OCI",
