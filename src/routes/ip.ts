@@ -1,6 +1,6 @@
 import { Router, Request, Response } from "express";
 import { TestIPv4Address, TestPrivateAddress, TestIpInSubnet } from '../util/ip-utils';
-import { GetCloudProviderSubnets, cloudProviderJSON } from '../util/cloudprovider-utils'
+import { SearchAllCloudProviders, cloudProviderJSON } from '../util/cloudprovider-utils'
 const router = Router();
 
 // -----------------------------
@@ -20,6 +20,10 @@ router.get("/:ip", (req: Request, res: Response) => {
       res.status(404).json({ message: "IPv4 Address is a reserved address" });
       return;
     }
+
+    var CloudProviderDetails: cloudProviderJSON[] = SearchAllCloudProviders(ipAddress);
+
+    /*
     // get the cloud provider subnets (and region/service), filtered on the first octet of the IP Address matching the start of the subnet network address 
     var CloudProviderDetails: cloudProviderJSON[] = [];
     CloudProviderDetails.push(...GetCloudProviderSubnets('./release/cloudproviders/Azure.json', ipAddress.split(".")[0]));
@@ -35,9 +39,9 @@ router.get("/:ip", (req: Request, res: Response) => {
         jsonResult.push(currentSubnet);
       }
     });
-
+*/
     // return the JSON result
-    res.send(JSON.stringify(jsonResult, null, 2));
+    res.send(JSON.stringify(CloudProviderDetails, null, 2));
   } else {
     // return a 404 error if the IP address is not valid
     res.status(404).json({ message: "IPv4 Address failed validation" });
