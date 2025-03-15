@@ -11,21 +11,23 @@ const router = Router();
 // -----------------------------
 router.get("/:hostname", (req: Request, res: Response) => {
     const hostname = req.params.hostname;
-    var matchingRegions: cloudProviderJSON[] = [];
     // resolve the hostname to an IPv4 address(s) - could be multiple A records. IPv6 not supported by this API.
     dns.resolve4(hostname, (err, addresses) => {
-
-// MOVE THIS TO AN EXCEPTION HANDLER ?
-        if (err) throw err;
+        var matchingRegions: cloudProviderJSON[] = [];
+        if (err) {
+            res.status(404).json({ message: "DNS lookup failed" });
+        }
 
         // get the cloud provider subnets (and region/service) for each IP address resolved from the hostname
-        addresses.forEach((address) => {
-        matchingRegions.push(...SearchAllCloudProviders(address));
+        for (var i = 0; i < addresses.length; i++) {
+            var cloudProviderResults: cloudProviderJSON[] = SearchAllCloudProviders(addresses[i]);
+            matchingRegions.push(...cloudProviderResults);
+            console.log("matchingRegions: " + JSON.stringify(matchingRegions, null, 2));
+        }
+        // return the JSON result
+        res.send(JSON.stringify(matchingRegions, null, 2));
 
-        });
     });
-    // return the JSON result
-    res.send(JSON.stringify(matchingRegions, null, 2));
 });
 
 export default router;
