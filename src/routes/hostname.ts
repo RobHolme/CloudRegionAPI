@@ -12,6 +12,18 @@ const router = Router();
 router.get("/:hostname", (req: Request, res: Response) => {
     const hostname = req.params.hostname;
     res.setHeader('content-type', 'application/json');
+
+    // validate input
+    const invalidCharacterRegEx: string ="\/|\\\\|\"|'|;";
+    const ValidHostnameRegex: string = "^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\-]*[A-Za-z0-9])$";
+    if (hostname.match(invalidCharacterRegEx)) {
+        res.status(404).json({ message: "DNS name not valid" });
+        return;
+    }
+    if (!hostname.match(ValidHostnameRegex)) {
+        res.status(404).json({ message: "DNS name not valid" });
+        return;
+    }
     // resolve the hostname to an IPv4 address(s) - could be multiple A records. IPv6 not supported by this API.
     dns.resolve4(hostname, (err, addresses) => {
         var matchingRegions: cloudProviderSearchResult[] = [];
