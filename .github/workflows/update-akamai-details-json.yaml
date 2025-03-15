@@ -1,0 +1,26 @@
+name: Weekly update of Akamai JSON files
+
+on:
+  schedule:
+    # 12:20am every Sunday
+    - cron: "20 0 * * 0"
+  workflow_dispatch:
+
+jobs:
+  update-cloud-provider-json:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Run update script
+        shell: pwsh
+        run: |
+          ./update-cloudproviderjson.ps1 -CloudProvider Akamai
+      - name: Push to repository
+        run: |
+          git config user.name ${{ secrets.USERNAME }}
+          git config user.email ${{ secrets.EMAIL }}
+          now=$(date)
+          git add -A
+          git commit -m "Auto update of Akamai details JSON files on $now"
+          git push
