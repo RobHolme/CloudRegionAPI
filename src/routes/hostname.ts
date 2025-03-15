@@ -16,6 +16,7 @@ router.get("/:hostname", (req: Request, res: Response) => {
         var matchingRegions: cloudProviderJSON[] = [];
         if (err) {
             res.status(404).json({ message: "DNS lookup failed" });
+            return
         }
 
         // get the cloud provider subnets (and region/service) for each IP address resolved from the hostname
