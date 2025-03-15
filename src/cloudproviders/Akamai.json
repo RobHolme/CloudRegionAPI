@@ -1,12 +1,5 @@
 [
   {
-    "Subnet": "23.0.48.0/20",
-    "Region": "Unknown",
-    "Service": "",
-    "SubnetSize": "20",
-    "CloudProvider": "Akamai"
-  },
-  {
     "Subnet": "186.251.179.224/28",
     "Region": "Unknown",
     "Service": "",
