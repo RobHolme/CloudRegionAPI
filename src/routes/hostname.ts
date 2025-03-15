@@ -22,7 +22,6 @@ router.get("/:hostname", (req: Request, res: Response) => {
         for (var i = 0; i < addresses.length; i++) {
             var cloudProviderResults: cloudProviderJSON[] = SearchAllCloudProviders(addresses[i]);
             matchingRegions.push(...cloudProviderResults);
-            console.log("matchingRegions: " + JSON.stringify(matchingRegions, null, 2));
         }
         // return the JSON result
         res.send(JSON.stringify(matchingRegions, null, 2));
