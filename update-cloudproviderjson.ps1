@@ -351,37 +351,37 @@ begin {
 process {
     # load the subnets for each cloud provider, or single provider if specified in -Cloudprovider parameter
     # AWS
-    if ($CloudProvider -eq "All") -or ($CloudProvider -eq "AWS") {
+    if (($CloudProvider -eq "All") -or ($CloudProvider -eq "AWS")) {
         write-progress -activity "Loading subnet ranges" -status "AWS" -percentcomplete 0                       
         $AWSRegions = GetAWSRegions
         Write-Verbose "$($AWSRegions.Count) AWS subnets loaded"
     }
     # Azure
-    if ($CloudProvider -eq "All") -or ($CloudProvider -eq "Azure") {
+    if (($CloudProvider -eq "All") -or ($CloudProvider -eq "Azure")) {
         write-progress -activity "Loading subnet ranges" -status "Azure" -percentcomplete 16 
         $AzureRegions = GetAzureRegions
         Write-Verbose "$($AzureRegions.Count) Azure subnets loaded"
     }
     # Google Cloud
-    if ($CloudProvider -eq "All") -or ($CloudProvider -eq "GoogleCloud") {
+    if (($CloudProvider -eq "All") -or ($CloudProvider -eq "GoogleCloud")) {
         write-progress -activity "Loading subnet ranges" -status "Google Cloud" -percentcomplete 33
         $GoogleCloudRegions = GetGoogleCloudRegions
         Write-Verbose "$($GoogleCloudRegions.Count) Google Cloud subnets loaded"
     }
     # CloudFlare
-    if ($CloudProvider -eq "All") -or ($CloudProvider -eq "CloudFlare") {
+    if (($CloudProvider -eq "All") -or ($CloudProvider -eq "CloudFlare")) {
         write-progress -activity "Loading subnet ranges" -status "CloudFlare" -percentcomplete 50
         $CloudFlareRegions = GetCloudFlareRegions
         Write-Verbose "$($CloudFlareRegions.Count) CloudFlare subnets loaded"
     }
     # Oracle Cloud (OCI)
-    if ($CloudProvider -eq "All") -or ($CloudProvider -eq "OCI") {
+    if (($CloudProvider -eq "All") -or ($CloudProvider -eq "OCI")) {
         write-progress -activity "Loading subnet ranges" -status "Oracle Cloud (OCI)" -percentcomplete 66
         $OCIRegions = GetOCIRegions
         Write-Verbose "$($OCIRegions.Count) OCI subnets loaded"
     }
     # Akamai
-    if ($CloudProvider -eq "All") -or ($CloudProvider -eq "Akamai") {
+    if (($CloudProvider -eq "All") -or ($CloudProvider -eq "Akamai")) {
         write-progress -activity "Loading subnet ranges" -status "Akamai" -percentcomplete 83
         $AkamaiRegions = GetAkamaiRegions
         Write-Verbose "$($AkamaiRegions.Count) Akamai subnets loaded"
