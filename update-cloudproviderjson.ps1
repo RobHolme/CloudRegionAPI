@@ -90,7 +90,7 @@ function GetAWSRegions {
     }
     else {
         $awsNetRangesJson = ConvertFrom-Json $awsNetRanges.Content 
-        $awsRegions = $awsNetRangesJson.prefixes | Select-Object  @{E = { $_.ip_prefix }; L = "Subnet" }, Region, Service, @{E = { $_.ip_prefix.split("/")[1] }; L = "SubnetSize" }, @{E = { "AWS" }; L = "CloudProvider" }
+        $awsRegions = $awsNetRangesJson.prefixes | Select-Object  @{E = { $_.ip_prefix }; L = "Subnet" }, @{E = { $_.region }; L = "Region"}, @{E = { $_.service }; L = "Segion"}, @{E = { $_.ip_prefix.split("/")[1] }; L = "SubnetSize" }, @{E = { "AWS" }; L = "CloudProvider" }
         # if not subnets found, return $null and do not update the cache file
         if ($awsRegions.Count -eq 0) {
             Write-Error "No AWS IP ranges found. Source may have changed? No updates saved."
