@@ -1,7 +1,6 @@
 import fs from 'fs';
 import express, { Request, Response } from "express";
 import { cloudProviderJSON } from './util/cloudprovider-utils'
-import ipRoutes from "./routes/ip";
 import hostnameRoutes from "./routes/hostname";
 
 // create a new express application instance
@@ -10,7 +9,6 @@ const PORT = process.env.PORT || 80;
 app.use(express.json());
 
 // define the routes
-app.use("/ip", ipRoutes);
 app.use("/hostname", hostnameRoutes);
 // static URL for favicon
 app.use('/favicon.ico', express.static('./release/images/favicon.ico'));
@@ -19,7 +17,6 @@ app.use('/favicon.ico', express.static('./release/images/favicon.ico'));
 app.get("/", (req: Request, res: Response) => {
   var html: string = fs.readFileSync('./release/html/search.html', 'utf-8');
   res.send(html);
-  // res.send("Welcome");
 });
 
 // handle requests for the /info URL
