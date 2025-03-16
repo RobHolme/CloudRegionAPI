@@ -20,7 +20,7 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 // handle requests for the /info URL
-app.get("/info", (req: Request, res: Response) => {
+app.get("/api/info", (req: Request, res: Response) => {
   res.setHeader('content-type', 'application/json');
   var jsonResult: Object = {
     ClientIP: req.ip,
