@@ -29,7 +29,7 @@ router.get("/:hostname", (req: Request, res: Response) => {
     if (ip4SubnetRegEx.test(hostname)) {
         // return an error for private addresses - likely to be private endpoints
         if (TestPrivateAddress(hostname) == true) {
-            res.status(404).json({ message: "IPv4 Address is a reserved address" });
+            res.status(404).json({ message: `IPv4 Address (${hostname}) is a reserved address` });
             return;
         }
         var ipSearchResults: cloudProviderSearchResult[] = SearchAllCloudProviders(hostname);

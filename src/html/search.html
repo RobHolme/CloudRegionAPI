@@ -173,7 +173,7 @@
       jsonData = await response.json();
       // Check if the response status is not 200, and display an error message
       if (response.status != 200) {
-        document.getElementById('result').textContent = "Error retrieving results: " + jsonData.message;
+        document.getElementById('result').textContent = "Error: " + jsonData.message;
         return;
       }
       // if a 200 response code returned, display the results in a table
