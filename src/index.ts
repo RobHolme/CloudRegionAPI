@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 80;
 app.use(express.json());
 
 // define the routes
-app.use("/hostname", hostnameRoutes);
+app.use("/api/hostname", hostnameRoutes);
 // static URL for favicon
 app.use('/favicon.ico', express.static('./release/images/favicon.ico'));
 
