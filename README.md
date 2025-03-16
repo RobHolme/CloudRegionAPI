@@ -1,5 +1,5 @@
 # CloudRegionAPI
-API to return the cloud provider and region for a given IPv4 address. Multiple results may be returned - some subnet scopes overlap. 
+API to return the cloud provider and region for a given IPv4 address or hostname. Multiple results may be returned - some subnet scopes overlap. 
 
 > A webpage page that consumes the API is published to the root of the node website. Connect to the website root for an example page using this API. e.g. http://127.0.0.1
 
@@ -8,11 +8,13 @@ The API provides the following path based parameters:
 
 ## IP Parameter
 
-__```GET http://127.0.0.1/ip/{IPv4Addres}```__
+__```GET http://127.0.0.1/api/hostname/{hostname}```__
 
-__IPvAddress \<string\>__ : The IPv4 address of the cloud service.
+__hostname \<string\>__ : The DNS name or IPv4 address of the cloud service.
 
-e.g. ```curl http://127.0.0.1/ip/34.37.1.5```
+e.g. ```curl http://127.0.0.1/api/hostname/34.37.1.5```
+
+e.g. ```curl http://127.0.0.1/api/hostname/example.com```
 
 ### Authentication
 No authentication required.
@@ -23,7 +25,8 @@ Results returned as a JSON payload
 ```JSON
 [
   {
-    "ip_prefix": "34.37.0.0/16",
+    "IPAddress": "34.37.1.5",
+    "Subnet": "34.37.0.0/16",
     "Region": "us-west8",
     "service": "Google Cloud",
     "SubnetSize": "16",
@@ -31,7 +34,10 @@ Results returned as a JSON payload
   }
 ]
 ```
-Multiple results may be returned. Some cloud providers include super nets and smaller subnets that a given IP may match both - or sometimes the same subnet is repeated with different service tags. e.g:
+Multiple results may be returned. 
+- DNS names may resolve to multiple IP addresses.
+- Some cloud providers include super nets and smaller subnets that a given IP may match both.
+- The same subnet is repeated with different service tags. e.g:
 
 ```yaml
 [
@@ -54,10 +60,10 @@ Multiple results may be returned. Some cloud providers include super nets and sm
 ## Info Parameter
 Displays information about the client connection.
 
-__```GET http://127.0.0.1/info```__
+__```GET http://127.0.0.1/api/info```__
 
 
-e.g. ```curl http://127.0.0.1/info```
+e.g. ```curl http://127.0.0.1/api/info```
 
 ### Authentication
 No authentication required.
@@ -81,7 +87,7 @@ Client information returned as a JSON payload
 ## Azure Parameter
 Returns all Azure IPv4 subnets.
 
-__```GET http://127.0.0.1/azure```__
+__```GET http://127.0.0.1/api/azure```__
 
 
 ### Authentication
@@ -93,7 +99,7 @@ All Azure subnets returned as a JSON payload
 ## AWS Parameter
 Returns all AWS IPv4 subnets.
 
-__```GET http://127.0.0.1/aws```__
+__```GET http://127.0.0.1/api/aws```__
 
 
 ### Authentication
@@ -105,7 +111,7 @@ All AWS subnets returned as a JSON payload
 ## OCI Parameter
 Returns all Oracle Cloud (OCI) IPv4 subnets.
 
-__```GET http://127.0.0.1/oci```__
+__```GET http://127.0.0.1/api/oci```__
 
 
 ### Authentication
@@ -117,7 +123,7 @@ All Oracle Cloud (OCI) subnets returned as a JSON payload
 ## Google Parameter
 Returns all Google Cloud IPv4 subnets.
 
-__```GET http://127.0.0.1/google```__
+__```GET http://127.0.0.1/api/google```__
 
 
 ### Authentication
@@ -129,7 +135,7 @@ All Google Cloud subnets returned as a JSON payload
 ## Akamai Parameter
 Returns all Akamai IPv4 subnets.
 
-__```GET http://127.0.0.1/akamai```__
+__```GET http://127.0.0.1/api/akamai```__
 
 
 ### Authentication
@@ -141,7 +147,7 @@ All Akamai subnets returned as a JSON payload
 ## CloudFlare Parameter
 Returns all CloudFlare IPv4 subnets.
 
-__```GET http://127.0.0.1/cloudflare```__
+__```GET http://127.0.0.1/api/cloudflare```__
 
 
 ### Authentication
