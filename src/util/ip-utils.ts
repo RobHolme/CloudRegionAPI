@@ -34,7 +34,6 @@ export function TestPrivateAddress (IpAddress: string) : boolean {
         "172.16.0.0/12", 
         "10.0.0.0/8", 
         "192.168.0.0/16",
-        "172.16.0.0/12",
     ]
     
     for (var i = 0; i < reservedAddressRanges.length; i++) {
