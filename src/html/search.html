@@ -166,9 +166,9 @@
       event.preventDefault();
 
       // Regular expressions for IP address and hostname validation
-      invalidCharacter="\/|\\\\|\"|'|;";
-      ValidIpAddressRegex = "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$";
-      ValidHostnameRegex = "^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\-]*[A-Za-z0-9])$";
+      //invalidCharacter="\/|\\\\|\"|'|;";
+      //ValidIpAddressRegex = "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$";
+      //ValidHostnameRegex = "^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\-]*[A-Za-z0-9])$";
       // clear previous results from web page
       document.getElementById('result').textContent = "";
       document.getElementById('table-container').textContent = "";
@@ -176,40 +176,44 @@
       var jsonData = [];
 
       // first reject any strings with invalid characters not picked up in the regexes below
-      if (ip.match(invalidCharacter)) { 
-        document.getElementById('result').textContent = "Error: Invalid IPv4 address or hostname.";
-        return;
-      }
+      //if (ip.match(invalidCharacter)) { 
+      //  document.getElementById('result').textContent = "Error: Invalid IPv4 address or hostname.";
+      //  return;
+      //}
+
       // Check if the input is a valid IP address or hostname, and call the appropriate function to retune results
-      if (ip.match(ValidIpAddressRegex)) {   
-        const response = await fetch(`/ip/${ip}`);
-        jsonData = await response.json();
-        // Check if the response status is not 200, and display an error message
-        if (response.status != 200) {
-          document.getElementById('result').textContent = "Error retrieving results: " + jsonData.message;
-          return;
-        }
-      }
-      else if (ip.match(ValidHostnameRegex)) {      
+      //if (ip.match(ValidIpAddressRegex)) {   
+      //  const response = await fetch(`/ip/${ip}`);
+      //  jsonData = await response.json();
+      //  // Check if the response status is not 200, and display an error message
+      //  if (response.status != 200) {
+      //    document.getElementById('result').textContent = "Error retrieving results: " + jsonData.message;
+      //    return;
+      //  }
+      //}
+      //else if (ip.match(ValidHostnameRegex)) {      
         const response = await fetch(`/hostname/${ip}`);
         jsonData = await response.json();
         // Check if the response status is not 200, and display an error message
         if (response.status != 200) {
           document.getElementById('result').textContent = "Error retrieving results: " + jsonData.message;
           return;
+        }
+        // if a 200 response code returned, display the results in a table
+        else {
+          document.getElementById('table-container').appendChild(generateTable(jsonData));
         }    
       // If input pattern doesn't match IP address or hostname, display an error message  
-      } else {
-        document.getElementById('result').textContent = "Error: Invalid IPv4 address or hostname.";
-        return;
-      }
+      //} else {
+      //  document.getElementById('result').textContent = "Error: Invalid IPv4 address or hostname.";
+      //  return;
+      //}
 
-      if (jsonData.length == 0) {
-        document.getElementById('result').textContent = "No results found.";
-        console.log("No results found.");
-        return;
-      }
-      document.getElementById('table-container').appendChild(generateTable(jsonData));
+      //if (jsonData.length == 0) {
+      //  document.getElementById('result').textContent = "No results found.";
+      //  console.log("No results found.");
+      //  return;
+      //}
     }
 
     // -----------------------------------------
@@ -256,7 +260,6 @@
       const element = document.querySelector('.centered');
       element.style.width = `${newWidth}px`;
     }
-
 
     // -----------------------------------------
     // Register listener on page load
