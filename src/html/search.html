@@ -185,7 +185,6 @@
 
     // -----------------------------------------
     // Function to generate a table from JSON data.
-    // Table header is created from keys of the first object in the array.
     function generateTable(jsonData) {
       const table = document.createElement('table');
       const thead = document.createElement('thead');
@@ -201,10 +200,9 @@
       thead.appendChild(headerRow);
 
       // Create table rows, Manually specify the order of the keys used to populate the table
-      const headers = ['IPAddress','CloudProvider', 'Region', 'Service', 'Subnet'];
       jsonData.forEach(item => {
         const row = document.createElement('tr');
-        headers.forEach((key) => {
+        ['IPAddress','CloudProvider', 'Region', 'Service', 'Subnet'].forEach((key) => {
           const td = document.createElement('td');
           td.textContent = item[key.toString()]
           row.appendChild(td);
