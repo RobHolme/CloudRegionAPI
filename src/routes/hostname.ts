@@ -15,26 +15,38 @@ router.get("/:hostname", async (req: Request, res: Response) => {
     res.setHeader('content-type', 'application/json');
 
     // regex to validate input, detect IP Address or Hostname
-    const invalidCharacterRegEx: RegExp = new RegExp("\/|\\\\|\"|'|;|(\\.){2,}");
-    const hostnameRegex: RegExp = new RegExp("^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\-]*[A-Za-z0-9])$");
+    //const invalidCharacterRegEx: RegExp = new RegExp("/|\\|\"|'|;|(\\.){2,}|`");
+    const hostnameRegex: RegExp = new RegExp("^(([_a-zA-Z0-9]|[_a-zA-Z0-9][a-zA-Z0-9\-_]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\-_]*[A-Za-z0-9])$");
     const ip4SubnetRegEx: RegExp = new RegExp('^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$');
     var resolvedIPAddresses: string[] | null = [];
     var hostnameSearchResults: cloudProviderSearchResult[] = [];
 
     // reject hostnames containing the following characters / \ " ' ;
-    if (invalidCharacterRegEx.test(hostname)) {
-        res.status(404).json({ message: "DNS name or IP Address not valid" });
-        return;
-    }
+    //if (invalidCharacterRegEx.test(hostname)) {
+    //    res.status(404).json({ message: "DNS name or IP Address not valid" });
+    //    return;
+   // }
     // detect IPv4 Address
     if (ip4SubnetRegEx.test(hostname)) {
         resolvedIPAddresses.push(hostname);
     }
     // detect DNS name
-    else if (hostnameRegex.test(hostname)) {
+    // NOTE: this would fail to match unicode characters and other characters technically allowed in DNS names. 
+    // It is possible this could exude genuine DNS names - the RFC doesn't define many character restrictions. 
+    // This  regex will only match common ASCII based DNS names. Alternatively the code could assume a name is a DNS
+    // name if it doesn;t match an IP, and let the DNS resolver sort it out.
+    //else if (hostnameRegex.test(hostname)) {
+    //    resolvedIPAddresses = await resolveIPv4Addresses(hostname);
+    //}
+    // input didn't match expected DNS or IP pattern, so return error
+    //else {
+    //    res.status(404).json({ message: "DNS name or IP Address not valid" });
+    //    return;
+    //}
+    // assume all other patterns are DNS hostnames - let the DNS resolver sort out any malformed DNS names
+    else {
         resolvedIPAddresses = await resolveIPv4Addresses(hostname);
     }
-
     // get the cloud provider subnets (and region/service) for each IP address resolved from the hostname
     if (resolvedIPAddresses == null) {
         res.status(404).json({ message: "DNS lookup failed" });
