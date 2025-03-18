@@ -170,8 +170,8 @@
       const ip = document.getElementById('ip').value;
       var jsonData = [];
       
-      // don't submit input with '\' or '/'' in the name
-      const pattern = /\\|\//;
+      // don't submit input with path or escape characters in the name, or any string terminators
+      const pattern = /\\|\/|;|`|'|"/;
       if (ip.match(pattern))
       {
         document.getElementById('result').textContent = "Error: Hostname is not valid"
@@ -249,6 +249,9 @@
       inputBox.addEventListener('input', function() {
         adjustInputWidth(inputBox);
       });
+
+      const myVariable = process.env.BUILD_DATE;
+      console.log(`The value of MY_VARIABLE is: ${myVariable}`);
     }
 
   </script>
