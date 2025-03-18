@@ -22,14 +22,14 @@ app.get("/", (req: Request, res: Response) => {
 // handle requests for the /info URL
 app.get("/api/info", (req: Request, res: Response) => {
   const buildDate = process.env.BUILD_DATE;
-  console.log`Build date:${buildDate}`
   res.setHeader('content-type', 'application/json');
   var jsonResult: Object = {
     ConatinerBuildDate: buildDate,
     ClientIP: req.ip,
     Protocol: req.protocol,
     HTTPVersion: req.httpVersion,
-    Headers: req.headers
+    Headers: req.headers,
+    Test: "test"
   };
   res.send(JSON.stringify(jsonResult, null, 2));
 });
