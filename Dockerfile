@@ -1,12 +1,6 @@
 # Description: Dockerfile for the CloudRegionAPI Node.js API. Based on node 22 slim image.
 FROM node:22-slim
 
-# to be able to use current date as argument in Dockerfile
-ARG now
-
-# to store the build date as environment variable in the image
-ENV build_date=$now
-
 # Create a directory for the app user
 RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
 
@@ -24,6 +18,9 @@ RUN npm install --omit=dev
 
 # copy the 'compiled' release folder to the container
 COPY --chown=node:node ./release/ ./release/
+
+# save the build date to a text file
+RUN echo `date +"%d-%B-%Y"` > ./release/build_date.txt
 
 # Expose the port the app runs on
 EXPOSE 80
