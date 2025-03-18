@@ -242,15 +242,14 @@
     }
 
     // -----------------------------------------
-    // Return the conatiner build date as a string (read from text file created during container build)
+    // Return the container build date as a string (read from text file created during container build)
     async function GetContainerBuildDate() {
       try {
         const infoResponse = await fetch(`/api/info`);
-        if (!response.ok) {
-            throw new Error('Network response was no OK');
+        if (!infoResponse.ok) {
+          return "unknown";
         }
         jsonInfoData = await infoResponse.json();
-        console.log (jsonInfoData);
         return jsonInfoData.BuildDate;
       }
       catch {
@@ -293,10 +292,9 @@
     <div>
       <p class="footer">
         Source: <a href="https://github.com/RobHolme/CloudRegionAPI">https://github.com/RobHolme/CloudRegionAPI</a><br>
-        Report Issues: <a
-          href="https://github.com/RobHolme/CloudRegionAPI/issues">https://github.com/RobHolme/CloudRegionAPI/issues</a><br>
-        Container Image: ghcr.io/robholme/cloud-region-api:latest
-        <div id="containerbuilddate"></div>
+        Report Issues: <a href="https://github.com/RobHolme/CloudRegionAPI/issues">https://github.com/RobHolme/CloudRegionAPI/issues</a><br>
+        Container Image: ghcr.io/robholme/cloud-region-api:latest<br>
+        <span id="containerbuilddate"></span>
       </p>
     </div>
 </body>
