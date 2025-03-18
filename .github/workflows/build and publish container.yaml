@@ -57,3 +57,6 @@ jobs:
           build-args: |
             NODE_ENV=production
     
+      # trigger the app service to pull the new container
+      - name: Trigger App Service Container deployment
+        run: "curl --data '' ${{secrets.APPSVC_DEPOLOYMENT_WEBHOOK}}" 
