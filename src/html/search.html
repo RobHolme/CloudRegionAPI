@@ -246,8 +246,11 @@
     async function GetContainerBuildDate() {
       try {
         const infoResponse = await fetch(`/api/info`);
+        if (!response.ok) {
+            throw new Error('Network response was no OK');
+        }
         jsonInfoData = await infoResponse.json();
-        return jsonInfoData.BuildDate;
+        return jsonInfoData;
       }
       catch {
         return "unknown";
@@ -263,7 +266,7 @@
         adjustInputWidth(inputBox);
       });
       // add container build date to page
-      document.getElementById('containerbuilddate').textContent = `Container build date: ${GetContainerBuildDate()}`;
+      GetContainerBuildDate().then(buildDate => document.getElementById('containerbuilddate').textContent = `Container build date: ${GetContainerBuildDate()}`);
     }
 
   </script>
