@@ -262,16 +262,8 @@
       inputBox.addEventListener('input', function() {
         adjustInputWidth(inputBox);
       });
-
       // add container build date to page
-      try {
-        const infoResponse = fetch(`/api/info`);
-        buildDate = infoResponse.json().BuildDate;
-        document.getElementById('containerbuilddate').textContent = `Container build date: ${GetContainerBuildDate()}`;
-      }
-      catch {
-        console.log("exception caught when displaying container build date");
-      }
+      document.getElementById('containerbuilddate').textContent = `Container build date: ${GetContainerBuildDate()}`;
     }
 
   </script>
