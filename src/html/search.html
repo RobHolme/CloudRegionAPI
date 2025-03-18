@@ -250,7 +250,7 @@
             throw new Error('Network response was no OK');
         }
         jsonInfoData = await infoResponse.json();
-        return jsonInfoData;
+        return jsonInfoData.BuildDate;
       }
       catch {
         return "unknown";
@@ -266,7 +266,7 @@
         adjustInputWidth(inputBox);
       });
       // add container build date to page
-      GetContainerBuildDate().then(buildDate => document.getElementById('containerbuilddate').textContent = `Container build date: ${GetContainerBuildDate()}`);
+      GetContainerBuildDate().then(buildDate => document.getElementById('containerbuilddate').textContent = `Container build date: ${buildDate()}`);
     }
 
   </script>
@@ -295,7 +295,7 @@
         Report Issues: <a
           href="https://github.com/RobHolme/CloudRegionAPI/issues">https://github.com/RobHolme/CloudRegionAPI/issues</a><br>
         Container Image: ghcr.io/robholme/cloud-region-api:latest
-        <pre id="containerbuilddate"></pre>
+        <div id="containerbuilddate"></div>
       </p>
     </div>
 </body>
