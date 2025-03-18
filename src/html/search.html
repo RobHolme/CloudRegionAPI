@@ -169,13 +169,28 @@
       document.getElementById('table-container').textContent = "";
       const ip = document.getElementById('ip').value;
       var jsonData = [];
-     
+      
+      // don't submit input with '\' or '/'' in the name
+      const pattern = /\\|\//;
+      if (ip.match(pattern))
+      {
+        document.getElementById('result').textContent = "Error: Hostname is not valid"
+        return;
+      }
+
+      // submit the hostname parameter to the API
       const response = await fetch(`/api/hostname/${ip}`);
       jsonData = await response.json();
-      // Check if the response status is not 200, and display an error message
+      // Check if the response status is not 200, and display an error message. Expecting the error returned from the API in a specific JSON payload - but if not display generic error.
       if (response.status != 200) {
-        document.getElementById('result').textContent = "Error: " + jsonData.message;
-        return;
+        try {
+          document.getElementById('result').textContent = "Error: " + jsonData.message;
+          return;
+        }
+        catch {
+          document.getElementById('result').textContent = "Error: Hostname is not valid"
+          return;
+        }
       }
       // if a 200 response code returned, display the results in a table
       else {
