@@ -250,6 +250,7 @@
             throw new Error('Network response was no OK');
         }
         jsonInfoData = await infoResponse.json();
+        console.log (jsonInfoData);
         return jsonInfoData.BuildDate;
       }
       catch {
