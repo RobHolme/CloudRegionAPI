@@ -20,7 +20,7 @@ RUN npm install --omit=dev
 COPY --chown=node:node ./release/ ./release/
 
 # save the build date to a text file
-RUN echo `date +"%d-%B-%Y"` > ./release/build_date.txt
+RUN echo -n `date +"%d-%B-%Y"` > ./release/build_date.txt
 
 # Expose the port the app runs on
 EXPOSE 80
