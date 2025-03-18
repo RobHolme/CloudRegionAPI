@@ -19,17 +19,18 @@ app.get("/", (req: Request, res: Response) => {
   res.send(html);
 });
 
-// handle requests for the /info URL
+// handle requests for the /info URL. Return diagnostic information as a JSON object.
 app.get("/api/info", (req: Request, res: Response) => {
-  const buildDate = process.env.BUILD_DATE;
   res.setHeader('content-type', 'application/json');
+  // read the build date generated during the container build
+  var buildDate: string = fs.readFileSync('./release/build_date.txt', 'utf-8');
+  // display diagnostic information
   var jsonResult: Object = {
-    ConatinerBuildDate: buildDate,
+    BuildDate: buildDate,
     ClientIP: req.ip,
     Protocol: req.protocol,
     HTTPVersion: req.httpVersion,
-    Headers: req.headers,
-    Test: "test"
+    Headers: req.headers
   };
   res.send(JSON.stringify(jsonResult, null, 2));
 });

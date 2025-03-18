@@ -249,6 +249,16 @@
       inputBox.addEventListener('input', function() {
         adjustInputWidth(inputBox);
       });
+
+      // add container build date to page
+      try {
+        const infoResponse = fetch(`/api/hostname/info`);
+        buildDate = infoResponse.json().BuildDate;
+        document.getElementById('containerbuilddate').textContent = buildDate;
+      }
+      catch {
+        console.log("exception caught when displaying container build date");
+      }
     }
 
   </script>
@@ -277,6 +287,7 @@
         Report Issues: <a
           href="https://github.com/RobHolme/CloudRegionAPI/issues">https://github.com/RobHolme/CloudRegionAPI/issues</a><br>
         Container Image: ghcr.io/robholme/cloud-region-api:latest
+        <pre id="containerbuilddate"></pre>
       </p>
     </div>
 </body>
