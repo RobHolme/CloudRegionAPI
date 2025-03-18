@@ -242,6 +242,19 @@
     }
 
     // -----------------------------------------
+    // Return the conatiner build date as a string (read from text file created during container build)
+    async function GetContainerBuildDate() {
+      try {
+        const infoResponse = await fetch(`/api/info`);
+        jsonInfoData = await infoResponse.json();
+        return jsonInfoData.BuildDate;
+      }
+      catch {
+        return "unknown";
+      }
+    }
+
+    // -----------------------------------------
     // Register listener on page load
     window.onload = function() {
       // Dynamically adjust input box width based on text size 
@@ -252,9 +265,9 @@
 
       // add container build date to page
       try {
-        const infoResponse = fetch(`/api/hostname/info`);
+        const infoResponse = fetch(`/api/info`);
         buildDate = infoResponse.json().BuildDate;
-        document.getElementById('containerbuilddate').textContent = buildDate;
+        document.getElementById('containerbuilddate').textContent = `Container build date: ${GetContainerBuildDate()}`;
       }
       catch {
         console.log("exception caught when displaying container build date");
