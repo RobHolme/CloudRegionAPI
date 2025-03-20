@@ -1,19 +1,21 @@
 import fs from 'fs';
 import express, { Request, Response } from "express";
 import { cloudProviderJSON } from './util/cloudprovider-utils'
-import hostnameRoutes from "./routes/hostname";
-import httpcompression from 'compression';
+import hostnameRoute from "./routes/hostname";
+import infoRoute from "./routes/info";
+import httpCompression from 'compression';
 
 // create a new express application instance
 const app = express();
 const PORT = process.env.PORT || 80;
 app.use(express.json());
+// disable the 'x-powered-by' header in the response
 app.disable('x-powered-by');
+// enable http compression
 app.use(httpCompression());
-
-
-// define the routes
-app.use("/api/hostname", hostnameRoutes);
+// define the routes foreach API
+app.use("/api/hostname", hostnameRoute);
+app.use("/api/info", infoRoute);
 // static URL for favicon
 app.use('/favicon.ico', express.static('./release/images/favicon.ico'));
 
@@ -21,29 +23,6 @@ app.use('/favicon.ico', express.static('./release/images/favicon.ico'));
 app.get("/", (req: Request, res: Response) => {
   var html: string = fs.readFileSync('./release/html/search.html', 'utf-8');
   res.send(html);
-});
-
-// handle requests for the /info URL. Return diagnostic information as a JSON object.
-app.get("/api/info", (req: Request, res: Response) => {
-  res.setHeader('content-type', 'application/json');
-  // read the build date generated during the container build.
-  // use 'unknown' as build date if ./release/build_date.txt file is missing - i.e. when running from source instead of from a container)
-  try {
-    var buildDate: string = fs.readFileSync('./release/build_date.txt', 'utf-8');
-  }
-  catch {
-    buildDate = "unknown";
-  }
-
-  // display diagnostic information
-  var jsonResult: Object = {
-    BuildDate: buildDate,
-    ClientIP: req.ip,
-    Protocol: req.protocol,
-    HTTPVersion: req.httpVersion,
-    Headers: req.headers
-  };
-  res.send(JSON.stringify(jsonResult, null, 2));
 });
 
 // handle requests for the /azure URL, Return the full list of Azure subnets
