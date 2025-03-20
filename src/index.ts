@@ -2,11 +2,15 @@ import fs from 'fs';
 import express, { Request, Response } from "express";
 import { cloudProviderJSON } from './util/cloudprovider-utils'
 import hostnameRoutes from "./routes/hostname";
+import httpcompression from 'compression';
 
 // create a new express application instance
 const app = express();
 const PORT = process.env.PORT || 80;
 app.use(express.json());
+app.disable('x-powered-by');
+app.use(httpCompression());
+
 
 // define the routes
 app.use("/api/hostname", hostnameRoutes);
