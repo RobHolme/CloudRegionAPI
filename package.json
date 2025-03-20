@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "tsc && npm run copy-json",
+    "build": "tsc && npm run copy-files",
     "serve": "node release/index.js",
-    "copy-json": "copyfiles -u 2 ./src/cloudproviders/*.json ./release/cloudproviders && copyfiles -u 2 ./src/html/*.html ./release/html && copyfiles -u 2 ./src/images/*.ico ./release/images"
+    "copy-files": "copyfiles -u 2 ./src/cloudproviders/*.json ./release/cloudproviders && copyfiles -u 2 ./src/html/*.html ./release/html && copyfiles -u 2 ./src/images/*.ico ./release/images"
   },
   "keywords": [],
   "author": "",
