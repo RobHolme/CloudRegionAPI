@@ -3,6 +3,7 @@ import express, { Request, Response } from "express";
 import { cloudProviderJSON } from './util/cloudprovider-utils'
 import hostnameRoute from "./routes/hostname";
 import infoRoute from "./routes/info";
+import allsubnetsRoute from "./routes/allsubnets";
 import httpCompression from 'compression';
 
 // create a new express application instance
@@ -16,6 +17,7 @@ app.use(httpCompression());
 // define the routes foreach API
 app.use("/api/hostname", hostnameRoute);
 app.use("/api/info", infoRoute);
+app.use("/api/subnets", allsubnetsRoute);
 // static URL for favicon
 app.use('/favicon.ico', express.static('./release/images/favicon.ico'));
 
@@ -23,48 +25,6 @@ app.use('/favicon.ico', express.static('./release/images/favicon.ico'));
 app.get("/", (req: Request, res: Response) => {
   var html: string = fs.readFileSync('./release/html/search.html', 'utf-8');
   res.send(html);
-});
-
-// handle requests for the /azure URL, Return the full list of Azure subnets
-app.get("/api/azure", (req: Request, res: Response) => {
-  res.setHeader('content-type', 'application/json');
-  var azureSubnets: cloudProviderJSON[] = JSON.parse(fs.readFileSync('./release/cloudproviders/Azure.json', 'utf-8'));
-  res.send(JSON.stringify(azureSubnets, null, 2));
-});
-
-// handle requests for the /aws URL, Return the full list of AWS subnets
-app.get("/api/aws", (req: Request, res: Response) => {
-  res.setHeader('content-type', 'application/json');
-  var azureSubnets: cloudProviderJSON[] = JSON.parse(fs.readFileSync('./release/cloudproviders/AWS.json', 'utf-8'));
-  res.send(JSON.stringify(azureSubnets, null, 2));
-});
-
-// handle requests for the /google URL, Return the full list of GoogleCloud subnets
-app.get("/api/google", (req: Request, res: Response) => {
-  res.setHeader('content-type', 'application/json');
-  var azureSubnets: cloudProviderJSON[] = JSON.parse(fs.readFileSync('./release/cloudproviders/GoogleCloud.json', 'utf-8'));
-  res.send(JSON.stringify(azureSubnets, null, 2));
-});
-
-// handle requests for the /oci URL, Return the full list of OCI subnets
-app.get("/api/oci", (req: Request, res: Response) => {
-  res.setHeader('content-type', 'application/json');
-  var azureSubnets: cloudProviderJSON[] = JSON.parse(fs.readFileSync('./release/cloudproviders/OCI.json', 'utf-8'));
-  res.send(JSON.stringify(azureSubnets, null, 2));
-});
-
-// handle requests for the /akamai URL, Return the full list of Akamai subnets
-app.get("/api/akamai", (req: Request, res: Response) => {
-  res.setHeader('content-type', 'application/json');
-  var azureSubnets: cloudProviderJSON[] = JSON.parse(fs.readFileSync('./release/cloudproviders/Akamai.json', 'utf-8'));
-  res.send(JSON.stringify(azureSubnets, null, 2));
-});
-
-// handle requests for the /cloudflare URL, Return the full list of CloudFlare subnets
-app.get("/api/cloudflare", (req: Request, res: Response) => {
-  res.setHeader('content-type', 'application/json');
-  var azureSubnets: cloudProviderJSON[] = JSON.parse(fs.readFileSync('./release/cloudproviders/CloudFlare.json', 'utf-8'));
-  res.send(JSON.stringify(azureSubnets, null, 2));
 });
 
 // start the Express server

@@ -6,7 +6,7 @@ API to return the cloud provider and region for a given IPv4 address or hostname
 
 The API provides the following path based parameters:
 
-## IP Parameter
+## Hostname Parameter
 
 __```GET http://127.0.0.1/api/hostname/{hostname}```__
 
@@ -42,6 +42,7 @@ Multiple results may be returned.
 ```yaml
 [
   {
+    "IPAddress": "3.16.2.15",
     "Subnet": "3.16.0.0/14",
     "region": "us-east-2",
     "service": "AMAZON",
@@ -49,6 +50,7 @@ Multiple results may be returned.
     "CloudProvider": "AWS"
   },
   {
+    "IPAddress": "3.16.2.15",
     "Subnet": "3.16.0.0/14",
     "region": "us-east-2",
     "service": "EC2",
@@ -73,6 +75,7 @@ Client information returned as a JSON payload
 
 ```JSON
 {
+  "BuildDate": "12-March-2025",
   "ClientIP": "::ffff:127.0.0.1",
   "Protocol": "http",
   "HTTPVersion": "1.1",
@@ -84,77 +87,31 @@ Client information returned as a JSON payload
 }
 ```
 
-## Azure Parameter
-Returns all Azure IPv4 subnets.
+## Subnets Parameter
+Returns all IPv4 subnets for the specified cloud provider.
 
-__```GET http://127.0.0.1/api/azure```__
+__```GET http://127.0.0.1/api/subnets/{CloudProvider}```__
 
+__CloudProvider \<string\>__ : The name of the specific cloud provider. Must be one of "AWS", "Azure", "OCI", "GoogleCloud", "Akamai", or "CloudFlare"
 
-### Authentication
-No authentication required.
+e.g. ```curl http://127.0.0.1/api/subnets/aws```
 
-### Body
-All Azure subnets returned as a JSON payload
-
-## AWS Parameter
-Returns all AWS IPv4 subnets.
-
-__```GET http://127.0.0.1/api/aws```__
-
+e.g. ```curl http://127.0.0.1/api/subnets/azure```
 
 ### Authentication
 No authentication required.
 
 ### Body
-All AWS subnets returned as a JSON payload
-
-## OCI Parameter
-Returns all Oracle Cloud (OCI) IPv4 subnets.
-
-__```GET http://127.0.0.1/api/oci```__
-
-
-### Authentication
-No authentication required.
-
-### Body
-All Oracle Cloud (OCI) subnets returned as a JSON payload
-
-## Google Parameter
-Returns all Google Cloud IPv4 subnets.
-
-__```GET http://127.0.0.1/api/google```__
-
-
-### Authentication
-No authentication required.
-
-### Body
-All Google Cloud subnets returned as a JSON payload
-
-## Akamai Parameter
-Returns all Akamai IPv4 subnets.
-
-__```GET http://127.0.0.1/api/akamai```__
-
-
-### Authentication
-No authentication required.
-
-### Body
-All Akamai subnets returned as a JSON payload
-
-## CloudFlare Parameter
-Returns all CloudFlare IPv4 subnets.
-
-__```GET http://127.0.0.1/api/cloudflare```__
-
-
-### Authentication
-No authentication required.
-
-### Body
-All CloudFlare subnets returned as a JSON payload
+Results returned as a JSON payload. All subnet ranges associated with the specified cloud provider will be returned. The JSON payload will be and array of objects of the following format:
+```json
+  {
+    "Subnet": <string>,
+    "Region": <string>,
+    "Service": <string>,
+    "SubnetSize": <string>,
+    "CloudProvider": <string>
+  }
+```
 
 <br>
 <br>
