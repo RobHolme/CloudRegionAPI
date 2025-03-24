@@ -32,6 +32,8 @@ async function submitForm(event) {
     else {
         document.getElementById('table-container').appendChild(generateTable(jsonData));
     }
+
+
 }
 
 // -----------------------------------------
@@ -96,7 +98,6 @@ async function GetContainerBuildDate() {
 // -----------------------------------------
 // Register listener on page load
 window.onload = function () {
-    console.log('Page loaded');
     // Dynamically adjust input box width based on text size 
     const inputBox = document.getElementById('ip');
     inputBox.addEventListener('input', function () {
@@ -104,4 +105,9 @@ window.onload = function () {
     });
     // add container build date to page
     GetContainerBuildDate().then(buildDate => document.getElementById('containerbuilddate').textContent = `Container build date: ${buildDate}`);
+
+    // Register listener for form submission
+    document.getElementById('SubmitForm').addEventListener('submit', function(event) {
+        submitForm(event);
+    });
 }
