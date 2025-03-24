@@ -5,7 +5,7 @@
   "scripts": {
     "build": "tsc && npm run copy-files && npm run create-build-date-file",
     "serve": "node release/index.js",
-    "copy-files": "copyfiles -u 2 ./src/cloudproviders/*.json ./release/cloudproviders && copyfiles -u 2 ./src/html/*.html ./release/html && copyfiles -u 2 ./src/images/*.ico ./release/images",
+    "copy-files": "copyfiles -u 2 ./src/cloudproviders/*.json ./release/cloudproviders && copyfiles -u 2 ./src/html/* ./release/html && copyfiles -u 2 ./src/images/*.ico ./release/images",
     "create-build-date-file": "node build-date.js"
   },
   "keywords": [],
