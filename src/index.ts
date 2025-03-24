@@ -27,7 +27,6 @@ app.use('/scripts.js', express.static('./release/html/scripts.js'));
 app.get("/", (req: Request, res: Response) => {
   // apply security headers
   res.setHeader('Content-Security-Policy', "default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self'; frame-ancestors 'none'; form-action 'self';");
-  //res.setHeader('Content-Security-Policy', "default-src 'none'; script-src-elem 'self'; script-src 'self'; ");
   res.setHeader('X-Content-Type-Options', 'nosniff');
   res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
   
