@@ -62,7 +62,11 @@ jobs:
             ${{ env.REGISTRY }}/${{ env.OWNER }}/${{ env.IMAGE_NAME }}:${{ steps.date.outputs.date }}
           build-args: |
             NODE_ENV=production
-    
-      # trigger the app service to pull the new container
-      - name: Trigger App Service Container deployment
-        run: "curl --data '' ${{secrets.APPSVC_DEPOLOYMENT_WEBHOOK}}" 
+
+      # remove old container images, leave the last 10 versions
+      - name: Remove old container images 
+        uses: actions/delete-package-versions@v5
+        with: 
+          package-name: 'cloud-region-api'
+          package-type: 'container'
+          min-versions-to-keep: 10
