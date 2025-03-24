@@ -15,7 +15,6 @@ router.get("/:hostname", async (req: Request, res: Response) => {
     res.setHeader('content-type', 'application/json');
 
     // regex to validate input, detect IP Address or Hostname
-    //const hostnameRegex: RegExp = new RegExp("^(([_a-zA-Z0-9]|[_a-zA-Z0-9][a-zA-Z0-9\-_]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\-_]*[A-Za-z0-9])$");
     const ip4SubnetRegEx: RegExp = new RegExp('^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$');
     var resolvedIPAddresses: string[] | null = [];
     var hostnameSearchResults: cloudProviderSearchResult[] = [];
