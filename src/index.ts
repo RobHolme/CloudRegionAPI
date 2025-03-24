@@ -18,11 +18,29 @@ app.use(httpCompression());
 app.use("/api/hostname", hostnameRoute);
 app.use("/api/info", infoRoute);
 app.use("/api/subnets", allsubnetsRoute);
-// static URL for favicon
+
+// apply security headers to all requests
+app.use((req, res, next) => {
+  res.set({
+    'Content-Security-Policy': "connect-src 'self'; img-src 'self'; style-src 'self'; frame-ancestors 'none'; form-action 'self';",
+          //res.setHeader('Content-Security-Policy', "default-src 'none'; script-src 'self'; ");
+    'X-Content-Type-Options': 'nosniff',
+    'Referrer-Policy': 'strict-origin-when-cross-origin'
+  });
+  next();
+});
+
+// static URL for favicon, css and script files
 app.use('/favicon.ico', express.static('./release/images/favicon.ico'));
+app.use('/styles.css', express.static('./release/html/styles.css'));
+app.use('/scripts.js', express.static('./release/html/scripts.js'));
 
 // handle requests for the root URL
 app.get("/", (req: Request, res: Response) => {
+    // set response headers
+
+
+
   var html: string = fs.readFileSync('./release/html/search.html', 'utf-8');
   res.send(html);
 });
