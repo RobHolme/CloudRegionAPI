@@ -15,8 +15,7 @@ jobs:
       # get the current date to add as a tag to the docker image
       - name: Get current date
         id: date
-        run: echo "{date}={$(date +'%Y-%m-%d')}" >> $GITHUB_OUTPUT
-
+        run: echo "date={$(date +'%Y-%m-%d')}" >> $GITHUB_OUTPUT
       # checkout repo
       - name: Checkout repo
         uses: actions/checkout@v4
