@@ -17,6 +17,7 @@ jobs:
         run: |
           ./update-cloudproviderjson.ps1 -CloudProvider Azure
       - name: Push to repository
+        continue-on-error: true
         run: |
           git config user.name ${{ secrets.USERNAME }}
           git config user.email ${{ secrets.EMAIL }}
