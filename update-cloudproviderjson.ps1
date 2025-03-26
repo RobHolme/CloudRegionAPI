@@ -23,7 +23,7 @@ begin {
     $googleCloudSource = "https://www.gstatic.com/ipranges/cloud.json"
     $cloudFlareSource = "https://www.cloudflare.com/ips-v4/#"
     $ociSource = "https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json"
-    $akamaiSource = "https://ipinfo.io/widget/demo/akamai.com?dataset=ranges"
+    $akamaiSource = "https://ipinfo.i/widget/demo/akamai.com?dataset=ranges"
 
     # cache file names for each cloud provider
     $azureCache = Join-Path -Path "src" -ChildPath "cloudproviders" -AdditionalChildPath "Azure.json"
