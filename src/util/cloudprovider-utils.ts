@@ -49,6 +49,7 @@ export function SearchAllCloudProviders(ipAddress: string): cloudProviderSearchR
     CloudProviderDetails.push(...GetCloudProviderSubnets('./release/cloudproviders/OCI.json', ipAddress.split(".")[0]));
     CloudProviderDetails.push(...GetCloudProviderSubnets('./release/cloudproviders/Akamai.json', ipAddress.split(".")[0]));
     CloudProviderDetails.push(...GetCloudProviderSubnets('./release/cloudproviders/CloudFlare.json', ipAddress.split(".")[0]));
+    CloudProviderDetails.push(...GetCloudProviderSubnets('./release/cloudproviders/DigitalOcean.json', ipAddress.split(".")[0]));
 
     // filter the cloud provider subnets to find the subnet that the IP address belongs to
     CloudProviderDetails.forEach((currentSubnet: cloudProviderJSON) => {

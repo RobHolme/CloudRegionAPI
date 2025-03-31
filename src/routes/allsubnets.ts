@@ -18,7 +18,8 @@ router.get("/:cloudprovider", async (req: Request, res: Response) => {
         "google": "./release/cloudproviders/GoogleCloud.json",
         "oci": "./release/cloudproviders/OCI.json", 
         "cloudflare": "./release/cloudproviders/CloudFlare.json",
-        "akamai": "./release/cloudproviders/Akamai.json"
+        "akamai": "./release/cloudproviders/Akamai.json",
+        "digitalocean": "./release/cloudproviders/DigitalOcean.json"
     };
 
     if (Object.keys(providerDetails).includes(cloudProvider)) {
