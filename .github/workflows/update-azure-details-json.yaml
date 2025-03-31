@@ -15,7 +15,7 @@ jobs:
       - name: Run update script
         shell: pwsh
         run: |
-          ./update-cloudproviderjson.ps1 -CloudProvider Azure
+          ./update-cloudproviderjson.ps1 -CloudProvider Azure -Verbose
       - name: Push to repository
         continue-on-error: true
         run: |
