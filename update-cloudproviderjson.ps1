@@ -121,6 +121,7 @@ begin {
                 exit 1
             }
             else {
+                write-verbose "AWS subnets found: $($awsRegions.Count)"
                 # cache the JSON file for future use in the same directory as the script, return the IP ranges and regions
                 $awsRegions | ConvertTo-Json | Out-File -FilePath (Join-Path -Path $PSScriptRoot -ChildPath $awsCache)
             }
@@ -195,6 +196,7 @@ begin {
                 }
                 # cache the JSON file for future use in the same directory as the script
                 else {
+                    write-verbose "Azure subnets found: $($azureRegions.Count)"
                     $azureRegions | ConvertTo-Json | Out-File -FilePath (Join-Path -Path $PSScriptRoot -ChildPath $azureCache)                 
                 }
             }
@@ -225,6 +227,7 @@ begin {
                 exit 1
             }
             else {
+                write-verbose "Google Cloud subnets found: $($gcpRegions.Count)"
                 # cache the JSON file for future use in the same directory as the script
                 $gcpRegions | ConvertTo-Json | Out-File -FilePath (Join-Path -Path $PSScriptRoot -ChildPath $googleCloudCache)
             }
@@ -268,6 +271,7 @@ begin {
                 exit 1
             }
             else {
+                write-verbose "Akamai subnets found: $($AkamaiRegions.Count)"
                 # cache the JSON file for future use in the same directory as the script
                 $AkamaiRegions | ConvertTo-Json | Out-File -FilePath (Join-Path -Path $PSScriptRoot -ChildPath $akamaiCache)
             }
@@ -306,6 +310,7 @@ begin {
             }
             # cache the JSON file for future use in the same directory as the script
             else {
+                write-verbose "CloudFlare subnets found: $($cloudFlareRegions.Count)"
                 $cloudFlareRegions | ConvertTo-Json | Out-File -FilePath (Join-Path -Path $PSScriptRoot -ChildPath $cloudFlareCache)
             }
         }   
@@ -354,6 +359,7 @@ begin {
             }
             # cache the JSON file for future use in the same directory as the script
             else {
+                write-verbose "OCI subnets found: $($ociRegions.Count)"
                 $ociRegions | ConvertTo-Json | Out-File -FilePath (Join-Path -Path $PSScriptRoot -ChildPath $ociCache)
             }
         }   
@@ -395,6 +401,7 @@ begin {
             }
             # cache the JSON file for future use in the same directory as the script
             else {
+                write-verbose "Digital Ocean subnets found: $($digitalOceanRegions.Count)"
                 $digitalOceanRegions | ConvertTo-Json | Out-File -FilePath (Join-Path -Path $PSScriptRoot -ChildPath $digitalOceanCache)
             }
         }   
