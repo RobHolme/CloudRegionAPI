@@ -8,7 +8,7 @@ Download JSON files detailing subnets for each cloud provider / CDN
 # Optional parameter to limit the script execution to a single cloud provider. If not specified, all providers are processed.
 param (
     [parameter(Mandatory = $false)]
-    [ValidateSet("AWS", "Azure", "GoogleCloud", "CloudFlare", "OCI", "Akamai", "All")]
+    [ValidateSet("AWS", "Azure", "GoogleCloud", "CloudFlare", "OCI", "Akamai", "DigitalOcean", "All")]
     [string] $CloudProvider = "All"
 )
 
@@ -21,16 +21,19 @@ begin {
     $awsSource = "https://ip-ranges.amazonaws.com/ip-ranges.json"
     $azureSource = "https://www.microsoft.com/en-us/download/confirmation.aspx?id=56519"
     $googleCloudSource = "https://www.gstatic.com/ipranges/cloud.json"
-    $cloudFlareSource = "https://www.cloudflare.com/ips-v4/#"
     $ociSource = "https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json"
+    $digitalOceanSource = "https://digitalocean.com/geo/google.csv"
+    # source URLs for CDNs
+    $cloudFlareSource = "https://www.cloudflare.com/ips-v4/#"
     $akamaiSource = "https://ipinfo.io/widget/demo/akamai.com?dataset=ranges"
 
     # cache file names for each cloud provider
     $azureCache = Join-Path -Path "src" -ChildPath "cloudproviders" -AdditionalChildPath "Azure.json"
     $awsCache = Join-Path -Path "src" -ChildPath "cloudproviders" -AdditionalChildPath "AWS.json"
     $googleCloudCache = Join-Path -Path "src" -ChildPath "cloudproviders" -AdditionalChildPath "GoogleCloud.json"
-    $cloudFlareCache = Join-Path -Path "src" -ChildPath "cloudproviders" -AdditionalChildPath "CloudFlare.json"
     $ociCache = Join-Path -Path "src" -ChildPath "cloudproviders" -AdditionalChildPath "OCI.json"
+    $digitalOceanCache = Join-Path -Path "src" -ChildPath "cloudproviders" -AdditionalChildPath "DigitalOcean.json"
+    $cloudFlareCache = Join-Path -Path "src" -ChildPath "cloudproviders" -AdditionalChildPath "CloudFlare.json"
     $akamaiCache = Join-Path -Path "src" -ChildPath "cloudproviders" -AdditionalChildPath "Akamai.json"
     
 
@@ -97,7 +100,7 @@ begin {
 
     #--------------------------
     # Function:     GetAWSRegions
-    # Description:  Retrieves all AWS regions and associated IP ranges. Uses a cached JSON file if it exists, otherwise retrieve from AWS.
+    # Description:  Retrieves all AWS regions and associated IP ranges. 
     #--------------------------
     function GetAWSRegions {
         # download the regions from source if the cached file does not exist or if the ForceDownload switch is used.
@@ -127,7 +130,7 @@ begin {
 
     #--------------------------
     # Function:     GetAzureRegions
-    # Description:  Retrieves all Azure regions and associated IP ranges. Uses a cached JSON file if it exists, otherwise retrieve from Azure.
+    # Description:  Retrieves all Azure regions and associated IP ranges. 
     #--------------------------
     function GetAzureRegions {
         $azureRegions = @()
@@ -201,7 +204,7 @@ begin {
 
     #--------------------------
     # Function:     GetGoogleCloudRegions
-    # Description:  Retrieves all Google Cloud regions and associated IP ranges. Uses a cached JSON file if it exists, otherwise retrieve from Google Cloud.
+    # Description:  Retrieves all Google Cloud regions and associated IP ranges. 
     #--------------------------
     function GetGoogleCloudRegions {   
         Write-Verbose "Retrieving Google Cloud regions from $googleCloudSource"
@@ -274,7 +277,7 @@ begin {
 
     #--------------------------
     # Function:     GetCloudFlareRegions
-    # Description:  Retrieves all CloudFlare IP ranges. Regions not available. Uses a cached JSON file if it exists, otherwise retrieve from CloudFlare.
+    # Description:  Retrieves all CloudFlare IP ranges. Regions not available.
     function GetCloudFlareRegions {
         $cloudFlareRegions = @()
         Write-Verbose "Retrieving CloudFlare IP ranges from $cloudFlareSource"
@@ -311,7 +314,7 @@ begin {
 
     #--------------------------
     # Function:     GetOCIRegions
-    # Description:  Retrieves all OCI regions and associated IP ranges. Uses a cached JSON file if it exists, otherwise retrieve from OCI.
+    # Description:  Retrieves all OCI regions and associated IP ranges. 
     #--------------------------
     function GetOCIRegions {
         $ociRegions = @()
@@ -352,6 +355,47 @@ begin {
             # cache the JSON file for future use in the same directory as the script
             else {
                 $ociRegions | ConvertTo-Json | Out-File -FilePath (Join-Path -Path $PSScriptRoot -ChildPath $ociCache)
+            }
+        }   
+    }
+
+        #--------------------------
+    # Function:     GetDigitalOceanRegions
+    # Description:  Retrieves all Digital Ocean regions and associated IP ranges.
+    #--------------------------
+    function GetDigitalOceanRegions {
+        $digitalOceanRegions = @()
+        Write-Verbose "Retrieving Digital Ocean regions from $digitalOceanSource"
+        $digitalOceanNetRangesCsv = Invoke-WebRequestEx -Uri $digitalOceanSource
+        if ($null -eq $digitalOceanNetRangesCsv) {
+            Write-Warning "Failed to retrieve Digital Ocean IP ranges."
+            # return error code to indicate no subnets found (should trigger github action to fail)
+            exit 1
+        }
+        else {
+            $digitalOceanNetRanges = ConvertFrom-csv -InputObject $digitalOceanNetRangesCsv.Content  -Header "Subnet","CountryCode","RegionCode","Region","NetworkID"
+            foreach ($subnet in $digitalOceanNetRanges) {
+                write-progress -activity "Processing Digital Ocean regions" -status "Processing region: $($Subnet.Region)" -percentcomplete (($digitalOceanNetRanges.IndexOf($subnet) / $digitalOceanNetRanges.Count) * 100)
+                if (TestIPv4Subnet -IPSubnet $subnet.Subnet) {
+                    $digitalOceanRegions += [PSCustomObject]@{
+                        Subnet        = $subnet.Subnet
+                        Region        = $subnet.Region
+                        Service       = ""
+                        SubnetSize    = $subnet.Subnet.split("/")[1]
+                        CloudProvider = "Digital Ocean"
+                    }
+                }
+            }
+            write-progress -activity "Processing Digital Ocean regions" -status "Completed" -completed
+            # if no subnets found, return $null and do not update the cache file
+            if ($digitalOceanRegions.Count -eq 0) {
+                Write-Error "No Digital Ocean IP ranges found. Source may have changed?. No updates saved."
+                # return error code to indicate no subnets found (should trigger github action to fail)
+                exit 1
+            }
+            # cache the JSON file for future use in the same directory as the script
+            else {
+                $digitalOceanRegions | ConvertTo-Json | Out-File -FilePath (Join-Path -Path $PSScriptRoot -ChildPath $digitalOceanCache)
             }
         }   
     }
