@@ -448,6 +448,13 @@
     "CloudProvider": "Oracle Cloud (OCI)"
   },
   {
+    "Subnet": "170.9.192.0/19",
+    "Region": "us-ashburn-1",
+    "Service": "OSN",
+    "SubnetSize": "19",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
     "Subnet": "129.146.0.0/21",
     "Region": "us-phoenix-1",
     "Service": "OCI",
@@ -490,7 +497,28 @@
     "CloudProvider": "Oracle Cloud (OCI)"
   },
   {
+    "Subnet": "129.150.64.0/18",
+    "Region": "us-phoenix-1",
+    "Service": "OCI",
+    "SubnetSize": "18",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "129.150.128.0/17",
+    "Region": "us-phoenix-1",
+    "Service": "OCI",
+    "SubnetSize": "17",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
     "Subnet": "129.151.0.0/19",
+    "Region": "us-phoenix-1",
+    "Service": "OCI",
+    "SubnetSize": "19",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "129.152.128.0/19",
     "Region": "us-phoenix-1",
     "Service": "OCI",
     "SubnetSize": "19",
@@ -508,6 +536,13 @@
     "Region": "us-phoenix-1",
     "Service": "OCI",
     "SubnetSize": "19",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "129.191.0.0/17",
+    "Region": "us-phoenix-1",
+    "Service": "OCI",
+    "SubnetSize": "17",
     "CloudProvider": "Oracle Cloud (OCI)"
   },
   {
@@ -571,6 +606,20 @@
     "Region": "us-phoenix-1",
     "Service": "OCI",
     "SubnetSize": "18",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "160.34.6.0/23",
+    "Region": "us-phoenix-1",
+    "Service": "OCI",
+    "SubnetSize": "23",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "160.34.8.0/22",
+    "Region": "us-phoenix-1",
+    "Service": "OCI",
+    "SubnetSize": "22",
     "CloudProvider": "Oracle Cloud (OCI)"
   },
   {
@@ -3752,6 +3801,13 @@
     "CloudProvider": "Oracle Cloud (OCI)"
   },
   {
+    "Subnet": "169.224.224.0/21",
+    "Region": "ap-melbourne-1",
+    "Service": "OCI",
+    "SubnetSize": "21",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
     "Subnet": "207.211.140.0/22",
     "Region": "ap-melbourne-1",
     "Service": "OCI",
@@ -4473,6 +4529,223 @@
     "CloudProvider": "Oracle Cloud (OCI)"
   },
   {
+    "Subnet": "84.235.160.0/19",
+    "Region": "eu-amsterdam-1",
+    "Service": "OCI",
+    "SubnetSize": "19",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "134.98.128.0/19",
+    "Region": "eu-amsterdam-1",
+    "Service": "OCI",
+    "SubnetSize": "19",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "140.204.84.0/23",
+    "Region": "eu-amsterdam-1",
+    "Service": "OCI",
+    "SubnetSize": "23",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "141.144.192.0/19",
+    "Region": "eu-amsterdam-1",
+    "Service": "OCI",
+    "SubnetSize": "19",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "141.148.224.0/19",
+    "Region": "eu-amsterdam-1",
+    "Service": "OCI",
+    "SubnetSize": "19",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "143.47.176.0/20",
+    "Region": "eu-amsterdam-1",
+    "Service": "OCI",
+    "SubnetSize": "20",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "144.21.32.0/20",
+    "Region": "eu-amsterdam-1",
+    "Service": "OCI",
+    "SubnetSize": "20",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "150.230.20.0/22",
+    "Region": "eu-amsterdam-1",
+    "Service": "OCI",
+    "SubnetSize": "22",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "152.70.48.0/20",
+    "Region": "eu-amsterdam-1",
+    "Service": "OCI",
+    "SubnetSize": "20",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "158.101.192.0/19",
+    "Region": "eu-amsterdam-1",
+    "Service": "OCI",
+    "SubnetSize": "19",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "158.178.144.0/20",
+    "Region": "eu-amsterdam-1",
+    "Service": "OCI",
+    "SubnetSize": "20",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "158.180.8.0/21",
+    "Region": "eu-amsterdam-1",
+    "Service": "OCI",
+    "SubnetSize": "21",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "168.138.120.0/22",
+    "Region": "eu-amsterdam-1",
+    "Service": "OCI",
+    "SubnetSize": "22",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "193.122.16.0/20",
+    "Region": "eu-amsterdam-1",
+    "Service": "OCI",
+    "SubnetSize": "20",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "193.123.32.0/19",
+    "Region": "eu-amsterdam-1",
+    "Service": "OCI",
+    "SubnetSize": "19",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "62.115.179.220/31",
+    "Region": "eu-amsterdam-1",
+    "Service": "OSN",
+    "SubnetSize": "31",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "62.115.179.228/31",
+    "Region": "eu-amsterdam-1",
+    "Service": "OSN",
+    "SubnetSize": "31",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "79.72.32.0/22",
+    "Region": "eu-amsterdam-1",
+    "Service": "OSN",
+    "SubnetSize": "22",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "79.76.24.0/21",
+    "Region": "eu-amsterdam-1",
+    "Service": "OSN",
+    "SubnetSize": "21",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "134.70.104.0/22",
+    "Region": "eu-amsterdam-1",
+    "Service": "OSN",
+    "SubnetSize": "22",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "134.70.104.0/22",
+    "Region": "eu-amsterdam-1",
+    "Service": "OBJECT_STORAGE",
+    "SubnetSize": "22",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "140.83.44.0/22",
+    "Region": "eu-amsterdam-1",
+    "Service": "OSN",
+    "SubnetSize": "22",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "140.91.44.0/23",
+    "Region": "eu-amsterdam-1",
+    "Service": "OSN",
+    "SubnetSize": "23",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "140.204.36.128/25",
+    "Region": "eu-amsterdam-1",
+    "Service": "OSN",
+    "SubnetSize": "25",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "140.204.38.128/25",
+    "Region": "eu-amsterdam-1",
+    "Service": "OSN",
+    "SubnetSize": "25",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "140.204.40.128/25",
+    "Region": "eu-amsterdam-1",
+    "Service": "OSN",
+    "SubnetSize": "25",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "158.178.220.0/22",
+    "Region": "eu-amsterdam-1",
+    "Service": "OSN",
+    "SubnetSize": "22",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "192.29.192.0/22",
+    "Region": "eu-amsterdam-1",
+    "Service": "OSN",
+    "SubnetSize": "22",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "192.29.200.0/21",
+    "Region": "eu-amsterdam-1",
+    "Service": "OSN",
+    "SubnetSize": "21",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "213.19.198.156/31",
+    "Region": "eu-amsterdam-1",
+    "Service": "OSN",
+    "SubnetSize": "31",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "213.19.198.164/31",
+    "Region": "eu-amsterdam-1",
+    "Service": "OSN",
+    "SubnetSize": "31",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
     "Subnet": "64.110.96.0/20",
     "Region": "ap-osaka-1",
     "Service": "OCI",
@@ -4767,216 +5040,6 @@
     "CloudProvider": "Oracle Cloud (OCI)"
   },
   {
-    "Subnet": "84.235.160.0/19",
-    "Region": "eu-amsterdam-1",
-    "Service": "OCI",
-    "SubnetSize": "19",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "140.204.84.0/23",
-    "Region": "eu-amsterdam-1",
-    "Service": "OCI",
-    "SubnetSize": "23",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "141.144.192.0/19",
-    "Region": "eu-amsterdam-1",
-    "Service": "OCI",
-    "SubnetSize": "19",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "141.148.224.0/19",
-    "Region": "eu-amsterdam-1",
-    "Service": "OCI",
-    "SubnetSize": "19",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "143.47.176.0/20",
-    "Region": "eu-amsterdam-1",
-    "Service": "OCI",
-    "SubnetSize": "20",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "144.21.32.0/20",
-    "Region": "eu-amsterdam-1",
-    "Service": "OCI",
-    "SubnetSize": "20",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "150.230.20.0/22",
-    "Region": "eu-amsterdam-1",
-    "Service": "OCI",
-    "SubnetSize": "22",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "152.70.48.0/20",
-    "Region": "eu-amsterdam-1",
-    "Service": "OCI",
-    "SubnetSize": "20",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "158.101.192.0/19",
-    "Region": "eu-amsterdam-1",
-    "Service": "OCI",
-    "SubnetSize": "19",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "158.178.144.0/20",
-    "Region": "eu-amsterdam-1",
-    "Service": "OCI",
-    "SubnetSize": "20",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "158.180.8.0/21",
-    "Region": "eu-amsterdam-1",
-    "Service": "OCI",
-    "SubnetSize": "21",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "168.138.120.0/22",
-    "Region": "eu-amsterdam-1",
-    "Service": "OCI",
-    "SubnetSize": "22",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "193.122.16.0/20",
-    "Region": "eu-amsterdam-1",
-    "Service": "OCI",
-    "SubnetSize": "20",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "193.123.32.0/19",
-    "Region": "eu-amsterdam-1",
-    "Service": "OCI",
-    "SubnetSize": "19",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "62.115.179.220/31",
-    "Region": "eu-amsterdam-1",
-    "Service": "OSN",
-    "SubnetSize": "31",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "62.115.179.228/31",
-    "Region": "eu-amsterdam-1",
-    "Service": "OSN",
-    "SubnetSize": "31",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "79.72.32.0/22",
-    "Region": "eu-amsterdam-1",
-    "Service": "OSN",
-    "SubnetSize": "22",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "79.76.24.0/21",
-    "Region": "eu-amsterdam-1",
-    "Service": "OSN",
-    "SubnetSize": "21",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "134.70.104.0/22",
-    "Region": "eu-amsterdam-1",
-    "Service": "OSN",
-    "SubnetSize": "22",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "134.70.104.0/22",
-    "Region": "eu-amsterdam-1",
-    "Service": "OBJECT_STORAGE",
-    "SubnetSize": "22",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "140.83.44.0/22",
-    "Region": "eu-amsterdam-1",
-    "Service": "OSN",
-    "SubnetSize": "22",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "140.91.44.0/23",
-    "Region": "eu-amsterdam-1",
-    "Service": "OSN",
-    "SubnetSize": "23",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "140.204.36.128/25",
-    "Region": "eu-amsterdam-1",
-    "Service": "OSN",
-    "SubnetSize": "25",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "140.204.38.128/25",
-    "Region": "eu-amsterdam-1",
-    "Service": "OSN",
-    "SubnetSize": "25",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "140.204.40.128/25",
-    "Region": "eu-amsterdam-1",
-    "Service": "OSN",
-    "SubnetSize": "25",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "158.178.220.0/22",
-    "Region": "eu-amsterdam-1",
-    "Service": "OSN",
-    "SubnetSize": "22",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "192.29.192.0/22",
-    "Region": "eu-amsterdam-1",
-    "Service": "OSN",
-    "SubnetSize": "22",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "192.29.200.0/21",
-    "Region": "eu-amsterdam-1",
-    "Service": "OSN",
-    "SubnetSize": "21",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "213.19.198.156/31",
-    "Region": "eu-amsterdam-1",
-    "Service": "OSN",
-    "SubnetSize": "31",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "213.19.198.164/31",
-    "Region": "eu-amsterdam-1",
-    "Service": "OSN",
-    "SubnetSize": "31",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
     "Subnet": "140.245.32.0/19",
     "Region": "ap-singapore-2",
     "Service": "OCI",
@@ -5048,6 +5111,13 @@
   },
   {
     "Subnet": "160.34.208.0/20",
+    "Region": "mx-queretaro-1",
+    "Service": "OCI",
+    "SubnetSize": "20",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "220.158.64.0/20",
     "Region": "mx-queretaro-1",
     "Service": "OCI",
     "SubnetSize": "20",
@@ -5688,6 +5758,20 @@
     "Region": "me-riyadh-1",
     "Service": "OSN",
     "SubnetSize": "25",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "81.208.192.0/19",
+    "Region": "eu-jovanovac-1",
+    "Service": "OCI",
+    "SubnetSize": "19",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "207.127.82.0/23",
+    "Region": "eu-jovanovac-1",
+    "Service": "OCI",
+    "SubnetSize": "23",
     "CloudProvider": "Oracle Cloud (OCI)"
   },
   {
