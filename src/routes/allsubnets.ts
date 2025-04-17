@@ -10,8 +10,8 @@ const router = Router();
 router.get("/:cloudprovider", async (req: Request, res: Response) => {
     const cloudProvider: string = req.params.cloudprovider.toLowerCase().trim();
     res.setHeader('content-type', 'application/json');
-    const xforwardedFor: string | undefined = req.headers['x-forwarded-for'] as string;
-    console.log(`Client ${req.ip} (${xforwardedFor}) submitted: ${cloudProvider}`);
+    const xClientIp: string | undefined = req.headers['x-client-ip'] as string;
+    console.log(`Client ${req.ip} (${xClientIp}) submitted: ${cloudProvider}`);
 
     // list of supported cloud providers and their JSON files
     const providerDetails: { [key: string]: string } = {
