@@ -1,7 +1,7 @@
 # CloudRegionAPI
 API to return the cloud provider and region for a given IPv4 address or hostname. Multiple results may be returned - some subnet scopes overlap. 
 
-> A webpage page that consumes the API is published to the root of the node website. Connect to the website root for an example page using this API. e.g. http://127.0.0.1
+> A webpage page that consumes the API is published to the root of the website. Connect to the website root for an example page using this API. e.g. http://127.0.0.1
 
 
 The API provides the following path based parameters:
@@ -211,8 +211,6 @@ Client information returned as a JSON payload
 <br>
 
 ## Notes
-
->URL examples assume API is running on localhost (127.0.0.1). Replace with the URL of the container / node app this solution is deployed to.
 
 IP ranges and region details for each cloud provider are sourced from:
 * https://ip-ranges.amazonaws.com/ip-ranges.json
