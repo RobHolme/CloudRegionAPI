@@ -22,7 +22,28 @@ e.g. ```curl http://127.0.0.1/api/hostname/example.com```
 No authentication required.
 
 ### Responses
-A 200 response code returned on success with the following JSON payload
+A 200 response code returned on success with the following JSON payload:
+
+```json
+[
+  {
+    "IPAddress": <string>,
+    "Subnet": <string>,
+    "Region": <string>,
+    "Service": <string>,
+    "SubnetSize": <string>,
+    "CloudProvider": <string>
+  }
+]
+```
+A 404 response code is returned on failure with the following JSON payload containing the error message:
+```json
+{
+  "Message": <string>
+}
+```
+
+#### Examples
 
 ```JSON
 [
@@ -62,7 +83,7 @@ Multiple results may be returned.
 ]
 ```
 
-On failure a 404 response code is returned the following JSON payload containing the error message. e.g.
+Failure example:
 ```json
 {
   "Message": "DNS lookup failed"
@@ -98,11 +119,48 @@ A 200 response code will be returned on success. Results returned as a JSON payl
   }
 ]
 ```
-On failure a 404 response code is returned the following JSON payload containing the error message. e.g.
+On failure a 404 response code is returned the following JSON payload containing the error message:
 ```json
 {
-  "Message": "DNS lookup failed"
+  "Message": <string>
 }
+```
+### Examples
+Example response is truncated for brevity.
+```json
+[
+  {
+      "Subnet": "209.199.34.0/25",
+      "Region": "",
+      "Service": "",
+      "SubnetSize": "25",
+      "CloudProvider": "Azure"
+    },
+    {
+      "Subnet": "209.199.34.128/25",
+      "Region": "",
+      "Service": "",
+      "SubnetSize": "25",
+      "CloudProvider": "Azure"
+    },
+    {
+      "Subnet": "209.199.35.0/25",
+      "Region": "",
+      "Service": "",
+      "SubnetSize": "25",
+      "CloudProvider": "Azure"
+    },
+    {
+      "Subnet": "213.199.169.0/24",
+      "Region": "",
+      "Service": "",
+      "SubnetSize": "24",
+      "CloudProvider": "Azure"
+    }
+    .
+    .
+    .
+]
 ```
 
 ## Info Path
@@ -121,6 +179,19 @@ No authentication required.
 
 ### Response
 Client information returned as a JSON payload
+```json
+{
+  "BuildDate": <string>,
+  "ClientIP": <string>,
+  "Protocol": <string>,
+  "HTTPVersion": <string>,
+  "Headers": <object> {
+  }
+}
+```
+
+
+#### Examples
 
 ```json
 {
