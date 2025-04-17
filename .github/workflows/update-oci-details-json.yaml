@@ -2,8 +2,8 @@ name: Weekly update of OCI JSON files
 
 on:
   schedule:
-    # 12:10am every Sunday
-    - cron: "10 0 * * 0"
+    # 19:20Z every Saturday
+    - cron: "20 19 * * 6"
   workflow_dispatch:
 
 jobs:

@@ -2,8 +2,8 @@ name: Weekly update of Akamai JSON files
 
 on:
   schedule:
-    # 12:20am every Sunday
-    - cron: "20 0 * * 0"
+    # 19:50Z every Saturday
+    - cron: "50 19 * * 6"
   workflow_dispatch:
 
 jobs:

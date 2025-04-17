@@ -2,8 +2,8 @@ name: Weekly update of AWS JSON files
 
 on:
   schedule:
-    # 12:05am every Sunday
-    - cron: "5 0 * * 0"
+    # 19:10Z every Saturday
+    - cron: "10 19 * * 6"
   workflow_dispatch:
 
 jobs:

@@ -2,8 +2,8 @@ name: Weekly update of Google Cloud JSON files
 
 on:
   schedule:
-    # 12:15am every Sunday
-    - cron: "15 0 * * 0"
+    # 19:30Z every Saturday
+    - cron: "30 19 * * 6"
   workflow_dispatch:
 
 jobs:

@@ -2,8 +2,8 @@ name: Weekly update of Digital Ocean JSON files
 
 on:
   schedule:
-    # 12:10am every Sunday
-    - cron: "35 0 * * 0"
+    # 19:40Z every Saturday
+    - cron: "40 19 * * 6"
   workflow_dispatch:
 
 jobs:

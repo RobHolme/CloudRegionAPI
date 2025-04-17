@@ -1,0 +1,197 @@
+openapi: 3.0.4
+info:
+  title: Cloud Region API
+  description: |-
+    Retrieves the cloud provider details for a hostname or IPv4 Address. Includes the region and service information if available.
+
+    Some useful links:
+    - [https://github.com/RobHolme/CloudRegionAPI](https://github.com/RobHolme/CloudRegionAPI)
+  contact:
+    email: rob@holme.com.au
+  license:
+    name: MIT
+    url: https://github.com/RobHolme/CloudRegionAPI?tab=MIT-1-ov-file#readme
+  version: 1.0
+externalDocs:
+  description: Find out more about CLoud Region API
+  url: https://github.com/RobHolme/CloudRegionAPI/blob/main/README.md
+servers:
+  - url: https://cloud-region.azurewebsites.net/api
+tags:
+  - name: hostname
+    description: retrieve cloud provider details from a hostname or IPv4 address 
+    externalDocs:
+      description: Find out more
+      url: https://github.com/RobHolme/CloudRegionAPI/blob/main/README.md#hostname-parameter
+  - name: subnets
+    description: Display all subnet details for a given cloud provider
+    externalDocs:
+      description: Find out more about our store
+      url: https://github.com/RobHolme/CloudRegionAPI/blob/main/README.md#subnets-parameter
+  - name: info
+    description: Display diagnostic information about the client session
+
+paths:
+  /hostname/{hostname}:
+    get:
+      tags:
+        - hostname
+      summary: Return cloud provider details
+      description: Return cloud provider details for a DNS hostname or IPv4 Address.
+      operationId: hostname
+      parameters:
+        - name: hostname
+          in: path
+          description: DNS hostname or IPv4 Address or cloud service to return.
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CloudService'
+        '404':
+          description: Cloud service details not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /subnets/{cloudprovider}:
+    get:
+      tags:
+        - subnets
+      summary: Return all subnet and associated service details for the given clould provider
+      description: Return cloud provider details for a DNS hostname or IPv4 Address.
+      operationId: subnets
+      parameters:
+        - name: cloudprovider
+          in: path
+          description: the name of the cloud provider
+          required: true
+          schema:
+            type: string
+            example: AWS
+            enum:
+              - Azure
+              - AWS
+              - OCI
+              - GoolgeCloud
+              - DigitalOcean
+              - Akamai
+              - CloudFlare
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Subnet'
+        '404':
+          description: Cloud service details not found
+          content:
+            application/json:
+              schema:
+                  $ref: '#/components/schemas/Error'
+
+  /info/:
+    get:
+      tags:
+        - hostname
+      summary: Return cloud provider details
+      description: Return cloud provider details for a DNS hostname or IPv4 Address.
+      operationId: info
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Info'
+
+
+components:
+  schemas:
+    CloudService:
+      type: array
+      items:
+        properties:
+          IPAddress:
+            type: string
+            description: The IPv4 address of the hostname queried
+            example: 3.16.2.15
+          Subnet:
+            type: string
+            description: The subnet range the cloud service is located on
+            example: 3.16.0.0/14
+          region:
+            type: string
+            description: 
+            example: us-east-2
+          service:
+            type: string
+            example: EC2
+          SubnetSize:
+            type: string
+            description: The size of the subnet
+            example: 14
+          CloudProvider:
+            type: string
+            example: AWS
+
+    Subnet:
+      type: array
+      items:
+        properties:
+          Subnet:
+            type: string
+            description: The subnet range the cloud service is located on
+            example: 3.16.0.0/14
+          region:
+            type: string
+            description: 
+            example: us-east-2
+          service:
+            type: string
+            example: EC2
+          SubnetSize:
+            type: string
+            description: The size of the subnet
+            example: 14
+          CloudProvider:
+            type: string
+            example: AWS
+    Info:
+      type: object
+      properties:
+        BuildDate:
+          type: string
+          example: 10
+        name:
+          type: string
+          description: The build date of the container image (or compile date of source)
+          example: 12-March-2025
+        ClientIP:
+          type: string
+          description: The IP address of the lient connection
+          example: 10.1.100.24
+        Protocol:
+          type: string
+          example: http
+        HTTPVersion:
+          type: string
+          description: The version of HTTP negotiated 
+          example: 1.1
+        Headers:
+          type: array
+          description: The client request headers
+    Error:
+      type: object
+      properties:
+        message:
+          type: string
+          description: Error message
+          example: DNS lookup failed

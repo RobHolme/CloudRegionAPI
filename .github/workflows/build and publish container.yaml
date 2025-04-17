@@ -3,8 +3,8 @@ name: Build and publish container
 on:
   # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
   schedule:
-    # 1am every Sunday
-    - cron: "0 1 * * 0"
+    # 21:00Z every Saturday
+    - cron: "0 21 * * 6"
   workflow_dispatch:
 
 jobs:

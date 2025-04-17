@@ -2,8 +2,8 @@ name: Weekly update of Azure JSON files
 
 on:
   schedule:
-    # 12:00am every Sunday
-    - cron: "0 0 * * 0"
+    # 19:00Z every Saturday
+    - cron: "0 19 * * 6"
   workflow_dispatch:
 
 jobs:
