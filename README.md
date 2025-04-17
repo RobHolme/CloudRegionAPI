@@ -6,9 +6,11 @@ API to return the cloud provider and region for a given IPv4 address or hostname
 
 The API provides the following path based parameters:
 
-## Hostname Parameter
+## Hostname Path
 
 __```GET http://127.0.0.1/api/hostname/{hostname}```__
+
+### Parameters
 
 __hostname \<string\>__ : The DNS name or IPv4 address of the cloud service.
 
@@ -19,8 +21,8 @@ e.g. ```curl http://127.0.0.1/api/hostname/example.com```
 ### Authentication
 No authentication required.
 
-### Body
-Results returned as a JSON payload
+### Responses
+A 200 response code returned on success with the following JSON payload
 
 ```JSON
 [
@@ -59,21 +61,68 @@ Multiple results may be returned.
   }
 ]
 ```
-## Info Parameter
+
+On failure a 404 response code is returned the following JSON payload containing the error message. e.g.
+```json
+{
+  "Message": "DNS lookup failed"
+}
+```
+
+## Subnets Path
+Returns all IPv4 subnets for the specified cloud provider.
+
+__```GET http://127.0.0.1/api/subnets/{CloudProvider}```__
+
+### Parameters
+
+__CloudProvider \<string\>__ : The name of the specific cloud provider. Must be one of "AWS", "Azure", "OCI", "GoogleCloud", "DigitalOcean", "Akamai", or "CloudFlare"
+
+e.g. ```curl http://127.0.0.1/api/subnets/aws```
+
+e.g. ```curl http://127.0.0.1/api/subnets/azure```
+
+### Authentication
+No authentication required.
+
+### Response
+A 200 response code will be returned on success. Results returned as a JSON payload. All subnet ranges associated with the specified cloud provider will be returned. The JSON payload will be and array of objects of the following format:
+```json
+[
+  {
+    "Subnet": <string>,
+    "Region": <string>,
+    "Service": <string>,
+    "SubnetSize": <string>,
+    "CloudProvider": <string>
+  }
+]
+```
+On failure a 404 response code is returned the following JSON payload containing the error message. e.g.
+```json
+{
+  "Message": "DNS lookup failed"
+}
+```
+
+## Info Path
 Displays information about the client connection.
+
 
 __```GET http://127.0.0.1/api/info```__
 
+### Parameters
+None.
 
 e.g. ```curl http://127.0.0.1/api/info```
 
 ### Authentication
 No authentication required.
 
-### Body
+### Response
 Client information returned as a JSON payload
 
-```JSON
+```json
 {
   "BuildDate": "12-March-2025",
   "ClientIP": "::ffff:127.0.0.1",
@@ -85,32 +134,6 @@ Client information returned as a JSON payload
     "accept": "*/*"
   }
 }
-```
-
-## Subnets Parameter
-Returns all IPv4 subnets for the specified cloud provider.
-
-__```GET http://127.0.0.1/api/subnets/{CloudProvider}```__
-
-__CloudProvider \<string\>__ : The name of the specific cloud provider. Must be one of "AWS", "Azure", "OCI", "GoogleCloud", "Akamai", or "CloudFlare"
-
-e.g. ```curl http://127.0.0.1/api/subnets/aws```
-
-e.g. ```curl http://127.0.0.1/api/subnets/azure```
-
-### Authentication
-No authentication required.
-
-### Body
-Results returned as a JSON payload. All subnet ranges associated with the specified cloud provider will be returned. The JSON payload will be and array of objects of the following format:
-```json
-  {
-    "Subnet": <string>,
-    "Region": <string>,
-    "Service": <string>,
-    "SubnetSize": <string>,
-    "CloudProvider": <string>
-  }
 ```
 
 <br>
@@ -126,6 +149,7 @@ IP ranges and region details for each cloud provider are sourced from:
 * https://www.gstatic.com/ipranges/cloud.json
 * https://www.cloudflare.com/ips-v4/#
 * https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json
+* https://digitalocean.com/geo/google.csv
 * https://ipinfo.io/widget/demo/akamai.com?dataset=ranges
 
 <br>
