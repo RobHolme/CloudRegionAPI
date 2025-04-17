@@ -10,6 +10,7 @@ const router = Router();
 router.get("/:cloudprovider", async (req: Request, res: Response) => {
     const cloudProvider: string = req.params.cloudprovider.toLowerCase().trim();
     res.setHeader('content-type', 'application/json');
+    console.log(`Client ${req.ip} submitted: ${cloudProvider}`);
 
     // list of supported cloud providers and their JSON files
     const providerDetails: { [key: string]: string } = {
