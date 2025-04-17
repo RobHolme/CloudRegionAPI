@@ -3,17 +3,14 @@ info:
   title: Cloud Region API
   description: |-
     Retrieves the cloud provider details for a hostname or IPv4 Address. Includes the region and service information if available.
-
-    Some useful links:
-    - [https://github.com/RobHolme/CloudRegionAPI](https://github.com/RobHolme/CloudRegionAPI)
   contact:
     email: rob@holme.com.au
   license:
-    name: MIT
+    name: MIT License
     url: https://github.com/RobHolme/CloudRegionAPI?tab=MIT-1-ov-file#readme
   version: 1.0
 externalDocs:
-  description: Find out more about CLoud Region API
+  description: https://github.com/RobHolme/CloudRegionAPI
   url: https://github.com/RobHolme/CloudRegionAPI/blob/main/README.md
 servers:
   - url: https://cloud-region.azurewebsites.net/api
@@ -24,12 +21,16 @@ tags:
       description: Find out more
       url: https://github.com/RobHolme/CloudRegionAPI/blob/main/README.md#hostname-parameter
   - name: subnets
-    description: Display all subnet details for a given cloud provider
+    description: Display all subnet details for a gioven cloud provider
     externalDocs:
-      description: Find out more about our store
+      description: Find out more
       url: https://github.com/RobHolme/CloudRegionAPI/blob/main/README.md#subnets-parameter
   - name: info
     description: Display diagnostic information about the client session
+    externalDocs:
+      description: Find out more
+      url: https://github.com/RobHolme/CloudRegionAPI/blob/main/README.md#info-parameter
+
 
 paths:
   /hostname/{hostname}:
@@ -100,9 +101,9 @@ paths:
   /info/:
     get:
       tags:
-        - hostname
-      summary: Return cloud provider details
-      description: Return cloud provider details for a DNS hostname or IPv4 Address.
+        - info
+      summary: Return client connection details
+      description: Return client connection details
       operationId: info
       responses:
         '200':
