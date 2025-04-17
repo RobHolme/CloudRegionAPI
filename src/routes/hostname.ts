@@ -13,7 +13,8 @@ const router = Router();
 router.get("/:hostname", async (req: Request, res: Response) => {
     const hostname = req.params.hostname.trim();
     res.setHeader('content-type', 'application/json');
-    console.log(`Client ${req.ip} submitted: ${hostname}`);
+    const xforwardedFor: string | undefined = req.headers['x-forwarded-for'] as string;
+    console.log(`Client ${req.ip} (${xforwardedFor}) submitted: ${hostname}`);
 
     // regex to validate input, detect IP Address or Hostname
     const ip4SubnetRegEx: RegExp = new RegExp('^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$');
