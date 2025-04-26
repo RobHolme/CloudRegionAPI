@@ -1750,6 +1750,27 @@
     "CloudProvider": "Digital Ocean"
   },
   {
+    "Subnet": "129.212.132.0/22",
+    "Region": "Clifton",
+    "Service": "",
+    "SubnetSize": "22",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
+    "Subnet": "129.212.136.0/22",
+    "Region": "North Bergen",
+    "Service": "",
+    "SubnetSize": "22",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
+    "Subnet": "129.212.144.0/20",
+    "Region": "Clifton",
+    "Service": "",
+    "SubnetSize": "20",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
     "Subnet": "134.122.0.0/20",
     "Region": "Clifton",
     "Service": "",
