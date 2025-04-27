@@ -69,3 +69,11 @@ jobs:
           package-name: 'cloud-region-api'
           package-type: 'container'
           min-versions-to-keep: 10
+
+
+      # restart app service
+      - name: Restart app service
+        run: |
+          az login --service-principal --username ${{ secrets.APP_REGISTRATION_ID }} --password ${{ secrets.APP_REGISTRATION_CLIENT_SECRET }} --tenant ${{ secrets.TENANT_ID }}
+          az webapp restart --name cloud-region --resource-group Cloud-Region-API
+          az logout

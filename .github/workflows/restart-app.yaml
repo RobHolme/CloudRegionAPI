@@ -14,7 +14,6 @@ jobs:
     steps:
       # restart app service
       - name: Push to repository
-        continue-on-error: true
         run: |
           az login --service-principal --username ${{ secrets.APP_REGISTRATION_ID }} --password ${{ secrets.APP_REGISTRATION_CLIENT_SECRET }} --tenant ${{ secrets.TENANT_ID }}
           az webapp restart --name cloud-region --resource-group Cloud-Region-API
