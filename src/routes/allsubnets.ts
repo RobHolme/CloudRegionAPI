@@ -16,6 +16,9 @@ router.get("/:cloudprovider", async (req: Request, res: Response) => {
     // list of supported cloud providers and their JSON files
     const providerDetails: { [key: string]: string } = {
         "azure": "./release/cloudproviders/Azure.json", 
+        "azuregovernment": "./release/cloudproviders/AzureGovernment.json", 
+        "azurechina": "./release/cloudproviders/AzureChina.json", 
+        "azuregermany": "./release/cloudproviders/AzureGermany.json", 
         "aws": "./release/cloudproviders/AWS.json",
         "google": "./release/cloudproviders/GoogleCloud.json",
         "oci": "./release/cloudproviders/OCI.json", 

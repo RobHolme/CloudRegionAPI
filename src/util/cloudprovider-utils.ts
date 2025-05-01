@@ -43,8 +43,11 @@ export function SearchAllCloudProviders(ipAddress: string): cloudProviderSearchR
     var cloudProviderResults: cloudProviderSearchResult[] = [];
     // get the cloud provider subnets (and region/service), filtered on the first octet of the IP Address matching the start of the subnet network address 
     var CloudProviderDetails: cloudProviderJSON[] = [];
-    CloudProviderDetails.push(...GetCloudProviderSubnets('./release/cloudproviders/Azure.json', ipAddress.split(".")[0]));
     CloudProviderDetails.push(...GetCloudProviderSubnets('./release/cloudproviders/AWS.json', ipAddress.split(".")[0]));
+    CloudProviderDetails.push(...GetCloudProviderSubnets('./release/cloudproviders/Azure.json', ipAddress.split(".")[0]));
+    CloudProviderDetails.push(...GetCloudProviderSubnets('./release/cloudproviders/AzureGovernment.json', ipAddress.split(".")[0]));
+    CloudProviderDetails.push(...GetCloudProviderSubnets('./release/cloudproviders/AzureChina.json', ipAddress.split(".")[0]));
+    CloudProviderDetails.push(...GetCloudProviderSubnets('./release/cloudproviders/AzureGermany.json', ipAddress.split(".")[0]));
     CloudProviderDetails.push(...GetCloudProviderSubnets('./release/cloudproviders/GoogleCloud.json', ipAddress.split(".")[0]));
     CloudProviderDetails.push(...GetCloudProviderSubnets('./release/cloudproviders/OCI.json', ipAddress.split(".")[0]));
     CloudProviderDetails.push(...GetCloudProviderSubnets('./release/cloudproviders/Akamai.json', ipAddress.split(".")[0]));
