@@ -1,0 +1,1353 @@
+[
+  {
+    "Subnet": "51.5.144.120/32",
+    "Region": "germanynortheast",
+    "Service": "ServiceFabric",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.226.216/29",
+    "Region": "germanynortheast",
+    "Service": "ServiceFabric",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.226.48/29",
+    "Region": "germanynortheast",
+    "Service": "MicrosoftContainerRegistry",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.144.101/32",
+    "Region": "germanynortheast",
+    "Service": "HDInsight",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.150.132/32",
+    "Region": "germanynortheast",
+    "Service": "HDInsight",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.226.232/29",
+    "Region": "germanynortheast",
+    "Service": "HDInsight",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.144.201/32",
+    "Region": "germanynortheast",
+    "Service": "GatewayManager",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.144.236/32",
+    "Region": "germanynortheast",
+    "Service": "GatewayManager",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.146.29/32",
+    "Region": "germanynortheast",
+    "Service": "GatewayManager",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.147.182/32",
+    "Region": "germanynortheast",
+    "Service": "GatewayManager",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.226.208/29",
+    "Region": "germanynortheast",
+    "Service": "GatewayManager",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.18.40.72/29",
+    "Region": "germanynortheast",
+    "Service": "GatewayManager",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.144.140/31",
+    "Region": "germanynortheast",
+    "Service": "BatchNodeManagement",
+    "SubnetSize": "31",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.168.64/28",
+    "Region": "germanynortheast",
+    "Service": "AzureStorage",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.168.96/28",
+    "Region": "germanynortheast",
+    "Service": "AzureStorage",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.168.128/27",
+    "Region": "germanynortheast",
+    "Service": "AzureStorage",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.248.64/27",
+    "Region": "germanynortheast",
+    "Service": "AzureStorage",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.248.112/28",
+    "Region": "germanynortheast",
+    "Service": "AzureStorage",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.248.128/28",
+    "Region": "germanynortheast",
+    "Service": "AzureStorage",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.248.160/27",
+    "Region": "germanynortheast",
+    "Service": "AzureStorage",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.144.64/26",
+    "Region": "germanynortheast",
+    "Service": "AzureStorage",
+    "SubnetSize": "26",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.147.0/25",
+    "Region": "germanynortheast",
+    "Service": "AzureStorage",
+    "SubnetSize": "25",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.151.0/24",
+    "Region": "germanynortheast",
+    "Service": "AzureStorage",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.144.179/32",
+    "Region": "germanynortheast",
+    "Service": "AzureSQL",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.144.185/32",
+    "Region": "germanynortheast",
+    "Service": "AzureSQL",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.240.174/32",
+    "Region": "germanynortheast",
+    "Service": "AzureSQL",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.246.239/32",
+    "Region": "germanynortheast",
+    "Service": "AzureSQL",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.224.0/27",
+    "Region": "germanynortheast",
+    "Service": "AzureSQL",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.225.0/27",
+    "Region": "germanynortheast",
+    "Service": "AzureSQL",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.243.5/32",
+    "Region": "germanynortheast",
+    "Service": "AzureServiceBus",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.226.32/28",
+    "Region": "germanynortheast",
+    "Service": "AzureServiceBus",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.227.176/28",
+    "Region": "germanynortheast",
+    "Service": "AzureResourceManager",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.230.0/23",
+    "Region": "germanynortheast",
+    "Service": "AzureResourceManager",
+    "SubnetSize": "23",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.226.240/28",
+    "Region": "germanynortheast",
+    "Service": "AzureMonitor",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.227.224/29",
+    "Region": "germanynortheast",
+    "Service": "AzureMonitor",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.144.216/32",
+    "Region": "germanynortheast",
+    "Service": "AzureKeyVault",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.144.237/32",
+    "Region": "germanynortheast",
+    "Service": "AzureKeyVault",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.145.130/32",
+    "Region": "germanynortheast",
+    "Service": "AzureIoTHub",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.229.0/27",
+    "Region": "germanynortheast",
+    "Service": "AzureIoTHub",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.144.173/32",
+    "Region": "germanynortheast",
+    "Service": "AzureEventHub",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.145.89/32",
+    "Region": "germanynortheast",
+    "Service": "AzureEventHub",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.146.33/32",
+    "Region": "germanynortheast",
+    "Service": "AzureEventHub",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.226.0/27",
+    "Region": "germanynortheast",
+    "Service": "AzureEventHub",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.144.198/32",
+    "Region": "germanynortheast",
+    "Service": "AzureCosmosDB",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.226.56/29",
+    "Region": "germanynortheast",
+    "Service": "AzureContainerRegistry",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.226.192/28",
+    "Region": "germanynortheast",
+    "Service": "AzureConnectors",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.18.40.96/28",
+    "Region": "germanynortheast",
+    "Service": "AzureCognitiveSearch",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.18.40.64/30",
+    "Region": "germanynortheast",
+    "Service": "AzureBotService",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.227.0/26",
+    "Region": "germanynortheast",
+    "Service": "AzureBackup",
+    "SubnetSize": "26",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.227.64/27",
+    "Region": "germanynortheast",
+    "Service": "AzureBackup",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.226.64/26",
+    "Region": "germanynortheast",
+    "Service": "AzureAppServiceManagement",
+    "SubnetSize": "26",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.226.128/27",
+    "Region": "germanynortheast",
+    "Service": "AzureAppService",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.226.224/31",
+    "Region": "germanynortheast",
+    "Service": "AzureApiManagement",
+    "SubnetSize": "31",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.227.160/28",
+    "Region": "germanynortheast",
+    "Service": "AzureApiManagement",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.84.0/24",
+    "Region": "germanynortheast",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.128.0/17",
+    "Region": "germanynortheast",
+    "Service": "",
+    "SubnetSize": "17",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.0.0/19",
+    "Region": "germanynortheast",
+    "Service": "",
+    "SubnetSize": "19",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.64.0/18",
+    "Region": "germanynortheast",
+    "Service": "",
+    "SubnetSize": "18",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.146.0/24",
+    "Region": "germanynortheast",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.149.0/24",
+    "Region": "germanynortheast",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.156.0/22",
+    "Region": "germanynortheast",
+    "Service": "",
+    "SubnetSize": "22",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.224.0/21",
+    "Region": "germanynortheast",
+    "Service": "",
+    "SubnetSize": "21",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.18.4.0/22",
+    "Region": "germanynortheast",
+    "Service": "",
+    "SubnetSize": "22",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.18.8.0/22",
+    "Region": "germanynortheast",
+    "Service": "",
+    "SubnetSize": "22",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.18.16.0/24",
+    "Region": "germanynortheast",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.18.18.0/24",
+    "Region": "germanynortheast",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.18.40.0/21",
+    "Region": "germanynortheast",
+    "Service": "",
+    "SubnetSize": "21",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "52.108.120.0/24",
+    "Region": "germanynortheast",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.144.99/32",
+    "Region": "germanycentral",
+    "Service": "ServiceFabric",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.234.224/29",
+    "Region": "germanycentral",
+    "Service": "ServiceFabric",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.234.56/29",
+    "Region": "germanycentral",
+    "Service": "MicrosoftContainerRegistry",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.146.68/32",
+    "Region": "germanycentral",
+    "Service": "HDInsight",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.146.80/32",
+    "Region": "germanycentral",
+    "Service": "HDInsight",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.234.248/29",
+    "Region": "germanycentral",
+    "Service": "HDInsight",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.145.39/32",
+    "Region": "germanycentral",
+    "Service": "GatewayManager",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.145.55/32",
+    "Region": "germanycentral",
+    "Service": "GatewayManager",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.147.130/32",
+    "Region": "germanycentral",
+    "Service": "GatewayManager",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.150.40/32",
+    "Region": "germanycentral",
+    "Service": "GatewayManager",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.234.72/29",
+    "Region": "germanycentral",
+    "Service": "GatewayManager",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.18.32.72/29",
+    "Region": "germanycentral",
+    "Service": "GatewayManager",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.144.221/32",
+    "Region": "germanycentral",
+    "Service": "BatchNodeManagement",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.144.222/32",
+    "Region": "germanycentral",
+    "Service": "BatchNodeManagement",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.236.16/29",
+    "Region": "germanycentral",
+    "Service": "BatchNodeManagement",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.242.72/29",
+    "Region": "germanycentral",
+    "Service": "BatchNodeManagement",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.250.104/29",
+    "Region": "germanycentral",
+    "Service": "BatchNodeManagement",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.168.16/28",
+    "Region": "germanycentral",
+    "Service": "AzureStorage",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.168.48/28",
+    "Region": "germanycentral",
+    "Service": "AzureStorage",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.168.128/27",
+    "Region": "germanycentral",
+    "Service": "AzureStorage",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.208.16/28",
+    "Region": "germanycentral",
+    "Service": "AzureStorage",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.208.32/28",
+    "Region": "germanycentral",
+    "Service": "AzureStorage",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.232.32/27",
+    "Region": "germanycentral",
+    "Service": "AzureStorage",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.144.128/25",
+    "Region": "germanycentral",
+    "Service": "AzureStorage",
+    "SubnetSize": "25",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.150.0/24",
+    "Region": "germanycentral",
+    "Service": "AzureStorage",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.144.100/31",
+    "Region": "germanycentral",
+    "Service": "AzureSQL",
+    "SubnetSize": "31",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.224.239/32",
+    "Region": "germanycentral",
+    "Service": "AzureSQL",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.226.98/32",
+    "Region": "germanycentral",
+    "Service": "AzureSQL",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.231.202/32",
+    "Region": "germanycentral",
+    "Service": "AzureSQL",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.232.0/27",
+    "Region": "germanycentral",
+    "Service": "AzureSQL",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.233.0/27",
+    "Region": "germanycentral",
+    "Service": "AzureSQL",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.240.0/27",
+    "Region": "germanycentral",
+    "Service": "AzureSQL",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.241.0/27",
+    "Region": "germanycentral",
+    "Service": "AzureSQL",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.248.0/27",
+    "Region": "germanycentral",
+    "Service": "AzureSQL",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.249.0/27",
+    "Region": "germanycentral",
+    "Service": "AzureSQL",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.224.37/32",
+    "Region": "germanycentral",
+    "Service": "AzureServiceBus",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.234.48/29",
+    "Region": "germanycentral",
+    "Service": "AzureServiceBus",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.235.224/28",
+    "Region": "germanycentral",
+    "Service": "AzureResourceManager",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.238.0/23",
+    "Region": "germanycentral",
+    "Service": "AzureResourceManager",
+    "SubnetSize": "23",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.234.240/29",
+    "Region": "germanycentral",
+    "Service": "AzureMonitor",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.236.0/29",
+    "Region": "germanycentral",
+    "Service": "AzureMonitor",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.242.0/30",
+    "Region": "germanycentral",
+    "Service": "AzureMonitor",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.242.8/29",
+    "Region": "germanycentral",
+    "Service": "AzureMonitor",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.250.0/30",
+    "Region": "germanycentral",
+    "Service": "AzureMonitor",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.250.8/29",
+    "Region": "germanycentral",
+    "Service": "AzureMonitor",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.235.240/28",
+    "Region": "germanycentral",
+    "Service": "AzureMachineLearning",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.242.16/28",
+    "Region": "germanycentral",
+    "Service": "AzureMachineLearning",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.250.16/28",
+    "Region": "germanycentral",
+    "Service": "AzureMachineLearning",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.145.57/32",
+    "Region": "germanycentral",
+    "Service": "AzureKeyVault",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.145.82/32",
+    "Region": "germanycentral",
+    "Service": "AzureKeyVault",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.146.77/32",
+    "Region": "germanycentral",
+    "Service": "AzureIoTHub",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.236.32/27",
+    "Region": "germanycentral",
+    "Service": "AzureIoTHub",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.242.96/27",
+    "Region": "germanycentral",
+    "Service": "AzureIoTHub",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.250.64/27",
+    "Region": "germanycentral",
+    "Service": "AzureIoTHub",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.145.246/32",
+    "Region": "germanycentral",
+    "Service": "AzureEventHub",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.146.41/32",
+    "Region": "germanycentral",
+    "Service": "AzureEventHub",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.147.190/32",
+    "Region": "germanycentral",
+    "Service": "AzureEventHub",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.234.32/28",
+    "Region": "germanycentral",
+    "Service": "AzureEventHub",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.145.23/32",
+    "Region": "germanycentral",
+    "Service": "AzureCosmosDB",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.234.0/27",
+    "Region": "germanycentral",
+    "Service": "AzureCosmosDB",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.242.80/29",
+    "Region": "germanycentral",
+    "Service": "AzureCosmosDB",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.250.112/29",
+    "Region": "germanycentral",
+    "Service": "AzureCosmosDB",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.234.64/29",
+    "Region": "germanycentral",
+    "Service": "AzureContainerRegistry",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.234.80/28",
+    "Region": "germanycentral",
+    "Service": "AzureConnectors",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.18.32.96/28",
+    "Region": "germanycentral",
+    "Service": "AzureCognitiveSearch",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.18.32.64/30",
+    "Region": "germanycentral",
+    "Service": "AzureBotService",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.235.0/26",
+    "Region": "germanycentral",
+    "Service": "AzureBackup",
+    "SubnetSize": "26",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.235.64/27",
+    "Region": "germanycentral",
+    "Service": "AzureBackup",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.234.128/26",
+    "Region": "germanycentral",
+    "Service": "AzureAppServiceManagement",
+    "SubnetSize": "26",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.234.96/27",
+    "Region": "germanycentral",
+    "Service": "AzureAppService",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.234.232/31",
+    "Region": "germanycentral",
+    "Service": "AzureApiManagement",
+    "SubnetSize": "31",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.235.160/28",
+    "Region": "germanycentral",
+    "Service": "AzureApiManagement",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.32.0/19",
+    "Region": "germanycentral",
+    "Service": "",
+    "SubnetSize": "19",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.84.0/24",
+    "Region": "germanycentral",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.128.0/17",
+    "Region": "germanycentral",
+    "Service": "",
+    "SubnetSize": "17",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.32.0/19",
+    "Region": "germanycentral",
+    "Service": "",
+    "SubnetSize": "19",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.128.0/20",
+    "Region": "germanycentral",
+    "Service": "",
+    "SubnetSize": "20",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.145.0/24",
+    "Region": "germanycentral",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.148.0/24",
+    "Region": "germanycentral",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.152.0/22",
+    "Region": "germanycentral",
+    "Service": "",
+    "SubnetSize": "22",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.160.0/19",
+    "Region": "germanycentral",
+    "Service": "",
+    "SubnetSize": "19",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.192.0/19",
+    "Region": "germanycentral",
+    "Service": "",
+    "SubnetSize": "19",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.232.0/21",
+    "Region": "germanycentral",
+    "Service": "",
+    "SubnetSize": "21",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.240.0/20",
+    "Region": "germanycentral",
+    "Service": "",
+    "SubnetSize": "20",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.18.0.0/22",
+    "Region": "germanycentral",
+    "Service": "",
+    "SubnetSize": "22",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.18.12.0/22",
+    "Region": "germanycentral",
+    "Service": "",
+    "SubnetSize": "22",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.18.17.0/24",
+    "Region": "germanycentral",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.18.19.0/24",
+    "Region": "germanycentral",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.18.24.0/21",
+    "Region": "germanycentral",
+    "Service": "",
+    "SubnetSize": "21",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.18.32.0/21",
+    "Region": "germanycentral",
+    "Service": "",
+    "SubnetSize": "21",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "52.108.119.0/24",
+    "Region": "germanycentral",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.136.19/32",
+    "Region": "",
+    "Service": "SqlManagement",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.136.21/32",
+    "Region": "",
+    "Service": "SqlManagement",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.226.160/27",
+    "Region": "",
+    "Service": "SqlManagement",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.227.192/27",
+    "Region": "",
+    "Service": "SqlManagement",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.234.192/27",
+    "Region": "",
+    "Service": "SqlManagement",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.235.192/27",
+    "Region": "",
+    "Service": "SqlManagement",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.242.32/27",
+    "Region": "",
+    "Service": "SqlManagement",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.250.32/27",
+    "Region": "",
+    "Service": "SqlManagement",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.72.0/24",
+    "Region": "",
+    "Service": "EOPExtPublished",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.80.0/27",
+    "Region": "",
+    "Service": "EOPExtPublished",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.72.0/24",
+    "Region": "",
+    "Service": "EOPExtPublished",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.80.0/27",
+    "Region": "",
+    "Service": "EOPExtPublished",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.200.133/32",
+    "Region": "",
+    "Service": "AzureTrafficManager",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.247.109/32",
+    "Region": "",
+    "Service": "AzureTrafficManager",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.150.0/23",
+    "Region": "",
+    "Service": "AzureStorage",
+    "SubnetSize": "23",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.225.99/32",
+    "Region": "",
+    "Service": "AzureSiteRecovery",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.242.106/32",
+    "Region": "",
+    "Service": "AzureSiteRecovery",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.18.32.80/28",
+    "Region": "",
+    "Service": "AzureSiteRecovery",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.18.40.80/28",
+    "Region": "",
+    "Service": "AzureSiteRecovery",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.227.96/27",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.235.96/27",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.4.86.64/26",
+    "Region": "",
+    "Service": "AzureFrontDoor",
+    "SubnetSize": "26",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.5.87.0/25",
+    "Region": "",
+    "Service": "AzureFrontDoor",
+    "SubnetSize": "25",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.227.232/29",
+    "Region": "",
+    "Service": "AzureAppConfiguration",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.227.240/29",
+    "Region": "",
+    "Service": "AzureAppConfiguration",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.236.8/29",
+    "Region": "",
+    "Service": "AzureAppConfiguration",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.236.24/29",
+    "Region": "",
+    "Service": "AzureAppConfiguration",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.236.64/28",
+    "Region": "",
+    "Service": "AzureAppConfiguration",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.242.64/29",
+    "Region": "",
+    "Service": "AzureAppConfiguration",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.242.88/29",
+    "Region": "",
+    "Service": "AzureAppConfiguration",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.242.128/28",
+    "Region": "",
+    "Service": "AzureAppConfiguration",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.250.96/29",
+    "Region": "",
+    "Service": "AzureAppConfiguration",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.250.120/29",
+    "Region": "",
+    "Service": "AzureAppConfiguration",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Germany"
+  },
+  {
+    "Subnet": "51.8.250.128/28",
+    "Region": "",
+    "Service": "AzureAppConfiguration",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Germany"
+  }
+]
