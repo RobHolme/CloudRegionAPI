@@ -21,9 +21,16 @@ router.get("/:hostname", async (req: Request, res: Response) => {
     var resolvedIPAddresses: string[] | null = [];
     var hostnameSearchResults: cloudProviderSearchResult[] = [];
 
+    // don't submit input with path or escape characters in the name, or any string terminators
+    const invalidHostnameRegEx = /\\|\/|;|`|'|"|\.{2,}|\(|\)|<|>|\$|\?|!|&/;
+
     // detect IPv4 Address
     if (ip4SubnetRegEx.test(hostname)) {
         resolvedIPAddresses.push(hostname);
+    }
+    else if (invalidHostnameRegEx.test(hostname)) {
+        res.status(404).json({ message: `Invalid hostname` });
+        return;
     }
     // if string not matched as an IP address, assume it is a DNS name. Let the DNS resolver handle issues if nto a valid DNS nam.
     else {

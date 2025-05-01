@@ -8,7 +8,7 @@ async function submitForm(event) {
     var jsonData = [];
 
     // don't submit input with path or escape characters in the name, or any string terminators
-    const pattern = /\\|\/|;|`|'|"/;
+    const pattern = /\\|\/|;|`|'|"|\.{2,}|\(|\)|<|>|\$|\?|!|&/;
     if (ip.match(pattern)) {
         document.getElementById('result').textContent = "Error: Hostname is not valid"
         return;
