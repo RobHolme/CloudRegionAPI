@@ -19,7 +19,10 @@ begin {
 
     # source URLs for each cloud provider
     $awsSource = "https://ip-ranges.amazonaws.com/ip-ranges.json"
-    $azureSource = "https://www.microsoft.com/en-us/download/confirmation.aspx?id=56519"
+    $azurePublicSource = "https://www.microsoft.com/en-us/download/confirmation.aspx?id=56519"
+    $azureGovernmentSource = "https://www.microsoft.com/en-us/download/confirmation.aspx?id=57063"
+    $azureChinaSource = "https://www.microsoft.com/en-us/download/confirmation.aspx?id=57062"
+    $azureGermanySource = "https://www.microsoft.com/en-us/download/confirmation.aspx?id=57064"
     $googleCloudSource = "https://www.gstatic.com/ipranges/cloud.json"
     $ociSource = "https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json"
     $digitalOceanSource = "https://digitalocean.com/geo/google.csv"
@@ -28,7 +31,10 @@ begin {
     $akamaiSource = "https://ipinfo.io/widget/demo/akamai.com?dataset=ranges"
 
     # cache file names for each cloud provider
-    $azureCache = Join-Path -Path "src" -ChildPath "cloudproviders" -AdditionalChildPath "Azure.json"
+    $azurePublicCache = Join-Path -Path "src" -ChildPath "cloudproviders" -AdditionalChildPath "Azure.json"
+    $azureGovernmentCache = Join-Path -Path "src" -ChildPath "cloudproviders" -AdditionalChildPath "AzureGovernment.json"
+    $azureChinaCache = Join-Path -Path "src" -ChildPath "cloudproviders" -AdditionalChildPath "AzureChina.json"
+    $azureGermanyCache = Join-Path -Path "src" -ChildPath "cloudproviders" -AdditionalChildPath "AzureGermany.json"
     $awsCache = Join-Path -Path "src" -ChildPath "cloudproviders" -AdditionalChildPath "AWS.json"
     $googleCloudCache = Join-Path -Path "src" -ChildPath "cloudproviders" -AdditionalChildPath "GoogleCloud.json"
     $ociCache = Join-Path -Path "src" -ChildPath "cloudproviders" -AdditionalChildPath "OCI.json"
@@ -87,7 +93,7 @@ begin {
             }
             catch {
                 if ($retry -lt 3) {
-                    Write-Warning "Failed to connect to $URI." + 3-$retry + "attempts remaining."
+                    Write-Warning "Failed to connect to $Uri. $(3-$retry) attempts remaining."
                 }
                 else {
                     Write-error $_.Exception
@@ -134,6 +140,21 @@ begin {
     # Description:  Retrieves all Azure regions and associated IP ranges. 
     #--------------------------
     function GetAzureRegions {
+        param (
+        # Azure cloud source to download the IP ranges from.
+        [Parameter(Mandatory=$true)]
+        [string] $azureSource,
+
+        # cache file to store the Azure IP ranges in.
+        [Parameter(Mandatory=$true)]
+        [string] $azureCache,
+
+        # The cloud provider name to use in results
+        [Parameter(Mandatory=$true)]
+        [string] $cloudProvider
+        ),
+
+
         $azureRegions = @()
         $azureRegionHashTable = @{}
             
@@ -170,7 +191,7 @@ begin {
                                         Region        = $region.region
                                         Service       = $region.systemService
                                         SubnetSize    = $addressPrefix.split("/")[1]
-                                        CloudProvider = "Azure"
+                                        CloudProvider = $cloudProvider
                                     }
                                 }
                             }
@@ -181,22 +202,22 @@ begin {
                                     Region        = $region.region
                                     Service       = $region.systemService
                                     SubnetSize    = $addressPrefix.split("/")[1]
-                                    CloudProvider = "Azure"
+                                    CloudProvider = $cloudProvider
                                 }
                             }
                         }
                     }
                 }
-                write-progress -activity "Processing Azure regions" -status "Processing complete" -completed
+                write-progress -activity "Processing $cloudProvider regions" -status "Processing complete" -completed
                 # if no subnets found, return $null and do not update the cache file
                 if ($azureRegions.Count -eq 0) {
-                    Write-Error "No Azure IP ranges found. Source may have changed? No updates saved."
+                    Write-Error "No $cloudProvider IP ranges found. Source may have changed? No updates saved."
                     # return error code to indicate no subnets found (should trigger github action to fail)
                     exit 1
                 }
                 # cache the JSON file for future use in the same directory as the script
                 else {
-                    write-verbose "Azure subnets found: $($azureRegions.Count)"
+                    write-verbose "$cloudProvider subnets found: $($azureRegions.Count)"
                     $azureRegions | ConvertTo-Json | Out-File -FilePath (Join-Path -Path $PSScriptRoot -ChildPath $azureCache)                 
                 }
             }
@@ -415,34 +436,49 @@ process {
         write-progress -activity "Loading subnet ranges" -status "AWS" -percentcomplete 0                       
         GetAWSRegions
     }
-    # Azure
+    # Azure - Public
     if (($CloudProvider -eq "All") -or ($CloudProvider -eq "Azure")) {
-        write-progress -activity "Loading subnet ranges" -status "Azure" -percentcomplete 14 
-        GetAzureRegions
+        write-progress -activity "Loading subnet ranges" -status "Azure" -percentcomplete 10 
+        GetAzureRegions -azureSource $azurePublicSource -azureCache $azurePublicCache -cloudProvider "Azure"
+    }
+    # Azure - Government
+    if (($CloudProvider -eq "All") -or ($CloudProvider -eq "Azure")) {
+        write-progress -activity "Loading subnet ranges" -status "Azure Government" -percentcomplete 20
+        GetAzureRegions -azureSource $azureGovernmentSource -azureCache $azureGovernmentCache -cloudProvider "Azure Government"
+    }
+    # Azure - China
+    if (($CloudProvider -eq "All") -or ($CloudProvider -eq "Azure")) {
+        write-progress -activity "Loading subnet ranges" -status "Azure China" -percentcomplete 30
+        GetAzureRegions -azureSource $azureChinaSource -azureCache $azureChinaCache -cloudProvider "Azure China"
+    }
+    # Azure - Germany
+    if (($CloudProvider -eq "All") -or ($CloudProvider -eq "Azure")) {
+        write-progress -activity "Loading subnet ranges" -status "Azure Germany" -percentcomplete 40
+        GetAzureRegions -azureSource $azureGermanySource -azureCache $azureGermanyCache -cloudProvider "Azure Germany"
     }
     # Google Cloud
     if (($CloudProvider -eq "All") -or ($CloudProvider -eq "GoogleCloud")) {
-        write-progress -activity "Loading subnet ranges" -status "Google Cloud" -percentcomplete 28
+        write-progress -activity "Loading subnet ranges" -status "Google Cloud" -percentcomplete 50
         GetGoogleCloudRegions
     }
     # CloudFlare
     if (($CloudProvider -eq "All") -or ($CloudProvider -eq "CloudFlare")) {
-        write-progress -activity "Loading subnet ranges" -status "CloudFlare" -percentcomplete 43
+        write-progress -activity "Loading subnet ranges" -status "CloudFlare" -percentcomplete 60
         GetCloudFlareRegions
     }
     # Oracle Cloud (OCI)
     if (($CloudProvider -eq "All") -or ($CloudProvider -eq "OCI")) {
-        write-progress -activity "Loading subnet ranges" -status "Oracle Cloud (OCI)" -percentcomplete 57
+        write-progress -activity "Loading subnet ranges" -status "Oracle Cloud (OCI)" -percentcomplete 70
         GetOCIRegions
     }
     # Akamai
     if (($CloudProvider -eq "All") -or ($CloudProvider -eq "Akamai")) {
-        write-progress -activity "Loading subnet ranges" -status "Akamai" -percentcomplete 71
+        write-progress -activity "Loading subnet ranges" -status "Akamai" -percentcomplete 80
         GetAkamaiRegions
     }
     # Digital Ocean
     if (($CloudProvider -eq "All") -or ($CloudProvider -eq "DigitalOcean")) {
-        write-progress -activity "Loading subnet ranges" -status "Digital Ocean" -percentcomplete 85
+        write-progress -activity "Loading subnet ranges" -status "Digital Ocean" -percentcomplete 90
         GetDigitalOceanRegions
     }
     
