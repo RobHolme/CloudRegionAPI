@@ -49,6 +49,10 @@ router.get("/:hostname", async (req: Request, res: Response) => {
     }
     // return the JSON 
     if (hostnameSearchResults.length > 0) {
+        // order results descending by subnet size (tightest match first)
+        hostnameSearchResults.sort((a: cloudProviderSearchResult, b: cloudProviderSearchResult) => {
+            return parseInt(b.SubnetSize) - parseInt(a.SubnetSize);
+        });
         res.send(JSON.stringify(hostnameSearchResults, null, 2));
         return;
     }
