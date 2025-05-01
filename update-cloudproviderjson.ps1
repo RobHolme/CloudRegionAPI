@@ -19,10 +19,10 @@ begin {
 
     # source URLs for each cloud provider
     $awsSource = "https://ip-ranges.amazonaws.com/ip-ranges.json"
-    $azurePublicSource = "https://www.microsoft.com/en-us/download/confirmation.aspx?id=56519"
-    $azureGovernmentSource = "https://www.microsoft.com/en-us/download/confirmation.aspx?id=57063"
-    $azureChinaSource = "https://www.microsoft.com/en-us/download/confirmation.aspx?id=57062"
-    $azureGermanySource = "https://www.microsoft.com/en-us/download/confirmation.aspx?id=57064"
+    $azurePublicSource = "https://www.microsoft.com/download/details.aspx?id=56519"
+    $azureGovernmentSource = "https://www.microsoft.com/download/details.aspx?id=57063"
+    $azureChinaSource = "https://www.microsoft.com/download/details.aspx?id=57062"
+    $azureGermanySource = "https://www.microsoft.com/download/details.aspx?id=57064"
     $googleCloudSource = "https://www.gstatic.com/ipranges/cloud.json"
     $ociSource = "https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json"
     $digitalOceanSource = "https://digitalocean.com/geo/google.csv"
@@ -152,7 +152,7 @@ begin {
         # The cloud provider name to use in results
         [Parameter(Mandatory=$true)]
         [string] $cloudProvider
-        ),
+        )
 
 
         $azureRegions = @()
