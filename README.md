@@ -97,7 +97,7 @@ __```GET http://127.0.0.1/api/subnets/{CloudProvider}```__
 
 ### Parameters
 
-__CloudProvider \<string\>__ : The name of the specific cloud provider. Must be one of "AWS", "Azure", "OCI", "GoogleCloud", "DigitalOcean", "Akamai", or "CloudFlare"
+__CloudProvider \<string\>__ : The name of the specific cloud provider. Must be one of "AWS", "Azure", "AzureGovernment", AzureChina", "AzureGermany", "OCI", "GoogleCloud", "DigitalOcean", "Akamai", or "CloudFlare"
 
 e.g. ```curl http://127.0.0.1/api/subnets/aws```
 
@@ -213,13 +213,16 @@ Client information returned as a JSON payload
 ## Notes
 
 IP ranges and region details for each cloud provider are sourced from:
-* https://ip-ranges.amazonaws.com/ip-ranges.json
-* https://www.microsoft.com/en-us/download/confirmation.aspx?id=56519
-* https://www.gstatic.com/ipranges/cloud.json
-* https://www.cloudflare.com/ips-v4/#
-* https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json
-* https://digitalocean.com/geo/google.csv
-* https://ipinfo.io/widget/demo/akamai.com?dataset=ranges
+* AWS: https://ip-ranges.amazonaws.com/ip-ranges.json
+* Azure (Public): https://www.microsoft.com/en-us/download/confirmation.aspx?id=56519
+* Azure (Government): https://www.microsoft.com/download/details.aspx?id=57063
+* Azure (China): https://www.microsoft.com/download/details.aspx?id=57062
+* Azure (Germany): https://www.microsoft.com/download/details.aspx?id=57064
+* Google Cloud: https://www.gstatic.com/ipranges/cloud.json
+* Oracle CLoud: https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json
+* Digital Ocean: https://digitalocean.com/geo/google.csv
+* CloudFlare: https://www.cloudflare.com/ips-v4/#
+* Akamai: https://ipinfo.io/widget/demo/akamai.com?dataset=ranges
 
 <br>
 <br>
