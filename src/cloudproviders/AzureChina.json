@@ -210,6 +210,174 @@
     "CloudProvider": "Azure China"
   },
   {
+    "Subnet": "143.64.122.183/32",
+    "Region": "chinanorth3",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "143.64.122.196/32",
+    "Region": "chinanorth3",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "143.64.122.199/32",
+    "Region": "chinanorth3",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "143.64.122.254/32",
+    "Region": "chinanorth3",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "143.64.123.16/32",
+    "Region": "chinanorth3",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "143.64.123.26/32",
+    "Region": "chinanorth3",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "143.64.123.32/32",
+    "Region": "chinanorth3",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "143.64.123.37/32",
+    "Region": "chinanorth3",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "143.64.123.42/32",
+    "Region": "chinanorth3",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "143.64.136.86/32",
+    "Region": "chinanorth3",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "143.64.136.129/32",
+    "Region": "chinanorth3",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "143.64.136.136/32",
+    "Region": "chinanorth3",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "143.64.166.106/32",
+    "Region": "chinanorth3",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "143.64.167.106/32",
+    "Region": "chinanorth3",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "143.64.167.129/32",
+    "Region": "chinanorth3",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "143.64.186.125/32",
+    "Region": "chinanorth3",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "143.64.186.220/32",
+    "Region": "chinanorth3",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "143.64.187.39/32",
+    "Region": "chinanorth3",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "143.64.187.163/32",
+    "Region": "chinanorth3",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "143.64.190.151/32",
+    "Region": "chinanorth3",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "143.64.190.236/32",
+    "Region": "chinanorth3",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "143.64.191.5/32",
+    "Region": "chinanorth3",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "143.64.191.41/32",
+    "Region": "chinanorth3",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "143.64.191.52/32",
+    "Region": "chinanorth3",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
     "Subnet": "159.27.255.192/28",
     "Region": "chinanorth3",
     "Service": "LogicApps",
@@ -1505,6 +1673,20 @@
     "CloudProvider": "Azure China"
   },
   {
+    "Subnet": "40.73.33.118/32",
+    "Region": "chinanorth2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.73.33.181/32",
+    "Region": "chinanorth2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
     "Subnet": "40.73.35.32/32",
     "Region": "chinanorth2",
     "Service": "LogicApps",
@@ -1610,6 +1792,69 @@
     "CloudProvider": "Azure China"
   },
   {
+    "Subnet": "139.217.98.10/32",
+    "Region": "chinanorth2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "139.217.98.90/32",
+    "Region": "chinanorth2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "139.217.98.105/32",
+    "Region": "chinanorth2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "139.217.98.110/32",
+    "Region": "chinanorth2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "139.217.98.133/32",
+    "Region": "chinanorth2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "139.217.98.139/32",
+    "Region": "chinanorth2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "139.217.98.149/32",
+    "Region": "chinanorth2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "139.217.98.194/32",
+    "Region": "chinanorth2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "139.217.98.249/32",
+    "Region": "chinanorth2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
     "Subnet": "139.217.99.144/32",
     "Region": "chinanorth2",
     "Service": "LogicApps",
@@ -1649,6 +1894,90 @@
     "Region": "chinanorth2",
     "Service": "LogicApps",
     "SubnetSize": "29",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "159.27.152.85/32",
+    "Region": "chinanorth2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "159.27.152.97/32",
+    "Region": "chinanorth2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "159.27.152.246/32",
+    "Region": "chinanorth2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "159.27.153.43/32",
+    "Region": "chinanorth2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "159.27.153.167/32",
+    "Region": "chinanorth2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "159.27.154.80/32",
+    "Region": "chinanorth2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "159.27.154.178/32",
+    "Region": "chinanorth2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "159.27.155.6/32",
+    "Region": "chinanorth2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "159.27.155.94/32",
+    "Region": "chinanorth2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "159.27.157.216/32",
+    "Region": "chinanorth2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "159.27.158.6/32",
+    "Region": "chinanorth2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "159.27.158.214/32",
+    "Region": "chinanorth2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
     "CloudProvider": "Azure China"
   },
   {
@@ -5005,6 +5334,69 @@
     "CloudProvider": "Azure China"
   },
   {
+    "Subnet": "40.72.111.145/32",
+    "Region": "chinaeast2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.72.114.104/32",
+    "Region": "chinaeast2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.72.114.136/32",
+    "Region": "chinaeast2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.72.114.189/32",
+    "Region": "chinaeast2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.72.115.83/32",
+    "Region": "chinaeast2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.72.115.166/32",
+    "Region": "chinaeast2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.72.116.147/32",
+    "Region": "chinaeast2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.72.118.84/32",
+    "Region": "chinaeast2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.72.118.169/32",
+    "Region": "chinaeast2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
     "Subnet": "40.73.71.31/32",
     "Region": "chinaeast2",
     "Service": "LogicApps",
@@ -5082,6 +5474,83 @@
     "CloudProvider": "Azure China"
   },
   {
+    "Subnet": "52.130.88.144/32",
+    "Region": "chinaeast2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "52.130.89.243/32",
+    "Region": "chinaeast2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "52.130.90.203/32",
+    "Region": "chinaeast2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "52.130.92.162/32",
+    "Region": "chinaeast2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "52.130.202.8/32",
+    "Region": "chinaeast2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "52.130.205.5/32",
+    "Region": "chinaeast2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "52.130.206.199/32",
+    "Region": "chinaeast2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "52.130.206.249/32",
+    "Region": "chinaeast2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "52.130.211.82/32",
+    "Region": "chinaeast2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "52.130.211.201/32",
+    "Region": "chinaeast2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "52.130.215.38/32",
+    "Region": "chinaeast2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
     "Subnet": "52.131.240.224/32",
     "Region": "chinaeast2",
     "Service": "LogicApps",
@@ -5153,6 +5622,34 @@
   },
   {
     "Subnet": "139.217.237.127/32",
+    "Region": "chinaeast2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "163.228.152.24/32",
+    "Region": "chinaeast2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "163.228.153.150/32",
+    "Region": "chinaeast2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "163.228.155.189/32",
+    "Region": "chinaeast2",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "163.228.159.157/32",
     "Region": "chinaeast2",
     "Service": "LogicApps",
     "SubnetSize": "32",
@@ -8918,6 +9415,20 @@
     "CloudProvider": "Azure China"
   },
   {
+    "Subnet": "40.162.73.240/28",
+    "Region": "",
+    "Service": "CognitiveServicesManagement",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.169.160/28",
+    "Region": "",
+    "Service": "CognitiveServicesManagement",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure China"
+  },
+  {
     "Subnet": "42.159.157.119/32",
     "Region": "",
     "Service": "CognitiveServicesManagement",
@@ -9188,6 +9699,13 @@
     "Region": "",
     "Service": "CognitiveServicesManagement",
     "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "143.64.206.32/28",
+    "Region": "",
+    "Service": "CognitiveServicesManagement",
+    "SubnetSize": "28",
     "CloudProvider": "Azure China"
   },
   {
