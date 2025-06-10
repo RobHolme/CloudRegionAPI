@@ -10,7 +10,7 @@ async function submitForm(event) {
     // don't submit input with path or escape characters in the name, or any string terminators
     const pattern = /\\|\/|;|`|'|"|\.{2,}|\(|\)|<|>|\$|\?|!|&/;
     if (ip.match(pattern)) {
-        document.getElementById('result').textContent = "Error: Hostname is not valid"
+        document.getElementById('result').textContent = "Error: Hostname is not valid";
         return;
     }
 
@@ -24,7 +24,7 @@ async function submitForm(event) {
             return;
         }
         catch {
-            document.getElementById('result').textContent = "Error: Hostname is not valid"
+            document.getElementById('result').textContent = "Error: Hostname is not valid";
             return;
         }
     }
@@ -57,7 +57,7 @@ function generateTable(jsonData) {
         const row = document.createElement('tr');
         ['IPAddress', 'CloudProvider', 'Region', 'Service', 'Subnet'].forEach((key) => {
             const td = document.createElement('td');
-            td.textContent = item[key.toString()]
+            td.textContent = item[key.toString()];
             row.appendChild(td);
         });
         tbody.appendChild(row);
