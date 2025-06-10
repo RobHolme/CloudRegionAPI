@@ -159,7 +159,7 @@ begin {
         $azureRegionHashTable = @{}
             
         # Get the download URL for the Azure IP ranges JSON file    
-        Write-Verbose "Retrieving Azure regions from $azureSource"
+        Write-Verbose "Retrieving Azure ($cloudProvider) regions from $azureSource"
         $azureNetDownload = Invoke-WebRequestEx -Uri $azureSource
         if ($null -eq $azureNetDownload) {
             Write-Warning "Failed to retrieve download location for Azure IP ranges."
@@ -169,6 +169,7 @@ begin {
         else {
             $azureNetDownload = ($azureNetDownload.RawContent | Select-string -Pattern 'https:\/\/download\.microsoft\.com\/download.+\.json",').Matches[0].Value            
             $azureNetDownload = $azureNetDownload.Substring(0, $azureNetDownload.Length - 2)
+            Write-Verbose "$cloudProvider IP ranges download URL: $azureNetDownload"
             $azureNetDownloadRaw = (Invoke-WebRequestEx -Uri $azureNetDownload)
             if ($null -eq $azureNetDownloadRaw) {
                 Write-Warning "Failed to retrieve Azure IP ranges."
