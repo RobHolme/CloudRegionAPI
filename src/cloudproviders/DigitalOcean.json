@@ -1792,6 +1792,13 @@
     "CloudProvider": "Digital Ocean"
   },
   {
+    "Subnet": "129.212.168.0/22",
+    "Region": "Frankfurt",
+    "Service": "",
+    "SubnetSize": "22",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
     "Subnet": "134.122.0.0/20",
     "Region": "Clifton",
     "Service": "",
