@@ -1995,6 +1995,13 @@
     "CloudProvider": "Google Cloud"
   },
   {
+    "Subnet": "34.183.3.128/25",
+    "Region": "europe-west12",
+    "service": "Google Cloud",
+    "SubnetSize": "25",
+    "CloudProvider": "Google Cloud"
+  },
+  {
     "Subnet": "34.13.0.0/18",
     "Region": "europe-west2",
     "service": "Google Cloud",
@@ -4687,6 +4694,13 @@
     "Region": "us-south1",
     "service": "Google Cloud",
     "SubnetSize": "16",
+    "CloudProvider": "Google Cloud"
+  },
+  {
+    "Subnet": "34.3.96.0/20",
+    "Region": "us-west1",
+    "service": "Google Cloud",
+    "SubnetSize": "20",
     "CloudProvider": "Google Cloud"
   },
   {
