@@ -1078,6 +1078,13 @@
     "CloudProvider": "Azure China"
   },
   {
+    "Subnet": "52.130.224.224/28",
+    "Region": "chinanorth3",
+    "Service": "AzureCognitiveSearch",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure China"
+  },
+  {
     "Subnet": "52.131.16.192/26",
     "Region": "chinanorth3",
     "Service": "AzureCognitiveSearch",
@@ -1491,6 +1498,13 @@
     "CloudProvider": "Azure China"
   },
   {
+    "Subnet": "163.228.177.0/24",
+    "Region": "chinanorth3",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure China"
+  },
+  {
     "Subnet": "163.228.224.0/19",
     "Region": "chinanorth3",
     "Service": "",
@@ -1618,6 +1632,13 @@
   },
   {
     "Subnet": "52.130.20.248/29",
+    "Region": "chinanorth2",
+    "Service": "PowerBI",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "139.217.121.0/29",
     "Region": "chinanorth2",
     "Service": "PowerBI",
     "SubnetSize": "29",
@@ -2661,6 +2682,13 @@
   },
   {
     "Subnet": "52.130.16.96/28",
+    "Region": "chinanorth2",
+    "Service": "AzureCognitiveSearch",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "139.217.121.16/28",
     "Region": "chinanorth2",
     "Service": "AzureCognitiveSearch",
     "SubnetSize": "28",
@@ -4893,6 +4921,13 @@
     "CloudProvider": "Azure China"
   },
   {
+    "Subnet": "163.228.33.112/28",
+    "Region": "chinaeast3",
+    "Service": "AzureCognitiveSearch",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure China"
+  },
+  {
     "Subnet": "52.131.144.16/30",
     "Region": "chinaeast3",
     "Service": "AzureBotService",
@@ -5156,6 +5191,13 @@
     "Region": "chinaeast3",
     "Service": "",
     "SubnetSize": "19",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "163.228.176.0/24",
+    "Region": "chinaeast3",
+    "Service": "",
+    "SubnetSize": "24",
     "CloudProvider": "Azure China"
   },
   {
@@ -6528,6 +6570,13 @@
     "Region": "chinaeast2",
     "Service": "AzureCognitiveSearch",
     "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.169.224/28",
+    "Region": "chinaeast2",
+    "Service": "AzureCognitiveSearch",
+    "SubnetSize": "28",
     "CloudProvider": "Azure China"
   },
   {
@@ -8677,6 +8726,13 @@
     "Region": "",
     "Service": "SerialConsole",
     "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.58.128/30",
+    "Region": "",
+    "Service": "SerialConsole",
+    "SubnetSize": "30",
     "CloudProvider": "Azure China"
   },
   {

@@ -427,6 +427,13 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "51.54.115.176/29",
+    "Region": "usgovvirginia",
+    "Service": "PowerBI",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "52.127.48.70/31",
     "Region": "usgovvirginia",
     "Service": "PowerBI",
@@ -2044,6 +2051,20 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "51.54.118.0/26",
+    "Region": "usgovvirginia",
+    "Service": "AzureCognitiveSearch",
+    "SubnetSize": "26",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.118.64/27",
+    "Region": "usgovvirginia",
+    "Service": "AzureCognitiveSearch",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "52.127.48.112/28",
     "Region": "usgovvirginia",
     "Service": "AzureCognitiveSearch",
@@ -3266,6 +3287,13 @@
     "Region": "usgovtexas",
     "Service": "PowerBI",
     "SubnetSize": "26",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.53.96/28",
+    "Region": "usgovtexas",
+    "Service": "PowerBI",
+    "SubnetSize": "28",
     "CloudProvider": "Azure Government"
   },
   {
@@ -4809,6 +4837,20 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "51.54.2.0/23",
+    "Region": "usgovtexas",
+    "Service": "",
+    "SubnetSize": "23",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.10.0/23",
+    "Region": "usgovtexas",
+    "Service": "",
+    "SubnetSize": "23",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "51.54.16.0/20",
     "Region": "usgovtexas",
     "Service": "",
@@ -4820,6 +4862,27 @@
     "Region": "usgovtexas",
     "Service": "",
     "SubnetSize": "19",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.66.0/23",
+    "Region": "usgovtexas",
+    "Service": "",
+    "SubnetSize": "23",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.74.0/23",
+    "Region": "usgovtexas",
+    "Service": "",
+    "SubnetSize": "23",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.82.0/23",
+    "Region": "usgovtexas",
+    "Service": "",
+    "SubnetSize": "23",
     "CloudProvider": "Azure Government"
   },
   {
@@ -7259,6 +7322,20 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "62.11.191.128/26",
+    "Region": "usgovarizona",
+    "Service": "AzureCognitiveSearch",
+    "SubnetSize": "26",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "62.11.191.192/27",
+    "Region": "usgovarizona",
+    "Service": "AzureCognitiveSearch",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "20.140.48.64/30",
     "Region": "usgovarizona",
     "Service": "AzureBotService",
@@ -7812,6 +7889,41 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "51.54.0.0/23",
+    "Region": "usgovarizona",
+    "Service": "",
+    "SubnetSize": "23",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.8.0/23",
+    "Region": "usgovarizona",
+    "Service": "",
+    "SubnetSize": "23",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.64.0/23",
+    "Region": "usgovarizona",
+    "Service": "",
+    "SubnetSize": "23",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.72.0/23",
+    "Region": "usgovarizona",
+    "Service": "",
+    "SubnetSize": "23",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.80.0/23",
+    "Region": "usgovarizona",
+    "Service": "",
+    "SubnetSize": "23",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "52.108.140.0/24",
     "Region": "usgovarizona",
     "Service": "",
@@ -8306,6 +8418,13 @@
     "Region": "usdodeast",
     "Service": "PowerBI",
     "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.181.42.128/28",
+    "Region": "usdodeast",
+    "Service": "PowerBI",
+    "SubnetSize": "28",
     "CloudProvider": "Azure Government"
   },
   {
@@ -9503,6 +9622,13 @@
     "Region": "usdodcentral",
     "Service": "PowerBI",
     "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.159.234.240/28",
+    "Region": "usdodcentral",
+    "Service": "PowerBI",
+    "SubnetSize": "28",
     "CloudProvider": "Azure Government"
   },
   {
@@ -15729,13 +15855,6 @@
     "CloudProvider": "Azure Government"
   },
   {
-    "Subnet": "20.140.176.202/32",
-    "Region": "",
-    "Service": "AzureAPIForFHIR",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
     "Subnet": "20.141.8.160/28",
     "Region": "",
     "Service": "AzureAPIForFHIR",
@@ -15789,20 +15908,6 @@
     "Region": "",
     "Service": "AzureAPIForFHIR",
     "SubnetSize": "28",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.244.111.67/32",
-    "Region": "",
-    "Service": "AzureAPIForFHIR",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.247.151.193/32",
-    "Region": "",
-    "Service": "AzureAPIForFHIR",
-    "SubnetSize": "32",
     "CloudProvider": "Azure Government"
   },
   {
