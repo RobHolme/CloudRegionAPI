@@ -434,6 +434,13 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "51.54.118.160/27",
+    "Region": "usgovvirginia",
+    "Service": "PowerBI",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "52.127.48.70/31",
     "Region": "usgovvirginia",
     "Service": "PowerBI",
