@@ -1274,24 +1274,10 @@
     "CloudProvider": "Azure Government"
   },
   {
-    "Subnet": "23.97.1.36/32",
-    "Region": "usgovvirginia",
-    "Service": "AzureServiceBus",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
     "Subnet": "52.127.42.64/28",
     "Region": "usgovvirginia",
     "Service": "AzureServiceBus",
     "SubnetSize": "28",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.227.161.208/32",
-    "Region": "usgovvirginia",
-    "Service": "AzureServiceBus",
-    "SubnetSize": "32",
     "CloudProvider": "Azure Government"
   },
   {
@@ -1789,13 +1775,6 @@
     "Region": "usgovvirginia",
     "Service": "AzureEventHub",
     "SubnetSize": "27",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.227.171.130/32",
-    "Region": "usgovvirginia",
-    "Service": "AzureEventHub",
-    "SubnetSize": "32",
     "CloudProvider": "Azure Government"
   },
   {
@@ -4123,27 +4102,6 @@
     "CloudProvider": "Azure Government"
   },
   {
-    "Subnet": "52.238.114.175/32",
-    "Region": "usgovtexas",
-    "Service": "AzureEventHub",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.238.116.59/32",
-    "Region": "usgovtexas",
-    "Service": "AzureEventHub",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.238.116.60/32",
-    "Region": "usgovtexas",
-    "Service": "AzureEventHub",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
     "Subnet": "62.11.93.0/24",
     "Region": "usgovtexas",
     "Service": "AzureEventHub",
@@ -5422,20 +5380,6 @@
     "Region": "usgoviowa",
     "Service": "AzureIoTHub",
     "SubnetSize": "27",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "23.97.16.186/32",
-    "Region": "usgoviowa",
-    "Service": "AzureEventHub",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "23.97.16.249/32",
-    "Region": "usgoviowa",
-    "Service": "AzureEventHub",
-    "SubnetSize": "32",
     "CloudProvider": "Azure Government"
   },
   {
@@ -7064,13 +7008,6 @@
   },
   {
     "Subnet": "52.244.48.85/32",
-    "Region": "usgovarizona",
-    "Service": "AzureEventHub",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.244.202.159/32",
     "Region": "usgovarizona",
     "Service": "AzureEventHub",
     "SubnetSize": "32",
@@ -8764,13 +8701,6 @@
     "CloudProvider": "Azure Government"
   },
   {
-    "Subnet": "52.181.160.40/32",
-    "Region": "usdodeast",
-    "Service": "AzureServiceBus",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
     "Subnet": "52.245.136.0/27",
     "Region": "usdodeast",
     "Service": "AzureSecurityCenter",
@@ -8936,20 +8866,6 @@
     "Region": "usdodeast",
     "Service": "AzureEventHub",
     "SubnetSize": "28",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.181.162.129/32",
-    "Region": "usdodeast",
-    "Service": "AzureEventHub",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.181.162.144/32",
-    "Region": "usdodeast",
-    "Service": "AzureEventHub",
-    "SubnetSize": "32",
     "CloudProvider": "Azure Government"
   },
   {
@@ -10276,20 +10192,6 @@
     "CloudProvider": "Azure Government"
   },
   {
-    "Subnet": "52.182.90.133/32",
-    "Region": "usdodcentral",
-    "Service": "AzureEventHub",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.182.90.144/32",
-    "Region": "usdodcentral",
-    "Service": "AzureEventHub",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
     "Subnet": "52.245.129.64/26",
     "Region": "usdodcentral",
     "Service": "AzureEventHub",
@@ -11449,6 +11351,27 @@
     "Region": "",
     "Service": "OneDsCollector",
     "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.159.235.16/29",
+    "Region": "",
+    "Service": "OneDsCollector",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.119.64/28",
+    "Region": "",
+    "Service": "OneDsCollector",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.181.43.16/29",
+    "Region": "",
+    "Service": "OneDsCollector",
+    "SubnetSize": "29",
     "CloudProvider": "Azure Government"
   },
   {

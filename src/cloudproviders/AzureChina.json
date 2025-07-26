@@ -5824,6 +5824,13 @@
     "CloudProvider": "Azure China"
   },
   {
+    "Subnet": "40.72.198.0/24",
+    "Region": "chinaeast2",
+    "Service": "AzureStorage",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure China"
+  },
+  {
     "Subnet": "40.73.81.0/24",
     "Region": "chinaeast2",
     "Service": "AzureStorage",
@@ -6780,13 +6787,6 @@
     "Region": "chinaeast2",
     "Service": "",
     "SubnetSize": "20",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "40.72.198.0/24",
-    "Region": "chinaeast2",
-    "Service": "",
-    "SubnetSize": "24",
     "CloudProvider": "Azure China"
   },
   {
