@@ -5138,14 +5138,21 @@
     "CloudProvider": "Azure China"
   },
   {
-    "Subnet": "159.27.128.112/30",
+    "Subnet": "159.27.128.112/29",
+    "Region": "chinaeast3",
+    "Service": "",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "159.27.128.120/30",
     "Region": "chinaeast3",
     "Service": "",
     "SubnetSize": "30",
     "CloudProvider": "Azure China"
   },
   {
-    "Subnet": "159.27.128.116/31",
+    "Subnet": "159.27.128.124/31",
     "Region": "chinaeast3",
     "Service": "",
     "SubnetSize": "31",
