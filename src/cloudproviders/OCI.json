@@ -6965,6 +6965,90 @@
     "CloudProvider": "Oracle Cloud (OCI)"
   },
   {
+    "Subnet": "170.9.64.0/19",
+    "Region": "ap-kulai-1",
+    "Service": "OCI",
+    "SubnetSize": "19",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "134.70.214.0/23",
+    "Region": "ap-kulai-1",
+    "Service": "OSN",
+    "SubnetSize": "23",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "134.70.214.0/23",
+    "Region": "ap-kulai-1",
+    "Service": "OBJECT_STORAGE",
+    "SubnetSize": "23",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "134.70.216.0/23",
+    "Region": "ap-kulai-1",
+    "Service": "OSN",
+    "SubnetSize": "23",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "134.70.216.0/23",
+    "Region": "ap-kulai-1",
+    "Service": "OBJECT_STORAGE",
+    "SubnetSize": "23",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "136.248.232.0/26",
+    "Region": "ap-kulai-1",
+    "Service": "OSN",
+    "SubnetSize": "26",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "136.248.232.128/25",
+    "Region": "ap-kulai-1",
+    "Service": "OSN",
+    "SubnetSize": "25",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "136.248.233.192/26",
+    "Region": "ap-kulai-1",
+    "Service": "OSN",
+    "SubnetSize": "26",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "136.248.234.0/23",
+    "Region": "ap-kulai-1",
+    "Service": "OSN",
+    "SubnetSize": "23",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "136.248.236.0/22",
+    "Region": "ap-kulai-1",
+    "Service": "OSN",
+    "SubnetSize": "22",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "140.91.100.0/23",
+    "Region": "ap-kulai-1",
+    "Service": "OSN",
+    "SubnetSize": "23",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "140.204.150.128/25",
+    "Region": "ap-kulai-1",
+    "Service": "OSN",
+    "SubnetSize": "25",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
     "Subnet": "192.22.128.0/19",
     "Region": "us-quincy-1",
     "Service": "OCI",
