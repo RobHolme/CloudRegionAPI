@@ -1533,6 +1533,13 @@
     "CloudProvider": "Google Cloud"
   },
   {
+    "Subnet": "34.128.208.0/20",
+    "Region": "europe-central2",
+    "service": "Google Cloud",
+    "SubnetSize": "20",
+    "CloudProvider": "Google Cloud"
+  },
+  {
     "Subnet": "34.88.0.0/16",
     "Region": "europe-north1",
     "service": "Google Cloud",
