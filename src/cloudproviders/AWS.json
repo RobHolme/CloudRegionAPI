@@ -9303,6 +9303,13 @@
     "CloudProvider": "AWS"
   },
   {
+    "Subnet": "69.0.136.0/22",
+    "Region": "eu-west-3",
+    "Service": "AMAZON",
+    "SubnetSize": "22",
+    "CloudProvider": "AWS"
+  },
+  {
     "Subnet": "69.107.10.8/29",
     "Region": "us-west-1",
     "Service": "AMAZON",
@@ -30303,13 +30310,6 @@
     "CloudProvider": "AWS"
   },
   {
-    "Subnet": "37.203.157.0/24",
-    "Region": "GLOBAL",
-    "Service": "AMAZON",
-    "SubnetSize": "24",
-    "CloudProvider": "AWS"
-  },
-  {
     "Subnet": "51.0.104.0/21",
     "Region": "GLOBAL",
     "Service": "AMAZON",
@@ -43764,6 +43764,13 @@
     "CloudProvider": "AWS"
   },
   {
+    "Subnet": "16.146.0.0/16",
+    "Region": "us-west-2",
+    "Service": "EC2",
+    "SubnetSize": "16",
+    "CloudProvider": "AWS"
+  },
+  {
     "Subnet": "18.230.0.0/16",
     "Region": "sa-east-1",
     "Service": "EC2",
@@ -48671,6 +48678,13 @@
     "CloudProvider": "AWS"
   },
   {
+    "Subnet": "46.168.0.0/15",
+    "Region": "ap-southeast-6",
+    "Service": "EC2",
+    "SubnetSize": "15",
+    "CloudProvider": "AWS"
+  },
+  {
     "Subnet": "51.0.112.0/21",
     "Region": "GLOBAL",
     "Service": "EC2",
@@ -52350,13 +52364,6 @@
     "Region": "GLOBAL",
     "Service": "ROUTE53",
     "SubnetSize": "23",
-    "CloudProvider": "AWS"
-  },
-  {
-    "Subnet": "37.203.157.0/24",
-    "Region": "GLOBAL",
-    "Service": "DATADEPOT",
-    "SubnetSize": "24",
     "CloudProvider": "AWS"
   },
   {
