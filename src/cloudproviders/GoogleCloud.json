@@ -1309,6 +1309,20 @@
     "CloudProvider": "Google Cloud"
   },
   {
+    "Subnet": "34.3.32.0/20",
+    "Region": "asia-southeast3",
+    "service": "Google Cloud",
+    "SubnetSize": "20",
+    "CloudProvider": "Google Cloud"
+  },
+  {
+    "Subnet": "34.15.128.0/17",
+    "Region": "asia-southeast3",
+    "service": "Google Cloud",
+    "SubnetSize": "17",
+    "CloudProvider": "Google Cloud"
+  },
+  {
     "Subnet": "34.40.128.0/17",
     "Region": "australia-southeast1",
     "service": "Google Cloud",
