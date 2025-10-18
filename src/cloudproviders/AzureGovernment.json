@@ -2772,6 +2772,13 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "51.55.0.0/18",
+    "Region": "usgovvirginia",
+    "Service": "",
+    "SubnetSize": "18",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "52.108.66.0/23",
     "Region": "usgovvirginia",
     "Service": "",
