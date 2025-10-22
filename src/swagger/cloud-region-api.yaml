@@ -78,6 +78,9 @@ paths:
             example: AWS
             enum:
               - Azure
+              - AzureGovernment
+              - AzureGermany
+              - AzureChina
               - AWS
               - OCI
               - GoolgeCloud
