@@ -1,5 +1,5 @@
 import fs from 'fs';
-import express, { Request, Response } from "express";
+import express, { NextFunction, Request, Response } from "express";
 import hostnameRoute from "./routes/hostname";
 import infoRoute from "./routes/info";
 import allsubnetsRoute from "./routes/allsubnets";
@@ -8,6 +8,20 @@ import httpCompression from 'compression';
 // create a new express application instance
 const app = express();
 const PORT = process.env.PORT || 80;
+
+
+// middleware to block specific HTTP methods that are not required. Whitelist allowed methods only.
+const blockMethodsMiddleware = (req: Request, res: Response, next: NextFunction): void => {
+  const allowedMethods: string[] = ['GET'];
+  if (!allowedMethods.includes(req.method)) {
+    res.status(405).json({ message: `${req.method} method is not allowed.`});
+    return;
+  }
+  next();
+};
+app.use(blockMethodsMiddleware);
+
+
 app.use(express.json());
 // disable the 'x-powered-by' header in the response
 app.disable('x-powered-by');
@@ -22,6 +36,7 @@ app.use("/api/subnets", allsubnetsRoute);
 app.use('/favicon.ico', express.static('./release/images/favicon.ico'));
 app.use('/styles.css', express.static('./release/html/styles.css'));
 app.use('/scripts.js', express.static('./release/html/scripts.js'));
+
 
 // handle requests for the root URL
 app.get("/", (req: Request, res: Response) => {
