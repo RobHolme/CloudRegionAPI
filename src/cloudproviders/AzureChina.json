@@ -9233,6 +9233,13 @@
     "CloudProvider": "Azure China"
   },
   {
+    "Subnet": "40.72.120.0/22",
+    "Region": "",
+    "Service": "EOPExtPublished",
+    "SubnetSize": "22",
+    "CloudProvider": "Azure China"
+  },
+  {
     "Subnet": "42.159.33.192/27",
     "Region": "",
     "Service": "EOPExtPublished",
@@ -9261,17 +9268,10 @@
     "CloudProvider": "Azure China"
   },
   {
-    "Subnet": "139.219.16.0/27",
+    "Subnet": "139.219.16.0/23",
     "Region": "",
     "Service": "EOPExtPublished",
-    "SubnetSize": "27",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "139.219.17.0/24",
-    "Region": "",
-    "Service": "EOPExtPublished",
-    "SubnetSize": "24",
+    "SubnetSize": "23",
     "CloudProvider": "Azure China"
   },
   {
@@ -9282,10 +9282,10 @@
     "CloudProvider": "Azure China"
   },
   {
-    "Subnet": "139.219.145.0/27",
+    "Subnet": "139.219.145.0/24",
     "Region": "",
     "Service": "EOPExtPublished",
-    "SubnetSize": "27",
+    "SubnetSize": "24",
     "CloudProvider": "Azure China"
   },
   {
@@ -9300,6 +9300,13 @@
     "Region": "",
     "Service": "EOPExtPublished",
     "SubnetSize": "22",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "159.27.176.0/21",
+    "Region": "",
+    "Service": "EOPExtPublished",
+    "SubnetSize": "21",
     "CloudProvider": "Azure China"
   },
   {
