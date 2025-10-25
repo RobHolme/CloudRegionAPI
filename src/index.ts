@@ -10,11 +10,11 @@ const app = express();
 const PORT = process.env.PORT || 80;
 
 
-// middleware to block specific HTTP methods that are not required. Whitelist allowed methods only.
+// middleware to block specific HTTP methods that are not required.
 const blockMethodsMiddleware = (req: Request, res: Response, next: NextFunction): void => {
-  const allowedMethods: string[] = ['GET'];
-  if (!allowedMethods.includes(req.method)) {
-    res.status(405).json({ message: `${req.method} method is not allowed.`});
+  const blockedMethods: string[] = ['POST', 'PUT', 'DELETE', 'PATCH', 'TRACE', 'CONNECT'];
+  if (blockedMethods.includes(req.method)) {
+  res.status(405).json({ message: `${req.method} method is not allowed.`});
     return;
   }
   next();
