@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 80;
 
 // middleware to block specific HTTP methods that are not required.
 const blockMethodsMiddleware = (req: Request, res: Response, next: NextFunction): void => {
-  const blockedMethods: string[] = ['POST', 'PUT', 'DELETE', 'PATCH', 'TRACE', 'CONNECT'];
+  const blockedMethods: string[] = ['POST', 'PUT', 'DELETE', 'PATCH', 'TRACE', 'CONNECT'];  // allow OPTIONS, HEAD, and GET
   if (blockedMethods.includes(req.method)) {
   res.status(405).json({ message: `${req.method} method is not allowed.`});
     return;
