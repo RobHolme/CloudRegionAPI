@@ -42,6 +42,13 @@
     "CloudProvider": "AWS"
   },
   {
+    "Subnet": "15.248.168.0/21",
+    "Region": "sa-west-1",
+    "Service": "AMAZON",
+    "SubnetSize": "21",
+    "CloudProvider": "AWS"
+  },
+  {
     "Subnet": "23.254.120.0/21",
     "Region": "sa-west-1",
     "Service": "AMAZON",
@@ -5950,6 +5957,13 @@
     "CloudProvider": "AWS"
   },
   {
+    "Subnet": "69.107.10.136/29",
+    "Region": "us-west-2",
+    "Service": "AMAZON",
+    "SubnetSize": "29",
+    "CloudProvider": "AWS"
+  },
+  {
     "Subnet": "99.77.155.0/24",
     "Region": "eu-west-1",
     "Service": "AMAZON",
@@ -6073,6 +6087,13 @@
     "Region": "sa-east-1",
     "Service": "AMAZON",
     "SubnetSize": "16",
+    "CloudProvider": "AWS"
+  },
+  {
+    "Subnet": "69.107.10.120/29",
+    "Region": "ap-southeast-1",
+    "Service": "AMAZON",
+    "SubnetSize": "29",
     "CloudProvider": "AWS"
   },
   {
@@ -7014,6 +7035,13 @@
     "CloudProvider": "AWS"
   },
   {
+    "Subnet": "16.12.120.0/22",
+    "Region": "sa-west-1",
+    "Service": "AMAZON",
+    "SubnetSize": "22",
+    "CloudProvider": "AWS"
+  },
+  {
     "Subnet": "18.97.64.0/20",
     "Region": "ap-southeast-5",
     "Service": "AMAZON",
@@ -7945,6 +7973,13 @@
     "CloudProvider": "AWS"
   },
   {
+    "Subnet": "150.247.42.0/24",
+    "Region": "eu-north-1",
+    "Service": "AMAZON",
+    "SubnetSize": "24",
+    "CloudProvider": "AWS"
+  },
+  {
     "Subnet": "155.146.128.0/20",
     "Region": "us-west-2",
     "Service": "AMAZON",
@@ -8292,6 +8327,13 @@
     "Region": "af-south-1",
     "Service": "AMAZON",
     "SubnetSize": "24",
+    "CloudProvider": "AWS"
+  },
+  {
+    "Subnet": "3.5.120.0/22",
+    "Region": "eu-central-1",
+    "Service": "AMAZON",
+    "SubnetSize": "22",
     "CloudProvider": "AWS"
   },
   {
@@ -12838,6 +12880,13 @@
     "CloudProvider": "AWS"
   },
   {
+    "Subnet": "150.247.46.0/24",
+    "Region": "us-west-2",
+    "Service": "AMAZON",
+    "SubnetSize": "24",
+    "CloudProvider": "AWS"
+  },
+  {
     "Subnet": "176.32.112.0/21",
     "Region": "us-west-1",
     "Service": "AMAZON",
@@ -13514,6 +13563,13 @@
     "Region": "us-east-1",
     "Service": "AMAZON",
     "SubnetSize": "20",
+    "CloudProvider": "AWS"
+  },
+  {
+    "Subnet": "15.177.107.0/24",
+    "Region": "sa-west-1",
+    "Service": "AMAZON",
+    "SubnetSize": "24",
     "CloudProvider": "AWS"
   },
   {
@@ -15022,6 +15078,13 @@
     "CloudProvider": "AWS"
   },
   {
+    "Subnet": "150.247.43.0/24",
+    "Region": "us-east-1",
+    "Service": "AMAZON",
+    "SubnetSize": "24",
+    "CloudProvider": "AWS"
+  },
+  {
     "Subnet": "3.2.68.0/24",
     "Region": "us-west-2",
     "Service": "AMAZON",
@@ -15568,6 +15631,13 @@
     "CloudProvider": "AWS"
   },
   {
+    "Subnet": "69.107.10.112/29",
+    "Region": "ap-southeast-1",
+    "Service": "AMAZON",
+    "SubnetSize": "29",
+    "CloudProvider": "AWS"
+  },
+  {
     "Subnet": "150.222.152.98/32",
     "Region": "eu-central-1",
     "Service": "AMAZON",
@@ -15754,13 +15824,6 @@
     "Region": "eu-west-3",
     "Service": "AMAZON",
     "SubnetSize": "16",
-    "CloudProvider": "AWS"
-  },
-  {
-    "Subnet": "43.226.24.0/23",
-    "Region": "us-west-2",
-    "Service": "AMAZON",
-    "SubnetSize": "23",
     "CloudProvider": "AWS"
   },
   {
@@ -16499,6 +16562,13 @@
     "CloudProvider": "AWS"
   },
   {
+    "Subnet": "69.107.10.104/29",
+    "Region": "me-south-1",
+    "Service": "AMAZON",
+    "SubnetSize": "29",
+    "CloudProvider": "AWS"
+  },
+  {
     "Subnet": "99.77.184.0/24",
     "Region": "us-gov-west-1",
     "Service": "AMAZON",
@@ -17143,13 +17213,6 @@
     "CloudProvider": "AWS"
   },
   {
-    "Subnet": "3.2.99.0/24",
-    "Region": "cn-north-1",
-    "Service": "AMAZON",
-    "SubnetSize": "24",
-    "CloudProvider": "AWS"
-  },
-  {
     "Subnet": "15.221.24.0/21",
     "Region": "us-east-1",
     "Service": "AMAZON",
@@ -17462,6 +17525,13 @@
     "Region": "us-east-1",
     "Service": "AMAZON",
     "SubnetSize": "18",
+    "CloudProvider": "AWS"
+  },
+  {
+    "Subnet": "24.110.16.0/20",
+    "Region": "us-east-1",
+    "Service": "AMAZON",
+    "SubnetSize": "20",
     "CloudProvider": "AWS"
   },
   {
@@ -18309,6 +18379,13 @@
     "Region": "eu-west-3",
     "Service": "AMAZON",
     "SubnetSize": "15",
+    "CloudProvider": "AWS"
+  },
+  {
+    "Subnet": "16.15.24.0/22",
+    "Region": "sa-west-1",
+    "Service": "AMAZON",
+    "SubnetSize": "22",
     "CloudProvider": "AWS"
   },
   {
@@ -20330,6 +20407,13 @@
   {
     "Subnet": "150.222.212.0/24",
     "Region": "us-east-1",
+    "Service": "AMAZON",
+    "SubnetSize": "24",
+    "CloudProvider": "AWS"
+  },
+  {
+    "Subnet": "150.247.44.0/24",
+    "Region": "eu-west-1",
     "Service": "AMAZON",
     "SubnetSize": "24",
     "CloudProvider": "AWS"
@@ -23723,13 +23807,6 @@
     "CloudProvider": "AWS"
   },
   {
-    "Subnet": "3.2.100.0/24",
-    "Region": "cn-northwest-1",
-    "Service": "AMAZON",
-    "SubnetSize": "24",
-    "CloudProvider": "AWS"
-  },
-  {
     "Subnet": "3.4.12.28/32",
     "Region": "ap-northeast-1",
     "Service": "AMAZON",
@@ -24049,6 +24126,13 @@
     "Region": "us-west-1",
     "Service": "AMAZON",
     "SubnetSize": "16",
+    "CloudProvider": "AWS"
+  },
+  {
+    "Subnet": "69.107.10.128/29",
+    "Region": "us-west-2",
+    "Service": "AMAZON",
+    "SubnetSize": "29",
     "CloudProvider": "AWS"
   },
   {
@@ -25536,6 +25620,13 @@
     "CloudProvider": "AWS"
   },
   {
+    "Subnet": "16.15.32.0/20",
+    "Region": "us-west-2",
+    "Service": "AMAZON",
+    "SubnetSize": "20",
+    "CloudProvider": "AWS"
+  },
+  {
     "Subnet": "18.68.0.0/16",
     "Region": "GLOBAL",
     "Service": "AMAZON",
@@ -26474,6 +26565,13 @@
     "CloudProvider": "AWS"
   },
   {
+    "Subnet": "104.255.58.44/32",
+    "Region": "eu-central-1",
+    "Service": "AMAZON",
+    "SubnetSize": "32",
+    "CloudProvider": "AWS"
+  },
+  {
     "Subnet": "104.255.59.87/32",
     "Region": "ap-southeast-2",
     "Service": "AMAZON",
@@ -26719,6 +26817,13 @@
     "CloudProvider": "AWS"
   },
   {
+    "Subnet": "35.96.56.0/24",
+    "Region": "us-west-2",
+    "Service": "AMAZON",
+    "SubnetSize": "24",
+    "CloudProvider": "AWS"
+  },
+  {
     "Subnet": "52.46.192.0/20",
     "Region": "eu-north-1",
     "Service": "AMAZON",
@@ -26929,6 +27034,13 @@
     "CloudProvider": "AWS"
   },
   {
+    "Subnet": "40.168.224.0/28",
+    "Region": "ap-southeast-1",
+    "Service": "AMAZON",
+    "SubnetSize": "28",
+    "CloudProvider": "AWS"
+  },
+  {
     "Subnet": "52.93.33.9/32",
     "Region": "ap-southeast-2",
     "Service": "AMAZON",
@@ -26968,6 +27080,13 @@
     "Region": "eu-south-1",
     "Service": "AMAZON",
     "SubnetSize": "32",
+    "CloudProvider": "AWS"
+  },
+  {
+    "Subnet": "69.107.10.96/29",
+    "Region": "me-south-1",
+    "Service": "AMAZON",
+    "SubnetSize": "29",
     "CloudProvider": "AWS"
   },
   {
@@ -29183,13 +29302,6 @@
     "CloudProvider": "AWS"
   },
   {
-    "Subnet": "43.226.26.0/24",
-    "Region": "us-west-2",
-    "Service": "AMAZON",
-    "SubnetSize": "24",
-    "CloudProvider": "AWS"
-  },
-  {
     "Subnet": "52.93.127.117/32",
     "Region": "ap-southeast-1",
     "Service": "AMAZON",
@@ -29677,6 +29789,13 @@
     "Region": "eu-central-1",
     "Service": "AMAZON",
     "SubnetSize": "24",
+    "CloudProvider": "AWS"
+  },
+  {
+    "Subnet": "104.255.58.63/32",
+    "Region": "eu-central-1",
+    "Service": "AMAZON",
+    "SubnetSize": "32",
     "CloudProvider": "AWS"
   },
   {
@@ -30713,6 +30832,13 @@
     "Region": "us-west-1",
     "Service": "AMAZON",
     "SubnetSize": "31",
+    "CloudProvider": "AWS"
+  },
+  {
+    "Subnet": "150.247.45.0/24",
+    "Region": "eu-south-1",
+    "Service": "AMAZON",
+    "SubnetSize": "24",
     "CloudProvider": "AWS"
   },
   {
@@ -34958,6 +35084,13 @@
     "CloudProvider": "AWS"
   },
   {
+    "Subnet": "13.204.220.0/23",
+    "Region": "ap-south-1",
+    "Service": "AMAZON",
+    "SubnetSize": "23",
+    "CloudProvider": "AWS"
+  },
+  {
     "Subnet": "13.234.221.192/26",
     "Region": "ap-south-1",
     "Service": "AMAZON",
@@ -35574,6 +35707,13 @@
     "CloudProvider": "AWS"
   },
   {
+    "Subnet": "3.103.82.0/24",
+    "Region": "ap-southeast-6",
+    "Service": "AMAZON",
+    "SubnetSize": "24",
+    "CloudProvider": "AWS"
+  },
+  {
     "Subnet": "43.208.52.0/24",
     "Region": "ap-southeast-7",
     "Service": "AMAZON",
@@ -35778,6 +35918,13 @@
   },
   {
     "Subnet": "40.177.52.0/23",
+    "Region": "ca-west-1",
+    "Service": "AMAZON",
+    "SubnetSize": "23",
+    "CloudProvider": "AWS"
+  },
+  {
+    "Subnet": "56.112.70.0/23",
     "Region": "ca-west-1",
     "Service": "AMAZON",
     "SubnetSize": "23",
@@ -38514,6 +38661,13 @@
     "CloudProvider": "AWS"
   },
   {
+    "Subnet": "16.12.120.0/22",
+    "Region": "sa-west-1",
+    "Service": "S3",
+    "SubnetSize": "22",
+    "CloudProvider": "AWS"
+  },
+  {
     "Subnet": "52.95.169.0/24",
     "Region": "eu-north-1",
     "Service": "S3",
@@ -38581,6 +38735,13 @@
     "Region": "GLOBAL",
     "Service": "S3",
     "SubnetSize": "24",
+    "CloudProvider": "AWS"
+  },
+  {
+    "Subnet": "3.5.120.0/22",
+    "Region": "eu-central-1",
+    "Service": "S3",
+    "SubnetSize": "22",
     "CloudProvider": "AWS"
   },
   {
@@ -39095,6 +39256,13 @@
     "CloudProvider": "AWS"
   },
   {
+    "Subnet": "16.15.24.0/22",
+    "Region": "sa-west-1",
+    "Service": "S3",
+    "SubnetSize": "22",
+    "CloudProvider": "AWS"
+  },
+  {
     "Subnet": "52.219.160.0/23",
     "Region": "ap-south-1",
     "Service": "S3",
@@ -39456,6 +39624,13 @@
     "Region": "mx-central-1",
     "Service": "S3",
     "SubnetSize": "22",
+    "CloudProvider": "AWS"
+  },
+  {
+    "Subnet": "16.15.32.0/20",
+    "Region": "us-west-2",
+    "Service": "S3",
+    "SubnetSize": "20",
     "CloudProvider": "AWS"
   },
   {
@@ -40271,6 +40446,13 @@
     "CloudProvider": "AWS"
   },
   {
+    "Subnet": "1.178.93.0/24",
+    "Region": "eu-north-1",
+    "Service": "S3",
+    "SubnetSize": "24",
+    "CloudProvider": "AWS"
+  },
+  {
     "Subnet": "13.51.71.176/28",
     "Region": "eu-north-1",
     "Service": "S3",
@@ -40334,6 +40516,13 @@
     "CloudProvider": "AWS"
   },
   {
+    "Subnet": "1.178.94.0/24",
+    "Region": "eu-west-2",
+    "Service": "S3",
+    "SubnetSize": "24",
+    "CloudProvider": "AWS"
+  },
+  {
     "Subnet": "18.168.37.160/28",
     "Region": "eu-west-2",
     "Service": "S3",
@@ -40345,6 +40534,13 @@
     "Region": "eu-west-2",
     "Service": "S3",
     "SubnetSize": "28",
+    "CloudProvider": "AWS"
+  },
+  {
+    "Subnet": "1.178.90.0/24",
+    "Region": "eu-west-3",
+    "Service": "S3",
+    "SubnetSize": "24",
     "CloudProvider": "AWS"
   },
   {
@@ -44478,6 +44674,13 @@
     "CloudProvider": "AWS"
   },
   {
+    "Subnet": "3.5.120.0/22",
+    "Region": "eu-central-1",
+    "Service": "EC2",
+    "SubnetSize": "22",
+    "CloudProvider": "AWS"
+  },
+  {
     "Subnet": "13.112.0.0/14",
     "Region": "ap-northeast-1",
     "Service": "EC2",
@@ -46284,6 +46487,13 @@
     "CloudProvider": "AWS"
   },
   {
+    "Subnet": "15.177.107.0/24",
+    "Region": "sa-west-1",
+    "Service": "EC2",
+    "SubnetSize": "24",
+    "CloudProvider": "AWS"
+  },
+  {
     "Subnet": "35.96.6.0/24",
     "Region": "us-west-2",
     "Service": "EC2",
@@ -47012,13 +47222,6 @@
     "CloudProvider": "AWS"
   },
   {
-    "Subnet": "43.226.24.0/23",
-    "Region": "us-west-2",
-    "Service": "EC2",
-    "SubnetSize": "23",
-    "CloudProvider": "AWS"
-  },
-  {
     "Subnet": "51.0.142.0/23",
     "Region": "eusc-de-east-1",
     "Service": "EC2",
@@ -47432,13 +47635,6 @@
     "CloudProvider": "AWS"
   },
   {
-    "Subnet": "3.2.99.0/24",
-    "Region": "cn-north-1",
-    "Service": "EC2",
-    "SubnetSize": "24",
-    "CloudProvider": "AWS"
-  },
-  {
     "Subnet": "18.220.0.0/14",
     "Region": "us-east-2",
     "Service": "EC2",
@@ -47541,6 +47737,13 @@
     "Region": "us-east-1",
     "Service": "EC2",
     "SubnetSize": "18",
+    "CloudProvider": "AWS"
+  },
+  {
+    "Subnet": "24.110.16.0/20",
+    "Region": "us-east-1",
+    "Service": "EC2",
+    "SubnetSize": "20",
     "CloudProvider": "AWS"
   },
   {
@@ -47828,6 +48031,13 @@
     "Region": "eu-west-3",
     "Service": "EC2",
     "SubnetSize": "15",
+    "CloudProvider": "AWS"
+  },
+  {
+    "Subnet": "16.15.24.0/22",
+    "Region": "sa-west-1",
+    "Service": "EC2",
+    "SubnetSize": "22",
     "CloudProvider": "AWS"
   },
   {
@@ -49658,13 +49868,6 @@
     "CloudProvider": "AWS"
   },
   {
-    "Subnet": "3.2.100.0/24",
-    "Region": "cn-northwest-1",
-    "Service": "EC2",
-    "SubnetSize": "24",
-    "CloudProvider": "AWS"
-  },
-  {
     "Subnet": "18.97.112.0/20",
     "Region": "ap-east-2",
     "Service": "EC2",
@@ -50211,6 +50414,13 @@
     "CloudProvider": "AWS"
   },
   {
+    "Subnet": "16.15.32.0/20",
+    "Region": "us-west-2",
+    "Service": "EC2",
+    "SubnetSize": "20",
+    "CloudProvider": "AWS"
+  },
+  {
     "Subnet": "52.95.225.0/24",
     "Region": "ap-northeast-3",
     "Service": "EC2",
@@ -50590,6 +50800,13 @@
   },
   {
     "Subnet": "35.96.10.0/24",
+    "Region": "us-west-2",
+    "Service": "EC2",
+    "SubnetSize": "24",
+    "CloudProvider": "AWS"
+  },
+  {
+    "Subnet": "35.96.56.0/24",
     "Region": "us-west-2",
     "Service": "EC2",
     "SubnetSize": "24",
@@ -51312,13 +51529,6 @@
   {
     "Subnet": "35.55.18.0/24",
     "Region": "eu-central-1",
-    "Service": "EC2",
-    "SubnetSize": "24",
-    "CloudProvider": "AWS"
-  },
-  {
-    "Subnet": "43.226.26.0/24",
-    "Region": "us-west-2",
     "Service": "EC2",
     "SubnetSize": "24",
     "CloudProvider": "AWS"
@@ -55314,6 +55524,13 @@
     "CloudProvider": "AWS"
   },
   {
+    "Subnet": "15.177.107.0/24",
+    "Region": "sa-west-1",
+    "Service": "ROUTE53_HEALTHCHECKS_PUBLISHING",
+    "SubnetSize": "24",
+    "CloudProvider": "AWS"
+  },
+  {
     "Subnet": "15.177.73.0/24",
     "Region": "ap-south-1",
     "Service": "ROUTE53_HEALTHCHECKS_PUBLISHING",
@@ -55671,10 +55888,10 @@
     "CloudProvider": "AWS"
   },
   {
-    "Subnet": "52.46.32.0/19",
+    "Subnet": "52.46.0.0/18",
     "Region": "GLOBAL",
     "Service": "CLOUDFRONT_ORIGIN_FACING",
-    "SubnetSize": "19",
+    "SubnetSize": "18",
     "CloudProvider": "AWS"
   },
   {
@@ -55731,13 +55948,6 @@
     "Region": "GLOBAL",
     "Service": "CLOUDFRONT_ORIGIN_FACING",
     "SubnetSize": "24",
-    "CloudProvider": "AWS"
-  },
-  {
-    "Subnet": "52.46.16.0/20",
-    "Region": "GLOBAL",
-    "Service": "CLOUDFRONT_ORIGIN_FACING",
-    "SubnetSize": "20",
     "CloudProvider": "AWS"
   },
   {
