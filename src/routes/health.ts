@@ -4,7 +4,7 @@ const router = Router();
 // -----------------------------
 // Health check URL for Docker health check
 // -----------------------------
-router.get('/health', (req, res) => {
+router.get('/', (req, res) => {
     res.status(200).json({ message: 'healthy' });
 });
 
