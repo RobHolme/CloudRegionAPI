@@ -10,14 +10,14 @@ WORKDIR /home/node/app
 # Copy the package.json and package-lock.json files to the container
 COPY --chown=node:node package*.json ./
 
+# Install curl for healthcheck
+RUN apt-get update && apt-get install -y curl
+
 # Switch to the node user
 USER node
 
 # Install production dependencies
 RUN npm install --omit=dev
-
-# Install curl for healthcheck
-RUN apt-get update && apt-get install -y curl
 
 # copy the 'compiled' release folder to the container
 COPY --chown=node:node ./release/ ./release/
