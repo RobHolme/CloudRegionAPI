@@ -16,6 +16,9 @@ USER node
 # Install production dependencies
 RUN npm install --omit=dev
 
+# Install curl for healthcheck
+RUN apt-get update && apt-get install -y curl
+
 # copy the 'compiled' release folder to the container
 COPY --chown=node:node ./release/ ./release/
 
