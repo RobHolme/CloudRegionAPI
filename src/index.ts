@@ -3,6 +3,7 @@ import express, { NextFunction, Request, Response } from "express";
 import hostnameRoute from "./routes/hostname";
 import infoRoute from "./routes/info";
 import allsubnetsRoute from "./routes/allsubnets";
+import healthRoute from "./routes/health";
 import httpCompression from 'compression';
 
 // create a new express application instance
@@ -31,6 +32,7 @@ app.use(httpCompression());
 app.use("/api/hostname", hostnameRoute);
 app.use("/api/info", infoRoute);
 app.use("/api/subnets", allsubnetsRoute);
+app.use("/api/health", healthRoute);
 
 // static URL for favicon, css and script files
 app.use('/favicon.ico', express.static('./release/images/favicon.ico'));
