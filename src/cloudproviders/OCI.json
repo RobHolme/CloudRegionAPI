@@ -1848,6 +1848,13 @@
     "CloudProvider": "Oracle Cloud (OCI)"
   },
   {
+    "Subnet": "92.4.64.0/19",
+    "Region": "ap-mumbai-1",
+    "Service": "OCI",
+    "SubnetSize": "19",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
     "Subnet": "129.151.40.0/21",
     "Region": "ap-mumbai-1",
     "Service": "OCI",
@@ -6342,6 +6349,13 @@
     "CloudProvider": "Oracle Cloud (OCI)"
   },
   {
+    "Subnet": "145.241.104.0/21",
+    "Region": "me-riyadh-1",
+    "Service": "OCI",
+    "SubnetSize": "21",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
     "Subnet": "145.241.152.0/21",
     "Region": "me-riyadh-1",
     "Service": "OCI",
@@ -6706,6 +6720,90 @@
     "CloudProvider": "Oracle Cloud (OCI)"
   },
   {
+    "Subnet": "168.107.192.0/19",
+    "Region": "ap-delhi-1",
+    "Service": "OCI",
+    "SubnetSize": "19",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "134.70.230.0/23",
+    "Region": "ap-delhi-1",
+    "Service": "OSN",
+    "SubnetSize": "23",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "134.70.230.0/23",
+    "Region": "ap-delhi-1",
+    "Service": "OBJECT_STORAGE",
+    "SubnetSize": "23",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "134.70.232.0/23",
+    "Region": "ap-delhi-1",
+    "Service": "OSN",
+    "SubnetSize": "23",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "134.70.232.0/23",
+    "Region": "ap-delhi-1",
+    "Service": "OBJECT_STORAGE",
+    "SubnetSize": "23",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "140.91.108.0/23",
+    "Region": "ap-delhi-1",
+    "Service": "OSN",
+    "SubnetSize": "23",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "140.204.166.128/25",
+    "Region": "ap-delhi-1",
+    "Service": "OSN",
+    "SubnetSize": "25",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "168.107.248.0/26",
+    "Region": "ap-delhi-1",
+    "Service": "OSN",
+    "SubnetSize": "26",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "168.107.248.128/25",
+    "Region": "ap-delhi-1",
+    "Service": "OSN",
+    "SubnetSize": "25",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "168.107.249.192/26",
+    "Region": "ap-delhi-1",
+    "Service": "OSN",
+    "SubnetSize": "26",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "168.107.250.0/23",
+    "Region": "ap-delhi-1",
+    "Service": "OSN",
+    "SubnetSize": "23",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "168.107.252.0/22",
+    "Region": "ap-delhi-1",
+    "Service": "OSN",
+    "SubnetSize": "22",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
     "Subnet": "168.110.192.0/19",
     "Region": "ap-batam-1",
     "Service": "OCI",
@@ -7021,6 +7119,69 @@
     "CloudProvider": "Oracle Cloud (OCI)"
   },
   {
+    "Subnet": "192.22.0.0/19",
+    "Region": "us-shawnee-1",
+    "Service": "OCI",
+    "SubnetSize": "19",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "192.22.32.0/26",
+    "Region": "us-shawnee-1",
+    "Service": "OSN",
+    "SubnetSize": "26",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "192.22.32.128/25",
+    "Region": "us-shawnee-1",
+    "Service": "OSN",
+    "SubnetSize": "25",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "192.22.33.192/26",
+    "Region": "us-shawnee-1",
+    "Service": "OSN",
+    "SubnetSize": "26",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "192.22.34.0/23",
+    "Region": "us-shawnee-1",
+    "Service": "OSN",
+    "SubnetSize": "23",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "192.22.36.0/22",
+    "Region": "us-shawnee-1",
+    "Service": "OSN",
+    "SubnetSize": "22",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "192.22.40.0/22",
+    "Region": "us-shawnee-1",
+    "Service": "OSN",
+    "SubnetSize": "22",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "192.22.44.128/25",
+    "Region": "us-shawnee-1",
+    "Service": "OSN",
+    "SubnetSize": "25",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "192.22.48.0/23",
+    "Region": "us-shawnee-1",
+    "Service": "OSN",
+    "SubnetSize": "23",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
     "Subnet": "192.22.128.0/19",
     "Region": "us-quincy-1",
     "Service": "OCI",
@@ -7144,6 +7305,69 @@
     "Region": "us-boardman-1",
     "Service": "OSN",
     "SubnetSize": "23",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "80.225.184.0/21",
+    "Region": "eu-madrid-3",
+    "Service": "OCI",
+    "SubnetSize": "21",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "80.225.160.0/26",
+    "Region": "eu-madrid-3",
+    "Service": "OSN",
+    "SubnetSize": "26",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "80.225.160.128/25",
+    "Region": "eu-madrid-3",
+    "Service": "OSN",
+    "SubnetSize": "25",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "80.225.161.192/26",
+    "Region": "eu-madrid-3",
+    "Service": "OSN",
+    "SubnetSize": "26",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "80.225.162.0/23",
+    "Region": "eu-madrid-3",
+    "Service": "OSN",
+    "SubnetSize": "23",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "80.225.164.0/22",
+    "Region": "eu-madrid-3",
+    "Service": "OSN",
+    "SubnetSize": "22",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "80.225.168.0/22",
+    "Region": "eu-madrid-3",
+    "Service": "OSN",
+    "SubnetSize": "22",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "80.225.176.0/23",
+    "Region": "eu-madrid-3",
+    "Service": "OSN",
+    "SubnetSize": "23",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "80.225.178.128/25",
+    "Region": "eu-madrid-3",
+    "Service": "OSN",
+    "SubnetSize": "25",
     "CloudProvider": "Oracle Cloud (OCI)"
   },
   {
