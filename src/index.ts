@@ -5,7 +5,6 @@ import infoRoute from "./routes/info";
 import allsubnetsRoute from "./routes/allsubnets";
 import healthRoute from "./routes/health";
 import httpCompression from 'compression';
-import e from 'express';
 
 // create a new express application instance
 const app = express();
