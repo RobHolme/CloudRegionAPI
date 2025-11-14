@@ -39,7 +39,6 @@ app.use("/api/health", healthRoute);
 // catch all error handler. Log the error and return a generic 500 response.
 // Intended to catch unhandled errors in the route handlers, such as invalid parameters. 
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
-  //console.error(err.stack);
   res.status(500).json({ message: 'Internal Server Error' });
   next(err);
 })
