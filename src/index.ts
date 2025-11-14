@@ -5,6 +5,7 @@ import infoRoute from "./routes/info";
 import allsubnetsRoute from "./routes/allsubnets";
 import healthRoute from "./routes/health";
 import httpCompression from 'compression';
+import e from 'express';
 
 // create a new express application instance
 const app = express();
@@ -33,6 +34,15 @@ app.use("/api/hostname", hostnameRoute);
 app.use("/api/info", infoRoute);
 app.use("/api/subnets", allsubnetsRoute);
 app.use("/api/health", healthRoute);
+
+
+// catch all error handler. Log the error and return a generic 500 response.
+// Intended to catch unhandled errors in the route handlers, such as invalid parameters. 
+app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+  //console.error(err.stack);
+  res.status(500).json({ message: 'Internal Server Error' });
+  next(err);
+})
 
 // static URL for favicon, css and script files
 app.use('/favicon.ico', express.static('./release/images/favicon.ico'));
