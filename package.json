@@ -13,15 +13,18 @@
   "license": "MIT",
   "description": "",
   "devDependencies": {
-    "@types/compression": "^1.7.5",
-    "@types/express": "^5.0.0",
-    "@types/node": "^22.13.4",
+    "@types/compression": "^1.8.1",
+    "@types/express": "^5.0.5",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.10.1",
     "copyfiles": "^2.4.1",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.5",
     "ts-node": "^10.9.2",
-    "typescript": "^5.7.3"
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "compression": "^1.8.1",
-    "express": "^4.21.2"
+    "express": "^5.1.0"
   }
 }
