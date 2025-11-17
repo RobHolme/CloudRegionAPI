@@ -76,20 +76,33 @@ begin {
             [uri] $ProxyServer,
 
             [parameter(Mandatory = $false)]
-            [Pscredential] $ProxyCredential
+            [Pscredential] $ProxyCredential,
+             
+            [parameter(Mandatory = $false)]
+            [string] $OutFile
         )
 
         $retry = 0
+
+        # build the parameter hashtable for Invoke-WebRequest
+        $params = @{
+            Uri        = $Uri
+            TimeoutSec = $timeout
+        }
+        if ($OutFile) {
+            $params.Add("OutFile", $OutFile)
+            write-verbose "Downloading to file $OutFile"
+        }
+        if ($ProxyServer -and $ProxyCredential) {
+            $params.Add("Proxy", $ProxyServer)
+            $params.Add("ProxyCredential", $ProxyCredential)
+            Write-Verbose "Using proxy server $ProxyServer"
+        }
+        
+        # attempt to download the file/data, retrying up to 3 times on failure
         while ($retry++ -lt 3) {
             try {
-                # if a proxy server is specified, use it with the provided credentials, otherwise use direct connection
-                if (($ProxyServer) -and ($ProxyCredential)) {
-                    Write-Verbose "Using proxy server $ProxyServer"
-                    return Invoke-WebRequest -Uri $Uri -TimeoutSec $timeout -Proxy $ProxyServer -ProxyCredential $ProxyCredential
-                }
-                else {
-                    return Invoke-WebRequest -Uri $Uri -TimeoutSec $timeout
-                }
+                return Invoke-WebRequest @params
             }
             catch {
                 if ($retry -lt 3) {
@@ -396,12 +409,13 @@ begin {
         $tempFile = Join-Path -Path $env:TEMP -ChildPath "digitalocean.csv"
         Write-Verbose "Retrieving Digital Ocean regions from $digitalOceanSource"
         $digitalOceanResult = Invoke-WebRequestEx -Uri $digitalOceanSource -OutFile $tempFile
-        if (!path-exists -Path $tempFile) {
+        if ((test-path -Path $tempFile) -eq $false) {
             Write-Warning "Failed to retrieve Digital Ocean IP ranges from $digitalOceanSource"
             # return error code to indicate no subnets found (should trigger github action to fail)
             exit 1
         }
         else {
+            Write-Verbose "Processing Digital Ocean IP ranges from $tempFile"
             $digitalOceanNetRanges = ConvertFrom-csv -InputObject (Get-Content -Path $tempFile)  -Header "Subnet","CountryCode","RegionCode","Region","NetworkID"
             foreach ($subnet in $digitalOceanNetRanges) {
                 write-progress -activity "Processing Digital Ocean regions" -status "Processing region: $($Subnet.Region)" -percentcomplete (($digitalOceanNetRanges.IndexOf($subnet) / $digitalOceanNetRanges.Count) * 100)
