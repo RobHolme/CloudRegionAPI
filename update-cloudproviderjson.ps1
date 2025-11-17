@@ -396,8 +396,8 @@ begin {
         $tempFile = Join-Path -Path $env:TEMP -ChildPath "digitalocean.csv"
         Write-Verbose "Retrieving Digital Ocean regions from $digitalOceanSource"
         $digitalOceanResult = Invoke-WebRequestEx -Uri $digitalOceanSource -OutFile $tempFile
-        if ($digitalOceanResult.StatusCode -ne 200) {
-            Write-Warning "Failed to retrieve Digital Ocean IP ranges."
+        if (!path-exists -Path $tempFile) {
+            Write-Warning "Failed to retrieve Digital Ocean IP ranges from $digitalOceanSource"
             # return error code to indicate no subnets found (should trigger github action to fail)
             exit 1
         }
