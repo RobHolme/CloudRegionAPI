@@ -406,9 +406,9 @@ begin {
     #--------------------------
     function GetDigitalOceanRegions {
         $digitalOceanRegions = @()
-        $tempFile = Join-Path -Path $env:TEMP -ChildPath "digitalocean.csv"
+        $tempFile = Join-Path -Path ([System.IO.Path]::GetTempPath()) -ChildPath "digitalocean.csv" # #env:temp not always defined (e.g. Linux)
         Write-Verbose "Retrieving Digital Ocean regions from $digitalOceanSource"
-        $digitalOceanResult = Invoke-WebRequestEx -Uri $digitalOceanSource -OutFile $tempFile
+        Invoke-WebRequestEx -Uri $digitalOceanSource -OutFile $tempFile
         if ((test-path -Path $tempFile) -eq $false) {
             Write-Warning "Failed to retrieve Digital Ocean IP ranges from $digitalOceanSource"
             # return error code to indicate no subnets found (should trigger github action to fail)
