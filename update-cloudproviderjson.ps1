@@ -393,15 +393,16 @@ begin {
     #--------------------------
     function GetDigitalOceanRegions {
         $digitalOceanRegions = @()
+        $tempFile = Join-Path -Path $env:TEMP -ChildPath "digitalocean.csv"
         Write-Verbose "Retrieving Digital Ocean regions from $digitalOceanSource"
-        $digitalOceanNetRangesCsv = Invoke-WebRequestEx -Uri $digitalOceanSource
-        if ($null -eq $digitalOceanNetRangesCsv) {
+        $digitalOceanResult = Invoke-WebRequestEx -Uri $digitalOceanSource -OutFile $tempFile
+        if ($digitalOceanResult.StatusCode -ne 200) {
             Write-Warning "Failed to retrieve Digital Ocean IP ranges."
             # return error code to indicate no subnets found (should trigger github action to fail)
             exit 1
         }
         else {
-            $digitalOceanNetRanges = ConvertFrom-csv -InputObject $digitalOceanNetRangesCsv.Content  -Header "Subnet","CountryCode","RegionCode","Region","NetworkID"
+            $digitalOceanNetRanges = ConvertFrom-csv -InputObject (Get-Content -Path $tempFile)  -Header "Subnet","CountryCode","RegionCode","Region","NetworkID"
             foreach ($subnet in $digitalOceanNetRanges) {
                 write-progress -activity "Processing Digital Ocean regions" -status "Processing region: $($Subnet.Region)" -percentcomplete (($digitalOceanNetRanges.IndexOf($subnet) / $digitalOceanNetRanges.Count) * 100)
                 if (TestIPv4Subnet -IPSubnet $subnet.Subnet) {
