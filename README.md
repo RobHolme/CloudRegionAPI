@@ -207,6 +207,28 @@ Client information returned as a JSON payload
 }
 ```
 
+## Health Path
+Used for container health checks.
+
+
+__```GET http://127.0.0.1/api/health```__
+
+### Parameters
+None.
+
+e.g. ```curl http://127.0.0.1/api/health```
+
+### Authentication
+No authentication required.
+
+### Response
+Client information returned as a JSON payload with a 200 response code.
+```json
+{
+  "message":"healthy"
+}
+```
+
 <br>
 <br>
 
