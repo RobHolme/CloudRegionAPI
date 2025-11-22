@@ -1848,6 +1848,48 @@
     "CloudProvider": "Digital Ocean"
   },
   {
+    "Subnet": "129.212.216.0/22",
+    "Region": "Singapore",
+    "Service": "",
+    "SubnetSize": "22",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
+    "Subnet": "129.212.220.0/22",
+    "Region": "Amsterdam",
+    "Service": "",
+    "SubnetSize": "22",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
+    "Subnet": "129.212.224.0/20",
+    "Region": "Singapore",
+    "Service": "",
+    "SubnetSize": "20",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
+    "Subnet": "129.212.240.0/22",
+    "Region": "Douglasville",
+    "Service": "",
+    "SubnetSize": "22",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
+    "Subnet": "129.212.244.0/22",
+    "Region": "Bangalore",
+    "Service": "",
+    "SubnetSize": "22",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
+    "Subnet": "129.212.248.0/22",
+    "Region": "Sydney",
+    "Service": "",
+    "SubnetSize": "22",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
     "Subnet": "134.122.0.0/20",
     "Region": "Clifton",
     "Service": "",
