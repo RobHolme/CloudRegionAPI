@@ -3059,24 +3059,10 @@
     "CloudProvider": "Azure Government"
   },
   {
-    "Subnet": "13.72.12.98/32",
-    "Region": "usgovvirginia",
-    "Service": "AzurePortal",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
     "Subnet": "20.140.94.160/28",
     "Region": "usgovvirginia",
     "Service": "AzurePortal",
     "SubnetSize": "28",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "23.97.12.183/32",
-    "Region": "usgovvirginia",
-    "Service": "AzurePortal",
-    "SubnetSize": "32",
     "CloudProvider": "Azure Government"
   },
   {
@@ -3119,20 +3105,6 @@
     "Region": "usgovvirginia",
     "Service": "AzurePortal",
     "SubnetSize": "29",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.227.15.80/32",
-    "Region": "usgovvirginia",
-    "Service": "AzurePortal",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.227.80.140/32",
-    "Region": "usgovvirginia",
-    "Service": "AzurePortal",
-    "SubnetSize": "32",
     "CloudProvider": "Azure Government"
   },
   {
@@ -3259,6 +3231,13 @@
     "Region": "usgovvirginia",
     "Service": "AzureMonitor",
     "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.170.192/28",
+    "Region": "usgovvirginia",
+    "Service": "AzureMonitor",
+    "SubnetSize": "28",
     "CloudProvider": "Azure Government"
   },
   {
@@ -3885,6 +3864,13 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "51.54.170.216/29",
+    "Region": "usgovvirginia",
+    "Service": "AzureAttestation",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "52.127.55.156/30",
     "Region": "usgovvirginia",
     "Service": "AzureAttestation",
@@ -3921,6 +3907,13 @@
   },
   {
     "Subnet": "20.141.167.224/29",
+    "Region": "usgovvirginia",
+    "Service": "AzureArcInfrastructure",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.172.64/29",
     "Region": "usgovvirginia",
     "Service": "AzureArcInfrastructure",
     "SubnetSize": "29",
@@ -5803,41 +5796,6 @@
     "CloudProvider": "Azure Government"
   },
   {
-    "Subnet": "52.238.115.136/32",
-    "Region": "usgovtexas",
-    "Service": "AzurePortal",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.238.116.132/32",
-    "Region": "usgovtexas",
-    "Service": "AzurePortal",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.238.118.115/32",
-    "Region": "usgovtexas",
-    "Service": "AzurePortal",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.238.118.253/32",
-    "Region": "usgovtexas",
-    "Service": "AzurePortal",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.238.119.77/32",
-    "Region": "usgovtexas",
-    "Service": "AzurePortal",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
     "Subnet": "62.11.95.32/27",
     "Region": "usgovtexas",
     "Service": "AzurePortal",
@@ -5891,6 +5849,13 @@
     "Region": "usgovtexas",
     "Service": "AzureMonitor",
     "SubnetSize": "26",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.207.32/28",
+    "Region": "usgovtexas",
+    "Service": "AzureMonitor",
+    "SubnetSize": "28",
     "CloudProvider": "Azure Government"
   },
   {
@@ -6538,7 +6503,42 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "13.72.149.0/24",
+    "Region": "usgovtexas",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "13.72.151.0/24",
+    "Region": "usgovtexas",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "13.72.153.0/24",
+    "Region": "usgovtexas",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "13.72.155.0/24",
+    "Region": "usgovtexas",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "13.72.157.0/24",
+    "Region": "usgovtexas",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "13.72.159.0/24",
     "Region": "usgovtexas",
     "Service": "",
     "SubnetSize": "24",
@@ -7263,41 +7263,6 @@
     "Region": "usgoviowa",
     "Service": "AzurePortal",
     "SubnetSize": "29",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "23.97.26.80/32",
-    "Region": "usgoviowa",
-    "Service": "AzurePortal",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "23.97.28.145/32",
-    "Region": "usgoviowa",
-    "Service": "AzurePortal",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "23.97.29.154/32",
-    "Region": "usgoviowa",
-    "Service": "AzurePortal",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "23.97.30.7/32",
-    "Region": "usgoviowa",
-    "Service": "AzurePortal",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "23.97.30.48/32",
-    "Region": "usgoviowa",
-    "Service": "AzurePortal",
-    "SubnetSize": "32",
     "CloudProvider": "Azure Government"
   },
   {
@@ -8932,27 +8897,6 @@
     "CloudProvider": "Azure Government"
   },
   {
-    "Subnet": "52.244.48.71/32",
-    "Region": "usgovarizona",
-    "Service": "AzurePortal",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.244.64.173/32",
-    "Region": "usgovarizona",
-    "Service": "AzurePortal",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.244.67.177/32",
-    "Region": "usgovarizona",
-    "Service": "AzurePortal",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
     "Subnet": "52.244.239.32/27",
     "Region": "usgovarizona",
     "Service": "AzurePortal",
@@ -9087,6 +9031,13 @@
   },
   {
     "Subnet": "20.158.176.0/28",
+    "Region": "usgovarizona",
+    "Service": "AzureMonitor",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.231.16/28",
     "Region": "usgovarizona",
     "Service": "AzureMonitor",
     "SubnetSize": "28",
@@ -9674,6 +9625,13 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "51.54.231.96/29",
+    "Region": "usgovarizona",
+    "Service": "AzureAttestation",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "52.127.12.48/30",
     "Region": "usgovarizona",
     "Service": "AzureAttestation",
@@ -9933,7 +9891,42 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "13.72.148.0/24",
+    "Region": "usgovarizona",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "13.72.150.0/24",
+    "Region": "usgovarizona",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "13.72.152.0/24",
+    "Region": "usgovarizona",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "13.72.154.0/24",
+    "Region": "usgovarizona",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "13.72.156.0/24",
+    "Region": "usgovarizona",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "13.72.158.0/24",
     "Region": "usgovarizona",
     "Service": "",
     "SubnetSize": "24",
@@ -13230,6 +13223,20 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "62.10.193.64/27",
+    "Region": "",
+    "Service": "SystemServiceAzureSpringAppsResourceProvider",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "62.11.9.128/27",
+    "Region": "",
+    "Service": "SystemServiceAzureSpringAppsResourceProvider",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "20.159.234.6/31",
     "Region": "",
     "Service": "StorageMover",
@@ -13657,6 +13664,34 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "20.159.235.71/32",
+    "Region": "",
+    "Service": "SerialConsole",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.159.235.134/31",
+    "Region": "",
+    "Service": "SerialConsole",
+    "SubnetSize": "31",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.207.224/31",
+    "Region": "",
+    "Service": "SerialConsole",
+    "SubnetSize": "31",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.207.226/32",
+    "Region": "",
+    "Service": "SerialConsole",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "52.127.55.131/32",
     "Region": "",
     "Service": "SerialConsole",
@@ -13665,6 +13700,20 @@
   },
   {
     "Subnet": "52.181.41.132/31",
+    "Region": "",
+    "Service": "SerialConsole",
+    "SubnetSize": "31",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.181.43.177/32",
+    "Region": "",
+    "Service": "SerialConsole",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.181.51.100/31",
     "Region": "",
     "Service": "SerialConsole",
     "SubnetSize": "31",
