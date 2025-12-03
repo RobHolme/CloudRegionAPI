@@ -1,5 +1,7 @@
 name: Weekly update of Azure JSON files
-
+permissions:
+  contents: write
+  
 on:
   schedule:
     # 19:00Z every Saturday
