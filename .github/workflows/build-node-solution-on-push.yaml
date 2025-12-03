@@ -1,4 +1,6 @@
 name: Build node solution on push
+permissions:
+  contents: read
 
 on:
    push:
