@@ -1,4 +1,6 @@
 name: Weekly update of OCI JSON files
+permissions:
+  contents: write
 
 on:
   schedule:
