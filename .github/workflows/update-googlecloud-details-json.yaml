@@ -1,4 +1,6 @@
 name: Weekly update of Google Cloud JSON files
+permissions:
+  contents: write
 
 on:
   schedule:

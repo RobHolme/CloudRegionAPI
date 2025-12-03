@@ -1,5 +1,7 @@
 name: Weekly update of AWS JSON files
-
+permissions:
+  contents: write
+  
 on:
   schedule:
     # 19:10Z every Saturday

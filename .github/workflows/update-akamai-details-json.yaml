@@ -1,5 +1,7 @@
 name: Weekly update of Akamai JSON files
-
+permissions:
+  contents: write
+  
 on:
   schedule:
     # 19:50Z every Saturday
