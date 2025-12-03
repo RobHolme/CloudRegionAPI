@@ -1,4 +1,7 @@
 name: Build and publish container
+permissions:
+  contents: read
+  packages: write
 
 on:
   # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
