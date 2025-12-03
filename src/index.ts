@@ -1,5 +1,7 @@
 import fs from 'fs';
 import express, { NextFunction, Request, Response } from "express";
+import rateLimit from "express-rate-limit";
+
 import hostnameRoute from "./routes/hostname";
 import infoRoute from "./routes/info";
 import allsubnetsRoute from "./routes/allsubnets";
@@ -22,8 +24,17 @@ const blockMethodsMiddleware = (req: Request, res: Response, next: NextFunction)
 };
 app.use(blockMethodsMiddleware);
 
-
 app.use(express.json());
+
+// Enable rate limiting to prevent abuse. 
+// Maximum of 100 requests / 15 minutes
+var limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // max 100 requests per windowMs
+});
+// apply rate limiter to all requests
+app.use(limiter);
+
 // disable the 'x-powered-by' header in the response
 app.disable('x-powered-by');
 // enable http compression
