@@ -31,4 +31,4 @@ EXPOSE 80
 # Serve the app
 CMD [ "node", "./release/index.js" ]
 
-HEALTHCHECK --interval=60s --timeout=3s --retries=2 CMD curl --fail http://localhost/api/health || exit 1
+HEALTHCHECK --interval=60s --timeout=3s --retries=2 CMD curl --fail http://localhost/health || exit 1
