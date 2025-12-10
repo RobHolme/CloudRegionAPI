@@ -15,7 +15,7 @@ async function submitForm(event) {
     }
 
     // submit the hostname parameter to the API
-    const response = await fetch(`/api/hostname/${ip}`);
+    const response = await fetch(`/api/v1/hostname/${ip}`);
     jsonData = await response.json();
     // Check if the response status is not 200, and display an error message. Expecting the error returned from the API in a specific JSON payload - but if not display generic error.
     if (response.status != 200) {
@@ -83,7 +83,7 @@ function adjustInputWidth(input) {
 // Return the container build date as a string (read from text file created during container build)
 async function GetContainerBuildDate() {
     try {
-        const infoResponse = await fetch(`/api/info`);
+        const infoResponse = await fetch(`/api/v1/info`);
         if (!infoResponse.ok) {
             return "unknown";
         }

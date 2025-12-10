@@ -40,10 +40,11 @@ app.disable('x-powered-by');
 // enable http compression
 app.use(httpCompression());
 // define the routes foreach API
-app.use("/api/hostname", hostnameRoute);
-app.use("/api/info", infoRoute);
-app.use("/api/subnets", allsubnetsRoute);
-app.use("/api/health", healthRoute);
+app.use("/api/v1/hostname", hostnameRoute);
+app.use("/api/v1/info", infoRoute);
+app.use("/api/v1/subnets", allsubnetsRoute);
+// used for container health checks
+app.use("/health", healthRoute);
 
 
 // catch all error handler. Log the error and return a generic 500 response.
