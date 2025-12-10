@@ -8,15 +8,15 @@ The API provides the following path based parameters:
 
 ## Hostname Path
 
-__```GET http://127.0.0.1/api/hostname/{hostname}```__
+__```GET http://127.0.0.1/api/v1/hostname/{hostname}```__
 
 ### Parameters
 
 __hostname \<string\>__ : The DNS name or IPv4 address of the cloud service.
 
-e.g. ```curl http://127.0.0.1/api/hostname/34.37.1.5```
+e.g. ```curl http://127.0.0.1/api/v1/hostname/34.37.1.5```
 
-e.g. ```curl http://127.0.0.1/api/hostname/example.com```
+e.g. ```curl http://127.0.0.1/api/v1/hostname/example.com```
 
 ### Authentication
 No authentication required.
@@ -93,15 +93,15 @@ Failure example:
 ## Subnets Path
 Returns all IPv4 subnets for the specified cloud provider.
 
-__```GET http://127.0.0.1/api/subnets/{CloudProvider}```__
+__```GET http://127.0.0.1/api/v1/subnets/{CloudProvider}```__
 
 ### Parameters
 
 __CloudProvider \<string\>__ : The name of the specific cloud provider. Must be one of "AWS", "Azure", "AzureGovernment", AzureChina", "AzureGermany", "OCI", "GoogleCloud", "DigitalOcean", "Akamai", or "CloudFlare"
 
-e.g. ```curl http://127.0.0.1/api/subnets/aws```
+e.g. ```curl http://127.0.0.1/api/v1/subnets/aws```
 
-e.g. ```curl http://127.0.0.1/api/subnets/azure```
+e.g. ```curl http://127.0.0.1/api/v1/subnets/azure```
 
 ### Authentication
 No authentication required.
@@ -167,12 +167,12 @@ Example response is truncated for brevity.
 Displays information about the client connection.
 
 
-__```GET http://127.0.0.1/api/info```__
+__```GET http://127.0.0.1/api/v1/info```__
 
 ### Parameters
 None.
 
-e.g. ```curl http://127.0.0.1/api/info```
+e.g. ```curl http://127.0.0.1/api/v1/info```
 
 ### Authentication
 No authentication required.
@@ -208,15 +208,15 @@ Client information returned as a JSON payload
 ```
 
 ## Health Path
-Used for container health checks.
+Not an API. Only used for container health checks.
 
 
-__```GET http://127.0.0.1/api/health```__
+__```GET http://127.0.0.1/health```__
 
 ### Parameters
 None.
 
-e.g. ```curl http://127.0.0.1/api/health```
+e.g. ```curl http://127.0.0.1/health```
 
 ### Authentication
 No authentication required.
