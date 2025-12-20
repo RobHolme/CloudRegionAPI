@@ -693,6 +693,13 @@
     "CloudProvider": "Azure China"
   },
   {
+    "Subnet": "40.162.75.224/28",
+    "Region": "chinanorth3",
+    "Service": "AzureMonitor",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure China"
+  },
+  {
     "Subnet": "52.131.21.116/30",
     "Region": "chinanorth3",
     "Service": "AzureMonitor",
@@ -2398,6 +2405,13 @@
     "Region": "chinanorth2",
     "Service": "AzureMonitor",
     "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "139.217.122.16/28",
+    "Region": "chinanorth2",
+    "Service": "AzureMonitor",
+    "SubnetSize": "28",
     "CloudProvider": "Azure China"
   },
   {
@@ -4711,6 +4725,13 @@
     "CloudProvider": "Azure China"
   },
   {
+    "Subnet": "40.162.60.224/28",
+    "Region": "chinaeast3",
+    "Service": "AzureMonitor",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure China"
+  },
+  {
     "Subnet": "52.131.149.116/30",
     "Region": "chinaeast3",
     "Service": "AzureMonitor",
@@ -5173,42 +5194,14 @@
     "CloudProvider": "Azure China"
   },
   {
-    "Subnet": "159.27.128.0/26",
+    "Subnet": "159.27.128.0/25",
     "Region": "chinaeast3",
     "Service": "",
-    "SubnetSize": "26",
+    "SubnetSize": "25",
     "CloudProvider": "Azure China"
   },
   {
-    "Subnet": "159.27.128.64/27",
-    "Region": "chinaeast3",
-    "Service": "",
-    "SubnetSize": "27",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "159.27.128.96/28",
-    "Region": "chinaeast3",
-    "Service": "",
-    "SubnetSize": "28",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "159.27.128.112/29",
-    "Region": "chinaeast3",
-    "Service": "",
-    "SubnetSize": "29",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "159.27.128.120/30",
-    "Region": "chinaeast3",
-    "Service": "",
-    "SubnetSize": "30",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "159.27.128.124/31",
+    "Subnet": "159.27.128.128/31",
     "Region": "chinaeast3",
     "Service": "",
     "SubnetSize": "31",
@@ -6126,6 +6119,13 @@
   },
   {
     "Subnet": "40.162.171.80/28",
+    "Region": "chinaeast2",
+    "Service": "AzureMonitor",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.171.144/28",
     "Region": "chinaeast2",
     "Service": "AzureMonitor",
     "SubnetSize": "28",

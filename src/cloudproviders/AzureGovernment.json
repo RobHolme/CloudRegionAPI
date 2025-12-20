@@ -3241,6 +3241,13 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "51.55.16.192/28",
+    "Region": "usgovvirginia",
+    "Service": "AzureMonitor",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "52.127.42.168/29",
     "Region": "usgovvirginia",
     "Service": "AzureMonitor",
@@ -4477,6 +4484,13 @@
     "Region": "usgovvirginia",
     "Service": "",
     "SubnetSize": "18",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.55.64.0/19",
+    "Region": "usgovvirginia",
+    "Service": "",
+    "SubnetSize": "19",
     "CloudProvider": "Azure Government"
   },
   {
@@ -5796,10 +5810,24 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "52.245.146.0/32",
+    "Region": "usgovtexas",
+    "Service": "AzurePortal",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "62.11.95.32/27",
     "Region": "usgovtexas",
     "Service": "AzurePortal",
     "SubnetSize": "27",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.245.146.0/32",
+    "Region": "usgovtexas",
+    "Service": "AzurePortal",
+    "SubnetSize": "32",
     "CloudProvider": "Azure Government"
   },
   {
@@ -5853,6 +5881,13 @@
   },
   {
     "Subnet": "51.54.207.32/28",
+    "Region": "usgovtexas",
+    "Service": "AzureMonitor",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.211.208/28",
     "Region": "usgovtexas",
     "Service": "AzureMonitor",
     "SubnetSize": "28",
@@ -6944,6 +6979,13 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "52.245.146.0/24",
+    "Region": "usgovtexas",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "52.245.160.0/19",
     "Region": "usgovtexas",
     "Service": "",
@@ -6987,6 +7029,34 @@
   },
   {
     "Subnet": "104.210.30.0/24",
+    "Region": "usgovtexas",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "104.212.32.0/24",
+    "Region": "usgovtexas",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "104.212.34.0/24",
+    "Region": "usgovtexas",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "104.212.43.0/24",
+    "Region": "usgovtexas",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "104.212.47.0/24",
     "Region": "usgovtexas",
     "Service": "",
     "SubnetSize": "24",
@@ -9044,6 +9114,13 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "51.54.234.112/28",
+    "Region": "usgovarizona",
+    "Service": "AzureMonitor",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "52.127.2.232/29",
     "Region": "usgovarizona",
     "Service": "AzureMonitor",
@@ -10483,6 +10560,20 @@
     "Region": "usgovarizona",
     "Service": "",
     "SubnetSize": "24",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "104.212.33.0/24",
+    "Region": "usgovarizona",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "104.212.44.0/23",
+    "Region": "usgovarizona",
+    "Service": "",
+    "SubnetSize": "23",
     "CloudProvider": "Azure Government"
   },
   {
@@ -14672,6 +14763,419 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "20.140.48.112/30",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.140.56.112/30",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.140.64.112/30",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.140.72.112/30",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.140.77.238/31",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "31",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.140.147.192/29",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.140.151.76/31",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "31",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.140.151.78/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.140.152.52/30",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.141.10.200/29",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.141.12.36/30",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.141.18.96/29",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.141.19.40/31",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "31",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.141.161.179/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.159.106.36/30",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.127.49.68/30",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.181.33.43/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.181.33.45/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.181.33.47/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.181.33.49/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.181.33.51/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.181.33.53/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.181.33.55/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.181.33.57/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.182.32.231/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.182.33.5/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.182.33.7/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.182.33.9/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.182.33.11/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.182.33.13/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.182.33.15/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.182.33.49/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.227.227.21/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.227.227.22/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.227.227.27/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.227.227.28/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.227.227.30/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.227.227.32/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.227.227.34/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.227.227.36/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.235.253.112/29",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.243.152.69/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.243.155.186/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.243.156.42/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.243.156.160/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.243.156.165/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.243.156.167/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.243.156.211/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.243.156.213/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.244.34.51/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.244.34.124/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.244.34.126/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.244.34.128/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.244.34.130/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.244.34.132/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.244.34.134/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.244.34.136/32",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.244.237.48/28",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.245.153.176/29",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "20.140.48.68/30",
     "Region": "",
     "Service": "ElasticAFD",
@@ -15086,419 +15590,6 @@
   },
   {
     "Subnet": "52.245.153.184/29",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "29",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "20.140.48.112/30",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "30",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "20.140.56.112/30",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "30",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "20.140.64.112/30",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "30",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "20.140.72.112/30",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "30",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "20.140.77.238/31",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "31",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "20.140.147.192/29",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "29",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "20.140.151.76/31",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "31",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "20.140.151.78/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "20.140.152.52/30",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "30",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "20.141.10.200/29",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "29",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "20.141.12.36/30",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "30",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "20.141.18.96/29",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "29",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "20.141.19.40/31",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "31",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "20.141.161.179/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "20.159.106.36/30",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "30",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.127.49.68/30",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "30",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.181.33.43/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.181.33.45/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.181.33.47/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.181.33.49/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.181.33.51/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.181.33.53/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.181.33.55/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.181.33.57/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.182.32.231/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.182.33.5/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.182.33.7/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.182.33.9/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.182.33.11/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.182.33.13/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.182.33.15/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.182.33.49/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.227.227.21/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.227.227.22/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.227.227.27/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.227.227.28/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.227.227.30/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.227.227.32/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.227.227.34/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.227.227.36/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.235.253.112/29",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "29",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.243.152.69/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.243.155.186/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.243.156.42/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.243.156.160/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.243.156.165/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.243.156.167/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.243.156.211/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.243.156.213/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.244.34.51/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.244.34.124/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.244.34.126/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.244.34.128/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.244.34.130/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.244.34.132/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.244.34.134/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.244.34.136/32",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.244.237.48/28",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "28",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.245.153.176/29",
     "Region": "",
     "Service": "ElasticAFD",
     "SubnetSize": "29",
@@ -16765,6 +16856,20 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "51.54.211.176/28",
+    "Region": "",
+    "Service": "AzureSentinel",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.55.16.144/28",
+    "Region": "",
+    "Service": "AzureSentinel",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "52.126.248.148/30",
     "Region": "",
     "Service": "AzureSentinel",
@@ -17171,104 +17276,6 @@
     "CloudProvider": "Azure Government"
   },
   {
-    "Subnet": "13.72.52.95/32",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "20.140.53.32/27",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "27",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.126.203.96/27",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "27",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.127.3.128/27",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "27",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.127.26.224/27",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "27",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.127.35.96/27",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "27",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.127.43.64/27",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "27",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.127.55.96/27",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "27",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.127.59.96/27",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "27",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.227.174.114/32",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.238.165.247/32",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.238.166.25/32",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.244.67.230/32",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.244.71.138/32",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
     "Subnet": "20.140.232.0/27",
     "Region": "",
     "Service": "AzureIdentity",
@@ -17420,6 +17427,104 @@
     "Region": "",
     "Service": "AzureIdentity",
     "SubnetSize": "28",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "13.72.52.95/32",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.140.53.32/27",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.126.203.96/27",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.127.3.128/27",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.127.26.224/27",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.127.35.96/27",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.127.43.64/27",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.127.55.96/27",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.127.59.96/27",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.227.174.114/32",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.238.165.247/32",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.238.166.25/32",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.244.67.230/32",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.244.71.138/32",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "32",
     "CloudProvider": "Azure Government"
   },
   {
