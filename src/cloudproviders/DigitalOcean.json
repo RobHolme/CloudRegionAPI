@@ -5180,6 +5180,20 @@
     "CloudProvider": "Digital Ocean"
   },
   {
+    "Subnet": "165.245.128.0/20",
+    "Region": "Douglasville",
+    "Service": "",
+    "SubnetSize": "20",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
+    "Subnet": "165.245.144.0/22",
+    "Region": "Singapore",
+    "Service": "",
+    "SubnetSize": "22",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
     "Subnet": "167.71.0.0/20",
     "Region": "Amsterdam",
     "Service": "",
