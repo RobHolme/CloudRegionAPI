@@ -16527,6 +16527,20 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "51.54.235.48/28",
+    "Region": "",
+    "Service": "AzureSiteRecovery",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.55.17.64/28",
+    "Region": "",
+    "Service": "AzureSiteRecovery",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "52.126.205.32/28",
     "Region": "",
     "Service": "AzureSiteRecovery",
