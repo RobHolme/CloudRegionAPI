@@ -5194,6 +5194,27 @@
     "CloudProvider": "Digital Ocean"
   },
   {
+    "Subnet": "165.245.148.0/22",
+    "Region": null,
+    "Service": "",
+    "SubnetSize": "22",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
+    "Subnet": "165.245.160.0/20",
+    "Region": null,
+    "Service": "",
+    "SubnetSize": "20",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
+    "Subnet": "165.245.176.0/20",
+    "Region": "Singapore",
+    "Service": "",
+    "SubnetSize": "20",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
     "Subnet": "167.71.0.0/20",
     "Region": "Amsterdam",
     "Service": "",
