@@ -14532,6 +14532,41 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "51.54.212.154/32",
+    "Region": "",
+    "Service": "M365ManagementActivityApiWebhook",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.213.16/29",
+    "Region": "",
+    "Service": "M365ManagementActivityApiWebhook",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.55.17.114/32",
+    "Region": "",
+    "Service": "M365ManagementActivityApiWebhook",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.55.18.16/29",
+    "Region": "",
+    "Service": "M365ManagementActivityApiWebhook",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.55.18.24/30",
+    "Region": "",
+    "Service": "M365ManagementActivityApiWebhook",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "52.127.12.6/31",
     "Region": "",
     "Service": "M365ManagementActivityApiWebhook",

@@ -9205,6 +9205,27 @@
     "CloudProvider": "Azure China"
   },
   {
+    "Subnet": "40.162.171.111/32",
+    "Region": "",
+    "Service": "M365ManagementActivityApiWebhook",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.171.170/31",
+    "Region": "",
+    "Service": "M365ManagementActivityApiWebhook",
+    "SubnetSize": "31",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.171.176/29",
+    "Region": "",
+    "Service": "M365ManagementActivityApiWebhook",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure China"
+  },
+  {
     "Subnet": "52.130.40.168/31",
     "Region": "",
     "Service": "M365ManagementActivityApiWebhook",
@@ -9237,6 +9258,27 @@
     "Region": "",
     "Service": "M365ManagementActivityApiWebhook",
     "SubnetSize": "30",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "139.217.122.40/29",
+    "Region": "",
+    "Service": "M365ManagementActivityApiWebhook",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "143.64.207.87/32",
+    "Region": "",
+    "Service": "M365ManagementActivityApiWebhook",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "143.64.207.180/31",
+    "Region": "",
+    "Service": "M365ManagementActivityApiWebhook",
+    "SubnetSize": "31",
     "CloudProvider": "Azure China"
   },
   {
