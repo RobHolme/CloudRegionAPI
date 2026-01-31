@@ -14651,6 +14651,76 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "51.54.212.155/32",
+    "Region": "",
+    "Service": "M365ManagementActivityApi",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.213.24/30",
+    "Region": "",
+    "Service": "M365ManagementActivityApi",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.213.28/31",
+    "Region": "",
+    "Service": "M365ManagementActivityApi",
+    "SubnetSize": "31",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.213.31/32",
+    "Region": "",
+    "Service": "M365ManagementActivityApi",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.213.36/30",
+    "Region": "",
+    "Service": "M365ManagementActivityApi",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.55.18.52/31",
+    "Region": "",
+    "Service": "M365ManagementActivityApi",
+    "SubnetSize": "31",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.55.18.54/32",
+    "Region": "",
+    "Service": "M365ManagementActivityApi",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.55.18.56/29",
+    "Region": "",
+    "Service": "M365ManagementActivityApi",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.55.18.68/30",
+    "Region": "",
+    "Service": "M365ManagementActivityApi",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.55.18.72/32",
+    "Region": "",
+    "Service": "M365ManagementActivityApi",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "52.127.10.216/30",
     "Region": "",
     "Service": "M365ManagementActivityApi",
@@ -14683,6 +14753,20 @@
     "Region": "",
     "Service": "M365ManagementActivityApi",
     "SubnetSize": "31",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.181.64.151/32",
+    "Region": "",
+    "Service": "M365ManagementActivityApi",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.181.64.172/30",
+    "Region": "",
+    "Service": "M365ManagementActivityApi",
+    "SubnetSize": "30",
     "CloudProvider": "Azure Government"
   },
   {
