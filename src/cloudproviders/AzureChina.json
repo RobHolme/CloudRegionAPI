@@ -2821,6 +2821,20 @@
     "CloudProvider": "Azure China"
   },
   {
+    "Subnet": "139.217.122.56/29",
+    "Region": "chinanorth2",
+    "Service": "AzureArcInfrastructure",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "143.64.207.182/32",
+    "Region": "chinanorth2",
+    "Service": "AzureArcInfrastructure",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
     "Subnet": "159.27.147.212/31",
     "Region": "chinanorth2",
     "Service": "AzureArcInfrastructure",
@@ -6710,6 +6724,13 @@
     "Region": "chinaeast2",
     "Service": "AzureAttestation",
     "SubnetSize": "30",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.171.184/32",
+    "Region": "chinaeast2",
+    "Service": "AzureArcInfrastructure",
+    "SubnetSize": "32",
     "CloudProvider": "Azure China"
   },
   {
@@ -10724,6 +10745,20 @@
     "CloudProvider": "Azure China"
   },
   {
+    "Subnet": "40.162.171.186/31",
+    "Region": "",
+    "Service": "AzureInformationProtection",
+    "SubnetSize": "31",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.171.188/30",
+    "Region": "",
+    "Service": "AzureInformationProtection",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure China"
+  },
+  {
     "Subnet": "52.130.42.0/29",
     "Region": "",
     "Service": "AzureInformationProtection",
@@ -10760,6 +10795,20 @@
   },
   {
     "Subnet": "52.131.194.232/31",
+    "Region": "",
+    "Service": "AzureInformationProtection",
+    "SubnetSize": "31",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "139.217.122.52/30",
+    "Region": "",
+    "Service": "AzureInformationProtection",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "139.217.122.96/31",
     "Region": "",
     "Service": "AzureInformationProtection",
     "SubnetSize": "31",
