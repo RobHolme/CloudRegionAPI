@@ -5208,6 +5208,13 @@
     "CloudProvider": "Digital Ocean"
   },
   {
+    "Subnet": "165.245.156.0/22",
+    "Region": null,
+    "Service": "",
+    "SubnetSize": "22",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
     "Subnet": "165.245.160.0/20",
     "Region": null,
     "Service": "",
@@ -5217,6 +5224,13 @@
   {
     "Subnet": "165.245.176.0/20",
     "Region": "Singapore",
+    "Service": "",
+    "SubnetSize": "20",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
+    "Subnet": "165.245.192.0/20",
+    "Region": null,
     "Service": "",
     "SubnetSize": "20",
     "CloudProvider": "Digital Ocean"
@@ -5604,6 +5618,27 @@
     "Region": "Bangalore",
     "Service": "",
     "SubnetSize": "22",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
+    "Subnet": "168.144.4.0/22",
+    "Region": "Frankfurt",
+    "Service": "",
+    "SubnetSize": "22",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
+    "Subnet": "168.144.16.0/20",
+    "Region": "Bangalore",
+    "Service": "",
+    "SubnetSize": "20",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
+    "Subnet": "168.144.32.0/20",
+    "Region": "Singapore",
+    "Service": "",
+    "SubnetSize": "20",
     "CloudProvider": "Digital Ocean"
   },
   {
