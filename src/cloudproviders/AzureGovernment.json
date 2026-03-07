@@ -1,5 +1,12 @@
 [
   {
+    "Subnet": "20.159.80.112/28",
+    "Region": "usgovvirginia",
+    "Service": "WindowsVirtualDesktop",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "20.159.80.176/28",
     "Region": "usgovvirginia",
     "Service": "WindowsVirtualDesktop",
@@ -4725,10 +4732,10 @@
     "CloudProvider": "Azure Government"
   },
   {
-    "Subnet": "20.159.80.128/28",
+    "Subnet": "20.159.80.128/27",
     "Region": "usgovtexas",
     "Service": "WindowsVirtualDesktop",
-    "SubnetSize": "28",
+    "SubnetSize": "27",
     "CloudProvider": "Azure Government"
   },
   {
@@ -7732,6 +7739,13 @@
     "Region": "usgoviowa",
     "Service": "",
     "SubnetSize": "24",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.159.80.96/28",
+    "Region": "usgovarizona",
+    "Service": "WindowsVirtualDesktop",
+    "SubnetSize": "28",
     "CloudProvider": "Azure Government"
   },
   {
