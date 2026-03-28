@@ -5348,6 +5348,13 @@
     "CloudProvider": "Google Cloud"
   },
   {
+    "Subnet": "8.230.96.0/19",
+    "Region": "us-south1",
+    "service": "Google Cloud",
+    "SubnetSize": "19",
+    "CloudProvider": "Google Cloud"
+  },
+  {
     "Subnet": "34.0.128.0/19",
     "Region": "us-south1",
     "service": "Google Cloud",
