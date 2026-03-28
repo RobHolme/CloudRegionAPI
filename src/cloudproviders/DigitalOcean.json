@@ -5236,6 +5236,13 @@
     "CloudProvider": "Digital Ocean"
   },
   {
+    "Subnet": "165.245.200.0/22",
+    "Region": "Amsterdam",
+    "Service": "",
+    "SubnetSize": "22",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
     "Subnet": "165.245.208.0/20",
     "Region": "Frankfurt",
     "Service": "",
