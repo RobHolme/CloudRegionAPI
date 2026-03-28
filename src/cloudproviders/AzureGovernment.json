@@ -56,66 +56,10 @@
     "CloudProvider": "Azure Government"
   },
   {
-    "Subnet": "13.72.34.110/32",
-    "Region": "usgovvirginia",
-    "Service": "SCCservice",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "13.72.39.75/32",
-    "Region": "usgovvirginia",
-    "Service": "SCCservice",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
     "Subnet": "20.158.112.32/28",
     "Region": "usgovvirginia",
     "Service": "SCCservice",
     "SubnetSize": "28",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.227.163.252/32",
-    "Region": "usgovvirginia",
-    "Service": "SCCservice",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.227.165.96/32",
-    "Region": "usgovvirginia",
-    "Service": "SCCservice",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.227.169.234/32",
-    "Region": "usgovvirginia",
-    "Service": "SCCservice",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.227.173.141/32",
-    "Region": "usgovvirginia",
-    "Service": "SCCservice",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.227.182.149/32",
-    "Region": "usgovvirginia",
-    "Service": "SCCservice",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.227.183.146/32",
-    "Region": "usgovvirginia",
-    "Service": "SCCservice",
-    "SubnetSize": "32",
     "CloudProvider": "Azure Government"
   },
   {
@@ -3378,6 +3322,41 @@
     "Region": "usgovvirginia",
     "Service": "AzureMachineLearning",
     "SubnetSize": "28",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.55.23.73/32",
+    "Region": "usgovvirginia",
+    "Service": "AzureMachineLearning",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.55.23.74/31",
+    "Region": "usgovvirginia",
+    "Service": "AzureMachineLearning",
+    "SubnetSize": "31",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.55.23.108/30",
+    "Region": "usgovvirginia",
+    "Service": "AzureMachineLearning",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.55.23.144/28",
+    "Region": "usgovvirginia",
+    "Service": "AzureMachineLearning",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.55.23.160/27",
+    "Region": "usgovvirginia",
+    "Service": "AzureMachineLearning",
+    "SubnetSize": "27",
     "CloudProvider": "Azure Government"
   },
   {
@@ -7812,34 +7791,6 @@
     "CloudProvider": "Azure Government"
   },
   {
-    "Subnet": "52.244.65.13/32",
-    "Region": "usgovarizona",
-    "Service": "SCCservice",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.244.67.138/32",
-    "Region": "usgovarizona",
-    "Service": "SCCservice",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.244.69.237/32",
-    "Region": "usgovarizona",
-    "Service": "SCCservice",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.244.205.111/32",
-    "Region": "usgovarizona",
-    "Service": "SCCservice",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
     "Subnet": "20.140.48.116/31",
     "Region": "usgovarizona",
     "Service": "PowerQueryOnline",
@@ -9303,6 +9254,41 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "51.54.239.131/32",
+    "Region": "usgovarizona",
+    "Service": "AzureMachineLearning",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.239.146/31",
+    "Region": "usgovarizona",
+    "Service": "AzureMachineLearning",
+    "SubnetSize": "31",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.239.164/30",
+    "Region": "usgovarizona",
+    "Service": "AzureMachineLearning",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.239.176/28",
+    "Region": "usgovarizona",
+    "Service": "AzureMachineLearning",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.248.0/27",
+    "Region": "usgovarizona",
+    "Service": "AzureMachineLearning",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "52.127.2.240/28",
     "Region": "usgovarizona",
     "Service": "AzureMachineLearning",
@@ -10724,62 +10710,6 @@
     "CloudProvider": "Azure Government"
   },
   {
-    "Subnet": "52.181.160.158/32",
-    "Region": "usdodeast",
-    "Service": "SCCservice",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.181.161.151/32",
-    "Region": "usdodeast",
-    "Service": "SCCservice",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.181.162.82/32",
-    "Region": "usdodeast",
-    "Service": "SCCservice",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.181.162.174/32",
-    "Region": "usdodeast",
-    "Service": "SCCservice",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.181.162.233/32",
-    "Region": "usdodeast",
-    "Service": "SCCservice",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.181.162.245/32",
-    "Region": "usdodeast",
-    "Service": "SCCservice",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.181.165.25/32",
-    "Region": "usdodeast",
-    "Service": "SCCservice",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.181.166.108/32",
-    "Region": "usdodeast",
-    "Service": "SCCservice",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
     "Subnet": "20.140.64.116/31",
     "Region": "usdodeast",
     "Service": "PowerQueryOnline",
@@ -11966,34 +11896,6 @@
     "Subnet": "52.182.88.86/32",
     "Region": "usdodcentral",
     "Service": "ServiceFabric",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.180.251.16/32",
-    "Region": "usdodcentral",
-    "Service": "SCCservice",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.180.255.219/32",
-    "Region": "usdodcentral",
-    "Service": "SCCservice",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.182.90.224/32",
-    "Region": "usdodcentral",
-    "Service": "SCCservice",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.182.92.250/32",
-    "Region": "usdodcentral",
-    "Service": "SCCservice",
     "SubnetSize": "32",
     "CloudProvider": "Azure Government"
   },
@@ -13993,6 +13895,34 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "51.54.239.152/29",
+    "Region": "",
+    "Service": "Scuba",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.239.160/30",
+    "Region": "",
+    "Service": "Scuba",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.55.23.96/29",
+    "Region": "",
+    "Service": "Scuba",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.55.23.104/30",
+    "Region": "",
+    "Service": "Scuba",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "52.244.236.128/30",
     "Region": "",
     "Service": "Scuba",
@@ -14700,6 +14630,13 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "20.159.245.120/30",
+    "Region": "",
+    "Service": "M365ManagementActivityApiWebhook",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "51.54.212.154/32",
     "Region": "",
     "Service": "M365ManagementActivityApiWebhook",
@@ -14708,6 +14645,20 @@
   },
   {
     "Subnet": "51.54.213.16/29",
+    "Region": "",
+    "Service": "M365ManagementActivityApiWebhook",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.218.8/29",
+    "Region": "",
+    "Service": "M365ManagementActivityApiWebhook",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.248.72/29",
     "Region": "",
     "Service": "M365ManagementActivityApiWebhook",
     "SubnetSize": "29",
@@ -14743,6 +14694,13 @@
   },
   {
     "Subnet": "52.127.38.200/30",
+    "Region": "",
+    "Service": "M365ManagementActivityApiWebhook",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.181.67.212/30",
     "Region": "",
     "Service": "M365ManagementActivityApiWebhook",
     "SubnetSize": "30",
@@ -14819,6 +14777,13 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "20.159.245.44/30",
+    "Region": "",
+    "Service": "M365ManagementActivityApi",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "51.54.212.155/32",
     "Region": "",
     "Service": "M365ManagementActivityApi",
@@ -14851,6 +14816,20 @@
     "Region": "",
     "Service": "M365ManagementActivityApi",
     "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.218.0/29",
+    "Region": "",
+    "Service": "M365ManagementActivityApi",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.248.64/29",
+    "Region": "",
+    "Service": "M365ManagementActivityApi",
+    "SubnetSize": "29",
     "CloudProvider": "Azure Government"
   },
   {
@@ -14932,6 +14911,13 @@
   },
   {
     "Subnet": "52.181.64.172/30",
+    "Region": "",
+    "Service": "M365ManagementActivityApi",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.181.67.208/30",
     "Region": "",
     "Service": "M365ManagementActivityApi",
     "SubnetSize": "30",

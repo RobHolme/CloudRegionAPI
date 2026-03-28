@@ -819,6 +819,41 @@
     "CloudProvider": "Azure China"
   },
   {
+    "Subnet": "40.162.75.199/32",
+    "Region": "chinanorth3",
+    "Service": "AzureMachineLearning",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.76.164/30",
+    "Region": "chinanorth3",
+    "Service": "AzureMachineLearning",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.77.80/28",
+    "Region": "chinanorth3",
+    "Service": "AzureMachineLearning",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.77.96/27",
+    "Region": "chinanorth3",
+    "Service": "AzureMachineLearning",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.77.128/31",
+    "Region": "chinanorth3",
+    "Service": "AzureMachineLearning",
+    "SubnetSize": "31",
+    "CloudProvider": "Azure China"
+  },
+  {
     "Subnet": "52.131.17.0/27",
     "Region": "chinanorth3",
     "Service": "AzureMachineLearning",
@@ -4837,10 +4872,45 @@
     "CloudProvider": "Azure China"
   },
   {
+    "Subnet": "40.162.60.201/32",
+    "Region": "chinaeast3",
+    "Service": "AzureMachineLearning",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.61.88/31",
+    "Region": "chinaeast3",
+    "Service": "AzureMachineLearning",
+    "SubnetSize": "31",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.61.96/27",
+    "Region": "chinaeast3",
+    "Service": "AzureMachineLearning",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.61.128/28",
+    "Region": "chinaeast3",
+    "Service": "AzureMachineLearning",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure China"
+  },
+  {
     "Subnet": "52.131.145.0/27",
     "Region": "chinaeast3",
     "Service": "AzureMachineLearning",
     "SubnetSize": "27",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "163.228.33.180/30",
+    "Region": "chinaeast3",
+    "Service": "AzureMachineLearning",
+    "SubnetSize": "30",
     "CloudProvider": "Azure China"
   },
   {
@@ -6297,6 +6367,41 @@
     "Region": "chinaeast2",
     "Service": "AzureMachineLearning",
     "SubnetSize": "28",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "163.228.202.64/27",
+    "Region": "chinaeast2",
+    "Service": "AzureMachineLearning",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "163.228.202.96/28",
+    "Region": "chinaeast2",
+    "Service": "AzureMachineLearning",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "163.228.202.112/30",
+    "Region": "chinaeast2",
+    "Service": "AzureMachineLearning",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "163.228.202.116/31",
+    "Region": "chinaeast2",
+    "Service": "AzureMachineLearning",
+    "SubnetSize": "31",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "163.228.202.118/32",
+    "Region": "chinaeast2",
+    "Service": "AzureMachineLearning",
+    "SubnetSize": "32",
     "CloudProvider": "Azure China"
   },
   {
