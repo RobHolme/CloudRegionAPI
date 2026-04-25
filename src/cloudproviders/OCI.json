@@ -105,6 +105,20 @@
     "CloudProvider": "Oracle Cloud (OCI)"
   },
   {
+    "Subnet": "147.5.96.0/19",
+    "Region": "ca-toronto-1",
+    "Service": "OCI",
+    "SubnetSize": "19",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "147.15.184.0/21",
+    "Region": "ca-toronto-1",
+    "Service": "OCI",
+    "SubnetSize": "21",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
     "Subnet": "150.230.24.0/21",
     "Region": "ca-toronto-1",
     "Service": "OCI",
@@ -172,6 +186,13 @@
     "Region": "ca-toronto-1",
     "Service": "OSN",
     "SubnetSize": "25",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "147.5.28.0/22",
+    "Region": "ca-toronto-1",
+    "Service": "OSN",
+    "SubnetSize": "22",
     "CloudProvider": "Oracle Cloud (OCI)"
   },
   {
@@ -326,6 +347,174 @@
     "Region": "eu-madrid-1",
     "Service": "OSN",
     "SubnetSize": "25",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "51.170.80.0/20",
+    "Region": "me-abudhabi-1",
+    "Service": "OCI",
+    "SubnetSize": "20",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "129.151.128.0/19",
+    "Region": "me-abudhabi-1",
+    "Service": "OCI",
+    "SubnetSize": "19",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "129.149.48.0/22",
+    "Region": "me-abudhabi-1",
+    "Service": "OSN",
+    "SubnetSize": "22",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "129.149.52.0/25",
+    "Region": "me-abudhabi-1",
+    "Service": "OSN",
+    "SubnetSize": "25",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "134.70.144.0/22",
+    "Region": "me-abudhabi-1",
+    "Service": "OSN",
+    "SubnetSize": "22",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "134.70.144.0/22",
+    "Region": "me-abudhabi-1",
+    "Service": "OBJECT_STORAGE",
+    "SubnetSize": "22",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "140.91.64.0/23",
+    "Region": "me-abudhabi-1",
+    "Service": "OSN",
+    "SubnetSize": "23",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "140.204.80.128/25",
+    "Region": "me-abudhabi-1",
+    "Service": "OSN",
+    "SubnetSize": "25",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "141.253.216.0/21",
+    "Region": "me-abudhabi-1",
+    "Service": "OSN",
+    "SubnetSize": "21",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "145.241.178.0/23",
+    "Region": "me-abudhabi-1",
+    "Service": "OSN",
+    "SubnetSize": "23",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "207.127.72.0/22",
+    "Region": "me-abudhabi-1",
+    "Service": "OSN",
+    "SubnetSize": "22",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "51.170.128.0/20",
+    "Region": "af-casablanca-1",
+    "Service": "OCI",
+    "SubnetSize": "20",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "51.170.152.0/21",
+    "Region": "af-casablanca-1",
+    "Service": "OCI",
+    "SubnetSize": "21",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "84.8.216.0/21",
+    "Region": "af-casablanca-1",
+    "Service": "OCI",
+    "SubnetSize": "21",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "84.8.192.0/26",
+    "Region": "af-casablanca-1",
+    "Service": "OSN",
+    "SubnetSize": "26",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "84.8.192.128/25",
+    "Region": "af-casablanca-1",
+    "Service": "OSN",
+    "SubnetSize": "25",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "84.8.193.192/26",
+    "Region": "af-casablanca-1",
+    "Service": "OSN",
+    "SubnetSize": "26",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "84.8.194.0/23",
+    "Region": "af-casablanca-1",
+    "Service": "OSN",
+    "SubnetSize": "23",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "84.8.196.0/22",
+    "Region": "af-casablanca-1",
+    "Service": "OSN",
+    "SubnetSize": "22",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "84.8.200.0/22",
+    "Region": "af-casablanca-1",
+    "Service": "OSN",
+    "SubnetSize": "22",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "84.8.200.0/22",
+    "Region": "af-casablanca-1",
+    "Service": "OBJECT_STORAGE",
+    "SubnetSize": "22",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "84.8.208.0/23",
+    "Region": "af-casablanca-1",
+    "Service": "OSN",
+    "SubnetSize": "23",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "84.8.210.128/25",
+    "Region": "af-casablanca-1",
+    "Service": "OSN",
+    "SubnetSize": "25",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "92.4.202.0/23",
+    "Region": "af-casablanca-1",
+    "Service": "OSN",
+    "SubnetSize": "23",
     "CloudProvider": "Oracle Cloud (OCI)"
   },
   {
@@ -3430,83 +3619,6 @@
     "CloudProvider": "Oracle Cloud (OCI)"
   },
   {
-    "Subnet": "84.8.216.0/21",
-    "Region": "af-casablanca-1",
-    "Service": "OCI",
-    "SubnetSize": "21",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "84.8.192.0/26",
-    "Region": "af-casablanca-1",
-    "Service": "OSN",
-    "SubnetSize": "26",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "84.8.192.128/25",
-    "Region": "af-casablanca-1",
-    "Service": "OSN",
-    "SubnetSize": "25",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "84.8.193.192/26",
-    "Region": "af-casablanca-1",
-    "Service": "OSN",
-    "SubnetSize": "26",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "84.8.194.0/23",
-    "Region": "af-casablanca-1",
-    "Service": "OSN",
-    "SubnetSize": "23",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "84.8.196.0/22",
-    "Region": "af-casablanca-1",
-    "Service": "OSN",
-    "SubnetSize": "22",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "84.8.200.0/22",
-    "Region": "af-casablanca-1",
-    "Service": "OSN",
-    "SubnetSize": "22",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "84.8.200.0/22",
-    "Region": "af-casablanca-1",
-    "Service": "OBJECT_STORAGE",
-    "SubnetSize": "22",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "84.8.208.0/23",
-    "Region": "af-casablanca-1",
-    "Service": "OSN",
-    "SubnetSize": "23",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "84.8.210.128/25",
-    "Region": "af-casablanca-1",
-    "Service": "OSN",
-    "SubnetSize": "25",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "92.4.202.0/23",
-    "Region": "af-casablanca-1",
-    "Service": "OSN",
-    "SubnetSize": "23",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
     "Subnet": "84.235.160.0/19",
     "Region": "eu-amsterdam-1",
     "Service": "OCI",
@@ -4509,6 +4621,20 @@
   },
   {
     "Subnet": "144.22.32.0/19",
+    "Region": "sa-santiago-1",
+    "Service": "OCI",
+    "SubnetSize": "19",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "146.181.16.0/20",
+    "Region": "sa-santiago-1",
+    "Service": "OCI",
+    "SubnetSize": "20",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
+    "Subnet": "146.181.32.0/19",
     "Region": "sa-santiago-1",
     "Service": "OCI",
     "SubnetSize": "19",
@@ -5518,76 +5644,6 @@
   {
     "Subnet": "209.17.60.0/22",
     "Region": "uk-cardiff-1",
-    "Service": "OSN",
-    "SubnetSize": "22",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "129.151.128.0/19",
-    "Region": "me-abudhabi-1",
-    "Service": "OCI",
-    "SubnetSize": "19",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "129.149.48.0/22",
-    "Region": "me-abudhabi-1",
-    "Service": "OSN",
-    "SubnetSize": "22",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "129.149.52.0/25",
-    "Region": "me-abudhabi-1",
-    "Service": "OSN",
-    "SubnetSize": "25",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "134.70.144.0/22",
-    "Region": "me-abudhabi-1",
-    "Service": "OSN",
-    "SubnetSize": "22",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "134.70.144.0/22",
-    "Region": "me-abudhabi-1",
-    "Service": "OBJECT_STORAGE",
-    "SubnetSize": "22",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "140.91.64.0/23",
-    "Region": "me-abudhabi-1",
-    "Service": "OSN",
-    "SubnetSize": "23",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "140.204.80.128/25",
-    "Region": "me-abudhabi-1",
-    "Service": "OSN",
-    "SubnetSize": "25",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "141.253.216.0/21",
-    "Region": "me-abudhabi-1",
-    "Service": "OSN",
-    "SubnetSize": "21",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "145.241.178.0/23",
-    "Region": "me-abudhabi-1",
-    "Service": "OSN",
-    "SubnetSize": "23",
-    "CloudProvider": "Oracle Cloud (OCI)"
-  },
-  {
-    "Subnet": "207.127.72.0/22",
-    "Region": "me-abudhabi-1",
     "Service": "OSN",
     "SubnetSize": "22",
     "CloudProvider": "Oracle Cloud (OCI)"
