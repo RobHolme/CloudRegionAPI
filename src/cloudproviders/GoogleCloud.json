@@ -42,6 +42,20 @@
     "CloudProvider": "Google Cloud"
   },
   {
+    "Subnet": "34.183.71.0/24",
+    "Region": "asia-east1",
+    "service": "Google Cloud",
+    "SubnetSize": "24",
+    "CloudProvider": "Google Cloud"
+  },
+  {
+    "Subnet": "34.184.70.0/24",
+    "Region": "asia-east1",
+    "service": "Google Cloud",
+    "SubnetSize": "24",
+    "CloudProvider": "Google Cloud"
+  },
+  {
     "Subnet": "35.185.128.0/19",
     "Region": "asia-east1",
     "service": "Google Cloud",
@@ -680,6 +694,20 @@
   },
   {
     "Subnet": "34.177.64.0/24",
+    "Region": "asia-northeast3",
+    "service": "Google Cloud",
+    "SubnetSize": "24",
+    "CloudProvider": "Google Cloud"
+  },
+  {
+    "Subnet": "34.183.72.0/24",
+    "Region": "asia-northeast3",
+    "service": "Google Cloud",
+    "SubnetSize": "24",
+    "CloudProvider": "Google Cloud"
+  },
+  {
+    "Subnet": "34.184.71.0/24",
     "Region": "asia-northeast3",
     "service": "Google Cloud",
     "SubnetSize": "24",
@@ -1890,6 +1918,27 @@
     "CloudProvider": "Google Cloud"
   },
   {
+    "Subnet": "34.156.0.0/16",
+    "Region": "europe-west1",
+    "service": "Google Cloud",
+    "SubnetSize": "16",
+    "CloudProvider": "Google Cloud"
+  },
+  {
+    "Subnet": "34.183.74.0/24",
+    "Region": "europe-west1",
+    "service": "Google Cloud",
+    "SubnetSize": "24",
+    "CloudProvider": "Google Cloud"
+  },
+  {
+    "Subnet": "34.184.73.0/24",
+    "Region": "europe-west1",
+    "service": "Google Cloud",
+    "SubnetSize": "24",
+    "CloudProvider": "Google Cloud"
+  },
+  {
     "Subnet": "35.187.0.0/17",
     "Region": "europe-west1",
     "service": "Google Cloud",
@@ -2090,6 +2139,13 @@
     "Region": "europe-west1",
     "service": "Google Cloud",
     "SubnetSize": "22",
+    "CloudProvider": "Google Cloud"
+  },
+  {
+    "Subnet": "207.175.0.0/16",
+    "Region": "europe-west1",
+    "service": "Google Cloud",
+    "SubnetSize": "16",
     "CloudProvider": "Google Cloud"
   },
   {
@@ -2814,7 +2870,21 @@
     "CloudProvider": "Google Cloud"
   },
   {
+    "Subnet": "34.183.70.0/24",
+    "Region": "europe-west4",
+    "service": "Google Cloud",
+    "SubnetSize": "24",
+    "CloudProvider": "Google Cloud"
+  },
+  {
     "Subnet": "34.184.31.0/24",
+    "Region": "europe-west4",
+    "service": "Google Cloud",
+    "SubnetSize": "24",
+    "CloudProvider": "Google Cloud"
+  },
+  {
+    "Subnet": "34.184.69.0/24",
     "Region": "europe-west4",
     "service": "Google Cloud",
     "SubnetSize": "24",
@@ -3045,10 +3115,31 @@
     "CloudProvider": "Google Cloud"
   },
   {
+    "Subnet": "34.183.73.0/24",
+    "Region": "europe-west9",
+    "service": "Google Cloud",
+    "SubnetSize": "24",
+    "CloudProvider": "Google Cloud"
+  },
+  {
+    "Subnet": "34.184.72.0/24",
+    "Region": "europe-west9",
+    "service": "Google Cloud",
+    "SubnetSize": "24",
+    "CloudProvider": "Google Cloud"
+  },
+  {
     "Subnet": "8.228.224.0/20",
     "Region": "global",
     "service": "Google Cloud",
     "SubnetSize": "20",
+    "CloudProvider": "Google Cloud"
+  },
+  {
+    "Subnet": "8.232.0.0/15",
+    "Region": "global",
+    "service": "Google Cloud",
+    "SubnetSize": "15",
     "CloudProvider": "Google Cloud"
   },
   {
@@ -3332,6 +3423,20 @@
     "CloudProvider": "Google Cloud"
   },
   {
+    "Subnet": "34.183.67.0/24",
+    "Region": "me-central1",
+    "service": "Google Cloud",
+    "SubnetSize": "24",
+    "CloudProvider": "Google Cloud"
+  },
+  {
+    "Subnet": "34.184.66.0/24",
+    "Region": "me-central1",
+    "service": "Google Cloud",
+    "SubnetSize": "24",
+    "CloudProvider": "Google Cloud"
+  },
+  {
     "Subnet": "8.228.192.0/19",
     "Region": "me-central2",
     "service": "Google Cloud",
@@ -3402,6 +3507,20 @@
     "CloudProvider": "Google Cloud"
   },
   {
+    "Subnet": "34.183.69.0/24",
+    "Region": "me-central2",
+    "service": "Google Cloud",
+    "SubnetSize": "24",
+    "CloudProvider": "Google Cloud"
+  },
+  {
+    "Subnet": "34.184.68.0/24",
+    "Region": "me-central2",
+    "service": "Google Cloud",
+    "SubnetSize": "24",
+    "CloudProvider": "Google Cloud"
+  },
+  {
     "Subnet": "35.252.32.0/19",
     "Region": "me-central2",
     "service": "Google Cloud",
@@ -3465,10 +3584,24 @@
     "CloudProvider": "Google Cloud"
   },
   {
+    "Subnet": "34.183.61.0/24",
+    "Region": "me-west1",
+    "service": "Google Cloud",
+    "SubnetSize": "24",
+    "CloudProvider": "Google Cloud"
+  },
+  {
     "Subnet": "34.184.3.128/25",
     "Region": "me-west1",
     "service": "Google Cloud",
     "SubnetSize": "25",
+    "CloudProvider": "Google Cloud"
+  },
+  {
+    "Subnet": "34.184.64.0/24",
+    "Region": "me-west1",
+    "service": "Google Cloud",
+    "SubnetSize": "24",
     "CloudProvider": "Google Cloud"
   },
   {
@@ -3570,7 +3703,21 @@
     "CloudProvider": "Google Cloud"
   },
   {
+    "Subnet": "34.183.75.0/24",
+    "Region": "northamerica-northeast1",
+    "service": "Google Cloud",
+    "SubnetSize": "24",
+    "CloudProvider": "Google Cloud"
+  },
+  {
     "Subnet": "34.184.22.0/24",
+    "Region": "northamerica-northeast1",
+    "service": "Google Cloud",
+    "SubnetSize": "24",
+    "CloudProvider": "Google Cloud"
+  },
+  {
+    "Subnet": "34.184.74.0/24",
     "Region": "northamerica-northeast1",
     "service": "Google Cloud",
     "SubnetSize": "24",
@@ -4207,6 +4354,13 @@
     "CloudProvider": "Google Cloud"
   },
   {
+    "Subnet": "34.183.76.0/22",
+    "Region": "us-central1",
+    "service": "Google Cloud",
+    "SubnetSize": "22",
+    "CloudProvider": "Google Cloud"
+  },
+  {
     "Subnet": "34.184.16.0/22",
     "Region": "us-central1",
     "service": "Google Cloud",
@@ -4222,6 +4376,13 @@
   },
   {
     "Subnet": "34.184.48.0/22",
+    "Region": "us-central1",
+    "service": "Google Cloud",
+    "SubnetSize": "22",
+    "CloudProvider": "Google Cloud"
+  },
+  {
+    "Subnet": "34.184.76.0/22",
     "Region": "us-central1",
     "service": "Google Cloud",
     "SubnetSize": "22",
@@ -5110,6 +5271,13 @@
     "CloudProvider": "Google Cloud"
   },
   {
+    "Subnet": "34.183.68.0/24",
+    "Region": "us-east4",
+    "service": "Google Cloud",
+    "SubnetSize": "24",
+    "CloudProvider": "Google Cloud"
+  },
+  {
     "Subnet": "34.184.12.0/22",
     "Region": "us-east4",
     "service": "Google Cloud",
@@ -5125,6 +5293,13 @@
   },
   {
     "Subnet": "34.184.59.0/24",
+    "Region": "us-east4",
+    "service": "Google Cloud",
+    "SubnetSize": "24",
+    "CloudProvider": "Google Cloud"
+  },
+  {
+    "Subnet": "34.184.67.0/24",
     "Region": "us-east4",
     "service": "Google Cloud",
     "SubnetSize": "24",
@@ -5415,6 +5590,20 @@
     "Region": "us-south1",
     "service": "Google Cloud",
     "SubnetSize": "16",
+    "CloudProvider": "Google Cloud"
+  },
+  {
+    "Subnet": "34.183.66.0/24",
+    "Region": "us-south1",
+    "service": "Google Cloud",
+    "SubnetSize": "24",
+    "CloudProvider": "Google Cloud"
+  },
+  {
+    "Subnet": "34.184.65.0/24",
+    "Region": "us-south1",
+    "service": "Google Cloud",
+    "SubnetSize": "24",
     "CloudProvider": "Google Cloud"
   },
   {
