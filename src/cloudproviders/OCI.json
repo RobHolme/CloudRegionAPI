@@ -3395,6 +3395,13 @@
     "CloudProvider": "Oracle Cloud (OCI)"
   },
   {
+    "Subnet": "147.5.20.0/22",
+    "Region": "ap-mumbai-1",
+    "Service": "OSN",
+    "SubnetSize": "22",
+    "CloudProvider": "Oracle Cloud (OCI)"
+  },
+  {
     "Subnet": "168.110.240.0/22",
     "Region": "ap-mumbai-1",
     "Service": "OSN",
