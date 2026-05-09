@@ -9331,6 +9331,20 @@
     "CloudProvider": "Azure China"
   },
   {
+    "Subnet": "40.162.62.236/30",
+    "Region": "",
+    "Service": "M365ManagementActivityApiWebhook",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.79.60/30",
+    "Region": "",
+    "Service": "M365ManagementActivityApiWebhook",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure China"
+  },
+  {
     "Subnet": "40.162.171.111/32",
     "Region": "",
     "Service": "M365ManagementActivityApiWebhook",
@@ -9426,6 +9440,20 @@
     "Region": "",
     "Service": "M365ManagementActivityApi",
     "SubnetSize": "31",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.63.160/30",
+    "Region": "",
+    "Service": "M365ManagementActivityApi",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.79.96/30",
+    "Region": "",
+    "Service": "M365ManagementActivityApi",
+    "SubnetSize": "30",
     "CloudProvider": "Azure China"
   },
   {
@@ -9569,6 +9597,76 @@
     "CloudProvider": "Azure China"
   },
   {
+    "Subnet": "52.131.21.32/29",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "52.131.149.32/29",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "143.64.194.48/29",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "159.27.145.240/29",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "159.27.248.128/29",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "159.27.255.224/29",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "163.228.60.104/29",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "163.228.102.88/29",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "163.228.195.128/29",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "163.228.218.208/29",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure China"
+  },
+  {
     "Subnet": "52.131.21.40/29",
     "Region": "",
     "Service": "ElasticAFD",
@@ -9639,73 +9737,17 @@
     "CloudProvider": "Azure China"
   },
   {
-    "Subnet": "52.131.21.32/29",
+    "Subnet": "139.217.124.0/27",
     "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "29",
+    "Service": "Dynamics365ForMarketingEmail",
+    "SubnetSize": "27",
     "CloudProvider": "Azure China"
   },
   {
-    "Subnet": "52.131.149.32/29",
+    "Subnet": "163.228.203.128/27",
     "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "29",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "143.64.194.48/29",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "29",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "159.27.145.240/29",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "29",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "159.27.248.128/29",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "29",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "159.27.255.224/29",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "29",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "163.228.60.104/29",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "29",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "163.228.102.88/29",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "29",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "163.228.195.128/29",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "29",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "163.228.218.208/29",
-    "Region": "",
-    "Service": "ElasticAFD",
-    "SubnetSize": "29",
+    "Service": "Dynamics365ForMarketingEmail",
+    "SubnetSize": "27",
     "CloudProvider": "Azure China"
   },
   {
@@ -10948,153 +10990,6 @@
     "CloudProvider": "Azure China"
   },
   {
-    "Subnet": "40.72.70.0/28",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "28",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "40.72.70.32/27",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "27",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "40.72.70.64/28",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "28",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "40.72.70.128/27",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "27",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "40.72.70.192/28",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "28",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "40.72.70.224/27",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "27",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "40.72.71.32/28",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "28",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "40.72.73.64/27",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "27",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "52.130.2.32/27",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "27",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "52.130.9.64/27",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "27",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "52.130.17.192/27",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "27",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "40.72.73.96/27",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "27",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "40.73.72.170/32",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "40.73.86.137/32",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "40.73.139.128/27",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "27",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "40.73.171.128/27",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "27",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "52.130.2.192/27",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "27",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "52.130.9.96/27",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "27",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "52.130.17.224/27",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "27",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "139.217.51.192/27",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "27",
-    "CloudProvider": "Azure China"
-  },
-  {
-    "Subnet": "139.217.171.192/27",
-    "Region": "",
-    "Service": "AzureIdentity",
-    "SubnetSize": "27",
-    "CloudProvider": "Azure China"
-  },
-  {
     "Subnet": "40.72.70.0/23",
     "Region": "",
     "Service": "AzureIdentity",
@@ -11137,6 +11032,20 @@
     "CloudProvider": "Azure China"
   },
   {
+    "Subnet": "40.73.72.170/32",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.73.86.137/32",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
     "Subnet": "40.73.106.29/32",
     "Region": "",
     "Service": "AzureIdentity",
@@ -11155,6 +11064,34 @@
     "Region": "",
     "Service": "AzureIdentity",
     "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.73.139.128/27",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.73.171.128/27",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "52.130.2.32/27",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "52.130.2.192/27",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "27",
     "CloudProvider": "Azure China"
   },
   {
@@ -11221,6 +11158,20 @@
     "CloudProvider": "Azure China"
   },
   {
+    "Subnet": "139.217.51.192/27",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "139.217.171.192/27",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure China"
+  },
+  {
     "Subnet": "159.27.24.105/32",
     "Region": "",
     "Service": "AzureIdentity",
@@ -11281,6 +11232,97 @@
     "Region": "",
     "Service": "AzureIdentity",
     "SubnetSize": "30",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.72.70.0/28",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.72.70.32/27",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.72.70.64/28",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.72.70.128/27",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.72.70.192/28",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.72.70.224/27",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.72.71.32/28",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.72.73.64/27",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "52.130.9.64/27",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "52.130.17.192/27",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.72.73.96/27",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "52.130.9.96/27",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "52.130.17.224/27",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "27",
     "CloudProvider": "Azure China"
   },
   {
