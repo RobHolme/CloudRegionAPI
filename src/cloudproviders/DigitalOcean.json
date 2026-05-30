@@ -5691,6 +5691,20 @@
     "CloudProvider": "Digital Ocean"
   },
   {
+    "Subnet": "168.144.52.0/22",
+    "Region": null,
+    "Service": "",
+    "SubnetSize": "22",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
+    "Subnet": "168.144.56.0/21",
+    "Region": null,
+    "Service": "",
+    "SubnetSize": "21",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
     "Subnet": "168.144.64.0/20",
     "Region": "Bangalore",
     "Service": "",
@@ -5728,6 +5742,13 @@
   {
     "Subnet": "168.144.144.0/20",
     "Region": "Bangalore",
+    "Service": "",
+    "SubnetSize": "20",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
+    "Subnet": "168.144.160.0/20",
+    "Region": "Sydney",
     "Service": "",
     "SubnetSize": "20",
     "CloudProvider": "Digital Ocean"
