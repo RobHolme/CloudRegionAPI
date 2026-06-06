@@ -7119,6 +7119,20 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "57.16.225.0/24",
+    "Region": "usgovtexas",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "57.16.227.0/24",
+    "Region": "usgovtexas",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "62.10.146.0/23",
     "Region": "usgovtexas",
     "Service": "",
@@ -10119,6 +10133,20 @@
     "Region": "usgovarizona",
     "Service": "",
     "SubnetSize": "23",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "57.16.224.0/24",
+    "Region": "usgovarizona",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "57.16.226.0/24",
+    "Region": "usgovarizona",
+    "Service": "",
+    "SubnetSize": "24",
     "CloudProvider": "Azure Government"
   },
   {
