@@ -5663,6 +5663,13 @@
     "CloudProvider": "Digital Ocean"
   },
   {
+    "Subnet": "168.144.8.0/22",
+    "Region": "London",
+    "Service": "",
+    "SubnetSize": "22",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
     "Subnet": "168.144.12.0/22",
     "Region": "North Bergen",
     "Service": "",
@@ -5692,14 +5699,14 @@
   },
   {
     "Subnet": "168.144.52.0/22",
-    "Region": null,
+    "Region": "Memphis",
     "Service": "",
     "SubnetSize": "22",
     "CloudProvider": "Digital Ocean"
   },
   {
     "Subnet": "168.144.56.0/21",
-    "Region": null,
+    "Region": "Memphis",
     "Service": "",
     "SubnetSize": "21",
     "CloudProvider": "Digital Ocean"
@@ -5758,6 +5765,13 @@
     "Region": "Bangalore",
     "Service": "",
     "SubnetSize": "20",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
+    "Subnet": "168.144.192.0/22",
+    "Region": "London",
+    "Service": "",
+    "SubnetSize": "22",
     "CloudProvider": "Digital Ocean"
   },
   {
