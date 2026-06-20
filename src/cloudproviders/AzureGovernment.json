@@ -3227,6 +3227,13 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "51.55.193.32/27",
+    "Region": "usgovvirginia",
+    "Service": "AzureMonitor",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "52.127.42.168/29",
     "Region": "usgovvirginia",
     "Service": "AzureMonitor",
@@ -6021,6 +6028,13 @@
   },
   {
     "Subnet": "52.243.12.192/27",
+    "Region": "usgovtexas",
+    "Service": "AzureMonitor",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.243.13.224/27",
     "Region": "usgovtexas",
     "Service": "AzureMonitor",
     "SubnetSize": "27",
