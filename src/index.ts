@@ -63,7 +63,7 @@ app.use('/scripts.js', express.static('./release/html/scripts.js'));
 // handle requests for the root URL
 app.get("/", (req: Request, res: Response) => {
   // apply security headers
-  res.setHeader('Content-Security-Policy', "default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self'; frame-ancestors 'none'; form-action 'self';");
+  res.setHeader('Content-Security-Policy', "frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content; default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self'; form-action 'self'; font-src 'self';");
   res.setHeader('X-Content-Type-Options', 'nosniff');
   res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
   
