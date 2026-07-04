@@ -3444,6 +3444,34 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "51.55.193.120/29",
+    "Region": "usgovvirginia",
+    "Service": "AzureIoTHub",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.55.193.128/27",
+    "Region": "usgovvirginia",
+    "Service": "AzureIoTHub",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.55.193.160/30",
+    "Region": "usgovvirginia",
+    "Service": "AzureIoTHub",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.55.194.0/24",
+    "Region": "usgovvirginia",
+    "Service": "AzureIoTHub",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "52.127.45.64/27",
     "Region": "usgovvirginia",
     "Service": "AzureIoTHub",
@@ -6115,6 +6143,34 @@
     "Region": "usgovtexas",
     "Service": "AzureIoTHub",
     "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.243.15.44/30",
+    "Region": "usgovtexas",
+    "Service": "AzureIoTHub",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.243.15.48/29",
+    "Region": "usgovtexas",
+    "Service": "AzureIoTHub",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.243.15.64/27",
+    "Region": "usgovtexas",
+    "Service": "AzureIoTHub",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.243.16.0/24",
+    "Region": "usgovtexas",
+    "Service": "AzureIoTHub",
+    "SubnetSize": "24",
     "CloudProvider": "Azure Government"
   },
   {
@@ -8940,6 +8996,27 @@
   },
   {
     "Subnet": "20.140.51.128/25",
+    "Region": "usgovarizona",
+    "Service": "AzureIoTHub",
+    "SubnetSize": "25",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.55.224.16/29",
+    "Region": "usgovarizona",
+    "Service": "AzureIoTHub",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.55.224.64/26",
+    "Region": "usgovarizona",
+    "Service": "AzureIoTHub",
+    "SubnetSize": "26",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.55.224.128/25",
     "Region": "usgovarizona",
     "Service": "AzureIoTHub",
     "SubnetSize": "25",
@@ -15632,6 +15709,13 @@
   },
   {
     "Subnet": "52.235.253.112/29",
+    "Region": "",
+    "Service": "ElasticAFD",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.243.17.0/29",
     "Region": "",
     "Service": "ElasticAFD",
     "SubnetSize": "29",
