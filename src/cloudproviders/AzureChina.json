@@ -11256,6 +11256,13 @@
     "CloudProvider": "Azure China"
   },
   {
+    "Subnet": "40.162.129.0/28",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure China"
+  },
+  {
     "Subnet": "52.130.2.32/27",
     "Region": "",
     "Service": "AzureIdentity",
@@ -11414,6 +11421,13 @@
     "Region": "",
     "Service": "AzureIdentity",
     "SubnetSize": "30",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "163.228.204.240/28",
+    "Region": "",
+    "Service": "AzureIdentity",
+    "SubnetSize": "28",
     "CloudProvider": "Azure China"
   },
   {
