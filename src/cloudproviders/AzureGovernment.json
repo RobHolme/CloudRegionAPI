@@ -10311,6 +10311,13 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "57.17.0.0/19",
+    "Region": "usgovarizona",
+    "Service": "",
+    "SubnetSize": "19",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "62.10.130.0/23",
     "Region": "usgovarizona",
     "Service": "",
