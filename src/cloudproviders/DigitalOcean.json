@@ -5782,6 +5782,13 @@
     "CloudProvider": "Digital Ocean"
   },
   {
+    "Subnet": "168.144.240.0/20",
+    "Region": "Singapore",
+    "Service": "",
+    "SubnetSize": "20",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
     "Subnet": "170.64.128.0/18",
     "Region": "Sydney",
     "Service": "",
@@ -7158,6 +7165,13 @@
     "Region": "Amsterdam",
     "Service": "",
     "SubnetSize": "21",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
+    "Subnet": "201.79.0.0/20",
+    "Region": "Frankfurt",
+    "Service": "",
+    "SubnetSize": "20",
     "CloudProvider": "Digital Ocean"
   },
   {
