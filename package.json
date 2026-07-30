@@ -5,7 +5,7 @@
   "scripts": {
     "build": "tsc && npm run copy-files && npm run create-build-date-file",
     "serve": "node release/index.js",
-    "copy-files": "copyfiles -u 2 ./src/cloudproviders/*.json ./release/cloudproviders && copyfiles -u 2 ./src/html/* ./release/html && copyfiles -u 2 ./src/images/*.ico ./release/images",
+    "copy-files": "copyfiles-ng -u 2 ./src/cloudproviders/*.json ./release/cloudproviders && copyfiles-ng -u 2 ./src/html/* ./release/html && copyfiles-ng -u 2 ./src/images/*.ico ./release/images",
     "create-build-date-file": "node build-date.js"
   },
   "keywords": [],
@@ -16,7 +16,7 @@
     "@types/compression": "^1.7.5",
     "@types/express": "^5.0.6",
     "@types/node": "^24.13.3",
-    "copyfiles": "^2.4.1",
+    "copyfiles-ng": "^2.4.7",
     "ts-node": "^10.9.2",
     "typescript": "^7.0.2"
   },
