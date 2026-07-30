@@ -11,7 +11,7 @@ const router = Router();
 // Returns result as string[]. 404 response code returned if no results found.
 // -----------------------------
 router.get("/:hostname", async (req: Request, res: Response) => {
-    const hostname = req.params.hostname.trim();
+    const hostname = req.params.hostname.toString().trim();
     res.setHeader('content-type', 'application/json');
     const xClientIp: string | undefined = req.headers['x-client-ip'] as string;
     console.log(`Hostname: client ${req.ip} (${xClientIp}) submitted: ${hostname}`);

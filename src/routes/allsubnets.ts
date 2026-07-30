@@ -8,7 +8,7 @@ const router = Router();
 // Return the full list of subnets for a specific cloud provider
 // -----------------------------
 router.get("/:cloudprovider", async (req: Request, res: Response) => {
-    const cloudProvider: string = req.params.cloudprovider.toLowerCase().trim();
+    const cloudProvider: string = req.params.cloudprovider.toString().toLowerCase().trim();
     res.setHeader('content-type', 'application/json');
     const xClientIp: string | undefined = req.headers['x-client-ip'] as string;
     console.log(`Subnets: client ${req.ip} (${xClientIp}) submitted: ${cloudProvider}`);
