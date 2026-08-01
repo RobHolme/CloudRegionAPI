@@ -3941,6 +3941,20 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "51.55.196.124/30",
+    "Region": "usgovvirginia",
+    "Service": "AzureAttestation",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.55.196.176/29",
+    "Region": "usgovvirginia",
+    "Service": "AzureAttestation",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "52.127.55.156/30",
     "Region": "usgovvirginia",
     "Service": "AzureAttestation",
@@ -6535,6 +6549,20 @@
     "Region": "usgovtexas",
     "Service": "AzureAttestation",
     "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.243.21.100/30",
+    "Region": "usgovtexas",
+    "Service": "AzureAttestation",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.243.21.104/29",
+    "Region": "usgovtexas",
+    "Service": "AzureAttestation",
+    "SubnetSize": "29",
     "CloudProvider": "Azure Government"
   },
   {
@@ -9464,6 +9492,20 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "51.55.233.4/30",
+    "Region": "usgovarizona",
+    "Service": "AzureAttestation",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.55.233.8/29",
+    "Region": "usgovarizona",
+    "Service": "AzureAttestation",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "52.127.12.48/30",
     "Region": "usgovarizona",
     "Service": "AzureAttestation",
@@ -11375,6 +11417,20 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "52.181.56.176/29",
+    "Region": "usdodeast",
+    "Service": "AzureAttestation",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.181.56.184/30",
+    "Region": "usdodeast",
+    "Service": "AzureAttestation",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "52.181.221.48/29",
     "Region": "usdodeast",
     "Service": "AzureAttestation",
@@ -12790,6 +12846,20 @@
   },
   {
     "Subnet": "20.159.252.120/29",
+    "Region": "usdodcentral",
+    "Service": "AzureAttestation",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.159.255.148/30",
+    "Region": "usdodcentral",
+    "Service": "AzureAttestation",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.159.255.152/29",
     "Region": "usdodcentral",
     "Service": "AzureAttestation",
     "SubnetSize": "29",
