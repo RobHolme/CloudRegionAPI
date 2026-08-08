@@ -4200,13 +4200,6 @@
     "CloudProvider": "Azure Government"
   },
   {
-    "Subnet": "13.72.19.232/32",
-    "Region": "usgovvirginia",
-    "Service": "ActionGroup",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
     "Subnet": "20.159.4.244/30",
     "Region": "usgovvirginia",
     "Service": "ActionGroup",
@@ -9727,13 +9720,6 @@
     "Region": "usgovarizona",
     "Service": "ActionGroup",
     "SubnetSize": "30",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.244.65.137/32",
-    "Region": "usgovarizona",
-    "Service": "ActionGroup",
-    "SubnetSize": "32",
     "CloudProvider": "Azure Government"
   },
   {
