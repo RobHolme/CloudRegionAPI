@@ -64267,6 +64267,13 @@
     "CloudProvider": "Azure"
   },
   {
+    "Subnet": "172.130.0.0/17",
+    "Region": "swedencentral",
+    "Service": "",
+    "SubnetSize": "17",
+    "CloudProvider": "Azure"
+  },
+  {
     "Subnet": "172.160.0.0/16",
     "Region": "swedencentral",
     "Service": "",
@@ -108850,6 +108857,13 @@
     "CloudProvider": "Azure"
   },
   {
+    "Subnet": "172.129.128.0/17",
+    "Region": "northeurope",
+    "Service": "",
+    "SubnetSize": "17",
+    "CloudProvider": "Azure"
+  },
+  {
     "Subnet": "172.205.0.0/17",
     "Region": "northeurope",
     "Service": "",
@@ -113544,6 +113558,13 @@
     "Region": "northcentralus",
     "Service": "",
     "SubnetSize": "29",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "57.157.65.216/31",
+    "Region": "northcentralus",
+    "Service": "",
+    "SubnetSize": "31",
     "CloudProvider": "Azure"
   },
   {
@@ -147602,6 +147623,13 @@
     "CloudProvider": "Azure"
   },
   {
+    "Subnet": "57.157.25.148/31",
+    "Region": "eastus3",
+    "Service": "",
+    "SubnetSize": "31",
+    "CloudProvider": "Azure"
+  },
+  {
     "Subnet": "134.138.0.0/17",
     "Region": "eastus3",
     "Service": "",
@@ -161063,10 +161091,10 @@
     "CloudProvider": "Azure"
   },
   {
-    "Subnet": "40.123.146.8/31",
+    "Subnet": "40.123.146.8/30",
     "Region": "eastus2",
     "Service": "",
-    "SubnetSize": "31",
+    "SubnetSize": "30",
     "CloudProvider": "Azure"
   },
   {
@@ -192388,10 +192416,10 @@
     "CloudProvider": "Azure"
   },
   {
-    "Subnet": "40.120.167.100/31",
+    "Subnet": "40.120.167.100/30",
     "Region": "centralus",
     "Service": "",
-    "SubnetSize": "31",
+    "SubnetSize": "30",
     "CloudProvider": "Azure"
   },
   {
@@ -194590,6 +194618,13 @@
     "Region": "centralus",
     "Service": "",
     "SubnetSize": "20",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "172.131.0.0/17",
+    "Region": "centralus",
+    "Service": "",
+    "SubnetSize": "17",
     "CloudProvider": "Azure"
   },
   {
@@ -220892,10 +220927,10 @@
     "CloudProvider": "Azure"
   },
   {
-    "Subnet": "57.157.168.48/31",
+    "Subnet": "57.157.168.48/30",
     "Region": "australiasoutheast",
     "Service": "",
-    "SubnetSize": "31",
+    "SubnetSize": "30",
     "CloudProvider": "Azure"
   },
   {
@@ -239100,6 +239135,13 @@
   },
   {
     "Subnet": "74.243.77.176/28",
+    "Region": "",
+    "Service": "MicrosoftDefenderForEndpoint",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "172.129.100.32/28",
     "Region": "",
     "Service": "MicrosoftDefenderForEndpoint",
     "SubnetSize": "28",
@@ -267813,6 +267855,13 @@
     "CloudProvider": "Azure"
   },
   {
+    "Subnet": "172.129.95.64/26",
+    "Region": "",
+    "Service": "AzureSignalR",
+    "SubnetSize": "26",
+    "CloudProvider": "Azure"
+  },
+  {
     "Subnet": "13.87.32.8/32",
     "Region": "",
     "Service": "AzureServiceBus",
@@ -284921,6 +284970,27 @@
     "CloudProvider": "Azure"
   },
   {
+    "Subnet": "4.182.154.160/28",
+    "Region": "",
+    "Service": "AzureDeviceUpdate",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "4.229.82.144/28",
+    "Region": "",
+    "Service": "AzureDeviceUpdate",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "4.248.140.192/27",
+    "Region": "",
+    "Service": "AzureDeviceUpdate",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure"
+  },
+  {
     "Subnet": "20.37.71.192/28",
     "Region": "",
     "Service": "AzureDeviceUpdate",
@@ -284978,6 +285048,13 @@
   },
   {
     "Subnet": "20.48.196.112/28",
+    "Region": "",
+    "Service": "AzureDeviceUpdate",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "20.48.197.192/28",
     "Region": "",
     "Service": "AzureDeviceUpdate",
     "SubnetSize": "28",
@@ -285418,6 +285495,13 @@
     "CloudProvider": "Azure"
   },
   {
+    "Subnet": "20.218.48.224/28",
+    "Region": "",
+    "Service": "AzureDeviceUpdate",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure"
+  },
+  {
     "Subnet": "20.223.64.64/26",
     "Region": "",
     "Service": "AzureDeviceUpdate",
@@ -285433,6 +285517,20 @@
   },
   {
     "Subnet": "40.67.53.144/28",
+    "Region": "",
+    "Service": "AzureDeviceUpdate",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "48.210.103.32/27",
+    "Region": "",
+    "Service": "AzureDeviceUpdate",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "48.210.112.80/28",
     "Region": "",
     "Service": "AzureDeviceUpdate",
     "SubnetSize": "28",
@@ -285485,6 +285583,13 @@
     "Region": "",
     "Service": "AzureDeviceUpdate",
     "SubnetSize": "28",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "51.116.55.192/27",
+    "Region": "",
+    "Service": "AzureDeviceUpdate",
+    "SubnetSize": "27",
     "CloudProvider": "Azure"
   },
   {
@@ -285558,6 +285663,13 @@
     "CloudProvider": "Azure"
   },
   {
+    "Subnet": "72.144.227.32/27",
+    "Region": "",
+    "Service": "AzureDeviceUpdate",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure"
+  },
+  {
     "Subnet": "102.37.80.176/28",
     "Region": "",
     "Service": "AzureDeviceUpdate",
@@ -285576,6 +285688,27 @@
     "Region": "",
     "Service": "AzureDeviceUpdate",
     "SubnetSize": "28",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "145.191.168.224/27",
+    "Region": "",
+    "Service": "AzureDeviceUpdate",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "172.192.226.48/28",
+    "Region": "",
+    "Service": "AzureDeviceUpdate",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "172.192.227.96/27",
+    "Region": "",
+    "Service": "AzureDeviceUpdate",
+    "SubnetSize": "27",
     "CloudProvider": "Azure"
   },
   {
