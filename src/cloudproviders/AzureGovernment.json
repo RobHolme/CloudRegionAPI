@@ -14903,20 +14903,6 @@
     "CloudProvider": "Azure Government"
   },
   {
-    "Subnet": "52.181.167.52/32",
-    "Region": "",
-    "Service": "M365ManagementActivityApi",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.181.181.136/32",
-    "Region": "",
-    "Service": "M365ManagementActivityApi",
-    "SubnetSize": "32",
-    "CloudProvider": "Azure Government"
-  },
-  {
     "Subnet": "52.181.222.252/30",
     "Region": "",
     "Service": "M365ManagementActivityApi",

@@ -10717,6 +10717,146 @@
     "CloudProvider": "Azure China"
   },
   {
+    "Subnet": "40.162.97.240/28",
+    "Region": "",
+    "Service": "AzureSiteRecovery",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.98.0/23",
+    "Region": "",
+    "Service": "AzureSiteRecovery",
+    "SubnetSize": "23",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.100.0/24",
+    "Region": "",
+    "Service": "AzureSiteRecovery",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.101.0/25",
+    "Region": "",
+    "Service": "AzureSiteRecovery",
+    "SubnetSize": "25",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.101.128/26",
+    "Region": "",
+    "Service": "AzureSiteRecovery",
+    "SubnetSize": "26",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.130.48/28",
+    "Region": "",
+    "Service": "AzureSiteRecovery",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.130.64/26",
+    "Region": "",
+    "Service": "AzureSiteRecovery",
+    "SubnetSize": "26",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.130.128/25",
+    "Region": "",
+    "Service": "AzureSiteRecovery",
+    "SubnetSize": "25",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.131.0/24",
+    "Region": "",
+    "Service": "AzureSiteRecovery",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.132.0/23",
+    "Region": "",
+    "Service": "AzureSiteRecovery",
+    "SubnetSize": "23",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.176.0/24",
+    "Region": "",
+    "Service": "AzureSiteRecovery",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.177.0/25",
+    "Region": "",
+    "Service": "AzureSiteRecovery",
+    "SubnetSize": "25",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.177.128/26",
+    "Region": "",
+    "Service": "AzureSiteRecovery",
+    "SubnetSize": "26",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.177.192/28",
+    "Region": "",
+    "Service": "AzureSiteRecovery",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.226.96/28",
+    "Region": "",
+    "Service": "AzureSiteRecovery",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.226.128/25",
+    "Region": "",
+    "Service": "AzureSiteRecovery",
+    "SubnetSize": "25",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.227.0/24",
+    "Region": "",
+    "Service": "AzureSiteRecovery",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.228.0/23",
+    "Region": "",
+    "Service": "AzureSiteRecovery",
+    "SubnetSize": "23",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.230.0/26",
+    "Region": "",
+    "Service": "AzureSiteRecovery",
+    "SubnetSize": "26",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.230.128/27",
+    "Region": "",
+    "Service": "AzureSiteRecovery",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure China"
+  },
+  {
     "Subnet": "42.159.205.45/32",
     "Region": "",
     "Service": "AzureSiteRecovery",
@@ -10826,6 +10966,13 @@
     "Region": "",
     "Service": "AzureSiteRecovery",
     "SubnetSize": "29",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "163.228.206.0/23",
+    "Region": "",
+    "Service": "AzureSiteRecovery",
+    "SubnetSize": "23",
     "CloudProvider": "Azure China"
   },
   {
