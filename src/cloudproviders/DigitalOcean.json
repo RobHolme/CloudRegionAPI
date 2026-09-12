@@ -7175,6 +7175,13 @@
     "CloudProvider": "Digital Ocean"
   },
   {
+    "Subnet": "201.79.16.0/20",
+    "Region": "Memphis",
+    "Service": "",
+    "SubnetSize": "20",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
     "Subnet": "204.48.16.0/20",
     "Region": "North Bergen",
     "Service": "",
