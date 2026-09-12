@@ -3493,101 +3493,45 @@
     "CloudProvider": "Azure"
   },
   {
-    "Subnet": "57.157.8.0/23",
+    "Subnet": "57.157.8.0/22",
+    "Region": "westus3",
+    "Service": "",
+    "SubnetSize": "22",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "57.157.128.0/23",
     "Region": "westus3",
     "Service": "",
     "SubnetSize": "23",
     "CloudProvider": "Azure"
   },
   {
-    "Subnet": "57.157.10.0/24",
-    "Region": "westus3",
-    "Service": "",
-    "SubnetSize": "24",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "57.157.11.0/27",
+    "Subnet": "57.157.130.0/27",
     "Region": "westus3",
     "Service": "",
     "SubnetSize": "27",
     "CloudProvider": "Azure"
   },
   {
-    "Subnet": "57.157.11.32/28",
+    "Subnet": "57.157.130.32/28",
     "Region": "westus3",
     "Service": "",
     "SubnetSize": "28",
     "CloudProvider": "Azure"
   },
   {
-    "Subnet": "57.157.11.48/29",
+    "Subnet": "57.157.130.48/29",
     "Region": "westus3",
     "Service": "",
     "SubnetSize": "29",
     "CloudProvider": "Azure"
   },
   {
-    "Subnet": "57.157.11.56/31",
+    "Subnet": "57.157.130.56/31",
     "Region": "westus3",
     "Service": "",
     "SubnetSize": "31",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "57.157.11.72/29",
-    "Region": "westus3",
-    "Service": "",
-    "SubnetSize": "29",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "57.157.11.80/28",
-    "Region": "westus3",
-    "Service": "",
-    "SubnetSize": "28",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "57.157.11.96/27",
-    "Region": "westus3",
-    "Service": "",
-    "SubnetSize": "27",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "57.157.11.128/25",
-    "Region": "westus3",
-    "Service": "",
-    "SubnetSize": "25",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "57.157.128.0/24",
-    "Region": "westus3",
-    "Service": "",
-    "SubnetSize": "24",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "57.157.129.0/25",
-    "Region": "westus3",
-    "Service": "",
-    "SubnetSize": "25",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "57.157.129.128/26",
-    "Region": "westus3",
-    "Service": "",
-    "SubnetSize": "26",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "57.157.129.192/28",
-    "Region": "westus3",
-    "Service": "",
-    "SubnetSize": "28",
     "CloudProvider": "Azure"
   },
   {
@@ -9863,10 +9807,10 @@
     "CloudProvider": "Azure"
   },
   {
-    "Subnet": "57.157.73.80/30",
+    "Subnet": "57.157.73.80/29",
     "Region": "westus2",
     "Service": "",
-    "SubnetSize": "30",
+    "SubnetSize": "29",
     "CloudProvider": "Azure"
   },
   {
@@ -36715,6 +36659,13 @@
     "CloudProvider": "Azure"
   },
   {
+    "Subnet": "145.190.88.0/24",
+    "Region": "westcentralus",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure"
+  },
+  {
     "Subnet": "151.206.110.0/24",
     "Region": "westcentralus",
     "Service": "",
@@ -41986,6 +41937,13 @@
     "CloudProvider": "Azure"
   },
   {
+    "Subnet": "20.143.240.0/23",
+    "Region": "ukwest",
+    "Service": "",
+    "SubnetSize": "23",
+    "CloudProvider": "Azure"
+  },
+  {
     "Subnet": "20.162.0.0/17",
     "Region": "ukwest",
     "Service": "",
@@ -42442,6 +42400,13 @@
   },
   {
     "Subnet": "145.190.72.0/24",
+    "Region": "ukwest",
+    "Service": "",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "145.190.87.0/24",
     "Region": "ukwest",
     "Service": "",
     "SubnetSize": "24",
@@ -47807,6 +47772,20 @@
     "Region": "uksouth",
     "Service": "",
     "SubnetSize": "28",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "57.157.40.144/30",
+    "Region": "uksouth",
+    "Service": "",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "57.157.40.148/31",
+    "Region": "uksouth",
+    "Service": "",
+    "SubnetSize": "31",
     "CloudProvider": "Azure"
   },
   {
@@ -63798,21 +63777,21 @@
     "CloudProvider": "Azure"
   },
   {
-    "Subnet": "57.157.71.0/28",
+    "Subnet": "57.157.71.0/26",
+    "Region": "swedencentral",
+    "Service": "",
+    "SubnetSize": "26",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "57.157.71.64/28",
     "Region": "swedencentral",
     "Service": "",
     "SubnetSize": "28",
     "CloudProvider": "Azure"
   },
   {
-    "Subnet": "57.157.71.16/29",
-    "Region": "swedencentral",
-    "Service": "",
-    "SubnetSize": "29",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "57.157.71.24/31",
+    "Subnet": "57.157.71.80/31",
     "Region": "swedencentral",
     "Service": "",
     "SubnetSize": "31",
@@ -63928,6 +63907,13 @@
     "Region": "swedencentral",
     "Service": "",
     "SubnetSize": "16",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "172.135.0.0/17",
+    "Region": "swedencentral",
+    "Service": "",
+    "SubnetSize": "17",
     "CloudProvider": "Azure"
   },
   {
@@ -78799,6 +78785,13 @@
     "CloudProvider": "Azure"
   },
   {
+    "Subnet": "20.143.236.0/23",
+    "Region": "southcentralus2",
+    "Service": "",
+    "SubnetSize": "23",
+    "CloudProvider": "Azure"
+  },
+  {
     "Subnet": "20.152.30.0/23",
     "Region": "southcentralus2",
     "Service": "",
@@ -84938,38 +84931,10 @@
     "CloudProvider": "Azure"
   },
   {
-    "Subnet": "40.87.178.64/28",
+    "Subnet": "40.87.178.64/27",
     "Region": "southcentralus",
     "Service": "",
-    "SubnetSize": "28",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "40.87.178.80/31",
-    "Region": "southcentralus",
-    "Service": "",
-    "SubnetSize": "31",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "40.87.178.84/31",
-    "Region": "southcentralus",
-    "Service": "",
-    "SubnetSize": "31",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "40.87.178.90/31",
-    "Region": "southcentralus",
-    "Service": "",
-    "SubnetSize": "31",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "40.87.178.92/30",
-    "Region": "southcentralus",
-    "Service": "",
-    "SubnetSize": "30",
+    "SubnetSize": "27",
     "CloudProvider": "Azure"
   },
   {
@@ -85015,87 +84980,17 @@
     "CloudProvider": "Azure"
   },
   {
-    "Subnet": "40.87.178.192/27",
-    "Region": "southcentralus",
-    "Service": "",
-    "SubnetSize": "27",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "40.87.178.224/29",
-    "Region": "southcentralus",
-    "Service": "",
-    "SubnetSize": "29",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "40.87.178.232/31",
-    "Region": "southcentralus",
-    "Service": "",
-    "SubnetSize": "31",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "40.87.178.242/31",
-    "Region": "southcentralus",
-    "Service": "",
-    "SubnetSize": "31",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "40.87.178.244/30",
-    "Region": "southcentralus",
-    "Service": "",
-    "SubnetSize": "30",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "40.87.178.248/29",
-    "Region": "southcentralus",
-    "Service": "",
-    "SubnetSize": "29",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "40.87.179.0/31",
-    "Region": "southcentralus",
-    "Service": "",
-    "SubnetSize": "31",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "40.87.179.10/31",
-    "Region": "southcentralus",
-    "Service": "",
-    "SubnetSize": "31",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "40.87.179.12/30",
-    "Region": "southcentralus",
-    "Service": "",
-    "SubnetSize": "30",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "40.87.179.16/28",
-    "Region": "southcentralus",
-    "Service": "",
-    "SubnetSize": "28",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "40.87.179.32/27",
-    "Region": "southcentralus",
-    "Service": "",
-    "SubnetSize": "27",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "40.87.179.64/26",
+    "Subnet": "40.87.178.192/26",
     "Region": "southcentralus",
     "Service": "",
     "SubnetSize": "26",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "40.87.179.0/25",
+    "Region": "southcentralus",
+    "Service": "",
+    "SubnetSize": "25",
     "CloudProvider": "Azure"
   },
   {
@@ -85180,6 +85075,13 @@
     "Region": "southcentralus",
     "Service": "",
     "SubnetSize": "30",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "40.87.179.252/31",
+    "Region": "southcentralus",
+    "Service": "",
+    "SubnetSize": "31",
     "CloudProvider": "Azure"
   },
   {
@@ -94682,17 +94584,24 @@
     "CloudProvider": "Azure"
   },
   {
-    "Subnet": "40.123.138.192/29",
+    "Subnet": "40.123.138.192/27",
     "Region": "polandcentral",
     "Service": "",
-    "SubnetSize": "29",
+    "SubnetSize": "27",
     "CloudProvider": "Azure"
   },
   {
-    "Subnet": "40.123.138.200/30",
+    "Subnet": "40.123.138.224/28",
     "Region": "polandcentral",
     "Service": "",
-    "SubnetSize": "30",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "40.123.138.240/29",
+    "Region": "polandcentral",
+    "Service": "",
+    "SubnetSize": "29",
     "CloudProvider": "Azure"
   },
   {
@@ -113064,24 +112973,38 @@
     "CloudProvider": "Azure"
   },
   {
-    "Subnet": "57.157.66.0/27",
+    "Subnet": "57.157.66.0/26",
+    "Region": "northcentralus",
+    "Service": "",
+    "SubnetSize": "26",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "57.157.66.64/27",
     "Region": "northcentralus",
     "Service": "",
     "SubnetSize": "27",
     "CloudProvider": "Azure"
   },
   {
-    "Subnet": "57.157.66.32/28",
+    "Subnet": "57.157.66.96/28",
     "Region": "northcentralus",
     "Service": "",
     "SubnetSize": "28",
     "CloudProvider": "Azure"
   },
   {
-    "Subnet": "57.157.66.48/29",
+    "Subnet": "57.157.66.112/29",
     "Region": "northcentralus",
     "Service": "",
     "SubnetSize": "29",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "57.157.66.120/30",
+    "Region": "northcentralus",
+    "Service": "",
+    "SubnetSize": "30",
     "CloudProvider": "Azure"
   },
   {
@@ -146517,6 +146440,34 @@
     "CloudProvider": "Azure"
   },
   {
+    "Subnet": "51.57.209.224/27",
+    "Region": "eastus3",
+    "Service": "DataFactory",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "51.57.210.0/25",
+    "Region": "eastus3",
+    "Service": "DataFactory",
+    "SubnetSize": "25",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "51.57.210.128/26",
+    "Region": "eastus3",
+    "Service": "DataFactory",
+    "SubnetSize": "26",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "51.57.210.192/28",
+    "Region": "eastus3",
+    "Service": "DataFactory",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure"
+  },
+  {
     "Subnet": "134.138.80.0/23",
     "Region": "eastus3",
     "Service": "DataFactory",
@@ -161371,52 +161322,17 @@
     "CloudProvider": "Azure"
   },
   {
-    "Subnet": "40.123.187.64/27",
+    "Subnet": "40.123.187.64/26",
+    "Region": "eastus2",
+    "Service": "",
+    "SubnetSize": "26",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "40.123.187.128/27",
     "Region": "eastus2",
     "Service": "",
     "SubnetSize": "27",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "40.123.187.100/30",
-    "Region": "eastus2",
-    "Service": "",
-    "SubnetSize": "30",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "40.123.187.104/29",
-    "Region": "eastus2",
-    "Service": "",
-    "SubnetSize": "29",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "40.123.187.112/28",
-    "Region": "eastus2",
-    "Service": "",
-    "SubnetSize": "28",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "40.123.187.134/31",
-    "Region": "eastus2",
-    "Service": "",
-    "SubnetSize": "31",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "40.123.187.136/29",
-    "Region": "eastus2",
-    "Service": "",
-    "SubnetSize": "29",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "40.123.187.144/28",
-    "Region": "eastus2",
-    "Service": "",
-    "SubnetSize": "28",
     "CloudProvider": "Azure"
   },
   {
@@ -161469,17 +161385,17 @@
     "CloudProvider": "Azure"
   },
   {
-    "Subnet": "40.123.187.212/30",
+    "Subnet": "40.123.187.204/30",
     "Region": "eastus2",
     "Service": "",
     "SubnetSize": "30",
     "CloudProvider": "Azure"
   },
   {
-    "Subnet": "40.123.187.216/29",
+    "Subnet": "40.123.187.208/28",
     "Region": "eastus2",
     "Service": "",
-    "SubnetSize": "29",
+    "SubnetSize": "28",
     "CloudProvider": "Azure"
   },
   {
@@ -162400,31 +162316,10 @@
     "CloudProvider": "Azure"
   },
   {
-    "Subnet": "57.157.0.128/30",
+    "Subnet": "57.157.0.128/26",
     "Region": "eastus2",
     "Service": "",
-    "SubnetSize": "30",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "57.157.0.136/29",
-    "Region": "eastus2",
-    "Service": "",
-    "SubnetSize": "29",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "57.157.0.144/28",
-    "Region": "eastus2",
-    "Service": "",
-    "SubnetSize": "28",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "57.157.0.160/27",
-    "Region": "eastus2",
-    "Service": "",
-    "SubnetSize": "27",
+    "SubnetSize": "26",
     "CloudProvider": "Azure"
   },
   {
@@ -162547,17 +162442,10 @@
     "CloudProvider": "Azure"
   },
   {
-    "Subnet": "57.157.2.0/30",
+    "Subnet": "57.157.2.0/29",
     "Region": "eastus2",
     "Service": "",
-    "SubnetSize": "30",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "57.157.2.4/31",
-    "Region": "eastus2",
-    "Service": "",
-    "SubnetSize": "31",
+    "SubnetSize": "29",
     "CloudProvider": "Azure"
   },
   {
@@ -190435,24 +190323,10 @@
     "CloudProvider": "Azure"
   },
   {
-    "Subnet": "40.87.182.136/29",
+    "Subnet": "40.87.182.128/26",
     "Region": "centralus",
     "Service": "",
-    "SubnetSize": "29",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "40.87.182.144/28",
-    "Region": "centralus",
-    "Service": "",
-    "SubnetSize": "28",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "40.87.182.160/27",
-    "Region": "centralus",
-    "Service": "",
-    "SubnetSize": "27",
+    "SubnetSize": "26",
     "CloudProvider": "Azure"
   },
   {
@@ -190561,31 +190435,24 @@
     "CloudProvider": "Azure"
   },
   {
-    "Subnet": "40.87.183.64/28",
+    "Subnet": "40.87.183.64/27",
+    "Region": "centralus",
+    "Service": "",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "40.87.183.96/28",
     "Region": "centralus",
     "Service": "",
     "SubnetSize": "28",
     "CloudProvider": "Azure"
   },
   {
-    "Subnet": "40.87.183.92/30",
+    "Subnet": "40.87.183.112/31",
     "Region": "centralus",
     "Service": "",
-    "SubnetSize": "30",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "40.87.183.96/29",
-    "Region": "centralus",
-    "Service": "",
-    "SubnetSize": "29",
-    "CloudProvider": "Azure"
-  },
-  {
-    "Subnet": "40.87.183.104/30",
-    "Region": "centralus",
-    "Service": "",
-    "SubnetSize": "30",
+    "SubnetSize": "31",
     "CloudProvider": "Azure"
   },
   {
@@ -193253,6 +193120,13 @@
     "Region": "centralus",
     "Service": "",
     "SubnetSize": "16",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "172.134.0.0/17",
+    "Region": "centralus",
+    "Service": "",
+    "SubnetSize": "17",
     "CloudProvider": "Azure"
   },
   {
@@ -201376,6 +201250,13 @@
     "CloudProvider": "Azure"
   },
   {
+    "Subnet": "145.191.175.104/29",
+    "Region": "canadaeast",
+    "Service": "ServiceFabric",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure"
+  },
+  {
     "Subnet": "4.229.81.128/27",
     "Region": "canadaeast",
     "Service": "SCCservice",
@@ -201408,6 +201289,13 @@
     "Region": "canadaeast",
     "Service": "PowerQueryOnline",
     "SubnetSize": "29",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "145.191.173.32/27",
+    "Region": "canadaeast",
+    "Service": "PowerQueryOnline",
+    "SubnetSize": "27",
     "CloudProvider": "Azure"
   },
   {
@@ -201936,6 +201824,13 @@
     "CloudProvider": "Azure"
   },
   {
+    "Subnet": "145.191.175.96/29",
+    "Region": "canadaeast",
+    "Service": "MicrosoftContainerRegistry",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure"
+  },
+  {
     "Subnet": "4.229.67.220/31",
     "Region": "canadaeast",
     "Service": "MicrosoftCloudAppSecurity",
@@ -202223,6 +202118,13 @@
     "CloudProvider": "Azure"
   },
   {
+    "Subnet": "145.191.180.0/27",
+    "Region": "canadaeast",
+    "Service": "LogicApps",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure"
+  },
+  {
     "Subnet": "40.69.107.8/29",
     "Region": "canadaeast",
     "Service": "HDInsight",
@@ -202293,6 +202195,13 @@
     "CloudProvider": "Azure"
   },
   {
+    "Subnet": "145.191.173.128/26",
+    "Region": "canadaeast",
+    "Service": "GatewayManager",
+    "SubnetSize": "26",
+    "CloudProvider": "Azure"
+  },
+  {
     "Subnet": "145.191.155.192/27",
     "Region": "canadaeast",
     "Service": "Dynamics365ForMarketingEmail",
@@ -202353,6 +202262,13 @@
     "Region": "canadaeast",
     "Service": "DataFactory",
     "SubnetSize": "29",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "145.191.177.0/24",
+    "Region": "canadaeast",
+    "Service": "DataFactory",
+    "SubnetSize": "24",
     "CloudProvider": "Azure"
   },
   {
@@ -202524,6 +202440,34 @@
     "CloudProvider": "Azure"
   },
   {
+    "Subnet": "57.163.75.0/24",
+    "Region": "canadaeast",
+    "Service": "AzureStorage",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "57.163.76.0/23",
+    "Region": "canadaeast",
+    "Service": "AzureStorage",
+    "SubnetSize": "23",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "57.163.79.0/24",
+    "Region": "canadaeast",
+    "Service": "AzureStorage",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "57.163.81.0/24",
+    "Region": "canadaeast",
+    "Service": "AzureStorage",
+    "SubnetSize": "24",
+    "CloudProvider": "Azure"
+  },
+  {
     "Subnet": "135.130.50.0/23",
     "Region": "canadaeast",
     "Service": "AzureStorage",
@@ -202640,6 +202584,13 @@
     "Region": "canadaeast",
     "Service": "AzureSignalR",
     "SubnetSize": "27",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "145.191.180.128/26",
+    "Region": "canadaeast",
+    "Service": "AzureSignalR",
+    "SubnetSize": "26",
     "CloudProvider": "Azure"
   },
   {
@@ -203287,6 +203238,13 @@
     "CloudProvider": "Azure"
   },
   {
+    "Subnet": "145.191.174.192/26",
+    "Region": "canadaeast",
+    "Service": "AzureConnectors",
+    "SubnetSize": "26",
+    "CloudProvider": "Azure"
+  },
+  {
     "Subnet": "40.89.17.64/26",
     "Region": "canadaeast",
     "Service": "AzureCognitiveSearch",
@@ -203434,6 +203392,13 @@
     "CloudProvider": "Azure"
   },
   {
+    "Subnet": "145.191.174.144/28",
+    "Region": "canadaeast",
+    "Service": "AzureArcInfrastructure",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure"
+  },
+  {
     "Subnet": "40.69.106.128/26",
     "Region": "canadaeast",
     "Service": "AzureAppServiceManagement",
@@ -203452,6 +203417,13 @@
     "Region": "canadaeast",
     "Service": "AzureAppServiceManagement",
     "SubnetSize": "28",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "145.191.175.0/26",
+    "Region": "canadaeast",
+    "Service": "AzureAppServiceManagement",
+    "SubnetSize": "26",
     "CloudProvider": "Azure"
   },
   {
@@ -203641,6 +203613,13 @@
     "Region": "canadaeast",
     "Service": "",
     "SubnetSize": "23",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "20.143.232.0/22",
+    "Region": "canadaeast",
+    "Service": "",
+    "SubnetSize": "22",
     "CloudProvider": "Azure"
   },
   {
@@ -204012,6 +203991,13 @@
     "Region": "canadaeast",
     "Service": "",
     "SubnetSize": "22",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "52.251.130.0/23",
+    "Region": "canadaeast",
+    "Service": "",
+    "SubnetSize": "23",
     "CloudProvider": "Azure"
   },
   {
@@ -214480,10 +214466,17 @@
     "CloudProvider": "Azure"
   },
   {
-    "Subnet": "20.20.121.192/30",
+    "Subnet": "20.20.121.192/27",
     "Region": "belgiumcentral",
     "Service": "",
-    "SubnetSize": "30",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "20.20.121.224/28",
+    "Region": "belgiumcentral",
+    "Service": "",
+    "SubnetSize": "28",
     "CloudProvider": "Azure"
   },
   {
@@ -219073,6 +219066,13 @@
   },
   {
     "Subnet": "20.143.112.0/23",
+    "Region": "australiasoutheast",
+    "Service": "",
+    "SubnetSize": "23",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "20.143.238.0/23",
     "Region": "australiasoutheast",
     "Service": "",
     "SubnetSize": "23",
@@ -224144,6 +224144,13 @@
     "Region": "australiaeast",
     "Service": "",
     "SubnetSize": "24",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "74.147.128.0/17",
+    "Region": "australiaeast",
+    "Service": "",
+    "SubnetSize": "17",
     "CloudProvider": "Azure"
   },
   {
@@ -232547,6 +232554,13 @@
     "CloudProvider": "Azure"
   },
   {
+    "Subnet": "145.191.180.32/27",
+    "Region": "",
+    "Service": "SqlManagement",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure"
+  },
+  {
     "Subnet": "158.23.12.64/26",
     "Region": "",
     "Service": "SqlManagement",
@@ -233576,6 +233590,13 @@
     "CloudProvider": "Azure"
   },
   {
+    "Subnet": "48.196.152.104/30",
+    "Region": "",
+    "Service": "SerialConsole",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure"
+  },
+  {
     "Subnet": "48.197.87.140/31",
     "Region": "",
     "Service": "SerialConsole",
@@ -234105,6 +234126,13 @@
     "Region": "",
     "Service": "SerialConsole",
     "SubnetSize": "31",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "145.191.174.168/30",
+    "Region": "",
+    "Service": "SerialConsole",
+    "SubnetSize": "30",
     "CloudProvider": "Azure"
   },
   {
@@ -237847,6 +237875,13 @@
   },
   {
     "Subnet": "40.80.103.192/28",
+    "Region": "",
+    "Service": "MicrosoftDefenderForEndpoint",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "48.196.155.32/28",
     "Region": "",
     "Service": "MicrosoftDefenderForEndpoint",
     "SubnetSize": "28",
@@ -247394,6 +247429,20 @@
     "CloudProvider": "Azure"
   },
   {
+    "Subnet": "48.196.158.192/27",
+    "Region": "",
+    "Service": "DataFactory",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "48.196.158.224/28",
+    "Region": "",
+    "Service": "DataFactory",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure"
+  },
+  {
     "Subnet": "48.197.89.112/28",
     "Region": "",
     "Service": "DataFactory",
@@ -247408,6 +247457,20 @@
     "CloudProvider": "Azure"
   },
   {
+    "Subnet": "48.197.149.112/28",
+    "Region": "",
+    "Service": "DataFactory",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "48.197.150.64/27",
+    "Region": "",
+    "Service": "DataFactory",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure"
+  },
+  {
     "Subnet": "48.198.97.224/28",
     "Region": "",
     "Service": "DataFactory",
@@ -247416,6 +247479,20 @@
   },
   {
     "Subnet": "48.198.101.0/27",
+    "Region": "",
+    "Service": "DataFactory",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "48.198.193.208/28",
+    "Region": "",
+    "Service": "DataFactory",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "48.198.193.224/27",
     "Region": "",
     "Service": "DataFactory",
     "SubnetSize": "27",
@@ -247450,6 +247527,20 @@
     "CloudProvider": "Azure"
   },
   {
+    "Subnet": "48.196.158.0/25",
+    "Region": "",
+    "Service": "DataFactory",
+    "SubnetSize": "25",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "48.196.158.128/26",
+    "Region": "",
+    "Service": "DataFactory",
+    "SubnetSize": "26",
+    "CloudProvider": "Azure"
+  },
+  {
     "Subnet": "48.197.91.0/24",
     "Region": "",
     "Service": "DataFactory",
@@ -247457,10 +247548,38 @@
     "CloudProvider": "Azure"
   },
   {
+    "Subnet": "48.197.149.128/25",
+    "Region": "",
+    "Service": "DataFactory",
+    "SubnetSize": "25",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "48.197.150.0/26",
+    "Region": "",
+    "Service": "DataFactory",
+    "SubnetSize": "26",
+    "CloudProvider": "Azure"
+  },
+  {
     "Subnet": "48.198.100.0/24",
     "Region": "",
     "Service": "DataFactory",
     "SubnetSize": "24",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "48.198.194.0/25",
+    "Region": "",
+    "Service": "DataFactory",
+    "SubnetSize": "25",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "48.198.194.128/26",
+    "Region": "",
+    "Service": "DataFactory",
+    "SubnetSize": "26",
     "CloudProvider": "Azure"
   },
   {
@@ -252466,6 +252585,13 @@
     "Region": "",
     "Service": "CognitiveServicesManagement",
     "SubnetSize": "29",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "48.196.153.192/26",
+    "Region": "",
+    "Service": "CognitiveServicesManagement",
+    "SubnetSize": "26",
     "CloudProvider": "Azure"
   },
   {
@@ -258398,6 +258524,13 @@
     "CloudProvider": "Azure"
   },
   {
+    "Subnet": "48.196.155.192/26",
+    "Region": "",
+    "Service": "AzureWebPubSub",
+    "SubnetSize": "26",
+    "CloudProvider": "Azure"
+  },
+  {
     "Subnet": "48.215.89.32/27",
     "Region": "",
     "Service": "AzureWebPubSub",
@@ -258752,6 +258885,13 @@
     "Region": "",
     "Service": "AzureWebPubSub",
     "SubnetSize": "27",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "145.191.180.192/26",
+    "Region": "",
+    "Service": "AzureWebPubSub",
+    "SubnetSize": "26",
     "CloudProvider": "Azure"
   },
   {
@@ -259946,6 +260086,13 @@
   },
   {
     "Subnet": "134.138.71.120/30",
+    "Region": "",
+    "Service": "AzureVideoAnalyzerForMedia",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "145.191.173.20/30",
     "Region": "",
     "Service": "AzureVideoAnalyzerForMedia",
     "SubnetSize": "30",
@@ -266739,6 +266886,13 @@
     "Region": "",
     "Service": "AzureSiteRecovery",
     "SubnetSize": "28",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "48.196.155.128/26",
+    "Region": "",
+    "Service": "AzureSignalR",
+    "SubnetSize": "26",
     "CloudProvider": "Azure"
   },
   {
@@ -273560,6 +273714,13 @@
     "CloudProvider": "Azure"
   },
   {
+    "Subnet": "48.196.154.0/25",
+    "Region": "",
+    "Service": "AzureMachineLearningInference",
+    "SubnetSize": "25",
+    "CloudProvider": "Azure"
+  },
+  {
     "Subnet": "48.197.73.96/27",
     "Region": "",
     "Service": "AzureMachineLearningInference",
@@ -274306,6 +274467,13 @@
     "Region": "",
     "Service": "AzureMachineLearningInference",
     "SubnetSize": "27",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "145.191.176.0/25",
+    "Region": "",
+    "Service": "AzureMachineLearningInference",
+    "SubnetSize": "25",
     "CloudProvider": "Azure"
   },
   {
@@ -288463,6 +288631,13 @@
     "CloudProvider": "Azure"
   },
   {
+    "Subnet": "145.191.173.192/26",
+    "Region": "",
+    "Service": "AzureDatabricks",
+    "SubnetSize": "26",
+    "CloudProvider": "Azure"
+  },
+  {
     "Subnet": "158.23.11.224/29",
     "Region": "",
     "Service": "AzureDatabricks",
@@ -292922,6 +293097,13 @@
     "CloudProvider": "Azure"
   },
   {
+    "Subnet": "145.191.174.0/27",
+    "Region": "",
+    "Service": "AzureAutomation",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure"
+  },
+  {
     "Subnet": "157.55.90.60/30",
     "Region": "",
     "Service": "AzureAutomation",
@@ -293367,6 +293549,13 @@
     "Region": "",
     "Service": "AzureArcInfrastructure",
     "SubnetSize": "30",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "48.196.153.96/28",
+    "Region": "",
+    "Service": "AzureArcInfrastructure",
+    "SubnetSize": "28",
     "CloudProvider": "Azure"
   },
   {
@@ -299002,6 +299191,13 @@
     "Region": "",
     "Service": "AzureAPIForFHIR",
     "SubnetSize": "31",
+    "CloudProvider": "Azure"
+  },
+  {
+    "Subnet": "145.191.174.32/27",
+    "Region": "",
+    "Service": "AzureAPIForFHIR",
+    "SubnetSize": "27",
     "CloudProvider": "Azure"
   },
   {
@@ -306537,10 +306733,10 @@
     "CloudProvider": "Azure"
   },
   {
-    "Subnet": "52.251.128.0/23",
+    "Subnet": "52.251.128.0/22",
     "Region": "",
     "Service": "",
-    "SubnetSize": "23",
+    "SubnetSize": "22",
     "CloudProvider": "Azure"
   },
   {
