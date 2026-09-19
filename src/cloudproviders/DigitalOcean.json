@@ -7182,6 +7182,13 @@
     "CloudProvider": "Digital Ocean"
   },
   {
+    "Subnet": "201.79.32.0/20",
+    "Region": "Kansas City",
+    "Service": "",
+    "SubnetSize": "20",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
     "Subnet": "204.48.16.0/20",
     "Region": "North Bergen",
     "Service": "",
