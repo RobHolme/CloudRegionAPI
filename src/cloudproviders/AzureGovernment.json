@@ -7266,6 +7266,13 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "57.17.64.0/19",
+    "Region": "usgovtexas",
+    "Service": "",
+    "SubnetSize": "19",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "62.10.146.0/23",
     "Region": "usgovtexas",
     "Service": "",

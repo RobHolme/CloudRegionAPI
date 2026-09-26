@@ -1358,6 +1358,13 @@
     "CloudProvider": "Azure China"
   },
   {
+    "Subnet": "40.72.48.0/21",
+    "Region": "chinanorth3",
+    "Service": "",
+    "SubnetSize": "21",
+    "CloudProvider": "Azure China"
+  },
+  {
     "Subnet": "40.72.70.0/25",
     "Region": "chinanorth3",
     "Service": "",
