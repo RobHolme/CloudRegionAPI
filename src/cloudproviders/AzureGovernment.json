@@ -8848,6 +8848,13 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "51.55.243.128/26",
+    "Region": "usgovarizona",
+    "Service": "AzureMonitor",
+    "SubnetSize": "26",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "52.127.2.232/29",
     "Region": "usgovarizona",
     "Service": "AzureMonitor",
