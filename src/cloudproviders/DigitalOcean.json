@@ -5775,6 +5775,20 @@
     "CloudProvider": "Digital Ocean"
   },
   {
+    "Subnet": "168.144.196.0/23",
+    "Region": "Memphis",
+    "Service": "",
+    "SubnetSize": "23",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
+    "Subnet": "168.144.198.0/23",
+    "Region": "Sandston",
+    "Service": "",
+    "SubnetSize": "23",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
     "Subnet": "168.144.208.0/20",
     "Region": "Bangalore",
     "Service": "",
@@ -7186,6 +7200,20 @@
     "Region": "Kansas City",
     "Service": "",
     "SubnetSize": "20",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
+    "Subnet": "201.79.48.0/20",
+    "Region": "Toronto",
+    "Service": "",
+    "SubnetSize": "20",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
+    "Subnet": "201.79.64.0/22",
+    "Region": "Sandston",
+    "Service": "",
+    "SubnetSize": "22",
     "CloudProvider": "Digital Ocean"
   },
   {
