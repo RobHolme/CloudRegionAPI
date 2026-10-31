@@ -10759,6 +10759,13 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "52.181.73.192/26",
+    "Region": "usdodeast",
+    "Service": "PowerPlatformInfra",
+    "SubnetSize": "26",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "20.140.64.118/31",
     "Region": "usdodeast",
     "Service": "PowerBI",
@@ -11967,6 +11974,13 @@
     "Region": "usdodcentral",
     "Service": "PowerPlatformInfra",
     "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "57.17.40.0/26",
+    "Region": "usdodcentral",
+    "Service": "PowerPlatformInfra",
+    "SubnetSize": "26",
     "CloudProvider": "Azure Government"
   },
   {
