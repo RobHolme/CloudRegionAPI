@@ -5978,6 +5978,13 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "52.245.146.0/32",
+    "Region": "usgovtexas",
+    "Service": "AzurePortal",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "20.140.57.96/29",
     "Region": "usgovtexas",
     "Service": "AzurePortal",
@@ -6045,13 +6052,6 @@
     "Region": "usgovtexas",
     "Service": "AzurePortal",
     "SubnetSize": "27",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.245.146.0/32",
-    "Region": "usgovtexas",
-    "Service": "AzurePortal",
-    "SubnetSize": "32",
     "CloudProvider": "Azure Government"
   },
   {
@@ -13307,6 +13307,265 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "20.140.93.231/32",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.140.95.50/31",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "31",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.140.95.52/30",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.140.95.192/30",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.140.95.196/32",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.140.134.78/31",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "31",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.140.134.160/30",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.140.134.164/31",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "31",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.140.134.168/30",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.140.200.247/32",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.140.201.22/31",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "31",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.140.201.24/29",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.140.201.96/32",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.140.224.164/30",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.140.225.0/29",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.158.88.78/31",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "31",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.158.89.8/29",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.158.172.230/31",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "31",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.158.172.232/29",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.158.173.96/28",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.158.173.112/30",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.159.6.90/31",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "31",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.159.6.92/30",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.159.6.144/28",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "20.159.6.192/29",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.253.93/32",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.54.254.180/30",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.55.176.2/31",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "31",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "51.55.177.0/29",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.127.10.211/32",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.127.12.230/32",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.127.16.64/29",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "29",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.127.16.72/30",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.244.237.4/30",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "52.244.237.16/28",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "62.10.81.124/30",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "30",
+    "CloudProvider": "Azure Government"
+  },
+  {
+    "Subnet": "62.10.81.192/28",
+    "Region": "",
+    "Service": "Windows365",
+    "SubnetSize": "28",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "20.141.20.0/26",
     "Region": "",
     "Service": "TridentKusto",
@@ -15057,6 +15316,13 @@
     "CloudProvider": "Azure Government"
   },
   {
+    "Subnet": "52.126.53.145/32",
+    "Region": "",
+    "Service": "LogicApps",
+    "SubnetSize": "32",
+    "CloudProvider": "Azure Government"
+  },
+  {
     "Subnet": "52.127.29.16/28",
     "Region": "",
     "Service": "LogicApps",
@@ -15068,13 +15334,6 @@
     "Region": "",
     "Service": "LogicApps",
     "SubnetSize": "27",
-    "CloudProvider": "Azure Government"
-  },
-  {
-    "Subnet": "52.126.53.145/32",
-    "Region": "",
-    "Service": "LogicApps",
-    "SubnetSize": "32",
     "CloudProvider": "Azure Government"
   },
   {

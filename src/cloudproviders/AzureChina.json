@@ -105,6 +105,13 @@
     "CloudProvider": "Azure China"
   },
   {
+    "Subnet": "40.72.49.160/27",
+    "Region": "chinanorth3",
+    "Service": "PowerPlatformInfra",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure China"
+  },
+  {
     "Subnet": "159.27.243.224/27",
     "Region": "chinanorth3",
     "Service": "PowerPlatformInfra",
@@ -1747,6 +1754,13 @@
     "Region": "chinanorth2",
     "Service": "PowerPlatformInfra",
     "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.134.240/28",
+    "Region": "chinanorth2",
+    "Service": "PowerPlatformInfra",
+    "SubnetSize": "28",
     "CloudProvider": "Azure China"
   },
   {
@@ -4627,6 +4641,13 @@
     "CloudProvider": "Azure China"
   },
   {
+    "Subnet": "40.72.56.96/27",
+    "Region": "chinaeast3",
+    "Service": "PowerPlatformInfra",
+    "SubnetSize": "27",
+    "CloudProvider": "Azure China"
+  },
+  {
     "Subnet": "163.228.59.64/26",
     "Region": "chinaeast3",
     "Service": "PowerPlatformInfra",
@@ -5688,6 +5709,13 @@
     "Region": "chinaeast2",
     "Service": "PowerPlatformInfra",
     "SubnetSize": "32",
+    "CloudProvider": "Azure China"
+  },
+  {
+    "Subnet": "40.162.179.32/28",
+    "Region": "chinaeast2",
+    "Service": "PowerPlatformInfra",
+    "SubnetSize": "28",
     "CloudProvider": "Azure China"
   },
   {
