@@ -11,6 +11,8 @@ const router = Router();
 // Returns result as string[]. 404 response code returned if no results found.
 // -----------------------------
 router.get("/:hostname", async (req: Request, res: Response) => {
+    const maxIps: number = 10; // limit the number of IP addresses to process for a single hostname
+
     const hostname = req.params.hostname.toString().trim();
     res.setHeader('content-type', 'application/json');
     const xClientIp: string | undefined = req.headers['x-client-ip'] as string;
@@ -43,6 +45,9 @@ router.get("/:hostname", async (req: Request, res: Response) => {
     }
     else {
         for (var i = 0; i < resolvedIPAddresses.length; i++) {
+            if (i >= maxIps) { // limit the number of IP addresses to process for a single hostname
+                break;
+            }
             // test for private addresses. Return 404 if private range detected (ignore other IPs - assume they all will be private for a single host record - such as private endpoints / internal load balancers)               
             if (TestPrivateAddress(resolvedIPAddresses[i]) == true) {
                 res.status(404).json({ message: `IPv4 Address (${resolvedIPAddresses[i]}) is a reserved address` });
