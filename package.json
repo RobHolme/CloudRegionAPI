@@ -15,14 +15,14 @@
   "devDependencies": {
     "@types/compression": "^1.7.5",
     "@types/express": "^5.0.6",
-    "@types/node": "^24.19.0",
-    "copyfiles-ng": "^2.4.7",
+    "@types/node": "^24.19.2",
+    "copyfiles-ng": "^2.4.9",
     "ts-node": "^10.9.2",
     "typescript": "^7.0.2"
   },
   "dependencies": {
     "compression": "^1.8.2",
-    "express": "^5.2.1",
-    "express-rate-limit": "^8.7.0"
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.3"
   }
 }
