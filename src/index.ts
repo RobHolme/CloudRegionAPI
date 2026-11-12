@@ -12,6 +12,14 @@ import httpCompression from 'compression';
 const app = express();
 const PORT = process.env.PORT || 80;
 
+// Enable rate limiting to prevent abuse. 
+// Maximum of 100 requests / 15 minutes
+var limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // max 100 requests per windowMs
+});
+// apply rate limiter to all requests
+app.use(limiter);
 
 // middleware to block specific HTTP methods that are not required.
 const blockMethodsMiddleware = (req: Request, res: Response, next: NextFunction): void => {
@@ -25,15 +33,6 @@ const blockMethodsMiddleware = (req: Request, res: Response, next: NextFunction)
 app.use(blockMethodsMiddleware);
 
 app.use(express.json());
-
-// Enable rate limiting to prevent abuse. 
-// Maximum of 100 requests / 15 minutes
-var limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // max 100 requests per windowMs
-});
-// apply rate limiter to all requests
-app.use(limiter);
 
 // disable the 'x-powered-by' header in the response
 app.disable('x-powered-by');
