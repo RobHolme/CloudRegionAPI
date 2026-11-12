@@ -3,6 +3,9 @@ API to return the cloud provider and region for a given IPv4 address or hostname
 
 > A webpage page that consumes the API is published to the root of the website. Connect to the website root for an example page using this API. e.g. http://127.0.0.1
 
+Note:
+* Results are capped to the first 10 IP addresses that a hostname resolves to.
+* A rate limit of 100 queries / 15 minutes has been applied (modify in index.ts if higher limits required)
 
 The API provides the following path based parameters:
 
