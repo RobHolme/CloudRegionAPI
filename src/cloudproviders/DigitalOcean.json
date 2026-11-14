@@ -5796,6 +5796,20 @@
     "CloudProvider": "Digital Ocean"
   },
   {
+    "Subnet": "168.144.228.0/22",
+    "Region": null,
+    "Service": "",
+    "SubnetSize": "22",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
+    "Subnet": "168.144.232.0/21",
+    "Region": null,
+    "Service": "",
+    "SubnetSize": "21",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
     "Subnet": "168.144.240.0/20",
     "Region": "Singapore",
     "Service": "",
@@ -7247,6 +7261,13 @@
   {
     "Subnet": "201.79.128.0/20",
     "Region": "Sandston",
+    "Service": "",
+    "SubnetSize": "20",
+    "CloudProvider": "Digital Ocean"
+  },
+  {
+    "Subnet": "201.79.144.0/20",
+    "Region": "Toronto",
     "Service": "",
     "SubnetSize": "20",
     "CloudProvider": "Digital Ocean"
